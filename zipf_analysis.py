@@ -23,16 +23,16 @@ def top_two_word(counts):
     count_data = [count for (_, count, _) in limited_counts]
     return count_data
 
-def top_ten_word(counts):
+def top_n_word(counts, n):
     """
     Given a list of (word, count, percentage) tuples,
     return the top ten word counts.
     """
-    limited_counts = counts[0:10]
+    limited_counts = counts[0:n]
     count_data = [count for (_, count, _) in limited_counts]
     return count_data
 
-def zipf_analysis(input_file):
+def zipf_analysis(input_file, n=10):
     counts = load_word_counts(input_file)
-    top_ten = top_ten_word(counts)
-    return top_ten
+    top_n = top_n_word(counts, n)
+    return top_n
