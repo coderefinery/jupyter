@@ -58,16 +58,16 @@ $ snakemake -s Snakefile_all
 %cp -r ../word-count/processed_data zipf_test/
 ```
 
-`8. Copy-paste the code below to a code cell (pretending that we just wrote it), and save it to a file `zipf_analysis.py``
+`8. Copy-paste the code below to a code cell (pretending that we just wrote it), and save it to a file `zipf.py``
 
 ```python
 # copy paste the code, and add at the top:
-%%writefile zipf_analysis.py
+%%writefile zipf.py
 ```
 - The instructor can remove the cell again, mentioning that it's good practice to write tested and finished code to an external module and then import it to notebook:
   ```python
-     import zipf_analysis
-     zipf_analysis.top_ten_word?
+     import zipf
+     zipf.top_n_word?
   ```
 
 `9. Run the `zipf_analysis()` function for a processed datafile. Plot the output, and compare with a 1/N function.`
