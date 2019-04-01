@@ -8,7 +8,16 @@ is a presentation of what Jupyter and JupyterLab is and what it can do.
 
 For inspiration, the instructor can open in a new tab the gravitational wave webpage with notebooks, and show how they can be launched in the cloud. It's also good to open the "Gallery of interesting Jupyter Notebooks" link to show a flavor of what's out there.
 
-The IDE section is adopted from the retired IDE lesson. The purpose of including it here is that IDEs deserve at least to be discussed. The instructor can ask the audience what, if any, IDEs they are using, and briefly discuss various pros and cons. 
+The IDE section is adopted from the retired IDE lesson, and is included here as a general 
+discussion about IDEs.. The instructor can ask the audience what, if any, IDEs they are using, and briefly discuss various pros and cons. 
+
+### Simple type-along
+
+To show that Jupyter Notebooks are rather simple and intuitive, it is good to 
+create a new code cell (e.g. under the Code Cells section) and type some simple code, 
+execute it and show that the output is displayed below.  
+The type-along exercise in the jupyter-usecases notebook is more advanced so it's good 
+to show some simple usage first.
 
 ### Version control of notebooks
 
@@ -16,6 +25,7 @@ There's a paragraph on Git extensions to Jupyter notebooks and JupyterLab (nbdim
 - `nbdime`: show how the `git` button works in the notebook (it opens a new window with git diff output)
 - `jupyterlab-git`: show how the new Git button on the left menubar works. One can add and commit files, unstage, push and pull, create branches etc.
 - `jupyterlab-github`: show how one can browse repositories on GitHub, open online notebooks and run them locally (in local Python environment) or launch them on mybinder.org
+
 
 
 ## Jupyter usecases
