@@ -1,17 +1,26 @@
-# JupyterLab lesson
+# Jupyter and JupyterLab 
 
-This is an introductory course on Jupyter Notebooks and JupyterLab. It is composed of the following 
-interactive notebooks:
+- [Credit and license](https://coderefinery.github.io/jupyter/license/)
 
- - [Basics of JupyterLab and Jupyter Notebooks](https://github.com/coderefinery/jupyterlab/blob/master/basics_of_jupyter.ipynb): Getting familiar with notebooks and the JupyterLab environment.
- - [Jupyter use cases](https://github.com/coderefinery/jupyterlab/blob/master/jupyter_usecases.ipynb): Showing how to 
- use shell commands, magics and widgets and how to plot, mix languages and do interactive data analysis.
- - [Exercises](https://github.com/coderefinery/jupyterlab/blob/master/exercises.ipynb): Exercises accompanying 
-   the [Jupyter use cases](https://github.com/coderefinery/jupyterlab/blob/master/jupyter_usecases.ipynb) notebook.
- - [Solutions](https://github.com/coderefinery/jupyterlab/blob/master/solutions.ipynb): Suggested solutions to the exercises.
+## Local development
 
-The material here is licensed under the [Creative Commons Attribution license (CC BY4.0)](https://creativecommons.org/licenses/by/4.0/).
+The following Gemfile will permit you to run jekyll locally
 
+```
+source 'https://rubygems.org'
+gem 'github-pages', group: :jekyll_plugins
+gem 'github-linguist'
+gem 'rouge', '~>1.11.1'
+```
+
+Write it as Gemfile under the repository root.
+
+```
+$ export GEM_HOME=$HOME/.gem
+$ export PATH=$PATH:$HOME/.gem/bin
+$ bundler install
+$ bundle exec jekyll serve
+```
 
 
 
