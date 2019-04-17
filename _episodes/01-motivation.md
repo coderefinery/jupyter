@@ -5,29 +5,31 @@ teaching: 10
 exercises: 0
 questions:
   - What are Jupyter Notebooks?
-  - Why use Jupyter and JupyterLab?
+  - What can Jupyter Notebooks be used for?
 objectives:
-  - Learn about the background of Jupyter
-  - See a few inspirational use cases of Jupyter
+  - Get an idea of the purpose of Jupyter.
+  - See some inspirational Jupyter notebooks.
 keypoints:
-  - K1 
+  - Jupyter is an open-source, interactive web tool allowing researchers 
+    to combine code, output, explanatory text and multimedia resources 
+    in a single document.
 ---
 
-# Jupyter notebooks and JupyterLab
+# Jupyter Notebooks
 
 ## Some history
 - In 2014, Fernando Pérez announced a spin-off project from IPython called Project Jupyter, moving the notebook and other language-agnostic parts of IPython to Jupyter
-- JupyterLab is the next generation interface for Project Jupyter, the first stable release was announced in February 2018.
-- [The popularity of Jupyter is steadily increasing across many sciences](https://www.nature.com/articles/d41586-018-07196-1).
 - The name "Jupyter" derives from Julia+Python+R, but today Jupyter kernels exist for [dozens of programming languages](https://github.com/jupyter/jupyter/wiki/Jupyter-kernels)
 - Galileo's publication in a pamphlet in 1610 in Sidereus Nuncius, one of the first notebooks!  
 <img src="http://media.gettyimages.com/photos/pages-from-sidereus-nuncius-magna-by-galileo-galilei-a-book-of-and-picture-id90732970" width="500">
 
-## Why notebooks? 
+---
+
+## What are Jupyter notebooks? 
 
 - A [literate programming](https://en.wikipedia.org/wiki/Literate_programming) tool.
 - Code, text, equations, figures, etc. are interleaved, creating a *computational narrative*.
-- 
+- [*"an environment in which users execute code, see what happens, modify and repeat in a kind of iterative conversation between researcher and data"*](https://www.nature.com/articles/d41586-018-07196-1)
 
 ### Common use cases
 
@@ -35,10 +37,10 @@ keypoints:
 - As an *interactive* development environment for code, data analysis and visualization
 - Interactive work on HPC clusters
 - Sharing and explaining code to colleagues
+- Teaching (programming, experimental/theoretical science)
 - Learning from other notebooks
 - Keeping track of interactive sessions, like a digital lab notebook
 - Supplementary information with published articles
-- Teaching (programming, experimental/theoretical science)
 - Slide presentations using [Reveal.js](https://github.com/damianavila/RISE)
 
 ### When not to use notebooks
@@ -47,6 +49,7 @@ keypoints:
 - More difficult to do automated testing on 
 - Tricky when it comes to non-linear execution of cells, discipline is needed!
 
+---
 
 ## A case example 
 
