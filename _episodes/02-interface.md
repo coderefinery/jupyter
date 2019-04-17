@@ -4,19 +4,32 @@ title: The JupyterLab and notebook interface
 teaching: 10
 exercises: 0
 questions:
- - What functionalities does JupyterLab offer?
- - How do markdown and code cells work?
+ - How does the JupyterLab interface work?
+ - How do I edit Jupyter notebooks?
+ - How can I version control notebooks?
 objectives:
- - O1
- - O2
+ - Learn to navigate JupyterLab user interface.
+ - Discuss integrated development environments.
+ - Learn a few useful keyboard shortcuts.
+ - Learn about command/edit modes, markdown/code cells and Git integration.
 keypoints:
- - JupyterLab has a rich, modular and highly customizable user interface
- - nbdime, jupyterlab-git and jupyterlab/github help you track notebooks with Git
+ - JupyterLab has a rich, modular and highly customizable user interface.
+ - nbdime, jupyterlab-git and jupyterlab/github help you track notebooks with Git.
 ---
 
-# The JupyterLab interface
+# JupyterLab
 
-## Navigating JupyterLab
+JupyterLab is the next-generation user interface for Jupyter Notebooks 
+and is intended to replace the conventional interface. 
+It is a highly modular and customizable interface. 
+
+Let's have a look at how it works. We go to terminal, and type:
+```shell
+$ jupyter-lab
+```
+- On Windows, the JupyterLab App can also be launched by clicking on the JupyterLab icon in the Anaconda menu.
+
+## Navigation
 
 - Left-hand menu (toggle it with `Ctrl(⌘)-b`):
      - File browser
@@ -45,8 +58,6 @@ keypoints:
 
 ![Components]({{ site.baseurl }}/img/notebook_components.png)
 
----
-
 ### Markdown cells
 
 ```
@@ -69,13 +80,11 @@ inline $e^{i\pi} + 1 = 0$
 or on new line  
 $$e^{i\pi} + 1 = 0$$
 
-Images ![CodeRefinery Logo](../img/coderefinery.png)
+Images ![CodeRefinery Logo](https://coderefinery.org/assets/img/logos/coderefinery.png)
 
 Links:  
 [One of many markdown cheat-sheets](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#emphasis)
 ```
-
----
 
 ### Code cells
 
@@ -90,14 +99,14 @@ print("hello world")
 hello world
 ```
 
----
-
 ### Command and edit modes
 
 - To add contents to a cell, you need to enter *edit mode* by pressing `Enter` or 
   double-clicking on a cell
 - To navigate between cells, create new cells, etc., you need to enter *command* mode by 
   pressing `Escape` key or executing the current cell.
+
+---
 
 ## Keyboard shortcuts 
 
