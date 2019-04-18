@@ -10,7 +10,7 @@ questions:
 objectives:
  - Learn to navigate JupyterLab user interface.
  - Discuss integrated development environments.
- - Learn a few useful keyboard shortcuts.
+ - Get an overview of useful keyboard shortcuts.
  - Learn about command/edit modes, markdown/code cells and Git integration.
 keypoints:
  - JupyterLab has a rich, modular and highly customizable user interface.
