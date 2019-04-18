@@ -4,18 +4,22 @@ title: A first computational notebook
 teaching: 10
 exercises: 0
 questions:
- - What does a simple notebook with data analysis look like?
- - Are there any keyboard shortcuts to speed up work?
+ - What does a simple notebook with some analysis look like?
+ - How can keyboard shortcuts speed up my work?
 objectives:
- - Get a feeling for how to get started with notebooks for analysis
+ - Get started with notebooks for analysis.
+ - Practice common keyboard shortcuts.
+ - Get a feeling for the importance of execution order
 keypoints:
- - Keyboard shortcuts can save you time and protect your wrists
+ - Notebooks provide an intuitive way to perform interactive computational work.
  - Cells can be executed in any order, beware of out-of-order execution bugs!
+ - Keyboard shortcuts can save you time and protect your wrists.
 ---
 
 # Creating a computational narrative
 
 Let's create our first real computational narrative in a Jupyter notebook.
+> Adapted from https://github.com/AaltoScienceIT/python-r-data-analysis-course
 
 <img src="{{ site.baseurl }}/img/pi_with_darts.png" width="30%">
 
@@ -24,14 +28,12 @@ You have a computer with you with Python installed but no
 math libraries and no Wikipedia.
 
 Here is one way of doing it - "throwing darts" by generating 
-random points in an interval and checking whether the points 
-are within a given radius:
+random points within a square area and checking whether the points 
+fall within the unit circle.
 
-<img src="{{ site.baseurl }}/img/darts.svg" width="30%">
-
-> ## Calculating $\pi$ using monte carlo methods
+> ## Calculating $\pi$ using Monte Carlo methods
 > 
-> 1. Create a new notebook, name it, and add a heading
+> 1. Create a new notebook, name it, and add a heading.
 > 2. Document the relevant formulas in a new cell:
 >  ```
 >  - square area = $(2 r)^2$
@@ -39,19 +41,27 @@ are within a given radius:
 >  - circle / square = $\pi r^2 / 4 r^2$ = $\pi / 4$
 >  - $\pi = (circle/square) * 4$
 >  ```
-> 
-> 3. Import module:
+>
+> 3. Add an image to explain the concept:
+> ```
+> !wget https://coderefinery.github.io/jupyter/img/darts.svg
+> ```
+> ```
+> ![Darts](darts.svg)
+> ```
+>
+> 4. Import `random` module:
 > ```python
 > import random
 > ```
 > 
-> 4. Initialize variables:
+> 5. Initialize variables:
 > ```python
 > N = 1000
 > points = []
 > ```
 > 
-> 5. "Throw darts":
+> 6. "Throw darts":
 > ```python
 > hits = 0
 > for i in range(N):
@@ -63,7 +73,7 @@ are within a given radius:
 >         points.append((x,y, False))
 > ```
 > 
-> 6. Plot results:
+> 7. Plot results:
 > ```python
 > %matplotlib inline
 > from matplotlib import pyplot
@@ -71,7 +81,7 @@ are within a given radius:
 > pyplot.scatter(x, y, c=colors)
 > ```
 > 
-> 7. Compute final estimate of $\pi$:
+> 8. Compute final estimate of $\pi$:
 > ```python
 > fraction = hits / N
 > 4 * fraction
