@@ -14,7 +14,7 @@ objectives:
  - Learn how to mix Python with R in the same noteobook.
 ---
 
-> ## *Exercise 1:* Widgets for interactive data fitting 
+> ## Widgets for interactive data fitting 
 > 
 > Widgets are fun, but they can also be useful. Here's an example showing how you can fit noisy data interactively.
 > 
@@ -57,11 +57,45 @@ objectives:
 > fit(n)
 > ```
 >
-{: .task}
+> > ## Solution
+> > 
+> > ```python
+> > import numpy as np
+> > from ipywidgets import interact
+> > import matplotlib.pyplot as plt
+> > %matplotlib inline
+> > 
+> > # gaussian function
+> > def gauss(x,param):
+> >     [a,b,c] = param
+> >     return a*np.exp(-b*(x-c)**2)
+> > 
+> > # gaussian array y in interval -5<x-5 
+> > nx = 100
+> > x = np.linspace(-5.,5.,nx)
+> > p = [2.0,0.5,1.5] # some parameters
+> > y = gauss(x,p)
+> > 
+> > # add some noise
+> > noise = np.random.normal(0,0.2,nx)
+> > y += noise
+> > 
+> > @interact
+> > def fit(n=(3,30)):
+> >     pfit = np.polyfit(x,y,n)
+> >     yfit = np.polyval(pfit,x)
+> >     plt.plot(x,y,"r",label="Data")
+> >     plt.plot(x,yfit,"b",label="Fit")
+> >     plt.legend()
+> >     plt.ylim(-0.5,2.5)
+> >     plt.show()
+> > ```
+> {: .solution}
+{: .challenge}
 
 ---
 
-> ## *Exercise 2a:* Cell profiling 
+> ## Cell profiling 
 > 
 > This exercise is about cell profiling, but you will get practice in 
 > working with magics and cells.
@@ -97,29 +131,137 @@ objectives:
 > 7. Can you spot a little mistake which is slowing down the code?
 > 8. In the next exercise you will install a line profiler which 
 >    will more easily expose the performance mistake.
-{: .task}
+> 
+> > ## Solution
+> > Split the code over multiple cells (e.g. using `Ctrl-Shift-minus`)
+> > ```python
+> > import numpy as np
+> > ```
+> > ```python
+> > def step():
+> >     import random
+> >     return 1. if random.random() > .5 else -1.
+> > ```
+> > ```python
+> > def walk(n):
+> >     x = np.zeros(n)
+> >     dx = 1. / n
+> >     for i in range(n - 1):
+> >         x_new = x[i] + dx * step()
+> >         if x_new > 5e-3:
+> >             x[i + 1] = 0.
+> >         else:
+> >             x[i + 1] = x_new
+> >     return x
+> > ```
+> > Initialize `n` and call `walk()`:
+> > ```python
+> > n = 100000
+> > x = walk(n)
+> > ```
+> > Plot the random walk
+> > ```python
+> > import matplotlib.pyplot as plt
+> > plt.plot(x);
+> > ```
+> > Time the execution using the `%timeit` line magic, and capture the output:
+> > ```python
+> > t1 = %timeit -o walk(n)
+> > ```
+> > Best result
+> > ```python
+> > t1.best
+> > ```
+> > Run with the `%%prun` cell profiler
+> > ```python
+> > %%prun
+> > walk(n)
+> > ```
+> {: .solution}
+{: .challenge}
 
 ---
 
-> ## *Exercise 2b:* Installing a magic command for line profiling 
+> ## Installing a magic command for line profiling 
 > 
 > Magics can be installed using `pip` and loaded like plugins using the 
 > `%load_ext` magic. You will now install a line-profiler to get more 
 > detailed profile, and hopefully find insight to speed up the code 
 > from the previous exercise.
 > 
-> 1. First install the line profiler using `!pip install line_profiler`.
-> 2. Next load it using `%load_ext line_profiler`.
-> 3. Have a look at the new magic command that has been enabled with `%lprun?`
-> 4. Load the `random_walk.py` into a new cell, and execute it.
-> 5. In a new cells, run the line profiler on each function of the example code using something like:   
-> `%lprun -f walk -f step walk(n)`
+> 1. If you haven't solved the previous exercise, copy paste the following code into a cell
+>    and run it:
+>    ```python
+>    import numpy as np
+>    import matplotlib.pyplot as plt
+>    
+>    def step():
+>        import random
+>        return 1. if random.random() > .5 else -1.
+>    
+>    def walk(n):
+>        x = np.zeros(n)
+>        dx = 1. / n
+>        for i in range(n - 1):
+>            x_new = x[i] + dx * step()
+>            if x_new > 5e-3:
+>                x[i + 1] = 0.
+>            else:
+>                x[i + 1] = x_new
+>        return x
+>    
+>    n = 100000
+>    x = walk(n)
+>    ```
+> 
+> 2. Then install the line profiler using `!pip install line_profiler`.
+> 3. Next load it using `%load_ext line_profiler`.
+> 4. Have a look at the new magic command that has been enabled with `%lprun?`
+> 5. In a new cell, run the line profiler on the `walk` and `step` functions in the way 
+>    described on the help page.
 > 6. Inspect the output. Can you more easily see the mistake now?
-{: .task}
+>
+> > ## Solution
+> > Copy-paste the code into a cell
+> > 
+> > Install the line profiler
+> > ```python
+> > !pip install line_profiler
+> > ```
+> > Load the IPython extension
+> > ```python
+> > %load_ext line_profiler
+> > ```
+> > See help:
+> > ```python
+> > %lprun?
+> > ```
+> > Use the line profiler on the `walk` function:
+> > ```python
+> > %lprun -f walk walk(10000)
+> > ```
+> > Aha, most time is spent on the line calling the `step()` function. 
+> > Run line profiler on `step`:
+> > ```python
+> > %lprun -f step walk(10000)
+> > ```
+> > Output:
+> > ```
+> > ...
+> >      8                                           def step():
+> >      9      9999       7488.0      0.7     52.3      import random
+> >     10      9999       6840.0      0.7     47.7      return 1. if random.random()
+> > ...
+> > ```
+> > Aha! Lot's of time is spent on importing the `random` module inside the `step` function 
+> > which is called thousands of times. Move the import statement to outside the function!
+> > 
+> {: .solution}
+{: .challenge}
 
 ---
 
-> ## *Exercise 3:* Data analysis with pandas dataframes 
+> ## Data analysis with pandas dataframes 
 > 
 > Data science and data analysis are key use cases of Jupyter. In this 
 > exercise you will familiarize yourself with dataframes and various 
@@ -189,9 +331,67 @@ objectives:
 > sns.heatmap(table,linewidths=.5);
 > ```
 >     - Have a look at the help page for `sns.heatmap` and see if you can find an input parameter which annotates each cell in the plot with the count number.
-{: .task}
+> 
+> > ## Solution
+> > 
+> > ```python
+> > import numpy as np
+> > import pandas as pd
+> > nobel = pd.read_csv("data/nobels.csv")
+> > ```
+> > ```python
+> > nobel["share"].describe()
+> > ```
+> > ```python
+> > nobel["bornCountryCode"].describe()
+> > ```
+> > - USA has received 275 prizes.
+> > - 76 countries have received at least one prize.
+> > 
+> > ```python
+> > nobel["born"] = pd.to_datetime(nobel["born"], errors ='coerce')
+> > ```
+> > Add column
+> > ```python
+> > nobel["age"] = nobel["year"] - nobel["born"].dt.year
+> > ```
+> > Print surname and age
+> > ```python
+> > nobel[["surname","age"]].head(10)
+> > ```
+> > ```python
+> > nobel["age"].plot.hist(bins=[20,30,40,50,60,70,80,90,100],alpha=0.6);
+> > ```
+> > ```python
+> > nobel.boxplot(column="age", by="category")
+> > ```
+> > Which Nobel laureates have been Swedish?
+> > ```python
+> > nobel.loc[nobel["bornCountry"] == "Sweden"]
+> > ```
+> > Finally, try the powerful `groupby()` method.  
+> > Add extra column with number of Nobel prizes per row (needed for statistics)
+> > ```python
+> > nobel["number"] = 1.0
+> > ```
+> > Pick a few countries to analyze further
+> > ```python
+> > countries = np.array(["Sweden", "United Kingdom", "France", "Denmark"])
+> > nobel2 = nobel.loc[nobel['bornCountry'].isin(countries)]
+> > ```
+> > ```python
+> > table = nobel2.pivot_table(values="number", index="bornCountry", 
+> >                            columns="category", aggfunc=np.sum)
+> > table
+> > ```
+> > ```python
+> > import seaborn as sns
+> > sns.heatmap(table,linewidths=.5, annot=True);
+> > ```
+> {: .solution}
+{: .challenge}
 
-> ## *Exercise 4:* Defining your own custom magic command 
+> ## Defining your own custom magic command 
 > 
 > It is possible to create new magic commands using the `@register_cell_magic` decorator from the `IPython.core` library. Here you will create a cell magic command that compiles C++ code and executes it.
 > 
@@ -237,11 +437,61 @@ objectives:
 > def load_ipython_extension(ipython):
 >     ipython.register_magic_function(cpp,'cell')
 > ```
-{: .task}
+> 
+> > ## Solution
+> > ```python
+> > from IPython.core.magic import register_cell_magic
+> > ```
+> > Add `load_ipython_extension` function, and write cell to file called `cpp_ext.py`:
+> > ```python
+> > %%writefile cpp_ext.py
+> > def cpp(line, cell):
+> >     """Compile, execute C++ code, and return the standard output."""
+> > 
+> >     # We first retrieve the current IPython interpreter instance.
+> >     ip = get_ipython()
+> >     # We define the source and executable filenames.
+> >     source_filename = '_temp.cpp'
+> >     program_filename = '_temp'
+> >     # We write the code to the C++ file.
+> >     with open(source_filename, 'w') as f:
+> >         f.write(cell)
+> >     # We compile the C++ code into an executable.
+> >     compile = ip.getoutput("g++ {0:s} -o {1:s}".format(
+> >         source_filename, program_filename))
+> >     # We execute the executable and return the output.
+> >     output = ip.getoutput('./{0:s}'.format(program_filename))
+> >     print('\n'.join(output))
+> > 
+> > def load_ipython_extension(ipython):
+> >     ipython.register_magic_function(cpp,'cell')
+> > ```
+> > Load extension:
+> > ```python
+> > %load_ext cpp_ext
+> > ```
+> > Get help on the cpp magic:
+> > ```python
+> > %%cpp?
+> > ```
+> > Hello World program in C++
+> > ```cpp
+> > %%cpp
+> > #include <iostream>
+> > using namespace std;
+> > 
+> > int main() 
+> > {
+> >     cout << "Hello, World!";
+> >     return 0;
+> > }
+> > ```
+> {: .solution}
+{: .challenge}
 
 ---
 
-> ## *Exercise 5:* Parallel Python with ipyparallel
+> ## Parallel Python with ipyparallel
 > 
 > Traditionally, Python is considered to not support parallel programming very 
 > well ([see "GIL"](https://en.wikipedia.org/wiki/Global_interpreter_lock)), 
@@ -279,7 +529,7 @@ objectives:
 > 4. You have now started the parallel engines. To run something simple on 
 >    each one of them, try the `apply_sync()` method:
 > ```python
-> cluster[:].apply_sync(lambda : "Hello, World")
+> dview.apply_sync(lambda : "Hello, World")
 > ```
 > 5. A serial evaluation of squares of integers can be seen in the code 
 >    snippet below. 
@@ -335,11 +585,82 @@ objectives:
 > should be used, and significant speedup can be obtained with just-in-time 
 > compilation with [Numba](https://numba.pydata.org/) and/or C-extensions 
 > from [Cython](http://cython.org/).
-{: .task}
+>
+> > ## Solution
+> > 
+> > Open terminal, run `ipcluster start` and wait a few seconds for the engines to start.  
+> > Import module, create client and DirectView object:
+> > ```python
+> > import ipyparallel as ipp
+> > client = ipp.Client()
+> > dview = client[:]
+> > dview
+> > ```
+> > ```
+> > <DirectView [0, 1, 2, 3]>
+> > ```
+> > Time the serial evaluation of the squaring lambda function:
+> > ```python
+> > %%timeit -n 1
+> > serial_result = list(map(lambda x:x**2, range(30)))
+> > ```
+> > Use the `map_sync` method of the DirectView instance:
+> > ```python
+> > %%timeit -n 1
+> > parallel_result = list(dview.map_sync(lambda x:x**2, range(30)))
+> > ```
+> > There probably won't be any speedup due to the communication overhead. 
+> > 
+> > Focus instead on computing $\\pi$. Import modules, export `random` module to engines:
+> > ```python
+> > from random import random
+> > from math import pi
+> > dview['random'] = random
+> > ```
+> > ```python
+> > def mcpi(nsamples):
+> >     s = 0
+> >     for i in range(nsamples):
+> >         x = random()
+> >         y = random()
+> >         if x*x + y*y <= 1:
+> >             s+=1
+> >     return 4.*s/nsamples
+> > ```
+> > ```python
+> > %%timeit -n 1
+> > mcpi(int(1e7))
+> > ```
+> > ```
+> > 3.05 s ± 97.1 ms per loop (mean ± std. dev. of 7 runs, 1 loop each)
+> > ```
+> > Function for splitting up the samples and dispatching the chunks to the engines:
+> > ```python
+> > def multi_mcpi(view, nsamples):
+> >     p = len(view.targets)
+> >     if nsamples % p:
+> >         # ensure even divisibility
+> >         nsamples += p - (nsamples%p)
+> >     
+> >     subsamples = nsamples//p
+> >     
+> >     ar = view.apply(mcpi, subsamples)
+> >     return sum(ar)/p
+> > ```
+> > ```python
+> > %%timeit -n 1
+> > multi_mcpi(dview, int(1e7))
+> > ```
+> > ```
+> > 1.71 s ± 30.4 ms per loop (mean ± std. dev. of 7 runs, 1 loop each)
+> > ```
+> > Some speedup is seen!
+> {: .solution}
+{: .challenge}
 
 ---
 
-> ## *Exercise 6:* Mixing Python and R 
+> ## Mixing Python and R 
 > 
 > Your goal now is to define a pandas dataframe, and pass it into an R cell 
 > and plot it with an R plotting library.
@@ -373,11 +694,32 @@ objectives:
 > ```
 > 
 > 5. Play around with the flags for height, width, units and resolution to get a good looking graph.
-{: .task}
+> 
+> > ## Solution
+> > 
+> > ```python
+> > import pandas as pd
+> > df = pd.DataFrame({
+> >  'cups_of_coffee': [0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
+> >  'productivity': [2, 5, 6, 8, 9, 8, 0, 1, 0, -1]
+> > })
+> > ```
+> > ```python 
+> > %load_ext rpy2.ipython
+> > ```
+> > ```python
+> > %%R -i df -w 6 -h 4 --units cm -r 200
+> > # the first line says 'import df and make default figure size 5 by 5 inches 
+> > # with resolution 200. You can change the units to px, cm, etc. as you wish.
+> > library(ggplot2)
+> > ggplot(df, aes(x=cups_of_coffee, y=productivity)) + geom_line();
+> > ```
+> {: .solution}
+{: .challenge}
 
 ---
 
-> ## *Exercise 7:* Word-count analysis with widgets
+> ## Word-count analysis with widgets
 > 
 > This exercise uses the 
 > [word-count project](https://github.com/coderefinery/word-count) 
@@ -463,4 +805,27 @@ objectives:
 > 7. Add another widget parameter `nmax` to the above code to control the 
 >    number of words displayed on the x-axis, e.g. `nmax=(6,14)`, and play 
 >    around with both sliders.
-{: .task}
+> 
+> > ## Solution
+> > 
+> > Code for a widget with sliding bars for both number of words and the inverse power:
+> > ```python
+> > from ipywidgets import interact
+> > import matplotlib.pyplot as plt
+> > %matplotlib inline
+> > 
+> > @interact(nmax=(6,14), p=-1.0)
+> > def zipf_plot(nmax, p):
+> >     plt.clf()
+> >     #plt.figure() 
+> >     n = range(1,nmax+1)
+> >     for f in ["data/isles.dat", "data/last.dat", "data/abyss.dat", 
+> >               "data/sierra.dat"]:
+> >         z = zipf.zipf_analysis(f, nmax)
+> >         z_norm = [i/z[0] for i in z]
+> >         plt.plot(n,z_norm)
+> >     inv_n = [i**p for i in n]
+> >     plt.plot(n, inv_n)
+> > ```
+> {: .solution}
+{: .challenge}
