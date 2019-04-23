@@ -540,7 +540,7 @@ objectives:
 >    `map_sync()` method of the DirectView instance. Time both serial 
 >    and parallel versions using `%%timeit -n 1`.
 > 
-> 6. You will now parallelize the evaluation of $\pi$ using a Monte Carlo 
+> 6. You will now parallelize the evaluation of $\\pi$ using a Monte Carlo 
 >    method. First load modules, and export the `random` module to the engines:
 > ```python
 > from random import random
@@ -548,7 +548,7 @@ objectives:
 > dview['random'] = random
 > ```
 > Then execute the following code in a cell. The function `mcpi` is a Monte 
-> Carlo method to calculate $\pi$. Time the execution of this function using 
+> Carlo method to calculate $\\pi$. Time the execution of this function using 
 > `%timeit -n 1` and a sample size of 10 million (`int(1e7)`).
 > ```python
 > def mcpi(nsamples):
