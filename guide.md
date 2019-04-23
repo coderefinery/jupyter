@@ -1,119 +1,71 @@
 # Instructor guide
 
 
-## Basics of Jupyter
+## Motivation
 
-In the first notebook, `basics_of_jupyter.ipynb`, the first half 
-is a presentation of what Jupyter and JupyterLab is and what it can do.
+How the instructor introduces and motivates Jupyter notebooks is flexible and 
+can depend on the instructor's background. The first episode emphasizes the 
+"computational narrative" aspect of notebooks, and highlights a few 
+common use cases. The gravitational-wave discovery is used as a motivational 
+example, and it's helpful if the instructor clicks the mybinder link to see how 
+the notebooks become available for interactive exploration in the cloud.
+The instructor should also open the link "Gallery of interesting Jupyter notebooks"
+to show the wide variety of notebooks that people have shared online.
 
-For inspiration, the instructor can open in a new tab the gravitational wave webpage with notebooks, and show how they can be launched in the cloud. It's also good to open the "Gallery of interesting Jupyter Notebooks" link to show a flavor of what's out there.
 
-The IDE section is adopted from the retired IDE lesson, and is included here as a general 
-discussion about IDEs.. The instructor can ask the audience what, if any, IDEs they are using, and briefly discuss various pros and cons. 
+## The JupyterLab interface
 
-### Simple type-along
+The second episode deals with the JupyterLab interface and how notebooks work. At 
+this stage the instructor should open Jupyter-Lab, demonstrate the 
+interface by clicking around and then launch a new notebook. Inside this notebook 
+the instructor can add headings and text and a simple code cell to illustrate 
+how cells work (copy-pasting from the lesson works well). A few important keyboard 
+shortcuts can be demonstrated.
 
-To show that Jupyter Notebooks are rather simple and intuitive, it is good to 
-create a new code cell (e.g. under the Code Cells section) and type some simple code, 
-execute it and show that the output is displayed below.  
-The type-along exercise in the jupyter-usecases notebook is more advanced so it's good 
-to show some simple usage first.
-
-### Version control of notebooks
+There is a discussion point on integrated development environments. This can 
+be used as a discussion exercise, where participants are invited to talk about 
+their prefered way to write code. The instructur can mention that JupyterLab is 
+sort of like an IDE for notebooks.
 
 There's a paragraph on Git extensions to Jupyter notebooks and JupyterLab (nbdime, jupyterlab-git, jupyterlab/github). It is useful if the instructor has installed and enabled these extensions in order to demostrate how they are used:
 - `nbdime`: show how the `git` button works in the notebook (it opens a new window with git diff output)
 - `jupyterlab-git`: show how the new Git button on the left menubar works. One can add and commit files, unstage, push and pull, create branches etc.
 - `jupyterlab-github`: show how one can browse repositories on GitHub, open online notebooks and run them locally (in local Python environment) or launch them on mybinder.org
 
+Take-home messages:
+- The JupyterLab interface is flexible and one can customize the workspace by dragging 
+  notebooks, terminals and text editors around.
+- There are code cells and markdown cells that work differently, and there are 
+  command and edit modes. It's easy to switch between these.
+- The Git integration in JupyterLab is powerful and enables tracking notebooks in just 
+  the same way as one would with source code files.
+
+## Simple type-along
+
+To show that Jupyter Notebooks are rather simple and intuitive, the third episode
+demonstrates the building up of a computational narrative 
+to compute pi and adding comments, equations and figures. 
+The instructor should create a new notebook, name it and then copy-paste from the lesson 
+into notebook cells. Learners should be given time to follow along interactively.
+
+Take-home messages:
+- Notebooks provide a simple and interactive tool for various kinds of analysis. 
+- Keyboard shortcuts enable efficient usage. The instructor should clearly
+  explain the most common ones for executing cells, creating new cells, changing 
+  between markdown and code cells, etc.
+- The execution order of cells matters, the instructor can demonstrate this by 
+  going up and down in the notebook.
 
 
-## Jupyter usecases
+## Magics, shell commands, widgets
 
-### Type-along exercise 1
-
-In the interactive type-along exercise, the instructor should explain
-clearly:
-- How to toggle between code and markdown cells
-- Edit mode and Command mode
-- How to execute a cell
-- How to insert, copy, paste and remove cells
-- Get help with ?
-- The importance of execution order - discuss prompt numbers.
-- How to use keyboard shortcuts efficiently.
-- The difference between executing a cell with `Shift-Enter`, `Ctrl-Enter` or `Alt-Enter`.
-- One can edit the cell by clicking on it, or pressing `Enter` when it's selected.
-- One can run the cell by pressing the play-button in the toolbar, or press `Shift-Enter`.
-
-The first 4 steps of the exercise are about the JupyterLab interface and the instructor should 
-practice these steps before the workshop. The remaining steps can be performed as follows:
-
-`5. In terminal, change directory to the `word-count` example project (if you don't already have it, clone `https://github.com/coderefinery/word-count.git`). Run `snakemake -s Snakefile_all` (this could be done from notebook too).`
-
-```shell
-$ cd ../word-count
-$ snakemake -s Snakefile_all
-```
-
-`6. In notebook, use a magic to load the word-count project README file at the top, and add a heading.`
-
-```python
-%load ../word-count/README.md
-```
-
-`7. In notebook, create a directory `zipf-test`, and copy the `word_count/processed_data` folder to it.`
-
-```python
-%mkdir zipf-test
-%cp -r ../word-count/processed_data zipf_test/
-```
-
-`8. Copy-paste the code below to a code cell (pretending that we just wrote it), and save it to a file `zipf.py``
-
-```python
-# copy paste the code, and add at the top:
-%%writefile zipf.py
-```
-- The instructor can remove the cell again, mentioning that it's good practice to write tested and finished code to an external module and then import it to notebook:
-  ```python
-     import zipf
-     zipf.top_n_word?
-  ```
-
-`9. Run the `zipf_analysis()` function for a processed datafile. Plot the output, and compare with a 1/N function.`
-
-```python
-nmax = 10
-z = zipf_analysis("processed_data/isles.dat", nmax)
-n = range(1,nmax+1)
-z_norm = [i/z[0] for i in z]
-plt.plot(n,z_norm)
-
-inv_n = [1.0/i for i in n]
-plt.plot(n, inv_n)
-```
+Take-home messages:
+- There is more to notebooks than just code.
+- Magics and shell commands can be useful for various kinds of workflows, and enable 
+  users to stay within the notebook instead of jumping to another terminal.
+- Widgets add even more interactivity to notebooks.
 
 
-### Type-along exercise 2
 
-Here the instructor should change the code from step 9 above to the following:
 
-```python
-import matplotlib.pyplot as plt
-from ipywidgets import interact
 
-%matplotlib inline
-```
-
-```python
-@interact(nmax=(6,14), p=-1.0)
-def zipf_plot(nmax, p):
-    plt.clf()
-    #plt.figure() 
-    z = zipf_analysis("processed_data/last.dat", nmax)
-    n = range(1,nmax+1)
-    z_norm = [i/z[0] for i in z]
-    plt.plot(n,z_norm)
-    inv_n = [i**p for i in n]
-    plt.plot(n, inv_n)
-```
