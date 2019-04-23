@@ -5,6 +5,18 @@ permalink: /guide/
 
 # Instructor guide
 
+## Requirements
+
+These are the packages used in the lesson material and exercises:
+- jupyter
+- jupyterlab
+- nodejs (for widgets to work)
+- ipywidgets
+- numpy
+- matplotlib
+- pandas
+- seaborn
+
 ## Motivation
 
 How the instructor introduces and motivates Jupyter notebooks is flexible and 
