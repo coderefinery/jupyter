@@ -1,5 +1,9 @@
-# Instructor guide
+---
+layout: default
+permalink: /guide/
+---
 
+# Instructor guide
 
 ## Motivation
 
