@@ -1,7 +1,7 @@
 ---
 layout: episode
 title: The JupyterLab and notebook interface
-teaching: 10
+teaching: 15
 exercises: 0
 questions:
  - How does the JupyterLab interface work?

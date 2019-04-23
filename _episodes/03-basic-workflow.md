@@ -1,8 +1,8 @@
 ---
 layout: episode
 title: A first computational notebook
-teaching: 10
-exercises: 0
+teaching: 0
+exercises: 20
 questions:
  - What does a simple notebook with some analysis look like?
  - How can keyboard shortcuts speed up my work?

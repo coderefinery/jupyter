@@ -2,7 +2,7 @@
 layout: episode
 title: Shell commands, magics and widgets
 teaching: 10
-exercises: 0
+exercises: 15
 questions:
  - Are there any other features besides code, text and output?
 objectives:

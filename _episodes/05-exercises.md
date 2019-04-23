@@ -1,8 +1,8 @@
 ---
 layout: episode
 title: Exercises
-teaching: 10
-exercises: 0
+teaching: 0
+exercises: 30
 questions:
  - Mixed exercises to practice various aspects of using Jupyter
 objectives:
