@@ -45,10 +45,7 @@ fall within the unit circle.
 >
 > 3. Add an image to explain the concept:
 > ```
-> !wget https://coderefinery.github.io/jupyter/img/darts.svg
-> ```
-> ```
-> ![Darts](darts.svg)
+> ![Darts](https://coderefinery.github.io/jupyter/img/darts.svg)
 > ```
 >
 > 4. Import `random` module:
