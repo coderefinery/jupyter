@@ -35,3 +35,22 @@ Note: the Google, Microsoft and CoCalc platforms are free but have paid subscrip
 - If you are already using Jupyter, what tasks do you use it for? 
 - If you are new to Jupyter, do you see any possible use cases?
 - Do you think Jupyter Notebooks can help tackle the problem of irreproducible results?
+
+
+But Notebooks have some [pitfalls](https://scicomp.aalto.fi/scicomp/jupyter-pitfalls.html)
+
+- They **don't promote modularity**, and once you get started in a
+  notebook it can be hard to migrate to modules.
+- They are **difficult to test**.  There are things to run notebooks as
+  unit tests like [nbval](https://nbval.readthedocs.io/), but it's not
+  perfect.
+- Notebooks can be **version controlled**
+  ([nbdime](https://nbdime.readthedocs.io/) helps with that), but
+  there are **still limitations**.
+- You can **change code after you run it** and run code out of order.
+  This can make debugging hard and results irreproducible if you
+  aren't careful.
+- Notebooks **aren't named by default** and tend to **acquire a bunch of
+  unrelated stuff**.  Be careful with organization!
+- Once lots of code is in notebooks, it can be **hard to change to
+  proper programs that can be scripted**.
