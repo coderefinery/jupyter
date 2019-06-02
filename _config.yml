@@ -1,6 +1,5 @@
 fork_me_ribbon_url: https://github.com/coderefinery/jupyter
 title: "Jupyter and JupyterLab"
-start_time: 570  # 9:30
 
 # where things are
 source: .
