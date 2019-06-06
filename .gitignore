@@ -1,6 +1,4 @@
-__pycache__
-.ipynb_checkpoints/
-data/.ipynb_checkpoints/
-img/.ipynb_checkpoints/
-Untitled*.ipynb
+_site/
+.sass-cache/
+.jekyll-metadata
 *~
