@@ -1,4 +1,4 @@
-# Jupyter and JupyterLab 
+# Jupyter and JupyterLab
 
 - [Credit and license](https://coderefinery.github.io/jupyter/license/)
 
@@ -21,7 +21,3 @@ $ export PATH=$PATH:$HOME/.gem/bin
 $ bundler install
 $ bundle exec jekyll serve
 ```
-
-
-
-
