@@ -25,6 +25,8 @@ It is a highly modular and customizable interface.
 
 Let's have a look at how it works. We go to terminal, and type:
 ```shell
+$ mkdir jupyterlab-demo
+$ cd jupyterlab-demo
 $ jupyter-lab
 ```
 - On Windows, the JupyterLab App can also be launched by clicking on the JupyterLab icon in the Anaconda menu.
@@ -152,7 +154,8 @@ Some shortcuts only work in Command or Edit mode.
 ## Version control of notebooks
 
 Jupyter Notebooks are stored in json format, which doesn't play nicely with Git, but the [nbdime](http://nbdime.readthedocs.io/en/latest/) package provides "content-aware" diffing and merging.
-- Can be installed with `pip install nbdime`. 
+- Can be installed with `pip install nbdime` and activated by 
+  `nbdime extensions --enable``
 - `git diff` and `git merge` will use nbdime's diff and merge for notebook files, but leave Git's behavior unchanged for non-notebook files.
 
 Two additional packages increase the Git integration even further:
@@ -160,3 +163,22 @@ Two additional packages increase the Git integration even further:
 - [jupyterlab/github](https://www.npmjs.com/package/@jupyterlab/github) is a JupyterLab extension for accessing GitHub repositories.
 
 All three extension can be used from within the JupyterLab interface.
+
+> ## Working with Git from JypyterLab
+> 
+> - Make sure that you have installed the [Git extension](https://coderefinery.github.io/installation/jupyter/#git-extension) and 
+    [nbdime](https://coderefinery.github.io/installation/jupyter/#diffingmerging-notebooks) for JupyterLab 
+> - Initialize a Git repository from the top Git menu 
+> - Make a few changes to a notebook and save it
+> - Use the left-hand Git menu to stage the notebook and commit it
+> - Go to GitHub and create a new repository, e.g. jupyterlab-demo 
+> - Open a terminal inside JupyterLab and set the remote, e.g.
+>   `git remote add origin https://github.com/user/jupyterlab-demo.git`
+> - The first push needs to be done via terminal (to set the upstream 
+>   branch for our local master branch):  
+>   `git push -u origin master`
+> - Future pushes (and pulls) can be done from the left-hand Git menu
+> - Make another change to the notebook and save it, and click the 
+>   `git` button in the notebook menu bar. This button uses `nbdime` 
+>   to display a readable `git diff`
+{: .task}
