@@ -122,7 +122,7 @@ def g(x, y, s):
 
 > ## A few useful magic commands
 >
-> Using the computing-$\\pi$ notebook, practice using a few magic commands.
+> Using the computing-pi notebook, practice using a few magic commands.
 > Remember that cell magics need to be on the first line of the cell.
 > 1. In the cell with the for-loop over `N` (throwing darts), add the 
 >    ``%%timeit`` cell magic and run the cell.
@@ -143,7 +143,7 @@ def g(x, y, s):
 > ## Playing around with a widget
 >
 > Widgets can be used to interactively explore or analyze data.
-> Using the computing-$\\pi$ notebook, introduce a widget which plots
+> Using the computing-pi notebook, introduce a widget which plots
 > subsets of all the random points:
 > 1. Change the last two lines of the plotting cell into a function 
 >    taking a tuple as argument, and slice the `points` list:
@@ -155,5 +155,5 @@ def g(x, y, s):
 > 2. Add the `@interact` decorator above the function, and execute the cell.
 > 3. Drag the slider back and forth and observe the results.
 > 4. Can you think of other interesting uses of widgets in the 
->    computing-$\\pi$ notebook?   
+>    computing-pi notebook?   
 {: .task}

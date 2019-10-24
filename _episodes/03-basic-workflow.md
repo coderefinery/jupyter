@@ -24,7 +24,7 @@ Let's create our first real computational narrative in a Jupyter notebook.
 
 <img src="{{ site.baseurl }}/img/pi_with_darts.png" width="30%">
 
-Imagine you are on a desert island and wish to compute $\\pi$. 
+Imagine you are on a desert island and wish to compute pi. 
 You have a computer with you with Python installed but no 
 math libraries and no Wikipedia.
 
@@ -32,7 +32,7 @@ Here is one way of doing it - "throwing darts" by generating
 random points within a square area and checking whether the points 
 fall within the unit circle.
 
-> ## Calculating $\\pi$ using Monte Carlo methods
+> ## Calculating pi using Monte Carlo methods
 > 
 > 1. Create a new notebook, name it, and add a heading.
 > 2. Document the relevant formulas in a new cell:
@@ -79,7 +79,7 @@ fall within the unit circle.
 > pyplot.scatter(x, y, c=colors)
 > ```
 > 
-> 8. Compute final estimate of $\\pi$:
+> 8. Compute final estimate of pi:
 > ```python
 > fraction = hits / N
 > 4 * fraction
