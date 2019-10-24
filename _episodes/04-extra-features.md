@@ -145,15 +145,37 @@ def g(x, y, s):
 > Widgets can be used to interactively explore or analyze data.
 > Using the computing-pi notebook, introduce a widget which plots
 > subsets of all the random points:
-> 1. Change the last two lines of the plotting cell into a function 
+> 1. If you haven't finished the previous episode, copy-paste this 
+>    code into a cell:
+>    ```python
+>    import random
+>    %matplotlib inline
+>    from matplotlib import pyplot
+>    from ipywidgets import interact
+>    
+>    N = 1000
+>    points = [] 
+>    
+>    hits = 0
+>    for i in range(N):
+>        x, y = random.random(), random.random()
+>        if x**2 + y**2 < 1:
+>            hits += 1
+>            points.append((x,y, True))
+>        else:
+>            points.append((x,y, False))
+>    
+>    x, y, colors = zip(*points)
+>    ```
+> 2. Change the last two lines of the plotting cell into a function 
 >    taking a tuple as argument, and slice the `points` list:
 >    ```python
 >    def plot_points(n=(1,10)):
 >        x, y, colors = zip(*points[::n])
 >        pyplot.scatter(x, y, c=colors)
 >    ```
-> 2. Add the `@interact` decorator above the function, and execute the cell.
-> 3. Drag the slider back and forth and observe the results.
-> 4. Can you think of other interesting uses of widgets in the 
+> 3. Add the `@interact` decorator above the function, and execute the cell.
+> 4. Drag the slider back and forth and observe the results.
+> 5. Can you think of other interesting uses of widgets in the 
 >    computing-pi notebook?   
 {: .task}
