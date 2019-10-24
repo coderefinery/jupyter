@@ -29,6 +29,27 @@ objectives:
 
 Note: the Google, Microsoft and CoCalc platforms are free but have paid subscriptions for faster access to cloud resources
 
+> ## Making your notebooks reproducible by anyone via mybinder
+> 
+> - Create a `requirements.txt` file in your notebook repository, e.g.
+>   ```
+>   ipywidgets==7.4.2
+>   numpy==1.16.4
+>   matplotlib==3.1.0
+>   ```
+> - Commit and push
+> - Visit [https://mybinder.org/](https://mybinder.org/), and paste in 
+>   the URL of your notebook repository
+> - Click on the arrow next to the "Cope the text below..." to expand it
+> - Copy the markdown line which begins with `[![Binder](https://mybinder.org/badge_logo.svg)]`, and paste it into a README.md file for your 
+>   notebook repository. Commit and push it. 
+> - Check that your notebook repository now has a "launch binder" 
+>   button in your README file on GitHub
+> - Try clicking the button and see how your repository in launched 
+>   on mybinder. Your notebooks can now be expored and executed in the cloud.
+> - Enjoy being fully reproducible!
+{: .task}
+
 
 ## Final discussion
 
