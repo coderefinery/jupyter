@@ -162,7 +162,7 @@ Two additional packages increase the Git integration even further:
 - [jupyterlab-git](https://github.com/jupyterlab/jupyterlab-git) is a JupyterLab extension for version control using Git, and
 - [jupyterlab/github](https://www.npmjs.com/package/@jupyterlab/github) is a JupyterLab extension for accessing GitHub repositories.
 
-All three extension can be used from within the JupyterLab interface.
+All three extensions can be used from within the JupyterLab interface.
 
 > ## Working with Git from JypyterLab
 > 
