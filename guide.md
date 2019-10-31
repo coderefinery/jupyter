@@ -38,6 +38,20 @@ to go into this episode, participants can choose whichever exercises they find i
 A key take-home message from this lesson should be that Jupyter notebooks 
 can be a very useful tool for reproducible research, if used wisely.
 
+## Intended learning outcomes
+
+By the end of this lesson, learners should:
+- be able to explain what a computational narrative is 
+- be able to identify areas of their own work where Jupyter notebooks could be an appropriate tool
+- be able to use the JupyterLab user interface somewhat efficiently
+- be able to use magics, shell commands and widgets in their own notebooks
+- understand that version control is equally important for notebooks as for other code
+- know how to version control notebooks efficiently using JupyterLab plugins and the nbdime tool
+- realize that notebooks can be used to document scientific analysis, and published 
+  e.g. as supplementary information with journal articles to aid reproducibility
+- know how to share notebooks via mybinder
+- be able to relate to the possible pitfalls of using notebooks
+- be able to distinguish good and bad examples of notebook usage 
 
 ## Requirements
 
