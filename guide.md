@@ -53,7 +53,9 @@ By the end of this lesson, learners should:
 - be able to relate to the possible pitfalls of using notebooks
 - be able to distinguish good and bad examples of notebook usage 
 
-## Requirements
+## How to teach this lesson
+
+### Requirements
 
 These are the packages used in the lesson material and exercises:
 - jupyter
@@ -65,7 +67,7 @@ These are the packages used in the lesson material and exercises:
 - pandas
 - seaborn
 
-## Motivation
+### Motivation
 
 How the instructor introduces and motivates Jupyter notebooks is flexible and 
 can depend on the instructor's background. The first episode emphasizes the 
@@ -77,7 +79,7 @@ The instructor should also open the link "Gallery of interesting Jupyter noteboo
 to show the wide variety of notebooks that people have shared online.
 
 
-## The JupyterLab interface
+### The JupyterLab interface
 
 The second episode deals with the JupyterLab interface and how notebooks work. At 
 this stage the instructor should open Jupyter-Lab, demonstrate the 
@@ -91,10 +93,19 @@ be used as a discussion exercise, where participants are invited to talk about
 their prefered way to write code. The instructur can mention that JupyterLab is 
 sort of like an IDE for notebooks.
 
-There's a paragraph on Git extensions to Jupyter notebooks and JupyterLab (nbdime, jupyterlab-git, jupyterlab/github). It is useful if the instructor has installed and enabled these extensions in order to demostrate how they are used:
+There's a paragraph and an exercise on Git extensions to Jupyter notebooks and JupyterLab 
+(nbdime, jupyterlab-git, jupyterlab/github). It is useful if the instructor has installed and 
+enabled these extensions in order to demostrate how they are used:
 - `nbdime`: show how the `git` button works in the notebook (it opens a new window with git diff output)
-- `jupyterlab-git`: show how the new Git button on the left menubar works. One can add and commit files, unstage, push and pull, create branches etc.
-- `jupyterlab-github`: show how one can browse repositories on GitHub, open online notebooks and run them locally (in local Python environment) or launch them on mybinder.org
+- `jupyterlab-git`: show how the new Git button on the left menubar works. One can add and commit files, 
+  unstage, push and pull, create branches etc.
+- `jupyterlab-github`: show how one can browse repositories on GitHub, open online notebooks and run them 
+  locally (in local Python environment) or launch them on mybinder.org
+
+After discussing the Git integrations, the instructor should encourage participants to 
+initialize a Git repo in their notebook directory, and commit the first "testing" notebook.
+They can do this via the JupyterLab interface if they have the plugins installed, or via 
+terminal inside JupyterLab, or via regular terminal.
 
 Take-home messages:
 - The JupyterLab interface is flexible and one can customize the workspace by dragging 
@@ -104,13 +115,16 @@ Take-home messages:
 - The Git integration in JupyterLab is powerful and enables tracking notebooks in just 
   the same way as one would with source code files.
 
-## Simple type-along
+### A first computational notebook
 
 To show that Jupyter Notebooks are rather simple and intuitive, the third episode
 demonstrates the building up of a computational narrative 
 to compute pi and adding comments, equations and figures. 
-The instructor should create a new notebook, name it and then copy-paste from the lesson 
-into notebook cells. Learners should be given time to follow along interactively.
+The instructor should create a new notebook, name it and then type out or copy-paste from the lesson 
+into notebook cells. Learners should be given time to follow along interactively. 
+
+After the notebook is completed, participants and instructor should commit it to the 
+repository.
 
 Take-home messages:
 - Notebooks provide a simple and interactive tool for various kinds of analysis. 
@@ -121,7 +135,7 @@ Take-home messages:
   going up and down in the notebook.
 
 
-## Magics, shell commands, widgets
+### Shell commands, magics and widgets
 
 Take-home messages:
 - There is more to notebooks than just code.
@@ -129,7 +143,24 @@ Take-home messages:
   users to stay within the notebook instead of jumping to another terminal.
 - Widgets add even more interactivity to notebooks.
 
+### Sharing notebooks
 
+This episode has a list of services and tools to share and collaborate on Jupyter 
+notebooks. The instructor doesn't have to go through each item in the list, but 
+rather emphasize that many services and tools built around Jupyter exist.
+
+The exercise on making notebooks reproducible via mybinder is an important one as 
+it connects with other lessons and emphasizes the reproducibility benefits of notebooks. 
+If time allows, the instructor can let participants set up a remote repository on GitHub
+for their local notebook repos, and push to the remote. After that they can follow the 
+exercise steps to obtain a mybinder badge to add to their repository README files.  
+If time is short, the instructor can instead just demonstrate all steps and encourage 
+participants to try it out themselves later.
+
+### Exercises
+
+If time allows, participants can spend some time on solving the exercises they are 
+most interested in.
 
 
 
