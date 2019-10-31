@@ -5,6 +5,40 @@ permalink: /guide/
 
 # Instructor guide
 
+## Why we teach this lesson
+
+When CodeRefinery started teaching this lesson it was meant to introduce participants 
+to a cool new tool around which there was a lot of buzz (particularly in data science), 
+and which could be useful to researchers to quickly prototype code and analyze data in an interactive way. 
+Since then, more and more participants are already using Jupyter for various purposes
+when they come to a workshop. 
+
+One purpose of teaching this lesson is still to introduce Jupyter to participants who haven't 
+used it before. The episodes "Motivation", "The JupyterLab and notebook interface" and 
+"A first computational notebook" are meant to inspire participants to use notebooks for 
+certain appropriate tasks, highlighting in particular the "computational narrative" aspect
+which is brilliantly enabled by notebooks.
+
+But to cater to participants who already use Jupyter, the lesson also covers 
+topics which might not be well known, or at least not well used, such as
+- version control of Jupyter notebooks through JupyterLab plugins
+- widgets for even more interactivity when e.g. analyzing data
+- useful magic commands to time, profile and debug code cells
+- using notebooks more efficiently, e.g. by keyboard shortcuts and quick access to documentation
+- making notebooks reproducible by anyone via mybinder
+
+Especially the first and last points connect well with the rest of the CodeRefinery lessons, 
+and as more and more researchers use notebooks in their daily work it will be important 
+to focus on these aspects when teaching this lesson.
+
+Finally, the "Exercises" episode has a long list of exercises focusing on 
+different aspects and use cases of notebooks. In workshops where there is enough time 
+to go into this episode, participants can choose whichever exercises they find interesting.
+
+A key take-home message from this lesson should be that Jupyter notebooks 
+can be a very useful tool for reproducible research, if used wisely.
+
+
 ## Requirements
 
 These are the packages used in the lesson material and exercises:
