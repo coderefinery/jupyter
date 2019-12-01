@@ -15,13 +15,13 @@ objectives:
 - You can enter a URL, GitHub repo or username, or GIST ID in [`nbviewer`](https://nbviewer.jupyter.org/) and view a rendered Jupyter notebook
 - Read the Docs can render Jupyter Notebooks via the [nbsphinx package](https://nbsphinx.readthedocs.io/)
 - [Binder](https://mybinder.org/) creates live notebooks based on a GitHub repository
-- [CoCalc](https://cocalc.com/) (formerly SageMathCloud) allows collaborative editing of notebooks in the cloud 
+- [CoCalc](https://cocalc.com/) (formerly SageMathCloud) allows collaborative editing of notebooks in the cloud
 - Google's [colaboratory](https://colab.research.google.com/) lets you work on notebooks in the cloud, and you can [read and write to notebook files on Drive](https://colab.research.google.com/notebooks/io.ipynb)
 - [Microsoft Azure Notebooks](https://notebooks.azure.com/) also offers free notebooks in the cloud
-- [JupyterLab](https://github.com/jupyterlab/jupyterlab) supports sharing and collaborative editing of notebooks via Google Drive 
+- [JupyterLab](https://github.com/jupyterlab/jupyterlab) supports sharing and collaborative editing of notebooks via Google Drive
 - [Notedown](https://github.com/aaren/notedown), [Jupinx](https://github.com/QuantEcon/sphinxcontrib-jupyter) and [DocOnce](https://github.com/hplgit/doconce) can take Markdown or Sphinx files and generate Jupyter Notebooks
 - The `jupyter nbconvert` tool can convert a (`.ipynb`) notebook file to:
-    - python code (`.py` file) 
+    - python code (`.py` file)
     - an HTML file
     - a LaTeX file
     - a PDF file
@@ -30,7 +30,7 @@ objectives:
 Note: the Google, Microsoft and CoCalc platforms are free but have paid subscriptions for faster access to cloud resources
 
 > ## Making your notebooks reproducible by anyone via mybinder
-> 
+>
 > - Create a `requirements.txt` file in your notebook repository, e.g.
 >   ```
 >   ipywidgets==7.4.2
@@ -38,14 +38,14 @@ Note: the Google, Microsoft and CoCalc platforms are free but have paid subscrip
 >   matplotlib==3.1.0
 >   ```
 > - Commit and push
-> - Visit [https://mybinder.org/](https://mybinder.org/), and paste in 
+> - Visit [https://mybinder.org/](https://mybinder.org/), and paste in
 >   the URL of your notebook repository
 > - Click on the arrow next to the "Cope the text below..." to expand it
-> - Copy the markdown line which begins with `[![Binder](https://mybinder.org/badge_logo.svg)]`, and paste it into a README.md file for your 
->   notebook repository. Commit and push it. 
-> - Check that your notebook repository now has a "launch binder" 
+> - Copy the markdown line which begins with `[![Binder](https://mybinder.org/badge_logo.svg)]`, and paste it into a README.md file for your
+>   notebook repository. Commit and push it.
+> - Check that your notebook repository now has a "launch binder"
 >   button in your README file on GitHub
-> - Try clicking the button and see how your repository in launched 
+> - Try clicking the button and see how your repository in launched
 >   on mybinder. Your notebooks can now be expored and executed in the cloud.
 > - Enjoy being fully reproducible!
 {: .task}
@@ -53,7 +53,7 @@ Note: the Google, Microsoft and CoCalc platforms are free but have paid subscrip
 
 ## Final discussion
 
-- If you are already using Jupyter, what tasks do you use it for? 
+- If you are already using Jupyter, what tasks do you use it for?
 - If you are new to Jupyter, do you see any possible use cases?
 - Do you think Jupyter Notebooks can help tackle the problem of irreproducible results?
 

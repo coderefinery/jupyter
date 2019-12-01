@@ -19,9 +19,9 @@ keypoints:
 
 # JupyterLab
 
-JupyterLab is the next-generation user interface for Jupyter Notebooks 
-and is intended to replace the conventional interface. 
-It is a highly modular and customizable interface. 
+JupyterLab is the next-generation user interface for Jupyter Notebooks
+and is intended to replace the conventional interface.
+It is a highly modular and customizable interface.
 
 Let's have a look at how it works. We go to terminal, and type:
 ```shell
@@ -41,21 +41,21 @@ $ jupyter-lab
      - Running terminals and kernels
      - Command palette
      - Cell inspector
-     - Open tabs    
+     - Open tabs
      - Git integration (if `jupyterlab-git` extension installed)
      - GitHub browser (if `jupyterlab-github` extension installed)
-- Fully-fledged terminal 
+- Fully-fledged terminal
 - Text editor for source code in different languages
 - Code console to run code interactively in a kernel with rich output and linear order
 - Modular interface
      - Notebooks, terminals, consoles, data files etc can be moved around
 - Classical notebook style is available under the Help menu
- 
+
 ---
 
 ## Cells
 
-- **Markdown cells** contain formatted text written in Markdown 
+- **Markdown cells** contain formatted text written in Markdown
 - **Code cells** contain code to be interpreted by the *kernel* (Python, R, Julia, Octave/Matlab...)
 
 ![Components]({{ site.baseurl }}/img/notebook_components.png)
@@ -65,7 +65,7 @@ $ jupyter-lab
 ```
 ## Second level heading
 
-This cell contains simple 
+This cell contains simple
 [markdown](https://daringfireball.net/projects/markdown/syntax), a simple language for writing text that can be automatically converted to other formats, e.g. HTML, LaTeX or any of a number of others.
 
 **Bold**, *italics*, **_combined_**, ~~strikethrough~~, `inline code`.
@@ -77,14 +77,14 @@ or
 1. numbered
 3. lists
 
-**Equations:**   
+**Equations:**
 inline $e^{i\pi} + 1 = 0$
-or on new line  
+or on new line
 $$e^{i\pi} + 1 = 0$$
 
 Images ![CodeRefinery Logo](https://coderefinery.org/assets/img/logos/coderefinery.png)
 
-Links:  
+Links:
 [One of many markdown cheat-sheets](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#emphasis)
 ```
 
@@ -92,8 +92,8 @@ Links:
 
 ```python
 # a code cell can run statements of code.
-# when you run this cell, the output is sent 
-# from the web page to a back-end process, run 
+# when you run this cell, the output is sent
+# from the web page to a back-end process, run
 # and the results are displayed to you
 print("hello world")
 ```
@@ -103,16 +103,16 @@ hello world
 
 ### Command and edit modes
 
-- To add contents to a cell, you need to enter *edit mode* by pressing `Enter` or 
+- To add contents to a cell, you need to enter *edit mode* by pressing `Enter` or
   double-clicking on a cell
-- To navigate between cells, create new cells, etc., you need to enter *command* mode by 
+- To navigate between cells, create new cells, etc., you need to enter *command* mode by
   pressing `Escape` key or executing the current cell.
 
 ---
 
-## Keyboard shortcuts 
+## Keyboard shortcuts
 
-Some shortcuts only work in Command or Edit mode. 
+Some shortcuts only work in Command or Edit mode.
 > Warning: it can happen that these shortcuts interfer with browser shortcuts.
 
 | Cell shortcuts | &nbsp; | Notebook/UI shortcuts | &nbsp; |
@@ -133,15 +133,15 @@ Some shortcuts only work in Command or Edit mode.
 ---
 
 > ## Discussion point: Integrated development environments
-> 
+>
 > - What tools do you use for developing code?
 > - How do you compile or execute code?
 > - How do you debug code?
-> 
+>
 > Some people prefer terminal-based text editors for writing code (e.g. vi/vim, nano, emacs, etc).
-> Others prefer integrated development environments (IDEs), which can bring "everything" one needs for productive programming to one's fingertips. 
+> Others prefer integrated development environments (IDEs), which can bring "everything" one needs for productive programming to one's fingertips.
 > Yet others prefer code editors, which are light-weight IDEs.
-> 
+>
 > | Terminal editor | Code editor | IDE |
 > | --------------- | ----------- | --- |
 > | Good command line skills are needed for effectively using terminal editors | If you use multiple programming languages then code editors offer good support | If you are working with large code bases, then you should definitely checkout the IDE suitable for your programming language |
@@ -154,7 +154,7 @@ Some shortcuts only work in Command or Edit mode.
 ## Version control of notebooks
 
 Jupyter Notebooks are stored in json format, which doesn't play nicely with Git, but the [nbdime](http://nbdime.readthedocs.io/en/latest/) package provides "content-aware" diffing and merging.
-- Can be installed with `pip install nbdime` and activated by 
+- Can be installed with `pip install nbdime` and activated by
   `nbdime extensions --enable``
 - `git diff` and `git merge` will use nbdime's diff and merge for notebook files, but leave Git's behavior unchanged for non-notebook files.
 
@@ -165,20 +165,20 @@ Two additional packages increase the Git integration even further:
 All three extensions can be used from within the JupyterLab interface.
 
 > ## Working with Git from JypyterLab
-> 
-> - Make sure that you have installed the [Git extension](https://coderefinery.github.io/installation/jupyter/#git-extension) and 
-    [nbdime](https://coderefinery.github.io/installation/jupyter/#diffingmerging-notebooks) for JupyterLab 
-> - Initialize a Git repository from the top Git menu 
+>
+> - Make sure that you have installed the [Git extension](https://coderefinery.github.io/installation/jupyter/#git-extension) and
+    [nbdime](https://coderefinery.github.io/installation/jupyter/#diffingmerging-notebooks) for JupyterLab
+> - Initialize a Git repository from the top Git menu
 > - Make a few changes to a notebook and save it
 > - Use the left-hand Git menu to stage the notebook and commit it
-> - Go to GitHub and create a new repository, e.g. jupyterlab-demo 
+> - Go to GitHub and create a new repository, e.g. jupyterlab-demo
 > - Open a terminal inside JupyterLab and set the remote, e.g.
 >   `git remote add origin https://github.com/user/jupyterlab-demo.git`
-> - The first push needs to be done via terminal (to set the upstream 
->   branch for our local master branch):  
+> - The first push needs to be done via terminal (to set the upstream
+>   branch for our local master branch):
 >   `git push -u origin master`
 > - Future pushes (and pulls) can be done from the left-hand Git menu
-> - Make another change to the notebook and save it, and click the 
->   `git` button in the notebook menu bar. This button uses `nbdime` 
+> - Make another change to the notebook and save it, and click the
+>   `git` button in the notebook menu bar. This button uses `nbdime`
 >   to display a readable `git diff`
 {: .task}

@@ -41,7 +41,7 @@ np.nansum
 np.sum
 ```
 
-`%quickref` shows a quick reference card of features and shortcuts: 
+`%quickref` shows a quick reference card of features and shortcuts:
 ```
 %quickref
 ```
@@ -51,8 +51,8 @@ np.sum
 
 ### Shell commands
   - You can run shell commands by prepending with !
-    - On Windows, GitBash needs to have the following option enabled:   
-    `Use Git and the optional Unix tools from the Windows Command Prompt` 
+    - On Windows, GitBash needs to have the following option enabled:
+    `Use Git and the optional Unix tools from the Windows Command Prompt`
   - Make sure your cell command doesn't require interaction
 
 ```
@@ -67,7 +67,7 @@ We can also capture the output of a shell command:
 notebooks = !ls *.ipynb
 ```
 
-- Common linux shell commands are also available as *magics*: %ls, %pwd, %mkdir, %cp, %mv, %cd, *etc.*. 
+- Common linux shell commands are also available as *magics*: %ls, %pwd, %mkdir, %cp, %mv, %cd, *etc.*.
 
 ---
 
@@ -124,19 +124,19 @@ def g(x, y, s):
 >
 > Using the computing-pi notebook, practice using a few magic commands.
 > Remember that cell magics need to be on the first line of the cell.
-> 1. In the cell with the for-loop over `N` (throwing darts), add the 
+> 1. In the cell with the for-loop over `N` (throwing darts), add the
 >    ``%%timeit`` cell magic and run the cell.
 > 2. In the same cell, try instead the `%%prun` cell profiling magic.
 > 3. Try introducing a bug in the code (e.g., use an incorrect variable name:
->    `points.append((x,y2, True))`) 
->    - run the cell 
->    - after the exception occurs, run the `%debug` magic in a new cell 
->      to enter an interactive debugger 
+>    `points.append((x,y2, True))`)
+>    - run the cell
+>    - after the exception occurs, run the `%debug` magic in a new cell
+>      to enter an interactive debugger
 >    - type `h` for a help menu, and `help <keyword>` for help on keyword
 >    - type `p x` to print the value of `x`
 >    - exit the debugger by typing `q`
-> 4. Have a look at the output of `%lsmagic`, and use a question mark and 
->    double question mark to see help for a magic command that raises 
+> 4. Have a look at the output of `%lsmagic`, and use a question mark and
+>    double question mark to see help for a magic command that raises
 >    your interest.
 {: .task}
 
@@ -145,17 +145,17 @@ def g(x, y, s):
 > Widgets can be used to interactively explore or analyze data.
 > Using the computing-pi notebook, introduce a widget which plots
 > subsets of all the random points:
-> 1. If you haven't finished the previous episode, copy-paste this 
+> 1. If you haven't finished the previous episode, copy-paste this
 >    code into a cell:
 >    ```python
 >    import random
 >    %matplotlib inline
 >    from matplotlib import pyplot
 >    from ipywidgets import interact
->    
+>
 >    N = 1000
->    points = [] 
->    
+>    points = []
+>
 >    hits = 0
 >    for i in range(N):
 >        x, y = random.random(), random.random()
@@ -164,10 +164,10 @@ def g(x, y, s):
 >            points.append((x,y, True))
 >        else:
 >            points.append((x,y, False))
->    
+>
 >    x, y, colors = zip(*points)
 >    ```
-> 2. Change the last two lines of the plotting cell into a function 
+> 2. Change the last two lines of the plotting cell into a function
 >    taking a tuple as argument, and slice the `points` list:
 >    ```python
 >    def plot_points(n=(1,10)):
@@ -176,6 +176,6 @@ def g(x, y, s):
 >    ```
 > 3. Add the `@interact` decorator above the function, and execute the cell.
 > 4. Drag the slider back and forth and observe the results.
-> 5. Can you think of other interesting uses of widgets in the 
->    computing-pi notebook?   
+> 5. Can you think of other interesting uses of widgets in the
+>    computing-pi notebook?
 {: .task}

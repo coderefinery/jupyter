@@ -12,8 +12,8 @@ how Jupyter notebooks work, and what some common and powerful usecases are.
 
 ### Prerequisites
 
-- A reasonably recent version of Jupyter and JupyterLab, and a few configuration steps. 
-  For installation and configuration instructions see the 
+- A reasonably recent version of Jupyter and JupyterLab, and a few configuration steps.
+  For installation and configuration instructions see the
   [installation instructions](https://coderefinery.github.io/installation/jupyter/).
-- A reasonably recent version of Git to be able to work with the JupyterLab 
-  Git integration. 
+- A reasonably recent version of Git to be able to work with the JupyterLab
+  Git integration.
