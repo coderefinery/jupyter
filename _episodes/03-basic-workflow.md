@@ -90,9 +90,9 @@ fall within the unit circle.
 What do we get from this?
 
 - With code separate from everything else, you might just send one
-  number or a plot to your supervisor for checking.
-- With a notebook as a narratives, you send everything in a consistent
-  story.
+  number or a plot to your supervisor/collaborator for checking.
+- With a notebook as a narratives, you send everything in a **consistent
+  story**.
 - A reader may still just read the introduction and conclusion, but
   they can easily see more - *and try changes themselves* - if they
   want.
