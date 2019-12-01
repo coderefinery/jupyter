@@ -64,7 +64,7 @@ fall within the unit circle.
 > hits = 0
 > for i in range(N):
 >        x, y = random.random(), random.random()
->        if x**2 + y**2 < 1:
+>        if x**2 + y**2 < 1.0:
 >            hits += 1
 >            points.append((x, y, True))
 >        else:
