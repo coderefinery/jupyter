@@ -171,6 +171,7 @@ def g(x, y, s):
 >    taking a tuple as argument, and slice the `points` list:
 >    ```python
 >    def plot_points(n=(1,10)):
+>        # we plot every n-th point
 >        x, y, colors = zip(*points[::n])
 >        pyplot.scatter(x, y, c=colors)
 >    ```
