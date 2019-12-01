@@ -138,7 +138,7 @@ def g(x, y, s):
 > 4. Have a look at the output of `%lsmagic`, and use a question mark and
 >    double question mark to see help for a magic command that raises
 >    your interest.
-{: .task}
+{: .challenge}
 
 > ## Playing around with a widget
 >
@@ -178,4 +178,4 @@ def g(x, y, s):
 > 4. Drag the slider back and forth and observe the results.
 > 5. Can you think of other interesting uses of widgets in the
 >    computing-pi notebook?
-{: .task}
+{: .challenge}

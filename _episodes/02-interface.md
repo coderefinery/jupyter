@@ -147,7 +147,7 @@ Some shortcuts only work in Command or Edit mode.
 > | Good command line skills are needed for effectively using terminal editors | If you use multiple programming languages then code editors offer good support | If you are working with large code bases, then you should definitely checkout the IDE suitable for your programming language |
 > | Continue using Emacs and Vim, if you are already proficient | Both IDE and code editors share common features such as code completion, hints, highlighting sections of code | IDEs offer rich support for Debugging and Code refactoring |
 > | Supports multiple programming languages | Supports multiple programming languages | Focused on a single language |
-{: .task}
+{: .challenge}
 
 ---
 
@@ -181,4 +181,4 @@ All three extensions can be used from within the JupyterLab interface.
 > - Make another change to the notebook and save it, and click the
 >   `git` button in the notebook menu bar. This button uses `nbdime`
 >   to display a readable `git diff`
-{: .task}
+{: .challenge}

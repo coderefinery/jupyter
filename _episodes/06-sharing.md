@@ -48,7 +48,7 @@ Note: the Google, Microsoft and CoCalc platforms are free but have paid subscrip
 > - Try clicking the button and see how your repository in launched
 >   on mybinder. Your notebooks can now be expored and executed in the cloud.
 > - Enjoy being fully reproducible!
-{: .task}
+{: .challenge}
 
 
 ## Final discussion

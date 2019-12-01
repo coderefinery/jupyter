@@ -84,7 +84,7 @@ fall within the unit circle.
 > fraction = hits / N
 > 4 * fraction
 > ```
-{: .task}
+{: .challenge}
 
 
 What do we get from this?
