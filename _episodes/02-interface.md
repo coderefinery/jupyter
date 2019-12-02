@@ -154,7 +154,7 @@ Some shortcuts only work in Command or Edit mode.
 ## Version control of notebooks
 
 Jupyter Notebooks are stored in json format, which doesn't play nicely with Git, but the [nbdime](http://nbdime.readthedocs.io/en/latest/) package provides "content-aware" diffing and merging.
-- Can be installed with `conda` or `pip` and activated by
+- Can be installed with `pip install nbdime` and activated by
   `nbdime extensions --enable``
 - `git diff` and `git merge` will use nbdime's diff and merge for notebook files, but leave Git's behavior unchanged for non-notebook files.
 
