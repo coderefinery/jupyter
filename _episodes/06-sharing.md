@@ -41,7 +41,7 @@ Note: the Google, Microsoft and CoCalc platforms are free but have paid subscrip
 > - Commit and push.
 > - Visit [https://mybinder.org](https://mybinder.org), and paste in
 >   the URL of your notebook repository.
-> - Click on the arrow next to the "Cope the text below..." to expand it.
+> - Click on the arrow next to the "Copy the text below ..." to expand it.
 > - Copy the markdown line which begins with `[![Binder](https://mybinder.org/badge_logo.svg)]`, and paste it into a README.md file for your
 >   notebook repository. Commit and push it.
 > - Check that your notebook repository now has a "launch binder"
