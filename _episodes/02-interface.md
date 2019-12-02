@@ -19,7 +19,7 @@ keypoints:
 
 # JupyterLab
 
-JupyterLab is the next-generation user interface for Jupyter Notebooks
+JupyterLab is the next-generation user interface for Jupyter notebooks
 and is intended to replace the conventional interface.
 It is a highly modular and customizable interface.
 
@@ -164,7 +164,7 @@ Two additional packages increase the Git integration even further:
 
 All three extensions can be used from within the JupyterLab interface.
 
-> ## Working with Git from JypyterLab
+> ## Working with Git from JupyterLab
 >
 > - Make sure that you have installed the [Git extension](https://coderefinery.github.io/installation/jupyter/#git-extension) and
     [nbdime](https://coderefinery.github.io/installation/jupyter/#diffingmerging-notebooks) for JupyterLab
