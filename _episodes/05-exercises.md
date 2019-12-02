@@ -29,10 +29,8 @@ objectives:
 > import matplotlib.pyplot as plt
 > %matplotlib inline
 >
->
 > def gaussian(x, a, b, c):
 >     return a * np.exp(-b * (x-c)**2)
->
 >
 > def noisy_gaussian():
 >     # gaussian array y in interval -5 <= x <= 5
@@ -43,12 +41,10 @@ objectives:
 >     y += noise
 >     return x, y
 >
->
 > def fit(x, y, n):
 >     pfit = np.polyfit(x, y, n)
 >     yfit = np.polyval(pfit, x)
 >     return yfit
->
 >
 > def plot(x, y, yfit):
 >     plt.plot(x, y, "r", label="Data")
@@ -56,7 +52,6 @@ objectives:
 >     plt.legend()
 >     plt.ylim(-0.5, 2.5)
 >     plt.show()
->
 >
 > x, y = noisy_gaussian()
 > yfit = fit(x, y, n=5)  # fit a 5th order polynomial to it
@@ -73,10 +68,8 @@ objectives:
 > > import matplotlib.pyplot as plt
 > > %matplotlib inline
 > >
-> >
 > > def gaussian(x, a, b, c):
 > >     return a * np.exp(-b * (x-c)**2)
-> >
 > >
 > > def noisy_gaussian():
 > >     # gaussian array y in interval -5 <= x <= 5
@@ -87,12 +80,10 @@ objectives:
 > >     y += noise
 > >     return x, y
 > >
-> >
 > > def fit(x, y, n):
 > >     pfit = np.polyfit(x, y, n)
 > >     yfit = np.polyval(pfit, x)
 > >     return yfit
-> >
 > >
 > > def plot(x, y, yfit):
 > >     plt.plot(x, y, "r", label="Data")
@@ -100,7 +91,6 @@ objectives:
 > >     plt.legend()
 > >     plt.ylim(-0.5, 2.5)
 > >     plt.show()
-> >
 > >
 > > x, y = noisy_gaussian()
 > >
