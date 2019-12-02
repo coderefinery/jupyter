@@ -128,7 +128,7 @@ def g(x, y, s):
 >    ``%%timeit`` cell magic and run the cell.
 > 2. In the same cell, try instead the `%%prun` cell profiling magic.
 > 3. Try introducing a bug in the code (e.g., use an incorrect variable name:
->    `points.append((x,y2, True))`)
+>    `points.append((x, y2, True))`)
 >    - run the cell
 >    - after the exception occurs, run the `%debug` magic in a new cell
 >      to enter an interactive debugger
