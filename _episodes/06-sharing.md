@@ -60,7 +60,7 @@ Note: the Google, Microsoft and CoCalc platforms are free but have paid subscrip
 - Do you think Jupyter Notebooks can help tackle the problem of irreproducible results?
 
 
-But Notebooks have some [pitfalls](https://scicomp.aalto.fi/scicomp/jupyter-pitfalls.html)
+But Notebooks have some [pitfalls](https://scicomp.aalto.fi/scicomp/jupyter-pitfalls.html):
 
 - They **don't promote modularity**, and once you get started in a
   notebook it can be hard to migrate to modules.
