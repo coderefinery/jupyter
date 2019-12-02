@@ -18,8 +18,8 @@ keypoints:
 # Jupyter Notebooks
 
 ## Some history
-- In 2014, Fernando Pérez announced a spin-off project from IPython called Project Jupyter, moving the notebook and other language-agnostic parts of IPython to Jupyter
-- The name "Jupyter" derives from Julia+Python+R, but today Jupyter kernels exist for [dozens of programming languages](https://github.com/jupyter/jupyter/wiki/Jupyter-kernels)
+- In 2014, Fernando Pérez announced a spin-off project from IPython called Project Jupyter, moving the notebook and other language-agnostic parts of IPython to Jupyter.
+- The name "Jupyter" derives from Julia+Python+R, but today Jupyter kernels exist for [dozens of programming languages](https://github.com/jupyter/jupyter/wiki/Jupyter-kernels).
 - Galileo's publication in a pamphlet in 1610 in Sidereus Nuncius, one of the first notebooks!
 <img src="http://media.gettyimages.com/photos/pages-from-sidereus-nuncius-magna-by-galileo-galilei-a-book-of-and-picture-id90732970" width="500">
 
@@ -47,7 +47,8 @@ keypoints:
 
 - Less useful for large codebases
 - More difficult to do automated testing on
-- Tricky when it comes to non-linear execution of cells, discipline is needed!
+- Tricky when it comes to non-linear execution of cells, discipline is needed
+- We will discuss pitfalls later
 
 ---
 
@@ -59,12 +60,8 @@ Let us have a look at the analysis published together with the discovery of grav
 lists the available analyses and presents several options to browse them:
 - Download zip-file with source and data
 - Open the notebooks on [Microsoft Azure Notebooks](https://notebooks.azure.com/losc/libraries/tutorials) platform.
-- Open the notebooks on [mybinder](http://beta.mybinder.org/repo/losc-tutorial/quickview).
+- Open the notebooks on [Binder](http://beta.mybinder.org/repo/losc-tutorial/quickview).
 
-Since Microsoft Azure requires a login to run the notebooks live (which is still free), we can try running the "Quickview Notebook" on mybinder, [here's a direct link](http://beta.mybinder.org/repo/losc-tutorial/quickview).
+Since Microsoft Azure requires a login to run the notebooks live (which is still free), we can try running the "Quickview Notebook" on Binder, [here's a direct link](http://beta.mybinder.org/repo/losc-tutorial/quickview).
 
-> For further inspiration, head over to the [Gallery of interesting Jupyter Notebooks](https://github.com/jupyter/jupyter/wiki/A-gallery-of-interesting-Jupyter-Notebooks)
-
-
-
-
+> For further inspiration, head over to the [Gallery of interesting Jupyter Notebooks](https://github.com/jupyter/jupyter/wiki/A-gallery-of-interesting-Jupyter-Notebooks).
