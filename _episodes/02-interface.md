@@ -164,6 +164,23 @@ Two additional packages increase the Git integration even further:
 
 All three extensions can be used from within the JupyterLab interface.
 
+> ## Installing extensions: Is the git interface not showing up?
+>
+> JupyterLab is modular,
+> and some parts need to be installed as an extension.  In general,
+> copy and paste the command into a shell (the JupyterLab shell works
+> fine).  For jupyterlab-git and nbdime, you have to install the
+> extensions.  See the [installation
+> instructions](https://coderefinery.github.io/installation/jupyter/#diffingmerging-notebooks)
+>
+> There are two modes of extension: backend (for the Python server)
+> and frontend (for the browser).
+>
+> Sometimes we need to restart Jupyter, sometime just reload the
+> page.  To install these, we need to restart JupyterLab itself.
+{: .discussion}
+
+
 > ## Working with Git from JupyterLab
 >
 > - Make sure that you have installed the [Git extension](https://coderefinery.github.io/installation/jupyter/#git-extension) and
