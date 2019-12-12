@@ -53,7 +53,7 @@ Note: the Google, Microsoft and CoCalc platforms are free but have paid subscrip
 {: .challenge}
 
 
-> ## Exercise: what happens without requirements.txt?
+> ## Exercise: what happens without requirements.txt? (optional)
 >
 > Let's look at the same [activity inequality
 > repository](https://github.com/timalthoff/activityinequality).  We
