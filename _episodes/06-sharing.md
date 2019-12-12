@@ -53,6 +53,24 @@ Note: the Google, Microsoft and CoCalc platforms are free but have paid subscrip
 {: .challenge}
 
 
+> ## (Optional) Exercise: what happens without requirements.txt?
+>
+> Let's look at the same [activity inequality
+> repository](https://github.com/timalthoff/activityinequality).  We
+> can start this repository [in Binder by using this
+> link](https://mybinder.org/v2/gh/timalthoff/activityinequality/master).
+>
+> - Start the repository in Binder
+> - `fig3/fig3bc.ipynb` is a Python notebook, so works in Binder.
+>   Most others are in R, which also works in Binder.  [But
+>   how?](https://mybinder.readthedocs.io/en/latest/howto/languages.html)
+>   Try to run the notebook - can you make it work?
+> - Install the missing requirements with `pip`.  Does it work now?
+>   Why or why not?
+> - How would this be better?
+{: .challenge}
+
+
 ## Final discussion
 
 - If you are already using Jupyter, what tasks do you use it for?
