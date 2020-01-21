@@ -171,7 +171,7 @@ All three extensions can be used from within the JupyterLab interface.
 > copy and paste the command into a shell (the JupyterLab shell works
 > fine).  For jupyterlab-git and nbdime, you have to install the
 > extensions.  See the [installation
-> instructions](https://coderefinery.github.io/installation/jupyter/#diffingmerging-notebooks)
+> instructions](https://coderefinery.github.io/installation/jupyter/#diffingmerging-notebooks).
 >
 > There are two modes of extension: backend (for the Python server)
 > and frontend (for the browser).
