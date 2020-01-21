@@ -61,7 +61,6 @@ fall within the unit circle.
 > 6. "Throw darts":
 > ```python
 > points = []
->
 > hits = 0
 > for _ in range(num_points):
 >     x, y = random.random(), random.random()
@@ -76,7 +75,6 @@ fall within the unit circle.
 > ```python
 > %matplotlib inline
 > from matplotlib import pyplot
-
 > x, y, colors = zip(*points)
 > pyplot.scatter(x, y, c=colors)
 > ```
