@@ -51,7 +51,7 @@ np.sum
 
 ### Shell commands
 
-- You can run shell commands by prepending with !
+- You can run shell commands by prepending with "!"
   - On Windows, GitBash needs to have the following option enabled:
   `Use Git and the optional Unix tools from the Windows Command Prompt`
 - Make sure your cell command doesn't require interaction
@@ -69,6 +69,8 @@ notebooks = !ls *.ipynb
 ```
 
 - Common linux shell commands are also available as *magics*: %ls, %pwd, %mkdir, %cp, %mv, %cd, *etc.*.
+- Using shell commands can be useful when testing a new idea but **for reproducible notebooks be careful
+  with shell commands** (will they also work on a different computer?).
 
 ---
 
