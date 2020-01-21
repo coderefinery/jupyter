@@ -37,10 +37,10 @@ fall within the unit circle.
 > 1. Create a new notebook, name it, and add a heading.
 > 2. Document the relevant formulas in a new cell:
 >  ```
->  - square area = $(2 r)^2$
->  - circle area = $\pi r^2$
->  - circle / square = $\pi r^2 / 4 r^2$ = $\pi / 4$
->  - $\pi$ = 4 * (circle/square)
+>  - square area: $s = (2 r)^2$
+>  - circle area: $c = \pi r^2$
+>  - $c/s = (\pi r^2) / (4 r^2) = \pi / 4$
+>  - $\pi = 4 * c/s$
 >  ```
 >
 > 3. Add an image to explain the concept:
