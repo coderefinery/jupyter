@@ -78,6 +78,30 @@ Note: the Google, Microsoft and CoCalc platforms are free but have paid subscrip
 You can do that using Markdown. This produces a nice overview for longer notebooks.
 Example: [https://stackoverflow.com/a/39817243](https://stackoverflow.com/a/39817243)
 
+
+### How to make it possible to toggle showing code
+
+It is possible to hide all the code and only show the output. This can be nice
+for notebook readers who don't need/want to see the code:
+
+```
+from IPython.display import HTML
+
+HTML('''<script>
+code_show=true;
+function code_toggle() {
+ if (code_show){
+ $('div.input').hide();
+ } else {
+ $('div.input').show();
+ }
+ code_show = !code_show
+}
+$( document ).ready(code_toggle);
+</script>
+<form action="javascript:code_toggle()"><input type="submit" value="Click here to toggle on/off the raw code."></form>''')
+```
+
 ---
 
 ## Final discussion
