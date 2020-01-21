@@ -19,8 +19,8 @@ keypoints:
 
 # Creating a computational narrative
 
-Let's create our first real computational narrative in a Jupyter notebook.
-> Adapted from https://github.com/AaltoScienceIT/python-r-data-analysis-course
+Let's create our first real computational narrative in a Jupyter notebook
+(adapted from [Python and R data analysis course](https://github.com/AaltoScienceIT/python-r-data-analysis-course) at Aalto Science IT).
 
 <img src="{{ site.baseurl }}/img/pi_with_darts.png" width="30%">
 
@@ -37,10 +37,10 @@ fall within the unit circle.
 > 1. Create a new notebook, name it, and add a heading.
 > 2. Document the relevant formulas in a new cell:
 >  ```
->  - square area = $(2 r)^2$
->  - circle area = $\pi r^2$
->  - circle / square = $\pi r^2 / 4 r^2$ = $\pi / 4$
->  - $\pi$ = 4 * (circle/square)
+>  - square area: $s = (2 r)^2$
+>  - circle area: $c = \pi r^2$
+>  - $c/s = (\pi r^2) / (4 r^2) = \pi / 4$
+>  - $\pi = 4 * c/s$
 >  ```
 >
 > 3. Add an image to explain the concept:
@@ -53,22 +53,22 @@ fall within the unit circle.
 > import random
 > ```
 >
-> 5. Initialize variables:
+> 5. Initialize the number of points:
 > ```python
-> N = 1000
-> points = []
+> num_points = 1000
 > ```
 >
 > 6. "Throw darts":
 > ```python
+> points = []
 > hits = 0
-> for i in range(N):
->        x, y = random.random(), random.random()
->        if x**2 + y**2 < 1.0:
->            hits += 1
->            points.append((x, y, True))
->        else:
->            points.append((x, y, False))
+> for _ in range(num_points):
+>     x, y = random.random(), random.random()
+>     if x*x + y*y < 1.0:
+>         hits += 1
+>         points.append((x, y, True))
+>     else:
+>         points.append((x, y, False))
 > ```
 >
 > 7. Plot results:
@@ -81,11 +81,10 @@ fall within the unit circle.
 >
 > 8. Compute final estimate of pi:
 > ```python
-> fraction = hits / N
+> fraction = hits / num_points
 > 4 * fraction
 > ```
 {: .challenge}
-
 
 What do we get from this?
 
