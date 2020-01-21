@@ -211,3 +211,11 @@ def g(x, y, s):
 > 4. Drag the slider back and forth and observe the results.
 > 5. Can you think of other interesting uses of widgets?
 {: .challenge}
+
+> ## RShiny is a nice R alternative/solution à la ipywidgets
+>
+> [RShiny](https://shiny.rstudio.com) is a nice R alternative/solution a la
+> ipywidgets which can be interesting for R developers.
+>
+> See for instance their [gallery of examples](https://shiny.rstudio.com/gallery/).
+{: .discussion}
