@@ -50,10 +50,11 @@ np.sum
 
 
 ### Shell commands
-  - You can run shell commands by prepending with !
-    - On Windows, GitBash needs to have the following option enabled:
-    `Use Git and the optional Unix tools from the Windows Command Prompt`
-  - Make sure your cell command doesn't require interaction
+
+- You can run shell commands by prepending with !
+  - On Windows, GitBash needs to have the following option enabled:
+  `Use Git and the optional Unix tools from the Windows Command Prompt`
+- Make sure your cell command doesn't require interaction
 
 ```
 !echo "hello"
