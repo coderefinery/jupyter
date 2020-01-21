@@ -53,39 +53,40 @@ fall within the unit circle.
 > import random
 > ```
 >
-> 5. Initialize variables:
+> 5. Initialize the number of points:
 > ```python
-> N = 1000
-> points = []
+> num_points = 1000
 > ```
 >
 > 6. "Throw darts":
 > ```python
+> points = []
+>
 > hits = 0
-> for i in range(N):
->        x, y = random.random(), random.random()
->        if x**2 + y**2 < 1.0:
->            hits += 1
->            points.append((x, y, True))
->        else:
->            points.append((x, y, False))
+> for _ in range(num_points):
+>     x, y = random.random(), random.random()
+>     if x*x + y*y < 1.0:
+>         hits += 1
+>         points.append((x, y, True))
+>     else:
+>         points.append((x, y, False))
 > ```
 >
 > 7. Plot results:
 > ```python
 > %matplotlib inline
 > from matplotlib import pyplot
+
 > x, y, colors = zip(*points)
 > pyplot.scatter(x, y, c=colors)
 > ```
 >
 > 8. Compute final estimate of pi:
 > ```python
-> fraction = hits / N
+> fraction = hits / num_points
 > 4 * fraction
 > ```
 {: .challenge}
-
 
 What do we get from this?
 
