@@ -19,8 +19,8 @@ keypoints:
 
 # Creating a computational narrative
 
-Let's create our first real computational narrative in a Jupyter notebook.
-> Adapted from https://github.com/AaltoScienceIT/python-r-data-analysis-course
+Let's create our first real computational narrative in a Jupyter notebook
+(adapted from [Python and R data analysis course](https://github.com/AaltoScienceIT/python-r-data-analysis-course) at Aalto Science IT).
 
 <img src="{{ site.baseurl }}/img/pi_with_darts.png" width="30%">
 
