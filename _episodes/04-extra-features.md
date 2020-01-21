@@ -165,40 +165,49 @@ def g(x, y, s):
 > ## Playing around with a widget
 >
 > Widgets can be used to interactively explore or analyze data.
-> Using the computing-pi notebook, introduce a widget which plots
-> subsets of all the random points:
-> 1. If you haven't finished the previous episode, copy-paste this
->    code into a cell:
+>
+> 1. We return to the pi approximation example and create a new cell where
+>    we reuse code that we have written earlier but this time we place the
+>    code into functions. This "hides" details and allows us to reuse the functions
+>    later or in other notebooks:
 >    ```python
 >    import random
+>    from ipywidgets import interact, widgets
+>
 >    %matplotlib inline
 >    from matplotlib import pyplot
->    from ipywidgets import interact
 >
->    N = 1000
->    points = []
 >
->    hits = 0
->    for i in range(N):
->        x, y = random.random(), random.random()
->        if x**2 + y**2 < 1.0:
->            hits += 1
->            points.append((x, y, True))
->        else:
->            points.append((x, y, False))
+>    def throw_darts(num_points):
+>        points = []
+>        hits = 0
+>        for _ in range(num_points):
+>            x, y = random.random(), random.random()
+>            if x*x + y*y < 1.0:
+>                hits += 1
+>                points.append((x, y, True))
+>            else:
+>                points.append((x, y, False))
+>        fraction = hits / num_points
+>        pi = 4 * fraction
+>        return pi, points
 >
->    x, y, colors = zip(*points)
->    ```
-> 2. Change the last two lines of the plotting cell into a function
->    taking a tuple as argument, and slice the `points` list:
->    ```python
->    def plot_points(n=(1,10)):
->        # we plot every n-th point
->        x, y, colors = zip(*points[::n])
+>
+>    def create_plot(points):
+>        x, y, colors = zip(*points)
 >        pyplot.scatter(x, y, c=colors)
+>
+>
+>    def experiment(num_points):
+>        pi, points = throw_darts(num_points)
+>        create_plot(points)
+>        print("approximation:", pi)
 >    ```
-> 3. Add the `@interact` decorator above the function, and execute the cell.
+> 2. Try to call the `experiment` function with e.g. `num_points` set to 2000.
+> 3. Add a cell where we will make it possible to vary the number of points interactively:
+>    ```python
+>    interact(experiment, num_points=widgets.IntSlider(min=100, max=10000, step=100, value=1000))
+>    ```
 > 4. Drag the slider back and forth and observe the results.
-> 5. Can you think of other interesting uses of widgets in the
->    computing-pi notebook?
+> 5. Can you think of other interesting uses of widgets?
 {: .challenge}
