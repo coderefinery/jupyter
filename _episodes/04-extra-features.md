@@ -212,6 +212,7 @@ def g(x, y, s):
 >    ```python
 >    interact(experiment, num_points=widgets.IntSlider(min=100, max=10000, step=100, value=1000))
 >    ```
+>    If you run into `Error displaying widget: model not found`, you may need to refresh the page.
 > 4. Drag the slider back and forth and observe the results.
 > 5. Can you think of other interesting uses of widgets?
 {: .challenge}
