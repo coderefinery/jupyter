@@ -97,26 +97,6 @@ Question mark shows help:
 
 Additional magics can also be installed or created.
 
-> ## A few useful magic commands
->
-> Using the computing-pi notebook, practice using a few magic commands.
-> Remember that cell magics need to be on the first line of the cell.
-> 1. In the cell with the for-loop over `N` (throwing darts), add the
->    ``%%timeit`` cell magic and run the cell.
-> 2. In the same cell, try instead the `%%prun` cell profiling magic.
-> 3. Try introducing a bug in the code (e.g., use an incorrect variable name:
->    `points.append((x, y2, True))`)
->    - run the cell
->    - after the exception occurs, run the `%debug` magic in a new cell
->      to enter an interactive debugger
->    - type `h` for a help menu, and `help <keyword>` for help on keyword
->    - type `p x` to print the value of `x`
->    - exit the debugger by typing `q`
-> 4. Have a look at the output of `%lsmagic`, and use a question mark and
->    double question mark to see help for a magic command that raises
->    your interest.
-{: .challenge}
-
 ---
 
 ### Widgets
@@ -163,6 +143,28 @@ def g(x, y, s):
 > information, see [the installation
 > instructions](https://coderefinery.github.io/installation/jupyter/)
 {: .discussion}
+
+---
+
+> ## A few useful magic commands
+>
+> Using the computing-pi notebook, practice using a few magic commands.
+> Remember that cell magics need to be on the first line of the cell.
+> 1. In the cell with the for-loop over `num_points` (throwing darts), add the
+>    ``%%timeit`` cell magic and run the cell.
+> 2. In the same cell, try instead the `%%prun` cell profiling magic.
+> 3. Try introducing a bug in the code (e.g., use an incorrect variable name:
+>    `points.append((x, y2, True))`)
+>    - run the cell
+>    - after the exception occurs, run the `%debug` magic in a new cell
+>      to enter an interactive debugger
+>    - type `h` for a help menu, and `help <keyword>` for help on keyword
+>    - type `p x` to print the value of `x`
+>    - exit the debugger by typing `q`
+> 4. Have a look at the output of `%lsmagic`, and use a question mark and
+>    double question mark to see help for a magic command that raises
+>    your interest.
+{: .challenge}
 
 > ## Playing around with a widget
 >
