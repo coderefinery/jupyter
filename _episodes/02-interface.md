@@ -187,22 +187,3 @@ All three extensions can be used from within the JupyterLab interface.
 >
 {: .discussion}
 
-
-> ## Working with Git from JupyterLab
->
-> - Make sure that you have installed the [Git extension](https://coderefinery.github.io/installation/jupyter/#git-extension) and
-    [nbdime](https://coderefinery.github.io/installation/jupyter/#diffingmerging-notebooks) for JupyterLab
-> - Initialize a Git repository from the top Git menu
-> - Make a few changes to a notebook and save it
-> - Use the left-hand Git menu to stage the notebook and commit it
-> - Go to GitHub and create a new repository, e.g. jupyterlab-demo
-> - Open a terminal inside JupyterLab and set the remote, e.g.
->   `git remote add origin https://github.com/user/jupyterlab-demo.git`
->   You can use the option "Open Git Repository in Terminal" in the top level Git menu.
-> - The first push needs to be done via terminal (to set the upstream
->   branch for our local master branch):
->   `git push -u origin master`
-> - Future pushes (and pulls) can be done from the left-hand Git menu
-> - Make another change to the notebook and save it, and click the
->   `git` button in the notebook menu bar (or the Diff button in the left-side Git menu). 
-{: .challenge}
