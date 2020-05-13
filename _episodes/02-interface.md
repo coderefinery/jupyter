@@ -82,7 +82,9 @@ inline $e^{i\pi} + 1 = 0$
 or on new line
 $$e^{i\pi} + 1 = 0$$
 
-Images ![CodeRefinery Logo](https://coderefinery.org/assets/img/logos/coderefinery.png)
+Images: 
+
+![Jupyter logo](https://jupyter.org/assets/main-logo.svg)
 
 Links:
 [One of many markdown cheat-sheets](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#emphasis)
