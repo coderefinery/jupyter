@@ -153,16 +153,27 @@ Some shortcuts only work in Command or Edit mode.
 
 ## Version control of notebooks
 
-Jupyter Notebooks are stored in json format, which doesn't play nicely with Git, but the [nbdime](http://nbdime.readthedocs.io/en/latest/) package provides "content-aware" diffing and merging.
-- Can be installed with `pip install nbdime` and activated by
-  `nbdime extensions --enable``
-- `git diff` and `git merge` will use nbdime's diff and merge for notebook files, but leave Git's behavior unchanged for non-notebook files.
+Jupyter Notebooks are stored in json format, which doesn't play nicely
+with Git, but several packages and JupyterLab extensions have been developed 
+to make it easier:
 
-Two additional packages increase the Git integration even further:
-- [jupyterlab-git](https://github.com/jupyterlab/jupyterlab-git) is a JupyterLab extension for version control using Git, and
-- [jupyterlab/github](https://www.npmjs.com/package/@jupyterlab/github) is a JupyterLab extension for accessing GitHub repositories.
+- [nbdime](http://nbdime.readthedocs.io/en/latest/) provides
+  "content-aware" diffing and merging.
+  - Adds a Git button to the notebook interface.
+  - `git diff` and `git merge` shell commands will use nbdime's diff
+    and merge for notebook files, but leave Git's behavior unchanged
+    for non-notebook files.
+- [jupyterlab-git](https://github.com/jupyterlab/jupyterlab-git) 
+  is a JupyterLab extension for version control using Git.
+  - Adds a Git tab to the left-side manubar for version control inside JupyterLab.
+- [jupyterlab/github](https://www.npmjs.com/package/@jupyterlab/github) 
+  is a JupyterLab extension for accessing GitHub repositories.
+  - Adds a GitHub tab to the left-side manubar where you can browse 
+    and open notebooks from your GitHub repositories.
 
 All three extensions can be used from within the JupyterLab interface.
+See [here](https://coderefinery.github.io/installation/jupyter/) for
+installation instructions.
 
 > ## Installing extensions: Is the git interface not showing up?
 >
