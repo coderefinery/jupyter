@@ -102,6 +102,7 @@ print("hello world")
 ```
 hello world
 ```
+{: .output}
 
 ### Command and edit modes
 

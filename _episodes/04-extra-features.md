@@ -40,9 +40,10 @@ np.nancumsum
 np.nansum
 np.sum
 ```
+{: .output}
 
 `%quickref` shows a quick reference card of features and shortcuts:
-```
+```python
 %quickref
 ```
 
@@ -56,15 +57,16 @@ np.sum
   `Use Git and the optional Unix tools from the Windows Command Prompt`
 - Make sure your cell command doesn't require interaction
 
-```
+```python
 !echo "hello"
 ```
 ```
 hello
 ```
+{: .output}
 
 We can also capture the output of a shell command:
-```
+```python
 notebooks = !ls *.ipynb
 ```
 
@@ -84,12 +86,12 @@ There are two kinds of magics:
  - **Cell magics**: use two percent characters as a marker (%%), receive as argument the whole cell (must be used as the first line in a cell)
 
 `%lsmagic` lists all available line and cell magics:
-```
+```python
 %lsmagic
 ```
 
 Question mark shows help:
-```
+```python
 %sx?
 ```
 
