@@ -172,23 +172,17 @@ to make it easier:
     and open notebooks from your GitHub repositories.
 
 All three extensions can be used from within the JupyterLab interface.
-See [here](https://coderefinery.github.io/installation/jupyter/) for
-installation instructions.
 
 > ## Installing extensions: Is the git interface not showing up?
 >
-> JupyterLab is modular,
-> and some parts need to be installed as an extension.  In general,
-> copy and paste the command into a shell (the JupyterLab shell works
-> fine).  For jupyterlab-git and nbdime, you have to install the
-> extensions.  See the [installation
-> instructions](https://coderefinery.github.io/installation/jupyter/#diffingmerging-notebooks).
+> JupyterLab is modular, and some parts need to be installed as extensions.  
+> In general, either copy and paste installation and configuration commands 
+> into a shell or use the JupyterLab extension manager. See the [installation
+> instructions](https://coderefinery.github.io/installation/jupyter/).
 >
 > There are two modes of extension: backend (for the Python server)
 > and frontend (for the browser).
 >
-> Sometimes we need to restart Jupyter, sometime just reload the
-> page.  To install these, we need to restart JupyterLab itself.
 {: .discussion}
 
 
