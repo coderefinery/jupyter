@@ -198,11 +198,11 @@ All three extensions can be used from within the JupyterLab interface.
 > - Go to GitHub and create a new repository, e.g. jupyterlab-demo
 > - Open a terminal inside JupyterLab and set the remote, e.g.
 >   `git remote add origin https://github.com/user/jupyterlab-demo.git`
+>   You can use the option "Open Git Repository in Terminal" in the top level Git menu.
 > - The first push needs to be done via terminal (to set the upstream
 >   branch for our local master branch):
 >   `git push -u origin master`
 > - Future pushes (and pulls) can be done from the left-hand Git menu
 > - Make another change to the notebook and save it, and click the
->   `git` button in the notebook menu bar. This button uses `nbdime`
->   to display a readable `git diff`
+>   `git` button in the notebook menu bar (or the Diff button in the left-side Git menu). 
 {: .challenge}
