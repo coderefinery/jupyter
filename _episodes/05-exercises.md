@@ -254,7 +254,7 @@ objectives:
 > > ```python
 > > %lprun -f step walk(10000)
 > > ```
-> > Output:
+> > 
 > > ```
 > > ...
 > >      8                                           def step():
@@ -262,6 +262,7 @@ objectives:
 > >     10      9999       6840.0      0.7     47.7      return 1. if random.random()
 > > ...
 > > ```
+> > {: .output}
 > > Aha! Lot's of time is spent on importing the `random` module inside the `step` function
 > > which is called thousands of times. Move the import statement to outside the function!
 > >
@@ -403,6 +404,7 @@ objectives:
 > ## Defining your own custom magic command
 >
 > It is possible to create new magic commands using the `@register_cell_magic` decorator from the `IPython.core` library. Here you will create a cell magic command that compiles C++ code and executes it.
+> This exercise requires that you have the GNU `g++` compiler installed on your computer.
 >
 > > This example has been adapted from the [IPython Minibook](http://ipython-books.github.io/), by Cyrille Rossant, Packt Publishing, 2015.
 >
