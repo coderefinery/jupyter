@@ -82,7 +82,9 @@ inline $e^{i\pi} + 1 = 0$
 or on new line
 $$e^{i\pi} + 1 = 0$$
 
-Images ![CodeRefinery Logo](https://coderefinery.org/assets/img/logos/coderefinery.png)
+Images: 
+
+![Jupyter logo](https://jupyter.org/assets/main-logo.svg)
 
 Links:
 [One of many markdown cheat-sheets](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#emphasis)
@@ -100,6 +102,7 @@ print("hello world")
 ```
 hello world
 ```
+{: .output}
 
 ### Command and edit modes
 
@@ -153,49 +156,35 @@ Some shortcuts only work in Command or Edit mode.
 
 ## Version control of notebooks
 
-Jupyter Notebooks are stored in json format, which doesn't play nicely with Git, but the [nbdime](http://nbdime.readthedocs.io/en/latest/) package provides "content-aware" diffing and merging.
-- Can be installed with `pip install nbdime` and activated by
-  `nbdime extensions --enable``
-- `git diff` and `git merge` will use nbdime's diff and merge for notebook files, but leave Git's behavior unchanged for non-notebook files.
+Jupyter Notebooks are stored in json format, which doesn't play nicely
+with Git, but several packages and JupyterLab extensions have been developed 
+to make it easier:
 
-Two additional packages increase the Git integration even further:
-- [jupyterlab-git](https://github.com/jupyterlab/jupyterlab-git) is a JupyterLab extension for version control using Git, and
-- [jupyterlab/github](https://www.npmjs.com/package/@jupyterlab/github) is a JupyterLab extension for accessing GitHub repositories.
+- [nbdime](http://nbdime.readthedocs.io/en/latest/) provides
+  "content-aware" diffing and merging.
+  - Adds a Git button to the notebook interface.
+  - `git diff` and `git merge` shell commands will use nbdime's diff
+    and merge for notebook files, but leave Git's behavior unchanged
+    for non-notebook files.
+- [jupyterlab-git](https://github.com/jupyterlab/jupyterlab-git) 
+  is a JupyterLab extension for version control using Git.
+  - Adds a Git tab to the left-side manubar for version control inside JupyterLab.
+- [jupyterlab/github](https://www.npmjs.com/package/@jupyterlab/github) 
+  is a JupyterLab extension for accessing GitHub repositories.
+  - Adds a GitHub tab to the left-side manubar where you can browse 
+    and open notebooks from your GitHub repositories.
 
 All three extensions can be used from within the JupyterLab interface.
 
 > ## Installing extensions: Is the git interface not showing up?
 >
-> JupyterLab is modular,
-> and some parts need to be installed as an extension.  In general,
-> copy and paste the command into a shell (the JupyterLab shell works
-> fine).  For jupyterlab-git and nbdime, you have to install the
-> extensions.  See the [installation
-> instructions](https://coderefinery.github.io/installation/jupyter/#diffingmerging-notebooks).
+> JupyterLab is modular, and some parts need to be installed as extensions.  
+> In general, either copy and paste installation and configuration commands 
+> into a shell or use the JupyterLab extension manager. See the [installation
+> instructions](https://coderefinery.github.io/installation/jupyter/).
 >
 > There are two modes of extension: backend (for the Python server)
 > and frontend (for the browser).
 >
-> Sometimes we need to restart Jupyter, sometime just reload the
-> page.  To install these, we need to restart JupyterLab itself.
 {: .discussion}
 
-
-> ## Working with Git from JupyterLab
->
-> - Make sure that you have installed the [Git extension](https://coderefinery.github.io/installation/jupyter/#git-extension) and
-    [nbdime](https://coderefinery.github.io/installation/jupyter/#diffingmerging-notebooks) for JupyterLab
-> - Initialize a Git repository from the top Git menu
-> - Make a few changes to a notebook and save it
-> - Use the left-hand Git menu to stage the notebook and commit it
-> - Go to GitHub and create a new repository, e.g. jupyterlab-demo
-> - Open a terminal inside JupyterLab and set the remote, e.g.
->   `git remote add origin https://github.com/user/jupyterlab-demo.git`
-> - The first push needs to be done via terminal (to set the upstream
->   branch for our local master branch):
->   `git push -u origin master`
-> - Future pushes (and pulls) can be done from the left-hand Git menu
-> - Make another change to the notebook and save it, and click the
->   `git` button in the notebook menu bar. This button uses `nbdime`
->   to display a readable `git diff`
-{: .challenge}

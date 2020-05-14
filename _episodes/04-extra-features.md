@@ -40,9 +40,10 @@ np.nancumsum
 np.nansum
 np.sum
 ```
+{: .output}
 
 `%quickref` shows a quick reference card of features and shortcuts:
-```
+```python
 %quickref
 ```
 
@@ -56,15 +57,16 @@ np.sum
   `Use Git and the optional Unix tools from the Windows Command Prompt`
 - Make sure your cell command doesn't require interaction
 
-```
+```python
 !echo "hello"
 ```
 ```
 hello
 ```
+{: .output}
 
 We can also capture the output of a shell command:
-```
+```python
 notebooks = !ls *.ipynb
 ```
 
@@ -84,36 +86,16 @@ There are two kinds of magics:
  - **Cell magics**: use two percent characters as a marker (%%), receive as argument the whole cell (must be used as the first line in a cell)
 
 `%lsmagic` lists all available line and cell magics:
-```
+```python
 %lsmagic
 ```
 
 Question mark shows help:
-```
+```python
 %sx?
 ```
 
 Additional magics can also be installed or created.
-
-> ## A few useful magic commands
->
-> Using the computing-pi notebook, practice using a few magic commands.
-> Remember that cell magics need to be on the first line of the cell.
-> 1. In the cell with the for-loop over `N` (throwing darts), add the
->    ``%%timeit`` cell magic and run the cell.
-> 2. In the same cell, try instead the `%%prun` cell profiling magic.
-> 3. Try introducing a bug in the code (e.g., use an incorrect variable name:
->    `points.append((x, y2, True))`)
->    - run the cell
->    - after the exception occurs, run the `%debug` magic in a new cell
->      to enter an interactive debugger
->    - type `h` for a help menu, and `help <keyword>` for help on keyword
->    - type `p x` to print the value of `x`
->    - exit the debugger by typing `q`
-> 4. Have a look at the output of `%lsmagic`, and use a question mark and
->    double question mark to see help for a magic command that raises
->    your interest.
-{: .challenge}
 
 ---
 
@@ -162,6 +144,28 @@ def g(x, y, s):
 > instructions](https://coderefinery.github.io/installation/jupyter/)
 {: .discussion}
 
+---
+
+> ## A few useful magic commands
+>
+> Using the computing-pi notebook, practice using a few magic commands.
+> Remember that cell magics need to be on the first line of the cell.
+> 1. In the cell with the for-loop over `num_points` (throwing darts), add the
+>    ``%%timeit`` cell magic and run the cell.
+> 2. In the same cell, try instead the `%%prun` cell profiling magic.
+> 3. Try introducing a bug in the code (e.g., use an incorrect variable name:
+>    `points.append((x, y2, True))`)
+>    - run the cell
+>    - after the exception occurs, run the `%debug` magic in a new cell
+>      to enter an interactive debugger
+>    - type `h` for a help menu, and `help <keyword>` for help on keyword
+>    - type `p x` to print the value of `x`
+>    - exit the debugger by typing `q`
+> 4. Have a look at the output of `%lsmagic`, and use a question mark and
+>    double question mark to see help for a magic command that raises
+>    your interest.
+{: .challenge}
+
 > ## Playing around with a widget
 >
 > Widgets can be used to interactively explore or analyze data.
@@ -208,6 +212,7 @@ def g(x, y, s):
 >    ```python
 >    interact(experiment, num_points=widgets.IntSlider(min=100, max=10000, step=100, value=1000))
 >    ```
+>    If you run into `Error displaying widget: model not found`, you may need to refresh the page.
 > 4. Drag the slider back and forth and observe the results.
 > 5. Can you think of other interesting uses of widgets?
 {: .challenge}
