@@ -52,16 +52,38 @@ keypoints:
 
 ---
 
-## A case example
+## Two case examples
+
+#### [Gravitational wave discovery](https://www.gw-openscience.org/about/)
 
 <img src="{{ site.baseurl }}/img/MergingBlackHoles_V2.jpg" width="50%">
 
-Let us have a look at the analysis published together with the discovery of gravitational waves. [This page](https://losc.ligo.org/tutorials/)
-lists the available analyses and presents several options to browse them:
-- Download zip-file with source and data
-- Open the notebooks on [Microsoft Azure Notebooks](https://notebooks.azure.com/losc/libraries/tutorials) platform.
-- Open the notebooks on [Binder](http://beta.mybinder.org/repo/losc-tutorial/quickview).
+Let us have a look at the analysis published together with the
+discovery of gravitational waves. [This
+page](https://losc.ligo.org/tutorials/) lists the available analyses
+and presents several options to browse them.
 
-Since Microsoft Azure requires a login to run the notebooks live (which is still free), we can try running the "Quickview Notebook" on Binder, [here's a direct link](http://beta.mybinder.org/repo/losc-tutorial/quickview).
+- A quick look at short segments of data can be found at 
+  [https://github.com/losc-tutorial/quickview](https://github.com/losc-tutorial/quickview)
+- The notebook can be opened and interactively explored 
+  using Binder by clicking the "launch Binder" button.
+- How does the Binder instance know which Python packages to load?
+
+
+#### [Activity inequality](http://activityinequality.stanford.edu/)
+
+<img src="{{ site.baseurl }}/img/activity_inequality.png" style="background-color:black;" width="80%">
+
+Researchers in the Stanford Activity Inequality Study measured daily
+activity from cell phone tracking data for over 700,000 users in
+different countries across the world.
+- All data and notebooks are available at 
+  [https://github.com/timalthoff/activityinequality](https://github.com/timalthoff/activityinequality)
+- Even without a "launch binder" button, the notebooks can still be 
+  [launched on Binder](https://mybinder.org/v2/gh/timalthoff/activityinequality/master)
+- Do you see any potential problems in recreating e.g. 
+  [fig3](https://github.com/timalthoff/activityinequality/tree/master/fig3)?
+
+---
 
 > For further inspiration, head over to the [Gallery of interesting Jupyter Notebooks](https://github.com/jupyter/jupyter/wiki/A-gallery-of-interesting-Jupyter-Notebooks).
