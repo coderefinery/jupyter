@@ -127,21 +127,11 @@ def g(x, y, s):
 > The widgets interface have to be installed.  JupyterLab is modular,
 > and some parts need to be installed as an extension.  In general,
 > copy and paste the command into a shell (the JupyterLab shell works
-> fine).
+> fine).  See the [installation instructions](https://coderefinery.github.io/installation/jupyter/#jupyterlab-extension-manager).
 >
-> ```shell
-> $ jupyter labextension install @jupyter-widgets/jupyterlab-manager
-> ```
-> But you may need some other support packages installed, too:
-> ```shell
-> $ conda install nodejs                                  # Do this first!
-> $ jupyter nbextension enable --py widgetsnbextension    # If not installed through anaconda
-> ```
->
-> In this case, we just need to reload the page to make it active.
-> Sometimes you have to restart the notebook server.  For more
-> information, see [the installation
-> instructions](https://coderefinery.github.io/installation/jupyter/)
+> After installation, you need to reload the page to make it active
+> (and if you installed it with pip or conda, restart the whole
+> JupyterLab server)
 {: .discussion}
 
 ---
