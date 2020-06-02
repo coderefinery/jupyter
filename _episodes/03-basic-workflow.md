@@ -109,8 +109,7 @@ What do we get from this?
 
 > ## Working with Git from JupyterLab
 >
-> 1. Make sure that you have installed the [Git extension](https://coderefinery.github.io/installation/jupyter/#git-extension) and
-    [nbdime](https://coderefinery.github.io/installation/jupyter/#diffingmerging-notebooks) for JupyterLab.
+> 1. Make sure that you have installed the [Git extension](https://coderefinery.github.io/installation/jupyter/#git-extension) for JupyterLab.
 > 2. Initialize a Git repository from the top Git menu.
 > 3. Save the computing-pi notebook and use the left-hand Git menu to stage and commit it.
 > 4. Go to GitHub and create a new repository, e.g. jupyterlab-demo.
