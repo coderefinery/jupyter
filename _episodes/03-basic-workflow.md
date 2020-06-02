@@ -60,15 +60,15 @@ fall within the unit circle.
 >
 > 6. "Throw darts":
 > ```python
-> points = []
-> hits = 0
-> for _ in range(num_points):
->     x, y = random.random(), random.random()
->     if x*x + y*y < 1.0:
->         hits += 1
->         points.append((x, y, True))
->     else:
->         points.append((x, y, False))
+>    points = []
+>    hits = 0
+>    for _ in range(num_points):
+>        x, y = random.random(), random.random()
+>        if x*x + y*y < 1.0:
+>            hits += 1
+>            points.append((x, y, True))
+>        else:
+>            points.append((x, y, False))
 > ```
 >
 > 7. Plot results:
