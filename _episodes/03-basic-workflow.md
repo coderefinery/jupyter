@@ -32,6 +32,17 @@ Here is one way of doing it - "throwing darts" by generating
 random points within a square area and checking whether the points
 fall within the unit circle.
 
+> ## Opening a webpage inside JupyterLab
+> 
+> If you would like to copy-paste content from this webpage into your 
+> Jupyter notebook, a cool way of doing it is to open this page inside 
+> an IFrame:
+> ```python
+> from IPython.display import IFrame
+> IFrame(src="https://coderefinery.github.io/jupyter/", width='100%', height='500px')
+> ```
+{: .callout}
+
 > ## Calculating pi using Monte Carlo methods
 >
 > 1. Create a new notebook, name it, and add a heading.
