@@ -279,7 +279,7 @@ objectives:
 > library. A dataset containing information on Nobel prizes will be used.
 >
 > 1. Start by navigating in the File Browser to the `data/` subfolder, and
->    double-click on the `nobels.csv` dataset. This will open JupyterLab's
+>    double-click on the [`nobels.csv`](https://github.com/coderefinery/jupyter/blob/gh-pages/data/nobels.csv) dataset. This will open JupyterLab's
 >    inbuilt data browser.
 > 2. Have a look at the data, column names, etc.
 > 3. In a your own notebook, import the `pandas` module and load the dataset into a *dataframe*:
