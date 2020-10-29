@@ -276,10 +276,10 @@ objectives:
 > Data science and data analysis are key use cases of Jupyter. In this
 > exercise you will familiarize yourself with dataframes and various
 > inbuilt analysis methods in the high-level `pandas` data exploration
-> library. A dataset containing information on Nobel prizes will be used.
+> library. A dataset containing information on Nobel prizes will be viewed with the file browser.
 >
 > 1. Start by navigating in the File Browser to the `data/` subfolder, and
->    double-click on the [`nobels.csv`](https://github.com/coderefinery/jupyter/blob/gh-pages/data/nobels.csv) dataset. This will open JupyterLab's
+>    double-click on the `nobels.csv` dataset. This will open JupyterLab's
 >    inbuilt data browser.
 > 2. Have a look at the data, column names, etc.
 > 3. In a your own notebook, import the `pandas` module and load the dataset into a *dataframe*:
