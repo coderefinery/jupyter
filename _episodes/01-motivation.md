@@ -89,11 +89,11 @@ For further inspiration, head over to the [Gallery of interesting Jupyter Notebo
 
 ### Pitfalls with notebooks
 
-- They **don't promote modularity**, and once you get started in a
-  notebook it can be hard to migrate to modules.
-- Once lots of code is in notebooks, it can be **hard to change to
-  proper programs that can be scripted**.
 - Less useful for **large codebases**.
+  They **don't promote modularity**, and once you get started in a
+  notebook it can be hard to migrate to modules.
+  Once lots of code is in notebooks, it can be **hard to change to
+  proper programs that can be scripted**.
 - Less useful for **non-linear code flow**.
 - They are **difficult to test**. There are things to run notebooks as
   unit tests like [nbval](https://nbval.readthedocs.io/), but it's not
