@@ -62,7 +62,7 @@ fall within the unit circle.
 > 4. Import two modules that we will need:
 > ```python
 > import random
-> from matplotlib import pyplot
+> import matplotlib.pyplot as plt
 > ```
 >
 > 5. Initialize the number of points:
@@ -78,16 +78,19 @@ fall within the unit circle.
 >        x, y = random.random(), random.random()
 >        if x*x + y*y < 1.0:
 >            hits += 1
->            points.append((x, y, True))
+>            points.append((x, y, "red"))
 >        else:
->            points.append((x, y, False))
+>            points.append((x, y, "blue"))
 > ```
 >
 > 7. Plot results:
 > ```python
 > %matplotlib inline
 > x, y, colors = zip(*points)
-> pyplot.scatter(x, y, c=colors)
+>
+> fig, ax = plt.subplots()
+> fig.set_size_inches(6.0, 6.0)
+> ax.scatter(x, y, c=colors)
 > ```
 >
 > 8. Compute final estimate of pi:
