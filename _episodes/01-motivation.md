@@ -31,30 +31,11 @@ keypoints:
 - Code, text, equations, figures, etc. are interleaved, creating a *computational narrative*.
 - [*"an environment in which users execute code, see what happens, modify and repeat in a kind of iterative conversation between researcher and data"*](https://www.nature.com/articles/d41586-018-07196-1)
 
-### Common use cases
-
-- Experimenting with new ideas, testing new libraries/databases
-- As an *interactive* development environment for code, data analysis and visualization
-- Interactive work on HPC clusters
-- Sharing and explaining code to colleagues
-- Teaching (programming, experimental/theoretical science)
-- Learning from other notebooks
-- Keeping track of interactive sessions, like a digital lab notebook
-- Supplementary information with published articles
-- Slide presentations using [Reveal.js](https://github.com/damianavila/RISE)
-
-### When not to use notebooks
-
-- Less useful for large codebases
-- More difficult to do automated testing on
-- Tricky when it comes to non-linear execution of cells, discipline is needed
-- We will discuss pitfalls later
-
 ---
 
-## Two case examples
+## Case examples
 
-#### [Gravitational wave discovery](https://www.gw-openscience.org/about/)
+### [Gravitational wave discovery](https://www.gw-openscience.org/about/)
 
 <img src="{{ site.baseurl }}/img/MergingBlackHoles_V2.jpg" width="50%">
 
@@ -70,7 +51,7 @@ and presents several options to browse them.
 - How does the Binder instance know which Python packages to load?
 
 
-#### [Activity inequality](http://activityinequality.stanford.edu/)
+### [Activity inequality](http://activityinequality.stanford.edu/) study
 
 <img src="{{ site.baseurl }}/img/activity_inequality.png" style="background-color:black;" width="80%">
 
@@ -81,9 +62,50 @@ different countries across the world.
   [https://github.com/timalthoff/activityinequality](https://github.com/timalthoff/activityinequality)
 - Even without a "launch binder" button, the notebooks can still be
   [launched on Binder](https://mybinder.org/v2/gh/timalthoff/activityinequality/master)
+  (you may see an error "missing R kernel" because a file `runtime.txt` is missing - more about that later)
 - Do you see any potential problems in recreating e.g.
-  [fig3](https://github.com/timalthoff/activityinequality/tree/master/fig3)?
+  [fig3bc](https://github.com/timalthoff/activityinequality/blob/master/fig3/fig3bc.ipynb)?
+
+
+### More examples
+
+For further inspiration, head over to the [Gallery of interesting Jupyter Notebooks](https://github.com/jupyter/jupyter/wiki/A-gallery-of-interesting-Jupyter-Notebooks).
 
 ---
 
-> For further inspiration, head over to the [Gallery of interesting Jupyter Notebooks](https://github.com/jupyter/jupyter/wiki/A-gallery-of-interesting-Jupyter-Notebooks).
+## Common use cases
+
+- Really good for **linear workflows** (e.g. read data, filter data, do some statistics, plot the results)
+- Experimenting with new ideas, testing new libraries/databases
+- As an *interactive* development environment for code, data analysis and visualization
+- Interactive work on HPC clusters
+- Sharing and explaining code to colleagues
+- Teaching (programming, experimental/theoretical science)
+- Learning from other notebooks
+- Keeping track of interactive sessions, like a digital lab notebook
+- Supplementary information with published articles
+- Slide presentations using [Reveal.js](https://github.com/damianavila/RISE)
+
+
+### Pitfalls with notebooks
+
+- Less useful for **large codebases**.
+  They **don't promote modularity**, and once you get started in a
+  notebook it can be hard to migrate to modules.
+  Once lots of code is in notebooks, it can be **hard to change to
+  proper programs that can be scripted**.
+- Less useful for **non-linear code flow**.
+- They are **difficult to test**. There are things to run notebooks as
+  unit tests like [nbval](https://nbval.readthedocs.io/), but it's not
+  perfect.
+- Notebooks can be **version controlled**
+  ([nbdime](https://nbdime.readthedocs.io/) helps with that), but
+  there are **still limitations**.
+- You can **change code after you run it** and run code out of order.
+  This can make debugging hard and results irreproducible if you
+  aren't careful. We recommend to **run all cells before sharing notebooks with others**.
+- Notebooks **aren't named by default** and tend to **acquire a bunch of
+  unrelated stuff**.  Be careful with organization!
+- See also <https://scicomp.aalto.fi/scicomp/jupyter-pitfalls.html>
+- You cannot easily write a notebook directly in your text editor (but you can do
+  that with [R Markdown](https://rmarkdown.rstudio.com/)).
