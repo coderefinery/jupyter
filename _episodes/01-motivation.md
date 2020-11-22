@@ -31,26 +31,6 @@ keypoints:
 - Code, text, equations, figures, etc. are interleaved, creating a *computational narrative*.
 - [*"an environment in which users execute code, see what happens, modify and repeat in a kind of iterative conversation between researcher and data"*](https://www.nature.com/articles/d41586-018-07196-1)
 
-### Common use cases
-
-- Really good for **linear workflows** (e.g. read data, filter data, do some statistics, plot the results)
-- Experimenting with new ideas, testing new libraries/databases
-- As an *interactive* development environment for code, data analysis and visualization
-- Interactive work on HPC clusters
-- Sharing and explaining code to colleagues
-- Teaching (programming, experimental/theoretical science)
-- Learning from other notebooks
-- Keeping track of interactive sessions, like a digital lab notebook
-- Supplementary information with published articles
-- Slide presentations using [Reveal.js](https://github.com/damianavila/RISE)
-
-### When not to use notebooks
-
-- Less useful for large codebases
-- More difficult to do automated testing on
-- Tricky when it comes to non-linear execution of cells, discipline is needed
-- We will discuss pitfalls later
-
 ---
 
 ## Two case examples
@@ -89,3 +69,26 @@ different countries across the world.
 ---
 
 For further inspiration, head over to the [Gallery of interesting Jupyter Notebooks](https://github.com/jupyter/jupyter/wiki/A-gallery-of-interesting-Jupyter-Notebooks).
+
+---
+
+## Common use cases
+
+- Really good for **linear workflows** (e.g. read data, filter data, do some statistics, plot the results)
+- Experimenting with new ideas, testing new libraries/databases
+- As an *interactive* development environment for code, data analysis and visualization
+- Interactive work on HPC clusters
+- Sharing and explaining code to colleagues
+- Teaching (programming, experimental/theoretical science)
+- Learning from other notebooks
+- Keeping track of interactive sessions, like a digital lab notebook
+- Supplementary information with published articles
+- Slide presentations using [Reveal.js](https://github.com/damianavila/RISE)
+
+
+### When not to use notebooks
+
+- Less useful for large codebases
+- More difficult to do automated testing on
+- Tricky when it comes to non-linear execution of cells, discipline is needed
+- We will discuss pitfalls later
