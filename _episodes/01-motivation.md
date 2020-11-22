@@ -86,9 +86,25 @@ For further inspiration, head over to the [Gallery of interesting Jupyter Notebo
 - Slide presentations using [Reveal.js](https://github.com/damianavila/RISE)
 
 
-### When not to use notebooks
+### Pitfalls with notebooks
 
-- Less useful for large codebases
-- More difficult to do automated testing on
-- Tricky when it comes to non-linear execution of cells, discipline is needed
-- We will discuss pitfalls later
+- They **don't promote modularity**, and once you get started in a
+  notebook it can be hard to migrate to modules.
+- Once lots of code is in notebooks, it can be **hard to change to
+  proper programs that can be scripted**.
+- Less useful for **large codebases**.
+- Less useful for **non-linear code flow**.
+- They are **difficult to test**. There are things to run notebooks as
+  unit tests like [nbval](https://nbval.readthedocs.io/), but it's not
+  perfect.
+- Notebooks can be **version controlled**
+  ([nbdime](https://nbdime.readthedocs.io/) helps with that), but
+  there are **still limitations**.
+- You can **change code after you run it** and run code out of order.
+  This can make debugging hard and results irreproducible if you
+  aren't careful. We recommend to **run all cells before sharing notebooks with others**.
+- Notebooks **aren't named by default** and tend to **acquire a bunch of
+  unrelated stuff**.  Be careful with organization!
+- See also <https://scicomp.aalto.fi/scicomp/jupyter-pitfalls.html>
+- You cannot easily write a notebook directly in your text editor (but you can do
+  that with [R Markdown](https://rmarkdown.rstudio.com/)).
