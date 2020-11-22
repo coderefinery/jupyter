@@ -82,7 +82,7 @@ different countries across the world.
 - Even without a "launch binder" button, the notebooks can still be
   [launched on Binder](https://mybinder.org/v2/gh/timalthoff/activityinequality/master)
 - Do you see any potential problems in recreating e.g.
-  [fig3](https://github.com/timalthoff/activityinequality/tree/master/fig3)?
+  [fig3bc](https://github.com/timalthoff/activityinequality/blob/master/fig3/fig3bc.ipynb)?
 
 ---
 
