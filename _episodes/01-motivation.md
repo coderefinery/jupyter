@@ -33,6 +33,7 @@ keypoints:
 
 ### Common use cases
 
+- Really good for **linear workflows** (e.g. read data, filter data, do some statistics, plot the results)
 - Experimenting with new ideas, testing new libraries/databases
 - As an *interactive* development environment for code, data analysis and visualization
 - Interactive work on HPC clusters
