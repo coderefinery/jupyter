@@ -1,10 +1,10 @@
 ---
 layout: episode
-title: Exercises
+title: Examples
 teaching: 0
 exercises: 30
 questions:
- - Mixed exercises to practice various aspects of using Jupyter
+ - Mixed examples/exercises to practice various aspects of using Jupyter
 objectives:
  - Learn more advanced usage of widgets.
  - Learn how to profile code and install a new line-profiler tool.
