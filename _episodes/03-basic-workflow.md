@@ -109,20 +109,3 @@ What do we get from this?
 - A reader may still just read the introduction and conclusion, but
   they can easily see more - *and try changes themselves* - if they
   want.
-
-> ## Working with Git from JupyterLab
->
-> 1. Make sure that you have installed the [Git extension](https://coderefinery.github.io/installation/jupyter/#git-extension) for JupyterLab.
-> 2. Initialize a Git repository from the top Git menu.
-> 3. Save the computing-pi notebook and use the left-hand Git menu to stage and commit it.
-> 4. Go to GitHub and create a new repository, e.g. jupyterlab-demo.
-> 5. Open a terminal inside JupyterLab and set the remote, e.g.
->   `git remote add origin https://github.com/user/jupyterlab-demo.git`
->   You can use the option "Open Git Repository in Terminal" in the top level Git menu.
-> 6. The first push needs to be done via terminal (to set the upstream
->   branch for our local master branch):
->   `git push -u origin master`
-> 7. Future pushes (and pulls) can be done from the left-hand Git menu.
-> 8. Make another change to the notebook and save it, and click the
->   `git` button in the notebook menu bar (or the Diff button in the left-side Git menu).
-{: .challenge}
