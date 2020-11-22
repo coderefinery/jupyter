@@ -9,10 +9,10 @@ questions:
 objectives:
  - Get started with notebooks for analysis.
  - Practice common keyboard shortcuts.
- - Get a feeling for the importance of execution order
+ - Get a feeling for the importance of execution order.
 keypoints:
  - Notebooks provide an intuitive way to perform interactive computational work.
- - Allows fast feedback in your test-code-refactor loop (see [test-driven development](https://en.wikipedia.org/wiki/Test-driven_development)).
+ - Allows fast feedback in your test-code-refactor loop.
  - Cells can be executed in any order, beware of out-of-order execution bugs!
  - Keyboard shortcuts can save you time and protect your wrists.
 ---
