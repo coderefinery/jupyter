@@ -39,26 +39,23 @@ faster access to cloud resources:
 
 ---
 
-> ## Exercise: Making your notebooks reproducible by anyone via [Binder](https://mybinder.org)
+> ## Exercise (20 min): Making your notebooks reproducible by anyone via [Binder](https://mybinder.org)
 >
-> - Create a `requirements.txt` file in your notebook repository, e.g.:
+> - Create a GitHub repository.
+> - Push the notebook which we have created earlier to this repository. If you got stuck earlier,
+>   you can fork this repository: <https://github.com/coderefinery/jupyter> (our example notebook is under `example`)
+> - Create a `requirements.txt` file which contains:
 >   ```
->   ipywidgets==7.4.2
->   numpy==1.16.4
 >   matplotlib==3.1.0
 >   ```
-> - Commit and push.
-> - Visit [https://mybinder.org](https://mybinder.org), and paste in
->   the URL of your notebook repository.
-> - Click on the arrow next to the "Copy the text below ..." to expand it.
-> - Copy the markdown line which begins with `[![Binder](https://mybinder.org/badge_logo.svg)]`, and paste it into a README.md file for your
->   notebook repository. Commit and push it.
+> - Commit and push also this file to your notebook repository.
+> - Visit [https://mybinder.org](https://mybinder.org):
+>   <img src="{{ site.baseurl }}/img/binder.jpg" width="100%">
 > - Check that your notebook repository now has a "launch binder"
->   button in your README file on GitHub
-> - Try clicking the button and see how your repository in launched
->   on Binder. Your notebooks can now be expored and executed in the cloud.
+>   badge in your `README.md` file on GitHub.
+> - Try clicking the button and see how your repository is launched
+>   on Binder (can take a minute or two). Your notebooks can now be expored and executed in the cloud.
 > - Enjoy being fully reproducible!
-> - As a side note you can also run RStudio directly on Binder ([example](https://github.com/bast/rstudio-on-binder)).
 {: .challenge}
 
 > ## (Optional) Exercise: what happens without requirements.txt?
@@ -76,6 +73,24 @@ faster access to cloud resources:
 > - Install the missing requirements with `pip`.  Does it work now?
 >   Why or why not?
 > - How would this be better?
+{: .challenge}
+
+> ## (Optional) Exercise: share an interactive (ipywidgets) notebook via [Binder](https://mybinder.org)
+>
+> - Take the solution from <https://coderefinery.github.io/jupyter/05-exercises/#widgets-for-interactive-data-fitting>.
+> - Push it to a GitHub/GitLab repository.
+> - Create a `requirements.txt` file in your notebook repository, e.g.:
+>   ```
+>   ipywidgets==7.4.2
+>   numpy==1.16.4
+>   matplotlib==3.1.0
+>   ```
+> - Try to deploy this example via Binder in the same way as the above exercise.
+{: .challenge}
+
+> ## (Optional) Exercise: share R Markdown/R Studio project via [Binder](https://mybinder.org)
+>
+> (Exercise to be written but we will share an Rmd example)
 {: .challenge}
 
 ---
