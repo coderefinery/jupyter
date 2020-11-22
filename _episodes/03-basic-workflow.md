@@ -59,9 +59,10 @@ fall within the unit circle.
 > ![Darts](https://coderefinery.github.io/jupyter/img/darts.svg)
 > ```
 >
-> 4. Import `random` module:
+> 4. Import two modules that we will need:
 > ```python
 > import random
+> from matplotlib import pyplot
 > ```
 >
 > 5. Initialize the number of points:
@@ -85,7 +86,6 @@ fall within the unit circle.
 > 7. Plot results:
 > ```python
 > %matplotlib inline
-> from matplotlib import pyplot
 > x, y, colors = zip(*points)
 > pyplot.scatter(x, y, c=colors)
 > ```
