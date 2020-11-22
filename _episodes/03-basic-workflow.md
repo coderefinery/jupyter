@@ -99,6 +99,10 @@ fall within the unit circle.
 > ```
 {: .challenge}
 
+Here is the notebook: <https://github.com/coderefinery/jupyter/blob/gh-pages/example/darts.ipynb>
+(static version, later we will learn how to share notebooks which are dynamic
+and can be modified).
+
 What do we get from this?
 
 - With code separate from everything else, you might just send one
