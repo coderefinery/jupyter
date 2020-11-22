@@ -254,7 +254,7 @@ objectives:
 > > ```python
 > > %lprun -f step walk(10000)
 > > ```
-> > 
+> >
 > > ```
 > > ...
 > >      8                                           def step():

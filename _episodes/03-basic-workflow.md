@@ -33,9 +33,9 @@ random points within a square area and checking whether the points
 fall within the unit circle.
 
 > ## Opening a webpage inside JupyterLab
-> 
-> If you would like to copy-paste content from this webpage into your 
-> Jupyter notebook, a cool way of doing it is to open this page inside 
+>
+> If you would like to copy-paste content from this webpage into your
+> Jupyter notebook, a cool way of doing it is to open this page inside
 > an IFrame:
 > ```python
 > from IPython.display import IFrame
@@ -121,5 +121,5 @@ What do we get from this?
 >   `git push -u origin master`
 > 7. Future pushes (and pulls) can be done from the left-hand Git menu.
 > 8. Make another change to the notebook and save it, and click the
->   `git` button in the notebook menu bar (or the Diff button in the left-side Git menu). 
+>   `git` button in the notebook menu bar (or the Diff button in the left-side Git menu).
 {: .challenge}

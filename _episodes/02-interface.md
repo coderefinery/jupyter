@@ -82,7 +82,7 @@ inline $e^{i\pi} + 1 = 0$
 or on new line
 $$e^{i\pi} + 1 = 0$$
 
-Images: 
+Images:
 
 ![Jupyter logo](https://jupyter.org/assets/main-logo.svg)
 
@@ -157,7 +157,7 @@ Some shortcuts only work in Command or Edit mode.
 ## Version control of notebooks
 
 Jupyter Notebooks are stored in json format, which doesn't play nicely
-with Git, but several packages and JupyterLab extensions have been developed 
+with Git, but several packages and JupyterLab extensions have been developed
 to make it easier:
 
 - [nbdime](http://nbdime.readthedocs.io/en/latest/) provides
@@ -166,20 +166,20 @@ to make it easier:
   - `git diff` and `git merge` shell commands will use nbdime's diff
     and merge for notebook files, but leave Git's behavior unchanged
     for non-notebook files.
-- [jupyterlab-git](https://github.com/jupyterlab/jupyterlab-git) 
+- [jupyterlab-git](https://github.com/jupyterlab/jupyterlab-git)
   is a JupyterLab extension for version control using Git.
   - Adds a Git tab to the left-side manubar for version control inside JupyterLab.
-- [jupyterlab/github](https://www.npmjs.com/package/@jupyterlab/github) 
+- [jupyterlab/github](https://www.npmjs.com/package/@jupyterlab/github)
   is a JupyterLab extension for accessing GitHub repositories.
-  - Adds a GitHub tab to the left-side manubar where you can browse 
+  - Adds a GitHub tab to the left-side manubar where you can browse
     and open notebooks from your GitHub repositories.
 
 All three extensions can be used from within the JupyterLab interface.
 
 > ## Installing extensions: Is the git interface not showing up?
 >
-> JupyterLab is modular, and some parts need to be installed as extensions.  
-> In general, either copy and paste installation and configuration commands 
+> JupyterLab is modular, and some parts need to be installed as extensions.
+> In general, either copy and paste installation and configuration commands
 > into a shell or use the JupyterLab extension manager. See the [installation
 > instructions](https://coderefinery.github.io/installation/jupyter/).
 >

@@ -63,9 +63,9 @@ discovery of gravitational waves. [This
 page](https://losc.ligo.org/tutorials/) lists the available analyses
 and presents several options to browse them.
 
-- A quick look at short segments of data can be found at 
+- A quick look at short segments of data can be found at
   [https://github.com/losc-tutorial/quickview](https://github.com/losc-tutorial/quickview)
-- The notebook can be opened and interactively explored 
+- The notebook can be opened and interactively explored
   using Binder by clicking the "launch Binder" button.
 - How does the Binder instance know which Python packages to load?
 
@@ -77,11 +77,11 @@ and presents several options to browse them.
 Researchers in the Stanford Activity Inequality Study measured daily
 activity from cell phone tracking data for over 700,000 users in
 different countries across the world.
-- All data and notebooks are available at 
+- All data and notebooks are available at
   [https://github.com/timalthoff/activityinequality](https://github.com/timalthoff/activityinequality)
-- Even without a "launch binder" button, the notebooks can still be 
+- Even without a "launch binder" button, the notebooks can still be
   [launched on Binder](https://mybinder.org/v2/gh/timalthoff/activityinequality/master)
-- Do you see any potential problems in recreating e.g. 
+- Do you see any potential problems in recreating e.g.
   [fig3](https://github.com/timalthoff/activityinequality/tree/master/fig3)?
 
 ---
