@@ -33,9 +33,9 @@ keypoints:
 
 ---
 
-## Two case examples
+## Case examples
 
-#### [Gravitational wave discovery](https://www.gw-openscience.org/about/)
+### [Gravitational wave discovery](https://www.gw-openscience.org/about/)
 
 <img src="{{ site.baseurl }}/img/MergingBlackHoles_V2.jpg" width="50%">
 
@@ -51,7 +51,7 @@ and presents several options to browse them.
 - How does the Binder instance know which Python packages to load?
 
 
-#### [Activity inequality](http://activityinequality.stanford.edu/)
+### [Activity inequality](http://activityinequality.stanford.edu/) study
 
 <img src="{{ site.baseurl }}/img/activity_inequality.png" style="background-color:black;" width="80%">
 
@@ -66,7 +66,8 @@ different countries across the world.
 - Do you see any potential problems in recreating e.g.
   [fig3bc](https://github.com/timalthoff/activityinequality/blob/master/fig3/fig3bc.ipynb)?
 
----
+
+### More examples
 
 For further inspiration, head over to the [Gallery of interesting Jupyter Notebooks](https://github.com/jupyter/jupyter/wiki/A-gallery-of-interesting-Jupyter-Notebooks).
 
