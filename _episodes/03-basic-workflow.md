@@ -9,10 +9,10 @@ questions:
 objectives:
  - Get started with notebooks for analysis.
  - Practice common keyboard shortcuts.
- - Get a feeling for the importance of execution order
+ - Get a feeling for the importance of execution order.
 keypoints:
  - Notebooks provide an intuitive way to perform interactive computational work.
- - Allows fast feedback in your test-code-refactor loop (see [test-driven development](https://en.wikipedia.org/wiki/Test-driven_development)).
+ - Allows fast feedback in your test-code-refactor loop.
  - Cells can be executed in any order, beware of out-of-order execution bugs!
  - Keyboard shortcuts can save you time and protect your wrists.
 ---
@@ -59,9 +59,10 @@ fall within the unit circle.
 > ![Darts](https://coderefinery.github.io/jupyter/img/darts.svg)
 > ```
 >
-> 4. Import `random` module:
+> 4. Import two modules that we will need:
 > ```python
 > import random
+> import matplotlib.pyplot as plt
 > ```
 >
 > 5. Initialize the number of points:
@@ -77,17 +78,19 @@ fall within the unit circle.
 >        x, y = random.random(), random.random()
 >        if x*x + y*y < 1.0:
 >            hits += 1
->            points.append((x, y, True))
+>            points.append((x, y, "red"))
 >        else:
->            points.append((x, y, False))
+>            points.append((x, y, "blue"))
 > ```
 >
 > 7. Plot results:
 > ```python
 > %matplotlib inline
-> from matplotlib import pyplot
 > x, y, colors = zip(*points)
-> pyplot.scatter(x, y, c=colors)
+>
+> fig, ax = plt.subplots()
+> fig.set_size_inches(6.0, 6.0)
+> ax.scatter(x, y, c=colors)
 > ```
 >
 > 8. Compute final estimate of pi:
