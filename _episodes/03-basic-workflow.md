@@ -72,22 +72,21 @@ fall within the unit circle.
 >
 > 6. "Throw darts":
 > ```python
->    points = []
->    hits = 0
->    for _ in range(num_points):
->        x, y = random.random(), random.random()
->        if x*x + y*y < 1.0:
->            hits += 1
->            points.append((x, y, "red"))
->        else:
->            points.append((x, y, "blue"))
+> points = []
+> hits = 0
+> for _ in range(num_points):
+>     x, y = random.random(), random.random()
+>     if x*x + y*y < 1.0:
+>         hits += 1
+>         points.append((x, y, "red"))
+>     else:
+>         points.append((x, y, "blue"))
 > ```
 >
 > 7. Plot results:
 > ```python
 > %matplotlib inline
 > x, y, colors = zip(*points)
->
 > fig, ax = plt.subplots()
 > fig.set_size_inches(6.0, 6.0)
 > ax.scatter(x, y, c=colors)
