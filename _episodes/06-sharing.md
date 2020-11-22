@@ -34,6 +34,7 @@ faster access to cloud resources:
 - [CoCalc](https://cocalc.com/) (formerly SageMathCloud) allows collaborative editing of notebooks in the cloud
 - Google's [colaboratory](https://colab.research.google.com/) lets you work on notebooks in the cloud, and you can [read and write to notebook files on Drive](https://colab.research.google.com/notebooks/io.ipynb)
 - [Microsoft Azure Notebooks](https://notebooks.azure.com/) also offers free notebooks in the cloud
+- [Deepnote](https://deepnote.com/) allows real-time collaboration
 
 ---
 
