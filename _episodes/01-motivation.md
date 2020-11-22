@@ -81,6 +81,7 @@ different countries across the world.
   [https://github.com/timalthoff/activityinequality](https://github.com/timalthoff/activityinequality)
 - Even without a "launch binder" button, the notebooks can still be
   [launched on Binder](https://mybinder.org/v2/gh/timalthoff/activityinequality/master)
+  (you may see an error "missing R kernel" because a file `runtime.txt` is missing - more about that later)
 - Do you see any potential problems in recreating e.g.
   [fig3bc](https://github.com/timalthoff/activityinequality/blob/master/fig3/fig3bc.ipynb)?
 
