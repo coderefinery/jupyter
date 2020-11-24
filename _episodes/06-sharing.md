@@ -92,7 +92,20 @@ faster access to cloud resources:
 
 > ## (Optional) Exercise: share R Markdown/R Studio project via [Binder](https://mybinder.org)
 >
-> (Exercise to be written but we will share an Rmd example)
+> This exercise is for those who use Rmd files instead of Jupyter notebooks.
+> - Put your Rmd file into a GitHub repository.
+> - To this repository add a file `runtime.txt` which specifies the R version you want to use:
+>   ```
+>   r-3.6-2020-10-13
+>   ```
+> - To this repository add a file `install.R` which lists the dependencies, for instance:
+>   ```
+>   install.packages(c("readr", "ggplot2"))
+>   ```
+> - After you have done that, visit
+>   `https://mybinder.org/v2/gh/myuser/myrepo/mybranch?urlpath=rstudio` (adapt
+>   "myuser", "myrepo", and "mybranch").
+> - For more information, see [this guide](https://github.com/alan-turing-institute/the-turing-way/blob/master/workshops/boost-research-reproducibility-binder/workshop-presentations/zero-to-binder-r.md).
 {: .challenge}
 
 ---
