@@ -25,18 +25,19 @@ topics which might not be well known, or at least not well used, such as
 - widgets for even more interactivity when e.g. analyzing data
 - useful magic commands to time, profile and debug code cells
 - using notebooks more efficiently, e.g. by keyboard shortcuts and quick access to documentation
-- making notebooks reproducible by anyone via mybinder
+- making notebooks reproducible by anyone via Binder
 
 Especially the first and last points connect well with the rest of the CodeRefinery lessons,
 and as more and more researchers use notebooks in their daily work it will be important
 to focus on these aspects when teaching this lesson.
 
-Finally, the "Exercises" episode has a long list of exercises focusing on
+Finally, the "Examples" episode has a long list of exercises focusing on
 different aspects and use cases of notebooks. In workshops where there is enough time
 to go into this episode, participants can choose whichever exercises they find interesting.
 
 A key take-home message from this lesson should be that Jupyter notebooks
 can be a very useful tool for reproducible research, if used wisely.
+
 
 ## Intended learning outcomes
 
@@ -49,9 +50,25 @@ By the end of this lesson, learners should:
 - know how to version control notebooks efficiently using JupyterLab plugins and the nbdime tool
 - realize that notebooks can be used to document scientific analysis, and published
   e.g. as supplementary information with journal articles to aid reproducibility
-- know how to share notebooks via mybinder
+- know how to share notebooks via Binder
 - be able to relate to the possible pitfalls of using notebooks
 - be able to distinguish good and bad examples of notebook usage
+
+
+## Exercises
+
+- "A first computational notebook" can be done either as a 20 minute exercise
+  or as a type-along demo.
+- "Version control of notebooks" should be done as demonstration.
+- "Making your notebooks reproducible by anyone via Binder" should be done as a
+  20 minute exercise but can be done as a demo.
+- Note that there is an optional exercise for R users who can try to deploy R
+  Studio/ R Markdown to Binder.
+- The "Examples" episode contains many interesting examples which can be used
+  for demonstration or as exercise. The dependencies for ipywidget examples are
+  typically tricky to install/enable in a group exercise. Instead they can be
+  demonstrated on Binder (there is an optional exercise for this).
+
 
 ## How to teach this lesson
 
@@ -60,12 +77,15 @@ By the end of this lesson, learners should:
 These are the packages used in the lesson material and exercises:
 - jupyter
 - jupyterlab
+- matplotlib
+
+Optional dependencies for optional examples:
 - nodejs (for widgets to work)
 - ipywidgets
 - numpy
-- matplotlib
 - pandas
 - seaborn
+
 
 ### Motivation
 
@@ -73,7 +93,7 @@ How the instructor introduces and motivates Jupyter notebooks is flexible and
 can depend on the instructor's background. The first episode emphasizes the
 "computational narrative" aspect of notebooks, and highlights a few
 common use cases. The gravitational-wave discovery is used as a motivational
-example, and it's helpful if the instructor clicks the mybinder link to see how
+example, and it's helpful if the instructor clicks the Binder link to see how
 the notebooks become available for interactive exploration in the cloud.
 The instructor should also open the link "Gallery of interesting Jupyter notebooks"
 to show the wide variety of notebooks that people have shared online.
@@ -115,6 +135,7 @@ Take-home messages:
 - The Git integration in JupyterLab is powerful and enables tracking notebooks in just
   the same way as one would with source code files.
 
+
 ### A first computational notebook
 
 To show that Jupyter Notebooks are rather simple and intuitive, the third episode
@@ -143,24 +164,17 @@ Take-home messages:
   users to stay within the notebook instead of jumping to another terminal.
 - Widgets add even more interactivity to notebooks.
 
+
 ### Sharing notebooks
 
 This episode has a list of services and tools to share and collaborate on Jupyter
 notebooks. The instructor doesn't have to go through each item in the list, but
 rather emphasize that many services and tools built around Jupyter exist.
 
-The exercise on making notebooks reproducible via mybinder is an important one as
+The exercise on making notebooks reproducible via Binder is an important one as
 it connects with other lessons and emphasizes the reproducibility benefits of notebooks.
 If time allows, the instructor can let participants set up a remote repository on GitHub
 for their local notebook repos, and push to the remote. After that they can follow the
-exercise steps to obtain a mybinder badge to add to their repository README files.
+exercise steps to obtain a Binder badge to add to their repository README files.
 If time is short, the instructor can instead just demonstrate all steps and encourage
 participants to try it out themselves later.
-
-### Exercises
-
-If time allows, participants can spend some time on solving the exercises they are
-most interested in.
-
-
-
