@@ -77,7 +77,7 @@ faster access to cloud resources:
 
 > ## (Optional) Exercise: share an interactive (ipywidgets) notebook via [Binder](https://mybinder.org)
 >
-> - Take the solution from <https://coderefinery.github.io/jupyter/05-exercises/#widgets-for-interactive-data-fitting>.
+> - Take the solution from <https://coderefinery.github.io/jupyter/05-examples/#widgets-for-interactive-data-fitting>.
 > - Push it to a GitHub/GitLab repository.
 > - Create a `requirements.txt` file in your notebook repository, e.g.:
 >   ```
