@@ -10,41 +10,22 @@ questions:
 
 # Version control of notebooks
 
-> ## Working with Git from JupyterLab
->
-> 1. Make sure that you have installed the [Git extension](https://coderefinery.github.io/installation/jupyter/#git-extension) for JupyterLab.
-> 2. Initialize a Git repository from the top Git menu.
-> 3. Save the computing-pi notebook and use the left-hand Git menu to stage and commit it.
-> 4. Go to GitHub and create a new repository, e.g. jupyterlab-demo.
-> 5. Open a terminal inside JupyterLab and set the remote, e.g.
->   `git remote add origin https://github.com/user/jupyterlab-demo.git`
->   You can use the option "Open Git Repository in Terminal" in the top level Git menu.
-> 6. The first push needs to be done via terminal (to set the upstream
->   branch for our local master branch):
->   `git push -u origin master`
-> 7. Future pushes (and pulls) can be done from the left-hand Git menu.
-> 8. Make another change to the notebook and save it, and click the
->   `git` button in the notebook menu bar (or the Diff button in the left-side Git menu).
-{: .challenge}
-
----
-
-Jupyter Notebooks are stored in json format, which doesn't play nicely
+Jupyter Notebooks are stored in [JSON](https://en.wikipedia.org/wiki/JSON) format, which doesn't play nicely
 with Git, but several packages and JupyterLab extensions have been developed
 to make it easier:
 
-- [nbdime](http://nbdime.readthedocs.io/en/latest/) provides
+- [nbdime](http://nbdime.readthedocs.io/) (notebook "diff" and "merge") provides
   "content-aware" diffing and merging.
   - Adds a Git button to the notebook interface.
-  - `git diff` and `git merge` shell commands will use nbdime's diff
+  - `git diff` and `git merge` shell commands can use nbdime's diff
     and merge for notebook files, but leave Git's behavior unchanged
     for non-notebook files.
 - [jupyterlab-git](https://github.com/jupyterlab/jupyterlab-git)
   is a JupyterLab extension for version control using Git.
-  - Adds a Git tab to the left-side manubar for version control inside JupyterLab.
-- [jupyterlab/github](https://www.npmjs.com/package/@jupyterlab/github)
+  - Adds a Git tab to the left-side menu bar for version control inside JupyterLab.
+- [JupyterLab GitHub](https://www.npmjs.com/package/@jupyterlab/github)
   is a JupyterLab extension for accessing GitHub repositories.
-  - Adds a GitHub tab to the left-side manubar where you can browse
+  - Adds a GitHub tab to the left-side menu bar where you can browse
     and open notebooks from your GitHub repositories.
 
 All three extensions can be used from within the JupyterLab interface.
@@ -61,3 +42,25 @@ All three extensions can be used from within the JupyterLab interface.
 >
 {: .discussion}
 
+
+> ## Instructor demonstrates nbdime
+>
+> 1. To understand the problem, the instructor first shows the [example
+>    notebook](https://github.com/coderefinery/jupyter/blob/gh-pages/example/darts.ipynb)
+>    and then the [source
+>    code](https://raw.githubusercontent.com/coderefinery/jupyter/gh-pages/example/darts.ipynb)
+>    in JSON format.
+> 2. Then we introduce a simple change to the example notebook, for instance
+>    changing colors and also changing dimensions in `fig.set_size_inches(6.0,
+>    6.0)`.
+> 3. We save the change and in the JupyterLab terminal try "normal" `git diff`
+>    and see that this is not very useful.
+> 4. Then the instructor installs `jupyterlab-git` which also installs
+>    `nbdime`.
+> 5. We then inspect the same change we did in the Git tab of the JupyterLab
+>    sidebar.
+> 6. If there is time, we can also show
+>    [nbdime](https://nbdime.readthedocs.io/) on the command line.
+> 7. We can point out that Git can be configured to always use nbdime for
+>    notebooks.
+{: .challenge}
