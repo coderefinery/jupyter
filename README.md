@@ -21,3 +21,5 @@ $ export PATH=$PATH:$HOME/.gem/bin
 $ bundler install
 $ bundle exec jekyll serve
 ```
+
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/thr44pw00d/jupyter/HEAD)
