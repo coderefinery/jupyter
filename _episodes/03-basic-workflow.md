@@ -43,7 +43,9 @@ fall within the unit circle.
 > ```
 {: .callout}
 
-> ## Calculating pi using Monte Carlo methods
+> ## Exercise/demonstration: Calculating pi using Monte Carlo methods
+>
+> This can be either done as a 20 minute exercise or as a type-along demo.
 >
 > 1. Create a new notebook, name it, and add a heading.
 > 2. Document the relevant formulas in a new cell:
