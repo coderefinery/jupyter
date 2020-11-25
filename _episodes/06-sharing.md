@@ -2,7 +2,7 @@
 layout: episode
 title: Sharing notebooks
 teaching: 10
-exercises: 0
+exercises: 20
 questions:
  - How can I share notebooks with colleagues and the community?
 objectives:
