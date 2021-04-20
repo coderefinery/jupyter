@@ -1,14 +1,9 @@
----
-layout: episode
-title: Notebooks and version control
-teaching: 15
-exercises: 0
-questions:
- - How can notebooks interact with version control?
- - How can we compare and merge notebooks using Git?
----
+# Notebooks and version control
 
-# Version control of notebooks
+```{questions}
+- How can notebooks interact with version control?
+- How can we compare and merge notebooks using Git?
+```
 
 Jupyter Notebooks are stored in [JSON](https://en.wikipedia.org/wiki/JSON) format, which doesn't play nicely
 with Git, but several packages and JupyterLab extensions have been developed
