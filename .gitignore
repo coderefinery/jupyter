@@ -1,4 +1,3 @@
-_site/
-.sass-cache/
-.jekyll-metadata
-*~
+.jupyter_cache/
+_build/
+venv/

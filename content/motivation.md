@@ -1,21 +1,15 @@
----
-layout: episode
-title: Motivation
-teaching: 10
-exercises: 0
-questions:
-  - What are Jupyter Notebooks?
-  - What can Jupyter Notebooks be used for?
-objectives:
-  - Get an idea of the purpose of Jupyter.
-  - See some inspirational Jupyter notebooks.
-keypoints:
-  - Jupyter is an open-source, interactive web tool allowing researchers
-    to combine code, output, explanatory text and multimedia resources
-    in a single document.
----
-
 # Jupyter Notebooks
+
+```{questions}
+- What are Jupyter Notebooks?
+- What can Jupyter Notebooks be used for?
+```
+
+```{objectives}
+- Get an idea of the purpose of Jupyter.
+- See some inspirational Jupyter notebooks.
+```
+
 
 ## Some history
 - In 2014, Fernando Pérez announced a spin-off project from IPython called Project Jupyter, moving the notebook and other language-agnostic parts of IPython to Jupyter.
@@ -37,7 +31,12 @@ keypoints:
 
 ### [Gravitational wave discovery](https://www.gw-openscience.org/about/)
 
-<img src="{{ site.baseurl }}/img/MergingBlackHoles_V2.jpg" width="50%">
+```{figure} img/MergingBlackHoles_V2.jpg
+:alt: Image of two black holes merging
+:width: 50%
+
+Image of two black holes merging.
+```
 
 Let us have a look at the analysis published together with the
 discovery of gravitational waves. [This
@@ -53,7 +52,12 @@ and presents several options to browse them.
 
 ### [Activity inequality](http://activityinequality.stanford.edu/) study
 
-<img src="{{ site.baseurl }}/img/activity_inequality.png" style="background-color:black;" width="80%">
+```{figure} img/activity_inequality.png
+:alt: Stanford Activity Inequality Study
+:width: 80%
+
+Stanford Activity Inequality Study.
+```
 
 Researchers in the Stanford Activity Inequality Study measured daily
 activity from cell phone tracking data for over 700,000 users in
@@ -109,3 +113,9 @@ For further inspiration, head over to the [Gallery of interesting Jupyter Notebo
 - See also <https://scicomp.aalto.fi/scicomp/jupyter-pitfalls.html>
 - You cannot easily write a notebook directly in your text editor (but you can do
   that with [R Markdown](https://rmarkdown.rstudio.com/)).
+
+```{keypoints}
+- Jupyter is an open-source, interactive web tool allowing researchers
+  to combine code, output, explanatory text and multimedia resources
+  in a single document.
+```

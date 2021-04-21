@@ -1,21 +1,17 @@
----
-layout: episode
-title: The JupyterLab and notebook interface
-teaching: 15
-exercises: 0
-questions:
- - How does the JupyterLab interface work?
- - How do I edit Jupyter notebooks?
- - How can I version control notebooks?
-objectives:
- - Learn to navigate JupyterLab user interface.
- - Discuss integrated development environments.
- - Get an overview of useful keyboard shortcuts.
- - Learn about command/edit modes, markdown/code cells and Git integration.
-keypoints:
- - JupyterLab has a rich, modular and highly customizable user interface.
- - nbdime, jupyterlab-git and jupyterlab/github help you track notebooks with Git.
----
+# The JupyterLab and notebook interface
+
+```{questions}
+- How does the JupyterLab interface work?
+- How do I edit Jupyter notebooks?
+- How can I version control notebooks?
+```
+
+```{objectives}
+- Learn to navigate JupyterLab user interface.
+- Discuss integrated development environments.
+- Get an overview of useful keyboard shortcuts.
+- Learn about command/edit modes, markdown/code cells and Git integration.
+```
 
 # JupyterLab
 
@@ -58,7 +54,12 @@ $ jupyter-lab
 - **Markdown cells** contain formatted text written in Markdown
 - **Code cells** contain code to be interpreted by the *kernel* (Python, R, Julia, Octave/Matlab...)
 
-![Components]({{ site.baseurl }}/img/notebook_components.png)
+```{figure} img/notebook_components.png
+:alt: Components of a Jupyter notebook
+
+Components of a Jupyter notebook.
+```
+
 
 ### Markdown cells
 
@@ -99,10 +100,11 @@ Links:
 # and the results are displayed to you
 print("hello world")
 ```
+
+Output:
 ```
 hello world
 ```
-{: .output}
 
 ### Command and edit modes
 
@@ -151,3 +153,10 @@ Some shortcuts only work in Command or Edit mode.
 > | Continue using Emacs and Vim, if you are already proficient | Both IDE and code editors share common features such as code completion, hints, highlighting sections of code | IDEs offer rich support for Debugging and Code refactoring |
 > | Supports multiple programming languages | Supports multiple programming languages | Focused on a single language |
 {: .challenge}
+
+---
+
+```{keypoints}
+ - JupyterLab has a rich, modular and highly customizable user interface.
+ - nbdime, jupyterlab-git and jupyterlab/github help you track notebooks with Git.
+```
