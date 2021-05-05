@@ -13,8 +13,6 @@
 - Learn about command/edit modes, markdown/code cells and Git integration.
 ```
 
-# JupyterLab
-
 JupyterLab is the next-generation user interface for Jupyter notebooks
 and is intended to replace the conventional interface.
 It is a highly modular and customizable interface.
