@@ -45,57 +45,58 @@ IFrame(src="https://coderefinery.github.io/jupyter/", width='100%', height='500p
 This can be either done as a 20 minute exercise or as a type-along demo.
 
 1. Create a new notebook, name it, and add a heading.
+
 2. Document the relevant formulas in a new cell:
- ```
- - square area: $s = (2 r)^2$
- - circle area: $c = \pi r^2$
- - $c/s = (\pi r^2) / (4 r^2) = \pi / 4$
- - $\pi = 4 * c/s$
- ```
+   ```
+   - square area: $s = (2 r)^2$
+   - circle area: $c = \pi r^2$
+   - $c/s = (\pi r^2) / (4 r^2) = \pi / 4$
+   - $\pi = 4 * c/s$
+   ```
 
 3. Add an image to explain the concept:
-```
-![Darts](https://coderefinery.github.io/jupyter/img/darts.svg)
-```
+   ```markdown
+   ![Darts](https://coderefinery.github.io/jupyter/img/darts.svg)
+   ```
 
 4. Import two modules that we will need:
-```python
-import random
-import matplotlib.pyplot as plt
-```
+   ```python
+   import random
+   import matplotlib.pyplot as plt
+   ```
 
 5. Initialize the number of points:
-```python
-num_points = 1000
-```
+   ```python
+   num_points = 1000
+   ```
 
 6. "Throw darts":
-```python
-points = []
-hits = 0
-for _ in range(num_points):
-    x, y = random.random(), random.random()
-    if x*x + y*y < 1.0:
-        hits += 1
-        points.append((x, y, "red"))
-    else:
-        points.append((x, y, "blue"))
-```
+   ```python
+   points = []
+   hits = 0
+   for _ in range(num_points):
+       x, y = random.random(), random.random()
+       if x*x + y*y < 1.0:
+           hits += 1
+           points.append((x, y, "red"))
+       else:
+           points.append((x, y, "blue"))
+   ```
 
 7. Plot results:
-```python
-%matplotlib inline
-x, y, colors = zip(*points)
-fig, ax = plt.subplots()
-fig.set_size_inches(6.0, 6.0)
-ax.scatter(x, y, c=colors)
-```
+   ```python
+   %matplotlib inline
+   x, y, colors = zip(*points)
+   fig, ax = plt.subplots()
+   fig.set_size_inches(6.0, 6.0)
+   ax.scatter(x, y, c=colors)
+   ```
 
 8. Compute final estimate of pi:
-```python
-fraction = hits / num_points
-4 * fraction
-```
+   ```python
+   fraction = hits / num_points
+   4 * fraction
+   ```
 ````
 
 Here is the notebook: <https://github.com/coderefinery/jupyter/blob/gh-pages/example/darts.ipynb>
