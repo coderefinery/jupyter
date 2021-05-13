@@ -1,8 +1,6 @@
 Introduction to Jupyter and JupyterLab
 ======================================
 
-This is a lesson on Jupyter Notebooks and the JupyterLab interface.
-
 The goal of this lesson is to teach learners the user interface of JupyterLab,
 how Jupyter notebooks work, and what some common and powerful usecases are.
 
