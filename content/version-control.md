@@ -25,37 +25,33 @@ to make it easier:
 
 All three extensions can be used from within the JupyterLab interface.
 
-> ## Installing extensions: Is the git interface not showing up?
->
-> JupyterLab is modular, and some parts need to be installed as extensions.
-> In general, either copy and paste installation and configuration commands
-> into a shell or use the JupyterLab extension manager. See the [installation
-> instructions](https://coderefinery.github.io/installation/jupyter/).
->
-> There are two modes of extension: backend (for the Python server)
-> and frontend (for the browser).
->
-{: .discussion}
+```{discussion} Installing extensions: Is the git interface not showing up?
+JupyterLab is modular, and some parts need to be installed as extensions.
+In general, either copy and paste installation and configuration commands
+into a shell or use the JupyterLab extension manager. See the [installation
+instructions](https://coderefinery.github.io/installation/jupyter/).
 
+There are two modes of extension: backend (for the Python server)
+and frontend (for the browser).
+```
 
-> ## Instructor demonstrates nbdime
->
-> 1. To understand the problem, the instructor first shows the [example
->    notebook](https://github.com/coderefinery/jupyter/blob/gh-pages/example/darts.ipynb)
->    and then the [source
->    code](https://raw.githubusercontent.com/coderefinery/jupyter/gh-pages/example/darts.ipynb)
->    in JSON format.
-> 2. Then we introduce a simple change to the example notebook, for instance
->    changing colors and also changing dimensions in `fig.set_size_inches(6.0,
->    6.0)`.
-> 3. We save the change and in the JupyterLab terminal try "normal" `git diff`
->    and see that this is not very useful.
-> 4. Then the instructor installs `jupyterlab-git` which also installs
->    `nbdime`.
-> 5. We then inspect the same change we did in the Git tab of the JupyterLab
->    sidebar.
-> 6. If there is time, we can also show
->    [nbdime](https://nbdime.readthedocs.io/) on the command line.
-> 7. We can point out that Git can be configured to always use nbdime for
->    notebooks.
-{: .challenge}
+```{challenge} Instructor demonstrates nbdime
+1. To understand the problem, the instructor first shows the [example
+   notebook](https://github.com/coderefinery/jupyter/blob/gh-pages/example/darts.ipynb)
+   and then the [source
+   code](https://raw.githubusercontent.com/coderefinery/jupyter/gh-pages/example/darts.ipynb)
+   in JSON format.
+2. Then we introduce a simple change to the example notebook, for instance
+   changing colors and also changing dimensions in `fig.set_size_inches(6.0,
+   6.0)`.
+3. We save the change and in the JupyterLab terminal try "normal" `git diff`
+   and see that this is not very useful.
+4. Then the instructor installs `jupyterlab-git` which also installs
+   `nbdime`.
+5. We then inspect the same change we did in the Git tab of the JupyterLab
+   sidebar.
+6. If there is time, we can also show
+   [nbdime](https://nbdime.readthedocs.io/) on the command line.
+7. We can point out that Git can be configured to always use nbdime for
+   notebooks.
+```
