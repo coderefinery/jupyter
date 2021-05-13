@@ -37,9 +37,9 @@ and frontend (for the browser).
 
 ```{challenge} Instructor demonstrates nbdime
 1. To understand the problem, the instructor first shows the [example
-   notebook](https://github.com/coderefinery/jupyter/blob/gh-pages/example/darts.ipynb)
+   notebook](https://github.com/coderefinery/jupyter/blob/main/example/darts.ipynb)
    and then the [source
-   code](https://raw.githubusercontent.com/coderefinery/jupyter/gh-pages/example/darts.ipynb)
+   code](https://raw.githubusercontent.com/coderefinery/jupyter/main/example/darts.ipynb)
    in JSON format.
 2. Then we introduce a simple change to the example notebook, for instance
    changing colors and also changing dimensions in `fig.set_size_inches(6.0,
