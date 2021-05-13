@@ -5,8 +5,10 @@
 - How can we compare and merge notebooks using Git?
 ```
 
-Jupyter Notebooks are stored in [JSON](https://en.wikipedia.org/wiki/JSON) format, which doesn't play nicely
-with Git, but several packages and JupyterLab extensions have been developed
+Jupyter Notebooks are stored in [JSON](https://en.wikipedia.org/wiki/JSON) format.
+With this format it can be a bit difficult to compare and merge changes which are introduced
+through the notebook interface.
+However, several packages and JupyterLab extensions have been developed
 to make it easier:
 
 - [nbdime](http://nbdime.readthedocs.io/) (notebook "diff" and "merge") provides
