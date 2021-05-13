@@ -7,11 +7,11 @@ how Jupyter notebooks work, and what some common and powerful usecases are.
 
 .. prereq::
 
-  - A reasonably recent version of Jupyter and JupyterLab, and a few configuration steps.
-    For installation and configuration instructions see the
-    [installation instructions](https://coderefinery.github.io/installation/jupyter/).
-  - A reasonably recent version of Git to be able to work with the JupyterLab
-    Git integration.
+  - A reasonably recent version of Jupyter and JupyterLab, which is installed
+    as part of the
+    `Conda environment for CodeRefinery workshops <https://coderefinery.github.io/installation/conda-environment/>`__.
+  - Optional (we only demonstrate this):
+    A reasonably recent version of Git to be able to work with the JupyterLab Git integration.
 
 
 .. csv-table::
