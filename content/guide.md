@@ -67,21 +67,6 @@ By the end of this lesson, learners should:
 
 ## How to teach this lesson
 
-### Requirements
-
-These are the packages used in the lesson material and exercises:
-- jupyter
-- jupyterlab
-- matplotlib
-
-Optional dependencies for optional examples:
-- nodejs (for widgets to work)
-- ipywidgets
-- numpy
-- pandas
-- seaborn
-
-
 ### Motivation
 
 How the instructor introduces and motivates Jupyter notebooks is flexible and
