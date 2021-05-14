@@ -11,6 +11,10 @@ JupyterLab is the next-generation user interface for Jupyter notebooks
 and is intended to replace the conventional interface.
 It is a highly modular and customizable interface.
 
+---
+
+## How to start JupyterLab
+
 Let's have a look at how it works. We go to terminal, and type:
 ```console
 $ mkdir jupyterlab-demo
