@@ -12,12 +12,22 @@ and is intended to replace the conventional interface.
 It is a highly modular and customizable interface.
 
 Let's have a look at how it works. We go to terminal, and type:
-```shell
+```console
 $ mkdir jupyterlab-demo
 $ cd jupyterlab-demo
 $ jupyter-lab
 ```
 - On Windows, the JupyterLab App can also be launched by clicking on the JupyterLab icon in the Anaconda menu.
+
+---
+
+## Components: the big picture
+
+```{figure} img/notebook_components.png
+:alt: Components of a Jupyter notebook
+
+Components of a Jupyter notebook.
+```
 
 ---
 
@@ -47,12 +57,6 @@ $ jupyter-lab
 
 - **Markdown cells** contain formatted text written in Markdown
 - **Code cells** contain code to be interpreted by the *kernel* (Python, R, Julia, Octave/Matlab...)
-
-```{figure} img/notebook_components.png
-:alt: Components of a Jupyter notebook
-
-Components of a Jupyter notebook.
-```
 
 
 ### Markdown cells
