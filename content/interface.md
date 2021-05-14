@@ -116,23 +116,37 @@ print("hello world")
 
 ## Keyboard shortcuts
 
-Some shortcuts only work in Command or Edit mode.
-> Warning: it can happen that these shortcuts interfer with browser shortcuts.
+Some shortcuts only work in Command or Edit mode. 
+It can also happen that these shortcuts interfere with browser shortcuts.
 
-| Cell shortcuts | &nbsp; | Notebook/UI shortcuts | &nbsp; |
-| -------- | ------ | -------- | ------ |
-| **Shortcut** | **Effect** | **Shortcut** | **Effect** |
-| `Enter` | Enter Edit mode | `Ctrl(⌘)`-`s` | Save notebook |
-|`Escape` or `Ctrl`-`m` | Enter Command mode | `Shift`-`Ctrl(⌘)`-`s` | Save notebook as |
-| `Ctrl`-`Enter` | Run the cell | `Ctrl`-q | Close notebook |
-| `Shift`-`Enter`| Run the cell and select the cell below | `Ctrl(⌘)`-`b` | Toggle left-hand menu |
-| `Alt`-`Enter`| Run the cell and insert a new cell below | `Shift`-`Ctrl(⌘)`-`c` | Open command palette |
-| `m` and `y` | Toggle between Markdown and Code cells | `Shift`-`Ctrl(⌘)`-d | Toggle single-document mode |
-| `d-d` | Delete a cell | &nbsp; | &nbsp;|
-| `z` | Undo deleting  | &nbsp;| &nbsp;|
-| `a/b` | Insert cells above/below current cell  | &nbsp;| &nbsp;|
-| `x/c/v` | Cut/copy/paste cells |&nbsp; | &nbsp;|
-| `Up/Down` or `k/j` | Select previous/next cells  | &nbsp;| &nbsp;|
+
+### Cell shortcuts
+
+| Shortcut | Effect |
+| -------- | ------ |
+| `Enter` | Enter Edit mode |
+|`Escape` or `Ctrl`-`m` | Enter Command mode |
+| `Ctrl`-`Enter` | Run the cell |
+| `Shift`-`Enter`| Run the cell and select the cell below |
+| `Alt`-`Enter`| Run the cell and insert a new cell below |
+| `m` and `y` | Toggle between Markdown and Code cells |
+| `d-d` | Delete a cell |
+| `z` | Undo deleting  |
+| `a/b` | Insert cells above/below current cell |
+| `x/c/v` | Cut/copy/paste cells |
+| `Up/Down` or `k/j` | Select previous/next cells |
+
+
+### Notebook shortcuts
+
+| Shortcut | Effect |
+| -------- | ------ |
+| `Ctrl(⌘)`-`s` | Save notebook |
+| `Shift`-`Ctrl(⌘)`-`s` | Save notebook as |
+| `Ctrl`-q | Close notebook |
+| `Ctrl(⌘)`-`b` | Toggle left-hand menu |
+| `Shift`-`Ctrl(⌘)`-`c` | Open command palette |
+| `Shift`-`Ctrl(⌘)`-d | Toggle single-document mode |
 
 ---
 
