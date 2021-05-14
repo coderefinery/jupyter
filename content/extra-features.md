@@ -16,18 +16,18 @@
 ### Access to help
 
 We can get help on an object using a question mark:
-```python
+```
 import numpy as np
 np.sum?
 ```
 
 Or two question marks to also see the source code:
-```python
+```
 np.sum??
 ```
 
 List all names in a module matching pattern:
-```python
+```
 ?np.*sum*
 ```
 
@@ -56,7 +56,7 @@ np.sum
   `Use Git and the optional Unix tools from the Windows Command Prompt`
 - Make sure your cell command doesn't require interaction
 
-```python
+```
 !echo "hello"
 ```
 
@@ -66,7 +66,7 @@ hello
 ```
 
 We can also capture the output of a shell command:
-```python
+```
 notebooks = !ls *.ipynb
 ```
 
@@ -91,7 +91,7 @@ There are two kinds of magics:
 ```
 
 Question mark shows help:
-```python
+```
 %sx?
 ```
 
