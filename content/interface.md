@@ -93,6 +93,7 @@ Links:
 [One of many markdown cheat-sheets](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#emphasis)
 ```
 
+
 ### Code cells
 
 ```python
@@ -103,10 +104,6 @@ Links:
 print("hello world")
 ```
 
-Output:
-```
-hello world
-```
 
 ### Command and edit modes
 
