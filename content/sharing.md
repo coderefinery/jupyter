@@ -9,33 +9,9 @@
  - Have a final discussion on notebooks in research.
 ```
 
-
-- You can enter a URL, GitHub repo or username, or GIST ID in [`nbviewer`](https://nbviewer.jupyter.org/) and view a rendered Jupyter notebook
-- Read the Docs can render Jupyter Notebooks via the [nbsphinx package](https://nbsphinx.readthedocs.io/)
-- [Binder](https://mybinder.org/) creates live notebooks based on a GitHub repository
-- [EGI Notebooks](https://notebooks.egi.eu) (see also [https://egi-notebooks.readthedocs.io](https://egi-notebooks.readthedocs.io))
-- [JupyterLab](https://github.com/jupyterlab/jupyterlab) supports sharing and collaborative editing of notebooks via Google Drive
-- [Notedown](https://github.com/aaren/notedown), [Jupinx](https://github.com/QuantEcon/sphinxcontrib-jupyter) and [DocOnce](https://github.com/hplgit/doconce) can take Markdown or Sphinx files and generate Jupyter Notebooks
-- [Voilà](https://voila.readthedocs.io/en/stable/) allows you to convert a Jupyter Notebook into an interactive dashboard
-- The `jupyter nbconvert` tool can convert a (`.ipynb`) notebook file to:
-    - python code (`.py` file)
-    - an HTML file
-    - a LaTeX file
-    - a PDF file
-    - a slide-show in the browser
-
-
-## Commercial offers with free plans
-
-These platforms can be used free of charge but have paid subscriptions for
-faster access to cloud resources:
-
-- [CoCalc](https://cocalc.com/) (formerly SageMathCloud) allows collaborative editing of notebooks in the cloud
-- Google's [colaboratory](https://colab.research.google.com/) lets you work on notebooks in the cloud, and you can [read and write to notebook files on Drive](https://colab.research.google.com/notebooks/io.ipynb)
-- [Microsoft Azure Notebooks](https://notebooks.azure.com/) also offers free notebooks in the cloud
-- [Deepnote](https://deepnote.com/) allows real-time collaboration
-
 ---
+
+## Sharing dynamic notebooks on [Binder](https://mybinder.org)
 
 ````{challenge} Exercise (20 min): Making your notebooks reproducible by anyone via [Binder](https://mybinder.org)
 - Create a GitHub repository.
@@ -106,6 +82,33 @@ This exercise is for those who use Rmd files instead of Jupyter notebooks.
 - For more information, see [this guide](https://github.com/alan-turing-institute/the-turing-way/blob/master/workshops/boost-research-reproducibility-binder/workshop-presentations/zero-to-binder-r.md).
 ````
 
+
+
+- You can enter a URL, GitHub repo or username, or GIST ID in [`nbviewer`](https://nbviewer.jupyter.org/) and view a rendered Jupyter notebook
+- Read the Docs can render Jupyter Notebooks via the [nbsphinx package](https://nbsphinx.readthedocs.io/)
+- [Binder](https://mybinder.org/) creates live notebooks based on a GitHub repository
+- [EGI Notebooks](https://notebooks.egi.eu) (see also [https://egi-notebooks.readthedocs.io](https://egi-notebooks.readthedocs.io))
+- [JupyterLab](https://github.com/jupyterlab/jupyterlab) supports sharing and collaborative editing of notebooks via Google Drive
+- [Notedown](https://github.com/aaren/notedown), [Jupinx](https://github.com/QuantEcon/sphinxcontrib-jupyter) and [DocOnce](https://github.com/hplgit/doconce) can take Markdown or Sphinx files and generate Jupyter Notebooks
+- [Voilà](https://voila.readthedocs.io/en/stable/) allows you to convert a Jupyter Notebook into an interactive dashboard
+- The `jupyter nbconvert` tool can convert a (`.ipynb`) notebook file to:
+    - python code (`.py` file)
+    - an HTML file
+    - a LaTeX file
+    - a PDF file
+    - a slide-show in the browser
+
+
+## Commercial offers with free plans
+
+These platforms can be used free of charge but have paid subscriptions for
+faster access to cloud resources:
+
+- [CoCalc](https://cocalc.com/) (formerly SageMathCloud) allows collaborative editing of notebooks in the cloud
+- Google's [colaboratory](https://colab.research.google.com/) lets you work on notebooks in the cloud, and you can [read and write to notebook files on Drive](https://colab.research.google.com/notebooks/io.ipynb)
+- [Microsoft Azure Notebooks](https://notebooks.azure.com/) also offers free notebooks in the cloud
+- [Deepnote](https://deepnote.com/) allows real-time collaboration
+
 ---
 
 ## Recommendations for longer notebooks
@@ -114,30 +117,6 @@ This exercise is for those who use Rmd files instead of Jupyter notebooks.
 
 You can do that using Markdown. This produces a nice overview for longer notebooks.
 Example: [https://stackoverflow.com/a/39817243](https://stackoverflow.com/a/39817243)
-
-
-### How to make it possible to toggle showing code
-
-It is possible to hide all the code and only show the output. This can be nice
-for notebook readers who don't need/want to see the code:
-
-```
-from IPython.display import HTML
-
-HTML('''<script>
-code_show=true;
-function code_toggle() {
- if (code_show){
- $('div.input').hide();
- } else {
- $('div.input').show();
- }
- code_show = !code_show
-}
-$( document ).ready(code_toggle);
-</script>
-<form action="javascript:code_toggle()"><input type="submit" value="Click here to toggle on/off the raw code."></form>''')
-```
 
 ---
 
