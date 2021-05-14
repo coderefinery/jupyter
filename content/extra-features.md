@@ -30,6 +30,8 @@ List all names in a module matching pattern:
 ```python
 ?np.*sum*
 ```
+
+Output:
 ```
 np.cumsum
 np.einsum
@@ -38,7 +40,6 @@ np.nancumsum
 np.nansum
 np.sum
 ```
-{: .output}
 
 `%quickref` shows a quick reference card of features and shortcuts:
 ```python
@@ -58,10 +59,11 @@ np.sum
 ```python
 !echo "hello"
 ```
+
+Output:
 ```
 hello
 ```
-{: .output}
 
 We can also capture the output of a shell command:
 ```python
