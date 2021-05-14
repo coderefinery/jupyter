@@ -4,7 +4,7 @@
 - Learn to navigate JupyterLab user interface.
 - Discuss integrated development environments.
 - Get an overview of useful keyboard shortcuts.
-- Learn about command/edit modes, markdown/code cells and Git integration.
+- Learn about command/edit modes and markdown/code cells.
 ```
 
 JupyterLab is the next-generation user interface for Jupyter notebooks
