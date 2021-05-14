@@ -24,8 +24,6 @@ how Jupyter notebooks work, and what some common and powerful usecases are.
    15 min ; :doc:`interface`
    20 min ; :doc:`basic-workflow`
    15 min ; :doc:`version-control`
-   25 min ; :doc:`extra-features`
-   30 min ; :doc:`examples`
    30 min ; :doc:`sharing`
 
 
@@ -37,8 +35,6 @@ how Jupyter notebooks work, and what some common and powerful usecases are.
    interface.md
    basic-workflow.md
    version-control.md
-   extra-features.md
-   examples.md
    sharing.md
 
 
@@ -46,5 +42,7 @@ how Jupyter notebooks work, and what some common and powerful usecases are.
    :maxdepth: 1
    :caption: Reference
 
-   guide
-   license
+   extra-features.md
+   examples.md
+   guide.md
+   license.md
