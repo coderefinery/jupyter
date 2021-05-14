@@ -1,10 +1,4 @@
-# The JupyterLab and notebook interface
-
-```{questions}
-- How does the JupyterLab interface work?
-- How do I edit Jupyter notebooks?
-- How can I version control notebooks?
-```
+# JupyterLab and notebook interface
 
 ```{objectives}
 - Learn to navigate JupyterLab user interface.
@@ -24,6 +18,8 @@ $ cd jupyterlab-demo
 $ jupyter-lab
 ```
 - On Windows, the JupyterLab App can also be launched by clicking on the JupyterLab icon in the Anaconda menu.
+
+---
 
 ## Navigation
 
@@ -151,10 +147,3 @@ Some shortcuts only work in Command or Edit mode.
 > | Continue using Emacs and Vim, if you are already proficient | Both IDE and code editors share common features such as code completion, hints, highlighting sections of code | IDEs offer rich support for Debugging and Code refactoring |
 > | Supports multiple programming languages | Supports multiple programming languages | Focused on a single language |
 {: .challenge}
-
----
-
-```{keypoints}
- - JupyterLab has a rich, modular and highly customizable user interface.
- - nbdime, jupyterlab-git and jupyterlab/github help you track notebooks with Git.
-```
