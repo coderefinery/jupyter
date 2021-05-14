@@ -57,7 +57,7 @@ Components of a Jupyter notebook.
 
 ### Markdown cells
 
-```
+```markdown
 ## Second level heading
 
 This cell contains simple
