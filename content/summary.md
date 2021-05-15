@@ -18,8 +18,10 @@ Example: <https://stackoverflow.com/a/39817243>
 
 ---
 
-## Final discussion
+## Discussion points
 
+```{discussion} Use cases and reproducibility
 - If you are already using Jupyter, what tasks do you use it for?
 - If you are new to Jupyter, do you see any possible use cases?
 - Do you think Jupyter Notebooks can help tackle the problem of irreproducible results?
+```
