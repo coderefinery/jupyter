@@ -151,6 +151,7 @@ Demonstrate out-of-order execution problems and how to avoid them:
 - Then demonstrate "run all cells"
 ```
 
+---
 
 ## Discussion
 
@@ -164,6 +165,12 @@ What do we get from this?
   they can easily see more - *and try changes themselves* - if they
   want.
 
+```{discussion} Where should we add comments?
+We can comment code either in **Markdown cells** or in the code cell as **code comments**.
+
+What advantages do you see of commenting in Markdown cells and what advantages
+can you list for writing code comments in code cells?
+```
 ---
 
 ```{keypoints}
