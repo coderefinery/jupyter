@@ -79,10 +79,11 @@ This can be either done as a 20 minute exercise or as a type-along demo.
 
 7. Plot results:
    ```python
-   %matplotlib inline
    x, y, colors = zip(*points)
+
    fig, ax = plt.subplots()
    fig.set_size_inches(6.0, 6.0)
+
    ax.scatter(x, y, c=colors)
    ```
 
