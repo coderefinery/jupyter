@@ -25,3 +25,9 @@ Example: <https://stackoverflow.com/a/39817243>
 - If you are new to Jupyter, do you see any possible use cases?
 - Do you think Jupyter Notebooks can help tackle the problem of irreproducible results?
 ```
+
+```{discussion} Are Jupyter notebooks "workflows"?
+- A reproducible workflow documents a "pipeline"
+- Also a Jupyter notebook can be a data processing and visualization pipeline
+- Are Jupyter notebooks "workflows"?
+```
