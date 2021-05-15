@@ -119,6 +119,13 @@ Here is the notebook: <https://github.com/coderefinery/jupyter/blob/main/example
 (static version, later we will learn how to share notebooks which are dynamic
 and can be modified).
 
+```{instructor-note}
+Demonstrate out-of-order execution problems and how to avoid them:
+- Add a cell at the end of the notebook which redefines `num_points`
+- Then run the cell which computes the pi estimate
+- Then demonstrate "run all cells"
+```
+
 
 ## Discussion
 
