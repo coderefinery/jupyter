@@ -31,3 +31,10 @@ Example: <https://stackoverflow.com/a/39817243>
 - Also a Jupyter notebook can be a data processing and visualization pipeline
 - Are Jupyter notebooks "workflows"?
 ```
+
+---
+
+## Interesting blog posts and articles
+
+- [A. Guzharina, "We Downloaded 10,000,000 Jupyter Notebooks From Github – This Is What We Learned"](https://blog.jetbrains.com/datalore/2020/12/17/we-downloaded-10-000-000-jupyter-notebooks-from-github-this-is-what-we-learned/)
+- [J. M. Perkel, "Reactive, reproducible, collaborative: computational notebooks evolve", Nature 593, 156-157 (2021)](https://doi.org/10.1038/d41586-021-01174-w)
