@@ -1,13 +1,7 @@
 # A first computational notebook
 
-```{questions}
-- What does a simple notebook with some analysis look like?
-- How can keyboard shortcuts speed up my work?
-```
-
 ```{objectives}
 - Get started with notebooks for analysis.
-- Practice common keyboard shortcuts.
 - Get a feeling for the importance of execution order.
 ```
 
@@ -119,5 +113,4 @@ What do we get from this?
 - Notebooks provide an intuitive way to perform interactive computational work.
 - Allows fast feedback in your test-code-refactor loop.
 - Cells can be executed in any order, beware of out-of-order execution bugs!
-- Keyboard shortcuts can save you time and protect your wrists.
 ```
