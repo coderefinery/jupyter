@@ -21,7 +21,6 @@ $ mkdir jupyterlab-demo
 $ cd jupyterlab-demo
 $ jupyter-lab
 ```
-- On Windows, the JupyterLab App can also be launched by clicking on the JupyterLab icon in the Anaconda menu.
 
 ---
 
