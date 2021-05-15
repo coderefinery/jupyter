@@ -31,7 +31,7 @@ Jupyter notebook, a cool way of doing it is to open this page inside
 an IFrame:
 ```python
 from IPython.display import IFrame
-IFrame(src="https://coderefinery.github.io/jupyter/", width='100%', height='500px')
+IFrame(src="https://coderefinery.github.io/jupyter/first-notebook/", width='100%', height='500px')
 ```
 ````
 
