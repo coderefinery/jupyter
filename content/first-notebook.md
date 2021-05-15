@@ -36,6 +36,31 @@ IFrame(src="https://coderefinery.github.io/jupyter/first-notebook/", width='100%
 ````
 
 
+## Launching JupyterLab notebook
+
+In your terminal create a folder or navigate to a folder where you would like
+the new notebook to appear.
+
+Then launch JupyterLab:
+```
+jupyter-lab
+```
+
+This opens JupyterLab in your browser. Click on the Python 3 tile.
+
+```{figure} img/launching-python.png
+:alt: JupyterLab opened in the browser
+:width: 100%
+
+JupyterLab opened in the browser. Click on the Python 3 tile.
+```
+
+If you prefer to select in which browser to open JupyterLab, use:
+```
+jupyter-lab --no-browser
+```
+
+
 ## Exercise
 
 ````{challenge} Exercise/demonstration: Calculating pi using Monte Carlo methods
