@@ -1,29 +1,38 @@
-# The JupyterLab and notebook interface
-
-```{questions}
-- How does the JupyterLab interface work?
-- How do I edit Jupyter notebooks?
-- How can I version control notebooks?
-```
+# JupyterLab and notebook interface
 
 ```{objectives}
 - Learn to navigate JupyterLab user interface.
 - Discuss integrated development environments.
 - Get an overview of useful keyboard shortcuts.
-- Learn about command/edit modes, markdown/code cells and Git integration.
+- Learn about command/edit modes and markdown/code cells.
 ```
 
 JupyterLab is the next-generation user interface for Jupyter notebooks
 and is intended to replace the conventional interface.
 It is a highly modular and customizable interface.
 
+---
+
+## How to start JupyterLab
+
 Let's have a look at how it works. We go to terminal, and type:
-```shell
+```console
 $ mkdir jupyterlab-demo
 $ cd jupyterlab-demo
 $ jupyter-lab
 ```
-- On Windows, the JupyterLab App can also be launched by clicking on the JupyterLab icon in the Anaconda menu.
+
+---
+
+## Components: the big picture
+
+```{figure} img/notebook_components.png
+:alt: Components of a Jupyter notebook
+
+Components of a Jupyter notebook.
+```
+
+---
 
 ## Navigation
 
@@ -52,16 +61,10 @@ $ jupyter-lab
 - **Markdown cells** contain formatted text written in Markdown
 - **Code cells** contain code to be interpreted by the *kernel* (Python, R, Julia, Octave/Matlab...)
 
-```{figure} img/notebook_components.png
-:alt: Components of a Jupyter notebook
-
-Components of a Jupyter notebook.
-```
-
 
 ### Markdown cells
 
-```
+```markdown
 ## Second level heading
 
 This cell contains simple
@@ -89,6 +92,7 @@ Links:
 [One of many markdown cheat-sheets](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#emphasis)
 ```
 
+
 ### Code cells
 
 ```python
@@ -99,10 +103,6 @@ Links:
 print("hello world")
 ```
 
-Output:
-```
-hello world
-```
 
 ### Command and edit modes
 
@@ -115,46 +115,62 @@ hello world
 
 ## Keyboard shortcuts
 
-Some shortcuts only work in Command or Edit mode.
-> Warning: it can happen that these shortcuts interfer with browser shortcuts.
+Some shortcuts only work in Command or Edit mode. 
+It can also happen that these shortcuts interfere with browser shortcuts.
 
-| Cell shortcuts | &nbsp; | Notebook/UI shortcuts | &nbsp; |
-| -------- | ------ | -------- | ------ |
-| **Shortcut** | **Effect** | **Shortcut** | **Effect** |
-| `Enter` | Enter Edit mode | `Ctrl(⌘)`-`s` | Save notebook |
-|`Escape` or `Ctrl`-`m` | Enter Command mode | `Shift`-`Ctrl(⌘)`-`s` | Save notebook as |
-| `Ctrl`-`Enter` | Run the cell | `Ctrl`-q | Close notebook |
-| `Shift`-`Enter`| Run the cell and select the cell below | `Ctrl(⌘)`-`b` | Toggle left-hand menu |
-| `Alt`-`Enter`| Run the cell and insert a new cell below | `Shift`-`Ctrl(⌘)`-`c` | Open command palette |
-| `m` and `y` | Toggle between Markdown and Code cells | `Shift`-`Ctrl(⌘)`-d | Toggle single-document mode |
-| `d-d` | Delete a cell | &nbsp; | &nbsp;|
-| `z` | Undo deleting  | &nbsp;| &nbsp;|
-| `a/b` | Insert cells above/below current cell  | &nbsp;| &nbsp;|
-| `x/c/v` | Cut/copy/paste cells |&nbsp; | &nbsp;|
-| `Up/Down` or `k/j` | Select previous/next cells  | &nbsp;| &nbsp;|
 
----
+### Cell shortcuts
 
-> ## Discussion point: Integrated development environments
->
-> - What tools do you use for developing code?
-> - How do you compile or execute code?
-> - How do you debug code?
->
-> Some people prefer terminal-based text editors for writing code (e.g. vi/vim, nano, emacs, etc).
-> Others prefer integrated development environments (IDEs), which can bring "everything" one needs for productive programming to one's fingertips.
-> Yet others prefer code editors, which are light-weight IDEs.
->
-> | Terminal editor | Code editor | IDE |
-> | --------------- | ----------- | --- |
-> | Good command line skills are needed for effectively using terminal editors | If you use multiple programming languages then code editors offer good support | If you are working with large code bases, then you should definitely checkout the IDE suitable for your programming language |
-> | Continue using Emacs and Vim, if you are already proficient | Both IDE and code editors share common features such as code completion, hints, highlighting sections of code | IDEs offer rich support for Debugging and Code refactoring |
-> | Supports multiple programming languages | Supports multiple programming languages | Focused on a single language |
-{: .challenge}
+| Shortcut | Effect |
+| -------- | ------ |
+| `Enter` | Enter Edit mode |
+|`Escape` or `Ctrl`-`m` | Enter Command mode |
+| `Ctrl`-`Enter` | Run the cell |
+| `Shift`-`Enter`| Run the cell and select the cell below |
+| `Alt`-`Enter`| Run the cell and insert a new cell below |
+| `m` and `y` | Toggle between Markdown and Code cells |
+| `d-d` | Delete a cell |
+| `z` | Undo deleting  |
+| `a/b` | Insert cells above/below current cell |
+| `x/c/v` | Cut/copy/paste cells |
+| `Up/Down` or `k/j` | Select previous/next cells |
+
+
+### Notebook shortcuts
+
+| Shortcut | Effect |
+| -------- | ------ |
+| `Ctrl(⌘)`-`s` | Save notebook |
+| `Shift`-`Ctrl(⌘)`-`s` | Save notebook as |
+| `Ctrl`-q | Close notebook |
+| `Ctrl(⌘)`-`b` | Toggle left-hand menu |
+| `Shift`-`Ctrl(⌘)`-`c` | Open command palette |
+| `Shift`-`Ctrl(⌘)`-d | Toggle single-document mode |
 
 ---
 
-```{keypoints}
- - JupyterLab has a rich, modular and highly customizable user interface.
- - nbdime, jupyterlab-git and jupyterlab/github help you track notebooks with Git.
+```{discussion} Integrated development environments
+- What tools do you use for writing, testing, and debugging code?
+
+Some people prefer **terminal-based text editors** for writing code (e.g. Vi/Vim, Nano, Emacs, etc.).
+
+Others prefer **integrated development environments (IDEs)**,
+which can bring "everything" one needs for productive programming to one's fingertips.a
+
+Yet others prefer **code editors**, which are light-weight IDEs.
+
+**Terminal editor**
+- Good command line skills are needed for effectively using terminal editors
+- Continue using Emacs and Vim, if you are already proficient
+- Supports multiple programming languages
+
+**Code editor**
+- If you use multiple programming languages then code editors offer good support
+- Both IDE and code editors share common features such as code completion, hints, highlighting sections of code
+- Supports multiple programming languages
+
+**IDE**
+- If you are working with large code bases, then you should definitely checkout the IDE suitable for your programming language
+- IDEs offer rich support for Debugging and Code refactoring
+- Focused on a single language
 ```
