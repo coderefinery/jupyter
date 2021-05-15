@@ -6,7 +6,15 @@
 ### Create a table of contents on top
 
 You can do that using Markdown. This produces a nice overview for longer notebooks.
-Example: [https://stackoverflow.com/a/39817243](https://stackoverflow.com/a/39817243)
+Example: <https://stackoverflow.com/a/39817243>
+
+
+### Jupyter Book
+
+- <https://jupyterbook.org>
+- You can cite and cross-reference
+- You can toggle cell visibility
+- ... and a lot more
 
 ---
 
