@@ -4,11 +4,6 @@
  - How can I share notebooks with colleagues and the community?
 ```
 
-```{objectives}
- - See what platforms and services exist to share Jupyter notebooks.
- - Have a final discussion on notebooks in research.
-```
-
 ---
 
 ## Sharing dynamic notebooks on [Binder](https://mybinder.org)
