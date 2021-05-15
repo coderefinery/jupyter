@@ -232,7 +232,7 @@ from the previous exercise.
 Copy-paste the code into a cell
 
 Install the line profiler
-```python
+```
 !pip install line_profiler
 ```
 Load the IPython extension
@@ -240,16 +240,16 @@ Load the IPython extension
 %load_ext line_profiler
 ```
 See help:
-```python
+```
 %lprun?
 ```
 Use the line profiler on the `walk` function:
-```python
+```
 %lprun -f walk walk(10000)
 ```
 Aha, most time is spent on the line calling the `step()` function.
 Run line profiler on `step`:
-```python
+```
 %lprun -f step walk(10000)
 ```
 
@@ -479,7 +479,7 @@ Load extension:
 %load_ext cpp_ext
 ```
 Get help on the cpp magic:
-```python
+```
 %%cpp?
 ```
 Hello World program in C++
@@ -765,7 +765,7 @@ from earlier lessons.
 
 4. Import the new zipf module, and have a look at the docstring for one
    of the functions:
-   ```python
+   ```
    import zipf
    zipf.top_n_word?
    ```
