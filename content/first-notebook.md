@@ -35,13 +35,21 @@ IFrame(src="https://coderefinery.github.io/jupyter/first-notebook/", width='100%
 ```
 ````
 
+
+## Exercise
+
 ````{challenge} Exercise/demonstration: Calculating pi using Monte Carlo methods
 This can be either done as a 20 minute exercise or as a type-along demo.
 
 1. Create a new notebook, name it, and add a heading.
+   ```markdown
+   # Calculating pi using Monte Carlo methods
+   ```
 
 2. Document the relevant formulas in a new cell:
-   ```
+   ```markdown
+   ## Relevant formulas
+
    - square area: $s = (2 r)^2$
    - circle area: $c = \pi r^2$
    - $c/s = (\pi r^2) / (4 r^2) = \pi / 4$
@@ -50,22 +58,30 @@ This can be either done as a 20 minute exercise or as a type-along demo.
 
 3. Add an image to explain the concept:
    ```markdown
+   ## Image to visualize the concept
+
    ![Darts](https://raw.githubusercontent.com/coderefinery/jupyter/main/example/darts.svg)
    ```
 
 4. Import two modules that we will need:
    ```python
+   # importing modules that we will need
+
    import random
    import matplotlib.pyplot as plt
    ```
 
 5. Initialize the number of points:
    ```python
+   # initializing the number of "throws"
+
    num_points = 1000
    ```
 
 6. "Throw darts":
    ```python
+   # here we "throw darts" and count the number of hits
+
    points = []
    hits = 0
    for _ in range(num_points):
@@ -79,16 +95,21 @@ This can be either done as a 20 minute exercise or as a type-along demo.
 
 7. Plot results:
    ```python
+   # unzip points into 3 lists
    x, y, colors = zip(*points)
 
+   # define figure dimensions
    fig, ax = plt.subplots()
    fig.set_size_inches(6.0, 6.0)
 
+   # plot results
    ax.scatter(x, y, c=colors)
    ```
 
-8. Compute final estimate of pi:
+8. Compute the estimate for pi:
    ```python
+   # compute and print the estimate
+
    fraction = hits / num_points
    4 * fraction
    ```
@@ -97,6 +118,9 @@ This can be either done as a 20 minute exercise or as a type-along demo.
 Here is the notebook: <https://github.com/coderefinery/jupyter/blob/main/example/darts.ipynb>
 (static version, later we will learn how to share notebooks which are dynamic
 and can be modified).
+
+
+## Discussion
 
 What do we get from this?
 
