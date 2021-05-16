@@ -32,6 +32,11 @@
 - Even better would be to get a DOI to your notebook and point Binder to the DOI.
 ````
 
+```{keypoints} More examples with Binder:
+- [Binder documentation](https://mybinder.readthedocs.io/en/latest/introduction.html)
+- [Collection of example repositories](https://github.com/binder-examples)
+```
+
 
 ## Optional exercises
 
