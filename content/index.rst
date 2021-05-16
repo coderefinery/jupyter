@@ -23,6 +23,7 @@ how Jupyter notebooks work, and what some common and powerful usecases are.
    20 min ; :doc:`basic-workflow`
    15 min ; :doc:`version-control`
    30 min ; :doc:`sharing`
+   5 min ; :doc:`summary`
 
 
 .. toctree::
@@ -34,6 +35,7 @@ how Jupyter notebooks work, and what some common and powerful usecases are.
    basic-workflow.md
    version-control.md
    sharing.md
+   summary.md
 
 
 .. toctree::
