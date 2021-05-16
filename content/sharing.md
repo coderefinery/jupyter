@@ -8,13 +8,14 @@
 
 ## Sharing dynamic notebooks on [Binder](https://mybinder.org)
 
-````{challenge} Exercise (20 min): Making your notebooks reproducible by anyone via [Binder](https://mybinder.org)
-- Create a GitHub repository.
-- Push the notebook which we have created earlier to this repository. If you got stuck earlier,
-  you can fork this repository: <https://github.com/coderefinery/jupyter> (our example notebook is under `example`)
-- Create a `requirements.txt` file which contains:
+````{challenge} Exercise (20 min): Making your notebooks reproducible by anyone via Binder
+- Create a new GitHub repository.
+- Commit and push the notebook which we have created earlier to this repository. If you got stuck earlier,
+  you can download [this notebook](https://raw.githubusercontent.com/coderefinery/jupyter/main/example/darts.ipynb)
+  (right-click, "Save as ..."). You can also try [Binder](https://mybinder.org) with a different notebook.
+- Create a `requirements.txt` file which contains (adapt this if your notebook has other dependencies):
   ```
-  matplotlib==3.1.0
+  matplotlib==3.4.1
   ```
 - Commit and push also this file to your notebook repository.
 - Visit [https://mybinder.org](https://mybinder.org):
@@ -28,7 +29,11 @@
 - Try clicking the button and see how your repository is launched
   on Binder (can take a minute or two). Your notebooks can now be expored and executed in the cloud.
 - Enjoy being fully reproducible!
+- Even better would be to get a DOI to your notebook and point Binder to the DOI.
 ````
+
+
+## Optional exercises
 
 ````{challenge} (Optional) Exercise: what happens without requirements.txt?
 Let's look at the same [activity inequality
