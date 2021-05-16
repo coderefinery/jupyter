@@ -15,6 +15,8 @@
 
 ---
 
+(interactive-data-fitting)=
+
 ## Widgets for interactive data fitting
 
 ````{challenge} Widgets for interactive data fitting

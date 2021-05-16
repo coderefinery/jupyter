@@ -51,11 +51,9 @@ link](https://mybinder.org/v2/gh/timalthoff/activityinequality/master).
 - How would this be better?
 ````
 
-````{challenge} (Optional) Exercise: share an interactive (ipywidgets) notebook via [Binder](https://mybinder.org)
-- Take one of these two notebooks:
-   - the example <https://coderefinery.github.io/jupyter/04-extra-features/#playing-around-with-a-widget>
-   - or solution from <https://coderefinery.github.io/jupyter/05-examples/#widgets-for-interactive-data-fitting>
-- Push it to a GitHub/GitLab repository (you can also add both files to the same repository).
+````{challenge} (Optional) Exercise: share an interactive (ipywidgets) notebook via Binder
+- Take the solution from the exercise {ref}`interactive-data-fitting` and paste it into a notebook.
+- Push the notebook to a GitHub/GitLab repository.
 - Create a `requirements.txt` file in your notebook repository, e.g.:
   ```
   ipywidgets==7.4.2
@@ -65,7 +63,7 @@ link](https://mybinder.org/v2/gh/timalthoff/activityinequality/master).
 - Try to deploy this example via Binder in the same way as the above exercise.
 ````
 
-````{challenge} (Optional) Exercise: share R Markdown/R Studio project via [Binder](https://mybinder.org)
+````{challenge} (Optional) Exercise: share R Markdown/R Studio project via Binder
 This exercise is for those who use Rmd files instead of Jupyter notebooks.
 - Put your Rmd file into a GitHub repository.
 - To this repository add a file `runtime.txt` which specifies the R version you want to use:
