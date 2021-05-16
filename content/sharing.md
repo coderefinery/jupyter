@@ -80,7 +80,9 @@ This exercise is for those who use Rmd files instead of Jupyter notebooks.
 - For more information, see [this guide](https://github.com/alan-turing-institute/the-turing-way/blob/master/workshops/boost-research-reproducibility-binder/workshop-presentations/zero-to-binder-r.md).
 ````
 
+---
 
+## Different ways to share a notebook
 
 - You can enter a URL, GitHub repo or username, or GIST ID in [`nbviewer`](https://nbviewer.jupyter.org/) and view a rendered Jupyter notebook
 - Read the Docs can render Jupyter Notebooks via the [nbsphinx package](https://nbsphinx.readthedocs.io/)
@@ -97,7 +99,7 @@ This exercise is for those who use Rmd files instead of Jupyter notebooks.
     - a slide-show in the browser
 
 
-## Commercial offers with free plans
+### Commercial offers with free plans
 
 These platforms can be used free of charge but have paid subscriptions for
 faster access to cloud resources:
