@@ -15,6 +15,8 @@
 
 ---
 
+## Widgets for interactive data fitting
+
 ````{challenge} Widgets for interactive data fitting
 Widgets are fun, but they can also be useful. Here's an example showing how you can fit noisy data interactively.
 
@@ -103,6 +105,8 @@ def slider(n=(3, 30)):
 
 ---
 
+## Cell profiling
+
 ````{challenge} Cell profiling
 This exercise is about cell profiling, but you will get practice in
 working with magics and cells.
@@ -189,6 +193,8 @@ walk(n)
 
 ---
 
+## Installing a magic command for line profiling
+
 ````{challenge} Installing a magic command for line profiling
 Magics can be installed using `pip` and loaded like plugins using the
 `%load_ext` magic. You will now install a line-profiler to get more
@@ -265,6 +271,8 @@ which is called thousands of times. Move the import statement to outside the fun
 ````
 
 ---
+
+## Data analysis with pandas dataframes
 
 ````{challenge} Data analysis with pandas dataframes
 Data science and data analysis are key use cases of Jupyter. In this
@@ -398,6 +406,8 @@ sns.heatmap(table,linewidths=.5, annot=True);
 
 ---
 
+## Defining your own custom magic command
+
 ````{challenge} Defining your own custom magic command
 It is possible to create new magic commands using the `@register_cell_magic` decorator from the `IPython.core` library. Here you will create a cell magic command that compiles C++ code and executes it.
 This exercise requires that you have the GNU `g++` compiler installed on your computer.
@@ -497,6 +507,8 @@ int main()
 ````
 
 ---
+
+## Parallel Python with ipyparallel
 
 ````{challenge} Parallel Python with ipyparallel
 Traditionally, Python is considered to not support parallel programming very
@@ -665,6 +677,8 @@ Some speedup is seen!
 
 ---
 
+## Mixing Python and R
+
 ````{challenge} Mixing Python and R
 Your goal now is to define a pandas dataframe, and pass it into an R cell
 and plot it with an R plotting library.
@@ -722,6 +736,8 @@ ggplot(df, aes(x=cups_of_coffee, y=productivity)) + geom_line();
 ````
 
 ---
+
+## Word-count analysis with widgets
 
 ````{challenge} Word-count analysis with widgets
 This exercise uses the
