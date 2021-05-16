@@ -88,7 +88,8 @@ This exercise is for those who use Rmd files instead of Jupyter notebooks.
 - Read the Docs can render Jupyter Notebooks via the [nbsphinx package](https://nbsphinx.readthedocs.io/)
 - [Binder](https://mybinder.org/) creates live notebooks based on a GitHub repository
 - [EGI Notebooks](https://notebooks.egi.eu) (see also [https://egi-notebooks.readthedocs.io](https://egi-notebooks.readthedocs.io))
-- [JupyterLab](https://github.com/jupyterlab/jupyterlab) supports sharing and collaborative editing of notebooks via Google Drive
+- [JupyterLab](https://github.com/jupyterlab/jupyterlab) supports sharing and collaborative editing of notebooks via Google Drive. Recently
+  it also added support for [Shared editing with collaborative notebook model](https://github.com/jupyterlab/jupyterlab/pull/10118).
 - [Notedown](https://github.com/aaren/notedown), [Jupinx](https://github.com/QuantEcon/sphinxcontrib-jupyter) and [DocOnce](https://github.com/hplgit/doconce) can take Markdown or Sphinx files and generate Jupyter Notebooks
 - [Voilà](https://voila.readthedocs.io/en/stable/) allows you to convert a Jupyter Notebook into an interactive dashboard
 - The `jupyter nbconvert` tool can convert a (`.ipynb`) notebook file to:
