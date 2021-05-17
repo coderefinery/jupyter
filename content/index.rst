@@ -23,7 +23,7 @@ for **reproducibility, collaboration, and reusability**.
 
    10 min ; :doc:`motivation`
    15 min ; :doc:`interface`
-   20 min ; :doc:`basic-workflow`
+   20 min ; :doc:`first-notebook`
    15 min ; :doc:`version-control`
    30 min ; :doc:`sharing`
    5 min ; :doc:`summary`
@@ -35,7 +35,7 @@ for **reproducibility, collaboration, and reusability**.
 
    motivation.md
    interface.md
-   basic-workflow.md
+   first-notebook.md
    version-control.md
    sharing.md
    summary.md
