@@ -9,7 +9,7 @@ With this format it can be a bit difficult to compare and merge changes which ar
 through the notebook interface.
 
 
-## Packages and JupyterLab extensions: to simplify version control
+## Packages and JupyterLab extensions to simplify version control
 
 Several packages and JupyterLab extensions have been developed
 to make it easier to interact with Git and GitHub:
