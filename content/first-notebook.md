@@ -69,12 +69,12 @@ This can be either done as a 20 minute exercise or as a type-along demo.
 Each numbered item will be a new cell. Press SHIFT+ENTER to run a cell and create
 a new cell below.
 
-1. Create a new notebook, name it, and add a heading.
+1. Create a new notebook, name it, and add a heading (markdown cell).
    ```markdown
    # Calculating pi using Monte Carlo methods
    ```
 
-2. Document the relevant formulas in a new cell:
+2. Document the relevant formulas in a new cell (markdown cell):
    ```markdown
    ## Relevant formulas
 
@@ -84,14 +84,14 @@ a new cell below.
    - $\pi = 4 * c/s$
    ```
 
-3. Add an image to explain the concept:
+3. Add an image to explain the concept (markdown cell):
    ```markdown
    ## Image to visualize the concept
 
    ![Darts](https://raw.githubusercontent.com/coderefinery/jupyter/main/example/darts.svg)
    ```
 
-4. Import two modules that we will need:
+4. Import two modules that we will need (code cell):
    ```python
    # importing modules that we will need
 
@@ -99,14 +99,14 @@ a new cell below.
    import matplotlib.pyplot as plt
    ```
 
-5. Initialize the number of points:
+5. Initialize the number of points (code cell):
    ```python
    # initializing the number of "throws"
 
    num_points = 1000
    ```
 
-6. "Throw darts":
+6. "Throw darts" (code cell):
    ```python
    # here we "throw darts" and count the number of hits
 
@@ -121,7 +121,7 @@ a new cell below.
            points.append((x, y, "blue"))
    ```
 
-7. Plot results:
+7. Plot results (code cell):
    ```python
    # unzip points into 3 lists
    x, y, colors = zip(*points)
@@ -134,7 +134,7 @@ a new cell below.
    ax.scatter(x, y, c=colors)
    ```
 
-8. Compute the estimate for pi:
+8. Compute the estimate for pi (code cell):
    ```python
    # compute and print the estimate
 
