@@ -10,6 +10,7 @@ for **reproducibility, collaboration, and reusability**.
 
 
 .. prereq::
+
   - A reasonably recent version of Jupyter and JupyterLab, which is installed
     as part of the
     `Conda environment for CodeRefinery workshops <https://coderefinery.github.io/installation/conda-environment/>`__.
