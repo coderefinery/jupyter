@@ -41,6 +41,14 @@ Example: <https://stackoverflow.com/a/39817243>
 
 ---
 
+## Similar tools for other languages
+
+- R: [R Shiny](https://shiny.rstudio.com/gallery/)
+- JavaScript: [Observable](https://observablehq.com/)
+- Julia: [Pluto](https://github.com/fonsp/Pluto.jl)
+
+---
+
 ## Avoiding repetitive code
 
 **It all started with a short and simple notebook** but how to organize as projects and
