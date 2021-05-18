@@ -66,6 +66,9 @@ jupyter-lab --no-browser
 ````{challenge} Exercise/demonstration: Calculating pi using Monte Carlo methods
 This can be either done as a 20 minute exercise or as a type-along demo.
 
+Each numbered item will be a new cell. Press SHIFT+ENTER to run a cell and create
+a new cell below.
+
 1. Create a new notebook, name it, and add a heading.
    ```markdown
    # Calculating pi using Monte Carlo methods
