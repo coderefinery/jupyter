@@ -102,7 +102,7 @@ For further inspiration, head over to the
   there are **still limitations**.
 - Notebooks **aren't named by default** and tend to **acquire a bunch of
   unrelated stuff**.  Be careful with organization!
-- See also <https://scicomp.aalto.fi/scicomp/jupyter-pitfalls.html>.
+- See also <https://scicomp.aalto.fi/scicomp/jupyter-pitfalls/>.
 
 
 ## Good practices
