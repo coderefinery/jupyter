@@ -72,7 +72,7 @@ different countries across the world.
 ### More examples
 
 For further inspiration, head over to the
-[Gallery of interesting Jupyter Notebooks](https://github.com/jupyter/jupyter/wiki/A-gallery-of-interesting-Jupyter-Notebooks).
+[Gallery of interesting Jupyter Notebooks](https://github.com/jupyter/jupyter/wiki).
 
 ---
 
