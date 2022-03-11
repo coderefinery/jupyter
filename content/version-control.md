@@ -49,7 +49,11 @@ about installing and managing JupyterLab extensions.
 - Stage and commit the file before trying the changes below
 ```
 
-```{challenge} Instructor demonstrates a plain git diff
+(plain-git-diff)=
+
+### A plain git diff
+
+```{exercise} Instructor demonstrates a plain git diff
 1. To understand the problem, the instructor first shows the [example
    notebook](https://github.com/coderefinery/jupyter/blob/main/example/darts.ipynb)
    and then the [source
