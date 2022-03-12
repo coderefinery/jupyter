@@ -41,12 +41,17 @@ for **reproducibility, collaboration, and reusability**.
    sharing.md
    summary.md
 
+.. toctree::
+   :maxdepth: 1
+   :caption: Optional
+
+   extra-features
+   examples
 
 .. toctree::
    :maxdepth: 1
    :caption: Reference
 
-   extra-features.md
-   examples.md
-   guide.md
-   license.md
+   exercises
+   guide
+   license

@@ -1,4 +1,4 @@
-# Examples
+# Additional exercises
 
 ```{questions}
 - Mixed examples/exercises to practice various aspects of using Jupyter
