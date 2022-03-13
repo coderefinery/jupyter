@@ -1,4 +1,4 @@
-# Examples
+# Examples of Jupyter features
 
 ```{questions}
 - Mixed examples/exercises to practice various aspects of using Jupyter
@@ -19,7 +19,7 @@
 
 ## Widgets for interactive data fitting
 
-````{challenge} Widgets for interactive data fitting
+`````{exercise} Widgets for interactive data fitting
 Widgets are fun, but they can also be useful. Here's an example showing how you can fit noisy data interactively.
 
 1. Execute the cell below. It fits a 5th order polynomial to a gaussian function with some random noise
@@ -61,8 +61,6 @@ x, y = noisy_gaussian()
 yfit = fit(x, y, n=5)  # fit a 5th order polynomial to it
 plot(x, y, yfit)
 ```
-````
-
 ````{solution}
 ```python
 import numpy as np
@@ -104,12 +102,16 @@ def slider(n=(3, 30)):
     plot(x, y, yfit)
 ```
 ````
+`````
+
 
 ---
 
+(cell-profiling)=
+
 ## Cell profiling
 
-````{challenge} Cell profiling
+`````{exercise} Cell profiling
 This exercise is about cell profiling, but you will get practice in
 working with magics and cells.
 
@@ -144,8 +146,6 @@ working with magics and cells.
 7. Can you spot a little mistake which is slowing down the code?
 8. In the next exercise you will install a line profiler which
    will more easily expose the performance mistake.
-````
-
 ````{solution}
 Split the code over multiple cells (e.g. using `Ctrl-Shift-minus`)
 ```python
@@ -192,12 +192,16 @@ Run with the `%%prun` cell profiler
 walk(n)
 ```
 ````
+`````
+
 
 ---
 
+(installing-magic-command)=
+
 ## Installing a magic command for line profiling
 
-````{challenge} Installing a magic command for line profiling
+`````{exercise} Installing a magic command for line profiling
 Magics can be installed using `pip` and loaded like plugins using the
 `%load_ext` magic. You will now install a line-profiler to get more
 detailed profile, and hopefully find insight to speed up the code
@@ -234,8 +238,6 @@ from the previous exercise.
 5. In a new cell, run the line profiler on the `walk` and `step` functions in the way
    described on the help page.
 6. Inspect the output. Can you more easily see the mistake now?
-````
-
 ````{solution}
 Copy-paste the code into a cell
 
@@ -271,12 +273,16 @@ Run line profiler on `step`:
 Aha! Lot's of time is spent on importing the `random` module inside the `step` function
 which is called thousands of times. Move the import statement to outside the function!
 ````
+`````
+
 
 ---
 
+(data-analysis)=
+
 ## Data analysis with pandas dataframes
 
-````{challenge} Data analysis with pandas dataframes
+`````{exercise} Data analysis with pandas dataframes
 Data science and data analysis are key use cases of Jupyter. In this
 exercise you will familiarize yourself with dataframes and various
 inbuilt analysis methods in the high-level `pandas` data exploration
@@ -347,8 +353,6 @@ sns.heatmap(table,linewidths=.5);
   - Have a look at the help page for `sns.heatmap` and see if you can find an
     input parameter which annotates each cell in the plot with the count
     number.
-````
-
 ````{solution}
 ```python
 import numpy as np
@@ -405,12 +409,16 @@ import seaborn as sns
 sns.heatmap(table,linewidths=.5, annot=True);
 ```
 ````
+`````
+
 
 ---
 
+(own-magic-command)=
+
 ## Defining your own custom magic command
 
-````{challenge} Defining your own custom magic command
+`````{exercise} Defining your own custom magic command
 It is possible to create new magic commands using the `@register_cell_magic` decorator from the `IPython.core` library. Here you will create a cell magic command that compiles C++ code and executes it.
 This exercise requires that you have the GNU `g++` compiler installed on your computer.
 
@@ -456,8 +464,6 @@ def cpp(line, cell):
 def load_ipython_extension(ipython):
     ipython.register_magic_function(cpp,'cell')
 ```
-````
-
 ````{solution}
 ```python
 from IPython.core.magic import register_cell_magic
@@ -507,12 +513,16 @@ int main()
 }
 ```
 ````
+`````
+
 
 ---
 
+(ipyparallel)=
+
 ## Parallel Python with ipyparallel
 
-````{challenge} Parallel Python with ipyparallel
+`````{exercise} Parallel Python with ipyparallel
 Traditionally, Python is considered to not support parallel programming very
 well ([see "GIL"](https://en.wikipedia.org/wiki/Global_interpreter_lock)),
 and "proper" parallel programming should be left to "heavy-duty" languages
@@ -605,8 +615,6 @@ particular, fast numerical packages like [Numpy](http://www.numpy.org/)
 should be used, and significant speedup can be obtained with just-in-time
 compilation with [Numba](https://numba.pydata.org/) and/or C-extensions
 from [Cython](http://cython.org/).
-````
-
 ````{solution}
 Open terminal, run `ipcluster start` and wait a few seconds for the engines to start.
 Import module, create client and DirectView object:
@@ -676,12 +684,16 @@ multi_mcpi(dview, int(1e7))
 ```
 Some speedup is seen!
 ````
+`````
+
 
 ---
 
+(mixing-python-r)=
+
 ## Mixing Python and R
 
-````{challenge} Mixing Python and R
+`````{exercise} Mixing Python and R
 Your goal now is to define a pandas dataframe, and pass it into an R cell
 and plot it with an R plotting library.
 
@@ -714,8 +726,6 @@ ggplot(df, aes(x=cups_of_coffee, y=productivity)) + geom_line()
 ```
 
 5. Play around with the flags for height, width, units and resolution to get a good looking graph.
-````
-
 ````{solution}
 
 ```python
@@ -736,12 +746,16 @@ library(ggplot2)
 ggplot(df, aes(x=cups_of_coffee, y=productivity)) + geom_line();
 ```
 ````
+`````
+
 
 ---
 
+(word-count-widgets)=
+
 ## Word-count analysis with widgets
 
-````{challenge} Word-count analysis with widgets
+`````{exercise} Word-count analysis with widgets
 This exercise uses the
 [word-count project](https://github.com/coderefinery/word-count)
 from earlier lessons.
@@ -826,8 +840,6 @@ from earlier lessons.
 7. Add another widget parameter `nmax` to the above code to control the
    number of words displayed on the x-axis, e.g. `nmax=(6,14)`, and play
    around with both sliders.
-````
-
 ````{solution}
 Code for a widget with sliding bars for both number of words and the inverse power:
 ```python
@@ -849,3 +861,5 @@ def zipf_plot(nmax, p):
     plt.plot(n, inv_n)
 ```
 ````
+`````
+

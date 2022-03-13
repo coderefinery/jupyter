@@ -60,10 +60,11 @@ If you prefer to select in which browser to open JupyterLab, use:
 jupyter-lab --no-browser
 ```
 
+(first-notebook)=
 
-## Exercise
+## An example computational notebook
 
-````{challenge} Exercise/demonstration: Calculating pi using Monte Carlo methods
+````{exercise} Exercise/demonstration: Calculating pi using Monte Carlo methods
 This can be either done as a 20 minute exercise or as a type-along demo.
 
 Each numbered item will be a new cell. Press SHIFT+ENTER to run a cell and create

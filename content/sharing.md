@@ -1,14 +1,16 @@
 # Sharing notebooks
 
 ```{questions}
- - How can I share notebooks with colleagues and the community?
+- How can I share notebooks with colleagues and the community?
 ```
 
 ---
 
+(reproducible-via-binder)=
+
 ## Sharing dynamic notebooks on [Binder](https://mybinder.org)
 
-````{challenge} Exercise (20 min): Making your notebooks reproducible by anyone via Binder
+````{exercise} Exercise (20 min): Making your notebooks reproducible by anyone via Binder
 - Create a new GitHub repository.
 - Commit and push the notebook which we have created earlier to this repository. If you got stuck earlier,
   you can download [this notebook](https://raw.githubusercontent.com/coderefinery/jupyter/main/example/darts.ipynb)
@@ -40,7 +42,11 @@
 
 ## Optional exercises
 
-````{challenge} (Optional) Exercise: what happens without requirements.txt?
+(without-requirements)=
+
+### Importance of requirements file
+
+````{exercise} (Optional) Exercise: what happens without requirements.txt?
 Let's look at the same [activity inequality
 repository](https://github.com/timalthoff/activityinequality).  We
 can start this repository [in Binder by using this
@@ -56,8 +62,13 @@ link](https://mybinder.org/v2/gh/timalthoff/activityinequality/master).
 - How would this be better?
 ````
 
-````{challenge} (Optional) Exercise: share an interactive (ipywidgets) notebook via Binder
-- Take the solution from the exercise {ref}`interactive-data-fitting` and paste it into a notebook.
+(share-widget)=
+
+### Sharing an interactive notebook on Binder
+
+````{exercise} (Optional) Exercise: share an interactive (ipywidgets) notebook via Binder
+- Take the solution from the exercise "Widgets for interactive data fitting" in the "Examples" 
+  episode and paste it into a notebook.
 - Push the notebook to a GitHub/GitLab repository.
 - Create a `requirements.txt` file in your notebook repository, e.g.:
   ```
@@ -68,7 +79,11 @@ link](https://mybinder.org/v2/gh/timalthoff/activityinequality/master).
 - Try to deploy this example via Binder in the same way as the above exercise.
 ````
 
-````{challenge} (Optional) Exercise: share R Markdown/R Studio project via Binder
+(r-project-binder)=
+
+### Sharing R Markdown/Studio projects
+
+````{exercise} (Optional) Exercise: share R Markdown/R Studio project via Binder
 This exercise is for those who use Rmd files instead of Jupyter notebooks.
 - Put your Rmd file into a GitHub repository.
 - To this repository add a file `runtime.txt` which specifies the R version you want to use:
@@ -80,7 +95,7 @@ This exercise is for those who use Rmd files instead of Jupyter notebooks.
   install.packages(c("readr", "ggplot2"))
   ```
 - After you have done that, visit
-  `https://mybinder.org/v2/gh/myuser/myrepo/mybranch?urlpath=rstudio` (adapt
+  https://mybinder.org/v2/gh/myuser/myrepo/mybranch?urlpath=rstudio (adapt
   "myuser", "myrepo", and "mybranch").
 - For more information, see [this guide](https://github.com/alan-turing-institute/the-turing-way/blob/master/workshops/boost-research-reproducibility-binder/workshop-presentations/zero-to-binder-r.md).
 ````
@@ -89,10 +104,10 @@ This exercise is for those who use Rmd files instead of Jupyter notebooks.
 
 ## Different ways to share a notebook
 
-- You can enter a URL, GitHub repo or username, or GIST ID in [`nbviewer`](https://nbviewer.jupyter.org/) and view a rendered Jupyter notebook
+- You can enter a URL, GitHub repo or username, or GIST ID in [nbviewer](https://nbviewer.jupyter.org/) and view a rendered Jupyter notebook
 - Read the Docs can render Jupyter Notebooks via the [nbsphinx package](https://nbsphinx.readthedocs.io/)
 - [Binder](https://mybinder.org/) creates live notebooks based on a GitHub repository
-- [EGI Notebooks](https://notebooks.egi.eu) (see also [https://egi-notebooks.readthedocs.io](https://egi-notebooks.readthedocs.io))
+- [EGI Notebooks](https://notebooks.egi.eu) (see also https://egi-notebooks.readthedocs.io)
 - [JupyterLab](https://github.com/jupyterlab/jupyterlab) supports sharing and collaborative editing of notebooks via Google Drive. Recently
   it also added support for [Shared editing with collaborative notebook model](https://github.com/jupyterlab/jupyterlab/pull/10118).
 - [Notedown](https://github.com/aaren/notedown), [Jupinx](https://github.com/QuantEcon/sphinxcontrib-jupyter) and [DocOnce](https://github.com/hplgit/doconce) can take Markdown or Sphinx files and generate Jupyter Notebooks
