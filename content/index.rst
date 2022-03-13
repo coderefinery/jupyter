@@ -34,12 +34,12 @@ for **reproducibility, collaboration, and reusability**.
    :maxdepth: 1
    :caption: The lesson
 
-   motivation.md
-   interface.md
-   first-notebook.md
-   version-control.md
-   sharing.md
-   summary.md
+   motivation
+   interface
+   first-notebook
+   version-control
+   sharing
+   summary
 
 .. toctree::
    :maxdepth: 1

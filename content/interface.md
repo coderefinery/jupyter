@@ -149,6 +149,10 @@ It can also happen that these shortcuts interfere with browser shortcuts.
 
 ---
 
+(integrated-development-environments)=
+
+### Tools for writing, testing and debugging code
+
 ```{discussion} Integrated development environments
 - What tools do you use for writing, testing, and debugging code?
 
