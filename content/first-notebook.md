@@ -5,6 +5,11 @@
 - Get a feeling for the importance of execution order.
 ```
 
+```{instructor-note}
+- 10 min teaching
+- 10 min exercises
+```
+
 ## Creating a computational narrative
 
 Let's create our first real computational narrative in a Jupyter notebook
