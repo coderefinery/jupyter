@@ -86,7 +86,7 @@ $$e^{i\pi} + 1 = 0$$
 
 Images:
 
-![Jupyter logo](https://jupyter.org/assets/main-logo.svg)
+![Jupyter logo](https://jupyter.org/assets/homepage/main-logo.svg)
 
 Links:
 [One of many markdown cheat-sheets](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#emphasis)
