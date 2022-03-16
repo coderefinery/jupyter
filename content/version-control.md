@@ -4,6 +4,11 @@
 - Demonstrate two tools which make version control of notebooks easier.
 ```
 
+```{instructor-note}
+- 10 min teaching
+- 5 min exercises
+```
+
 Jupyter Notebooks are stored in [JSON](https://en.wikipedia.org/wiki/JSON) format.
 With this format it can be a bit difficult to compare and merge changes which are introduced
 through the notebook interface.

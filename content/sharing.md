@@ -1,7 +1,12 @@
 # Sharing notebooks
 
-```{questions}
-- How can I share notebooks with colleagues and the community?
+```{objectives}
+- Learn how to share notebooks with colleagues and the community?
+```
+
+```{instructor-note}
+- 10 min teaching
+- 20 min exercises
 ```
 
 ---

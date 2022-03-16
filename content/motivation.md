@@ -5,6 +5,11 @@
 - See some inspirational Jupyter notebooks.
 ```
 
+```{instructor-note}
+- 10 min teaching
+- 0 min exercises
+```
+
 ## Motivation for Jupyter notebooks
 
 ```{figure} img/medicean-stars.png

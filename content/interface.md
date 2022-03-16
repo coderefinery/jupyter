@@ -7,6 +7,11 @@
 - Learn about command/edit modes and markdown/code cells.
 ```
 
+```{instructor-note}
+- 15 min teaching
+- 0 min exercises
+```
+
 JupyterLab is the next-generation user interface for Jupyter notebooks
 and is intended to replace the conventional interface.
 It is a highly modular and customizable interface.
