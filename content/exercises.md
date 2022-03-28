@@ -7,6 +7,7 @@ JupyterLab and notebook interface:
 
 A first computational notebook:
 - {ref}`first-notebook`
+- {ref}`other-kernels`
 
 Notebooks and version control:
 - {ref}`plain-git-diff`

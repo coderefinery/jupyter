@@ -160,6 +160,21 @@ Demonstrate out-of-order execution problems and how to avoid them:
 - Then demonstrate "run all cells"
 ```
 
+(other-kernels)=
+
+## Notebooks in other languages
+
+```{exercise} (Optional exercise) Installing a kernel for your favorite language
+
+Want to use Jupyter for other programming languages than Python? Head over to this
+[list of Jupyter kernels](https://github.com/jupyter/jupyter/wiki/Jupyter-kernels)
+and find the kernel for your favorite language. Follow the link to installation instructions
+and try to make it work on your machine!
+
+- [Direct link for IRKernel](https://irkernel.github.io/installation/) (for R)
+- [Direct link for IJulia](https://github.com/JuliaLang/IJulia.jl) (for Julia)
+```
+
 ---
 
 ## Discussion
