@@ -47,8 +47,8 @@ In your terminal create a folder or navigate to a folder where you would like
 the new notebook to appear.
 
 Then launch JupyterLab:
-```
-jupyter-lab
+```console
+$ jupyter-lab
 ```
 
 This opens JupyterLab in your browser. Click on the Python 3 tile.
@@ -61,8 +61,8 @@ JupyterLab opened in the browser. Click on the Python 3 tile.
 ```
 
 If you prefer to select in which browser to open JupyterLab, use:
-```
-jupyter-lab --no-browser
+```console
+$ jupyter-lab --no-browser
 ```
 
 (first-notebook)=

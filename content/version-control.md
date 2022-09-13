@@ -88,8 +88,8 @@ Comparing changes with jupyterlab-git/nbdime. Click on the Git tab, then on the 
 ## Using nbdime on the command line
 
 You can configure your (command line) Git to always use nbdime when comparing and merging notebooks:
-```
-nbdime config-git --enable --global
+```console
+$ nbdime config-git --enable --global
 ```
 Now when you do git diff or git merge with notebooks, you should see a nice diff view.
 For more information please see the
