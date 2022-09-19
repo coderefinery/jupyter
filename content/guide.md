@@ -28,10 +28,10 @@ can be a very useful tool for reproducible research, if used wisely.
 By the end of this lesson, learners should:
 - be able to explain what a computational narrative is
 - be able to identify areas of their own work where Jupyter notebooks could be an appropriate tool
-- be able to use the JupyterLab user interface efficiently
+- be able to use the JupyterLab interface efficiently
 - understand that version control is equally important for notebooks as for other code
 - know how to version control notebooks efficiently using JupyterLab plugins 
-- realize that notebooks can be used to document scientific analysis, and published
+- know that notebooks can be used to document scientific analysis, and published
   e.g. as supplementary information with journal articles to aid reproducibility
 - know how to share notebooks via Binder
 - understand possible pitfalls of using notebooks
@@ -43,10 +43,10 @@ By the end of this lesson, learners should:
   or as a type-along demo.
 - "Instructor demonstrates a plain git diff" should be done as demonstration.
 - "Making your notebooks reproducible by anyone via Binder" should be done as a
-  20 minute exercise but can be done as a demo.
-- There are two optional exercises in "Sharing notebooks", one on trying to reproduce 
-  results from a published notebook, and on for R users who can try to deploy R
-  Studio/ R Markdown to Binder.
+  20 minute exercise but can also be done as a demo.
+- There are three optional exercises in "Sharing notebooks", one on trying to reproduce 
+  results from a published notebook, another on sharing an interactive notebook on Binder, 
+  and one for R users who can try to deploy R   Studio/ R Markdown to Binder.
 - The "Examples" episode contains many interesting examples which can be used
   for demonstration or as exercises. The dependencies for ipywidget examples are
   typically tricky to install/enable in a group exercise. Instead they can be
