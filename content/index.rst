@@ -2,7 +2,7 @@ Introduction to Jupyter and JupyterLab
 ======================================
 
 The goal of this lesson is to teach learners the user interface of JupyterLab,
-how Jupyter notebooks work, and what some common and powerful usecases are.
+how Jupyter notebooks work, and what some common and powerful use cases are.
 
 For many learners, notebooks are not a new concept,
 and our goal will be to demonstrate and discuss and guide towards good practices
@@ -18,21 +18,10 @@ for **reproducibility, collaboration, and reusability**.
     A reasonably recent version of Git to be able to work with the JupyterLab Git integration.
 
 
-.. csv-table::
-   :widths: auto
-   :delim: ;
-
-   10 min ; :doc:`motivation`
-   15 min ; :doc:`interface`
-   20 min ; :doc:`first-notebook`
-   15 min ; :doc:`version-control`
-   30 min ; :doc:`sharing`
-   5 min ; :doc:`summary`
-
 
 .. toctree::
    :maxdepth: 1
-   :caption: The lesson
+   :caption: Core episodes
 
    motivation
    interface
@@ -43,7 +32,7 @@ for **reproducibility, collaboration, and reusability**.
 
 .. toctree::
    :maxdepth: 1
-   :caption: Optional
+   :caption: Optional episodes
 
    extra-features
    examples

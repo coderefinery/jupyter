@@ -40,6 +40,7 @@ IFrame(src="https://coderefinery.github.io/jupyter/first-notebook/", width='100%
 ```
 ````
 
+---
 
 ## Launching JupyterLab notebook
 
@@ -66,6 +67,8 @@ $ jupyter-lab --no-browser
 ```
 
 (first-notebook)=
+
+---
 
 ## An example computational notebook
 
@@ -162,6 +165,8 @@ Demonstrate out-of-order execution problems and how to avoid them:
 
 (other-kernels)=
 
+---
+
 ## Notebooks in other languages
 
 ```{exercise} (Optional exercise) Installing a kernel for your favorite language
@@ -195,6 +200,7 @@ We can comment code either in **Markdown cells** or in the code cell as **code c
 What advantages do you see of commenting in Markdown cells and what advantages
 can you list for writing code comments in code cells?
 ```
+
 ---
 
 ```{keypoints}
