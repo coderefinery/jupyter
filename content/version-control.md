@@ -13,6 +13,7 @@ Jupyter Notebooks are stored in [JSON](https://en.wikipedia.org/wiki/JSON) forma
 With this format it can be a bit difficult to compare and merge changes which are introduced
 through the notebook interface.
 
+---
 
 ## Packages and JupyterLab extensions to simplify version control
 
@@ -43,6 +44,7 @@ To install additional extensions, please consult the
 [official documentation](https://jupyterlab.readthedocs.io/en/stable/user/extensions.html)
 about installing and managing JupyterLab extensions.
 
+---
 
 ## Comparing changes without jupyterlab-git/nbdime
 
@@ -72,6 +74,7 @@ about installing and managing JupyterLab extensions.
    and see that this is not very useful. Discuss why.
 ```
 
+---
 
 ## Comparing changes with jupyterlab-git/nbdime
 
@@ -84,6 +87,7 @@ This is more convenient since it highlights only the changes that we have made:
 Comparing changes with jupyterlab-git/nbdime. Click on the Git tab, then on the plus-minus symbol.
 ```
 
+---
 
 ## Using nbdime on the command line
 
@@ -94,3 +98,11 @@ $ nbdime config-git --enable --global
 Now when you do git diff or git merge with notebooks, you should see a nice diff view.
 For more information please see the
 [corresponding documentation](https://nbdime.readthedocs.io/en/latest/#git-integration-quickstart).
+
+---
+
+## See also
+
+- [nbdev](https://nbdev.fast.ai/getting_started.html) developed by [fast.ai](https://www.fast.ai/)
+  is a notebook-driven development platform which includes support for [git-friendly Jupyter 
+  notebooks](https://nbdev.fast.ai/tutorials/git_friendly_jupyter.html)
