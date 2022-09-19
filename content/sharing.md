@@ -44,6 +44,7 @@
 - [Collection of example repositories](https://github.com/binder-examples)
 ```
 
+---
 
 ## Optional exercises
 
