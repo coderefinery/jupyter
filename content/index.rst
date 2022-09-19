@@ -18,17 +18,6 @@ for **reproducibility, collaboration, and reusability**.
     A reasonably recent version of Git to be able to work with the JupyterLab Git integration.
 
 
-.. csv-table::
-   :widths: auto
-   :delim: ;
-
-   10 min ; :doc:`motivation`
-   15 min ; :doc:`interface`
-   20 min ; :doc:`first-notebook`
-   15 min ; :doc:`version-control`
-   30 min ; :doc:`sharing`
-   5 min ; :doc:`summary`
-
 
 .. toctree::
    :maxdepth: 1
