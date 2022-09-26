@@ -31,6 +31,7 @@
 
   Screenshot of Binder web interface.
   ```
+- Copy-paste the markdown text for the mybinder badge into a README.md file in your notebook repository.
 - Check that your notebook repository now has a "launch binder"
   badge in your `README.md` file on GitHub.
 - Try clicking the button and see how your repository is launched
@@ -65,7 +66,7 @@ link](https://mybinder.org/v2/gh/timalthoff/activityinequality/master).
   Try to run the notebook - can you make it work?
 - Install the missing requirements with `pip`.  Does it work now?
   Why or why not?
-- How would this be better?
+- How could this be better?
 ````
 
 (share-widget)=
@@ -73,7 +74,7 @@ link](https://mybinder.org/v2/gh/timalthoff/activityinequality/master).
 ### Sharing an interactive notebook on Binder
 
 ````{exercise} (Optional) Exercise: share an interactive (ipywidgets) notebook via Binder
-- Take the solution from the exercise "Widgets for interactive data fitting" in the "Examples" 
+- Take the solution from the exercise "Widgets for interactive data fitting" in the {doc}`examples`
   episode and paste it into a notebook.
 - Push the notebook to a GitHub/GitLab repository.
 - Create a `requirements.txt` file in your notebook repository, e.g.:
