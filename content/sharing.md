@@ -31,6 +31,7 @@
 
   Screenshot of Binder web interface.
   ```
+- Copy-paste the markdown text for the mybinder badge into a README.md file in your notebook repository.
 - Check that your notebook repository now has a "launch binder"
   badge in your `README.md` file on GitHub.
 - Try clicking the button and see how your repository is launched
