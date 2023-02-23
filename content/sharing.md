@@ -82,7 +82,7 @@ repository](https://github.com/timalthoff/activityinequality).
   ```  
   and run the notebook again. What happens now?  
 - Again, the run brakes down due to missing packages. This time the culprit is the
-  `seaborn`package. Modify the first cell to also install it with
+  `seaborn` package. Modify the first cell to also install it with
   ```jupyter
   !python3 -m pip install pandas matplotlib seaborn
   ```  
