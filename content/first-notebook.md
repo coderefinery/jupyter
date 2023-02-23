@@ -1,3 +1,4 @@
+
 # A first computational notebook
 
 ```{objectives}
@@ -66,9 +67,9 @@ If you prefer to select in which browser to open JupyterLab, use:
 $ jupyter-lab --no-browser
 ```
 
-(first-notebook)=
-
 ---
+
+(first-notebook)=
 
 ## An example computational notebook
 
@@ -163,9 +164,9 @@ Demonstrate out-of-order execution problems and how to avoid them:
 - Then demonstrate "run all cells"
 ```
 
-(other-kernels)=
-
 ---
+
+(other-kernels)=
 
 ## Notebooks in other languages
 

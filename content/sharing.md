@@ -55,11 +55,10 @@
 
 ````{exercise} (Optional) Exercise: what happens without requirements.txt?
 Let's look at the same [activity inequality
-repository](https://github.com/timalthoff/activityinequality).  We
-can start this repository [in Binder by using this
-link](https://mybinder.org/v2/gh/timalthoff/activityinequality/master).
+repository](https://github.com/timalthoff/activityinequality).  
 
-- Start the repository in Binder
+- Start the repository [in Binder by using this
+link](https://mybinder.org/v2/gh/timalthoff/activityinequality/master). 
 - `fig3/fig3bc.ipynb` is a Python notebook, so works in Binder.
   Most others are in R, which also works in Binder.  [But
   how?](https://mybinder.readthedocs.io/en/latest/howto/languages.html)
