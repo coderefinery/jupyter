@@ -106,3 +106,6 @@ For more information please see the
 - [nbdev](https://nbdev.fast.ai/getting_started.html) developed by [fast.ai](https://www.fast.ai/)
   is a notebook-driven development platform which includes support for [git-friendly Jupyter 
   notebooks](https://nbdev.fast.ai/tutorials/git_friendly_jupyter.html)
+- [Verdant](https://github.com/mkery/Verdant/) is a JupyterLab extension that automatically
+  records history of all experiments you run in a Jupyter notebook, and stores them in an
+  `.ipyhistory` JSON file.
