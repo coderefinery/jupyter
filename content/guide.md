@@ -45,14 +45,14 @@ By the end of this lesson, learners should:
 * 09:00 - 10:45 Jupyter
     - 09:00 - 09:10 Jupyter notebooks
     - 09:10 - 09:25 JupyterLab and notebook interface
-    - 09:25 - 09:45 A first computational notebook
+    - 09:25 - 09:50 A first computational notebook
       - discussion (5 min)
-      - breakout room exercise (15 min)
-    - 09:45 - 10:00 Notebooks and version control demo, 10-15 min
+      - breakout room exercise (20 min)
+    - 09:50 - 10:00 Notebooks and version control demo, 10-15 min
     - 10:00 - 10:10 Break
-    - 10:10 - 10:30 Sharing notebooks
-      - Binder Breakout room exercise (15 min)
-    - 10:30 - 10:40 Wrap-up
+    - 10:10 - 10:35 Sharing notebooks
+      - Binder Breakout room exercise (20 min)
+    - 10:35 - 10:40 Wrap-up
     - 10:40 - 10:45 buffer
 ```
 
