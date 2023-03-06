@@ -37,6 +37,25 @@ By the end of this lesson, learners should:
 - understand possible pitfalls of using notebooks
 
 
+## Timing and lesson placement
+
+### Detailed schedule
+
+```markdown
+* 09:00 - 10:45 Jupyter
+    - 09:00 - 09:10 Jupyter notebooks
+    - 09:10 - 09:25 JupyterLab and notebook interface
+    - 09:25 - 09:50 A first computational notebook
+      - discussion (5 min)
+      - breakout room exercise (20 min)
+    - 09:50 - 10:00 Notebooks and version control demo, 10-15 min
+    - 10:00 - 10:10 Break
+    - 10:10 - 10:35 Sharing notebooks
+      - Binder Breakout room exercise (20 min)
+    - 10:35 - 10:40 Wrap-up
+    - 10:40 - 10:45 buffer
+```
+
 ## Exercises
 
 - "A first computational notebook" can be done either as a 20 minute exercise
