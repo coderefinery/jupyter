@@ -55,18 +55,55 @@
 
 ````{exercise} (Optional) Exercise: what happens without requirements.txt?
 Let's look at the same [activity inequality
-repository](https://github.com/timalthoff/activityinequality).  We
-can start this repository [in Binder by using this
-link](https://mybinder.org/v2/gh/timalthoff/activityinequality/master).
+repository](https://github.com/timalthoff/activityinequality).  
 
-- Start the repository in Binder
-- `fig3/fig3bc.ipynb` is a Python notebook, so works in Binder.
-  Most others are in R, which also works in Binder.  [But
+- Start the repository in Binder [using this link](https://mybinder.org/v2/gh/timalthoff/activityinequality/master). 
+- `fig3/fig3bc.ipynb` is a Python notebook, so it works in Binder.
+  Most others are in R, which also works in Binder. [But
   how?](https://mybinder.readthedocs.io/en/latest/howto/languages.html)
-  Try to run the notebook - can you make it work?
-- Install the missing requirements with `pip`.  Does it work now?
-  Why or why not?
-- How could this be better?
+- Try to run the notebook. What happens?
+- Most likely the run brakes down immediately in the first cell
+  ```jupyter
+  %matplotlib inline
+  import pandas as pd
+  import matplotlib.pyplot as plt
+  import seaborn as sns
+  sns.set(style="whitegrid")
+  from itertools import cycle
+  ```
+  with a long list of `ModuleNotFoundError` messages. This is 
+  because the required Python packages have not been installed and can not be imported. 
+  The missing packages include, at least, `pandas` and `matplotlib` mentioned in the 
+  error message.
+- To install the missing requirements, add a new code cell to the beginning of the
+  notebook with the contents
+  ```jupyter
+  !python3 -m pip install pandas matplotlib
+  ```  
+  and run the notebook again. What happens now?  
+- Again, the run brakes down due to missing packages. This time the culprit is the
+  `seaborn` package. Modify the first cell to also install it with
+  ```jupyter
+  !python3 -m pip install pandas matplotlib seaborn
+  ```  
+  and try to run the notebook for the third time. Does it finally work? 
+  What could have been done differently by the developer?
+- A good way to make a notebook more usable is to create a `requirements.txt` file 
+  containing the necessary packages to run the notebook and add it next to the notebook
+  in the repository.
+- In this case, the `requirements.txt` could look like this
+  ```file 
+  # requirements.txt
+  pandas
+  matplotlib
+  seaborn
+  ```
+  and to make sure the packages are installed, one could add a code cell to the beginning
+  of original notebook with the line  
+  ```jupyter
+  !python3 -m pip install -r requirements.txt
+  ```
+
 ````
 
 (share-widget)=
