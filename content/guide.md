@@ -42,18 +42,18 @@ By the end of this lesson, learners should:
 ### Detailed schedule
 
 ```markdown
-* 09:00 - 10:45 Jupyter
-    - 09:00 - 09:10 Jupyter notebooks
-    - 09:10 - 09:25 JupyterLab and notebook interface
-    - 09:25 - 09:50 A first computational notebook
+* 12:00 - 13:45 Jupyter
+    - 12:00 - 12:10 Jupyter notebooks
+    - 12:10 - 12:25 JupyterLab and notebook interface
+    - 12:25 - 12:50 A first computational notebook
       - discussion (5 min)
       - breakout room exercise (20 min)
-    - 09:50 - 10:00 Notebooks and version control demo, 10-15 min
-    - 10:00 - 10:10 Break
-    - 10:10 - 10:35 Sharing notebooks
+    - 12:50 - 13:00 Notebooks and version control demo, 10-15 min
+    - 13:00 - 13:10 Break
+    - 13:10 - 13:35 Sharing notebooks
       - Binder Breakout room exercise (20 min)
-    - 10:35 - 10:40 Wrap-up
-    - 10:40 - 10:45 buffer
+    - 13:35 - 13:40 Wrap-up
+    - 13:40 - 13:45 buffer
 ```
 
 ## Exercises
