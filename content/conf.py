@@ -17,8 +17,8 @@
 
 # -- Project information -----------------------------------------------------
 
-project = "Introduction to Jupyter and JupyterLab"
-copyright = "2021, CodeRefinery team"
+project = "Jupyter notebooks"
+copyright = "CodeRefinery team"
 author = "CodeRefinery team"
 github_user = "coderefinery"
 github_repo_name = "jupyter"  # auto-detected from dirname if blank
