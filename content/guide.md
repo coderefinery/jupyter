@@ -41,20 +41,16 @@ By the end of this lesson, learners should:
 
 ### Detailed schedule
 
-```markdown
-* 09:00 - 10:45 Jupyter
-    - 09:00 - 09:10 Jupyter notebooks
-    - 09:10 - 09:25 JupyterLab and notebook interface
-    - 09:25 - 09:50 A first computational notebook
-      - discussion (5 min)
-      - breakout room exercise (20 min)
-    - 09:50 - 10:00 Notebooks and version control demo, 10-15 min
-    - 10:00 - 10:10 Break
-    - 10:10 - 10:35 Sharing notebooks
-      - Binder Breakout room exercise (20 min)
-    - 10:35 - 10:40 Wrap-up
-    - 10:40 - 10:45 buffer
-```
+- 12:00 - 12:10 [Jupyter notebooks](https://coderefinery.github.io/jupyter/motivation/)
+- 12:10 - 12:15 [JupyterLab and notebook interface](https://coderefinery.github.io/jupyter/interface/)
+- 12:15 - 12:35 [A first computational notebook](https://coderefinery.github.io/jupyter/first-notebook/)
+  - [Exercise (20 min)](https://coderefinery.github.io/jupyter/first-notebook/#an-example-computational-notebook)
+- 12:35 - 12:50 [Notebooks and version control demo](https://coderefinery.github.io/jupyter/version-control/)
+- 12:50 - 12:55 [Sharing notebooks](https://coderefinery.github.io/jupyter/sharing/)
+- 12:55 - 13:05 Break
+- 13:05 - 13:25 [Binder exercise (20 min)](https://coderefinery.github.io/jupyter/sharing/#sharing-dynamic-notebooks-on-binder)
+- 13:25 - 13:30 Wrap-up
+
 
 ## Exercises
 
