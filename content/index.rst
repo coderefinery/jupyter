@@ -1,5 +1,5 @@
-Introduction to Jupyter and JupyterLab
-======================================
+Jupyter notebooks - A tool to write and share executable notebooks and data visualization
+=========================================================================================
 
 The goal of this lesson is to teach learners the user interface of JupyterLab,
 how Jupyter notebooks work, and what some common and powerful use cases are.
