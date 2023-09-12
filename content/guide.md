@@ -51,7 +51,6 @@ By the end of this lesson, learners should:
 - 13:05 - 13:25 [Binder exercise (20 min)](https://coderefinery.github.io/jupyter/sharing/#sharing-dynamic-notebooks-on-binder)
 - 13:25 - 13:30 Wrap-up
 
-
 ## Exercises
 
 - "A first computational notebook" can be done either as a 20 minute exercise

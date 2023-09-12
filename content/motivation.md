@@ -32,6 +32,8 @@ Collections, University of Oklahoma Libraries (CC-BY).
 
 ## Case examples
 
+Jupyter notebooks make it feasible to share your code: you can explain your ideas and anyone can run the code eg. in Binder.
+
 ### [Gravitational wave discovery](https://www.gw-openscience.org/about/)
 
 ```{figure} img/gravity.jpg
