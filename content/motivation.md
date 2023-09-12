@@ -28,6 +28,13 @@ Jupyter Notebook is a tool for creating and sharing documents that contain live 
 - The name "Jupyter" derives from Julia+Python+R, but today Jupyter kernels
   exist for [dozens of programming languages](https://github.com/jupyter/jupyter/wiki/Jupyter-kernels).
 
+### Jupyter Notebook-ish functionalities are widely used
+
+Many tools can have jupyter-like behaviour: code and markdown cells
+- VSCode
+- Google Colab
+- GitHub Codespaces
+
 ---
 
 ## Case examples
