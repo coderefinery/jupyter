@@ -6,7 +6,7 @@
 
 ```{instructor-note}
 - 10 min teaching
-- 5 min exercises
+- 5 min demo
 ```
 
 Jupyter Notebooks are stored in [JSON](https://en.wikipedia.org/wiki/JSON) format.
