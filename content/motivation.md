@@ -12,13 +12,13 @@
 
 ## Motivation for Jupyter notebooks
 
-```{figure} img/medicean-stars.png
-:alt: Galileo's drawings of Jupiter and its Medicean Stars from Sidereus Nuncius
-:width: 50%
+Jupyter Notebook is a tool for creating and sharing documents that contain live code, equations, visualizations, and narrative text.
 
-**One of the first notebooks: Galileo's drawings of Jupiter and its Medicean
-Stars** from Sidereus Nuncius. Image courtesy of the History of Science
-Collections, University of Oklahoma Libraries (CC-BY).
+```{figure} img/‎Jupyter_Pandas_demo.png
+:alt: A comparison between pure Python code and a Jupyter Notebook highlights how Jupyter Notebook can include much more elaborate narrative than regular code files.
+:width: 100%
+
+**Jupyter notebooks can contain much more than just regular code. (CC-BY).
 ```
 
 - **Code, text, equations, figures, plots**, etc. are interleaved, creating a *computational narrative*.
