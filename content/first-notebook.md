@@ -7,8 +7,8 @@
 ```
 
 ```{instructor-note}
-- 10 min teaching
-- 10 min exercises
+- 5 min teaching
+- 20 min exercises
 ```
 
 ## Creating a computational narrative
@@ -30,16 +30,6 @@ math libraries and no Wikipedia.
 Here is one way of doing it - "throwing darts" by generating
 random points within a square area and checking whether the points
 fall within the unit circle.
-
-````{discussion} Hint: Opening a webpage inside JupyterLab
-If you would like to copy-paste content from this webpage into your
-Jupyter notebook, a cool way of doing it is to open this page inside
-an IFrame:
-```python
-from IPython.display import IFrame
-IFrame(src="https://coderefinery.github.io/jupyter/first-notebook/", width='100%', height='500px')
-```
-````
 
 ---
 
@@ -73,13 +63,23 @@ $ jupyter-lab --no-browser
 
 ## An example computational notebook
 
+````{discussion} Hint: Opening a webpage inside JupyterLab
+If you would like to copy-paste content from this webpage into your
+Jupyter notebook, a cool way of doing it is to open this page inside
+an IFrame:
+```python
+from IPython.display import IFrame
+IFrame(src="https://coderefinery.github.io/jupyter/first-notebook/", width='100%', height='500px')
+```
+````
+
 ````{exercise} Exercise/demonstration: Calculating pi using Monte Carlo methods
 This can be either done as a 20 minute exercise or as a type-along demo.
 
 Each numbered item will be a new cell. Press SHIFT+ENTER to run a cell and create
-a new cell below.
+a new cell below. Use shortcuts `M` and `Y` to change cells to markdown and code, respectively.
 
-1. Create a new notebook, name it, and add a heading (markdown cell).
+1. Create a new notebook, name it, and add a heading (markdown cell). 
    ```markdown
    # Calculating pi using Monte Carlo methods
    ```
