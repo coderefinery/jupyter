@@ -77,7 +77,7 @@ IFrame(src="https://coderefinery.github.io/jupyter/first-notebook/", width='100%
 This can be either done as a 20 minute exercise or as a type-along demo.
 
 Each numbered item will be a new cell. Press SHIFT+ENTER to run a cell and create
-a new cell below. Use shortcuts `M` and `Y` to change cells to markdown and code, respectively.
+a new cell below. With the cell selected, press ESCAPE to go into command mode. Use shortcuts `M` and `Y` to change cells to markdown and code, respectively.
 
 1. Create a new notebook, name it, and add a heading (markdown cell). 
    ```markdown
