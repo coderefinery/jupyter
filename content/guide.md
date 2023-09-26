@@ -16,7 +16,7 @@ which is brilliantly enabled by notebooks.
 
 After the first three episodes the focus shifts to topics related to version control ("Notebooks and version control"), open science and reproducibility ("Sharing notebooks") which connects to topics covered in other CodeRefinery lessons.
 
-There are also two optional episodes, "Shell commands, magics and widgets" and "Additional exercises" 
+There are also two optional episodes, "Shell commands, magics and widgets" and "Additional exercises"
 which go through various features and use-cases of Jupyter.
 
 A key take-home message from this lesson should be that Jupyter notebooks
@@ -30,7 +30,7 @@ By the end of this lesson, learners should:
 - be able to identify areas of their own work where Jupyter notebooks could be an appropriate tool
 - be able to use the JupyterLab interface efficiently
 - understand that version control is equally important for notebooks as for other code
-- know how to version control notebooks efficiently using JupyterLab plugins 
+- know how to version control notebooks efficiently using JupyterLab plugins
 - know that notebooks can be used to document scientific analysis, and published
   e.g. as supplementary information with journal articles to aid reproducibility
 - know how to share notebooks via Binder
@@ -58,8 +58,8 @@ By the end of this lesson, learners should:
 - "Instructor demonstrates a plain git diff" should be done as demonstration.
 - "Making your notebooks reproducible by anyone via Binder" should be done as a
   20 minute exercise but can also be done as a demo.
-- There are three optional exercises in "Sharing notebooks", one on trying to reproduce 
-  results from a published notebook, another on sharing an interactive notebook on Binder, 
+- There are three optional exercises in "Sharing notebooks", one on trying to reproduce
+  results from a published notebook, another on sharing an interactive notebook on Binder,
   and one for R users who can try to deploy R   Studio/ R Markdown to Binder.
 - The "Examples" episode contains many interesting examples which can be used
   for demonstration or as exercises. The dependencies for ipywidget examples are
@@ -123,14 +123,14 @@ Take-home messages:
   going up and down in the notebook.
 
 
-### Notebooks and version control 
+### Notebooks and version control
 
 After discussing the Git integrations, the instructor should encourage participants to
 initialize a Git repo in their notebook directory, and commit the first "testing" notebook.
 They can do this via the JupyterLab interface if they have the plugins installed, or via
 terminal inside JupyterLab, or via regular terminal.
 
-Take home message: The Git integration in JupyterLab is powerful and enables tracking 
+Take home message: The Git integration in JupyterLab is powerful and enables tracking
 notebooks in just the same way as one would with source code files.
 
 ### Sharing notebooks

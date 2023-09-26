@@ -107,8 +107,8 @@ Widgets add more interactivity to Notebooks, allowing one to visualize and contr
 from ipywidgets import interact
 ```
 
-> The `ipywidgets` package is included in the standard 
-> CodeRefinery conda environment, but if you run into problems getting widgets to work  
+> The `ipywidgets` package is included in the standard
+> CodeRefinery conda environment, but if you run into problems getting widgets to work
 > please refer to the official [installation instructions](https://ipywidgets.readthedocs.io/en/latest/user_install.html).
 
 #### Use `interact` as a function

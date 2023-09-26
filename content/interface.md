@@ -120,7 +120,7 @@ print("hello world")
 
 ## Keyboard shortcuts
 
-Some shortcuts only work in Command or Edit mode. 
+Some shortcuts only work in Command or Edit mode.
 It can also happen that these shortcuts interfere with browser shortcuts.
 
 
