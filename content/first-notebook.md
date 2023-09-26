@@ -177,8 +177,10 @@ Want to use Jupyter for other programming languages than Python? Head over to th
 and find the kernel for your favorite language. Follow the link to installation instructions
 and try to make it work on your machine!
 
-- [Direct link for IRKernel](https://irkernel.github.io/installation/) (for R)
+- [Direct link for IRKernel](https://irkernel.github.io/installation/) (for R).
+  - However, with R, you probably rather want to use [R Markdown](https://rmarkdown.rstudio.com/)
 - [Direct link for IJulia](https://github.com/JuliaLang/IJulia.jl) (for Julia)
+  - However, with Julia, you probably rather want to use [Pluto.jl](https://plutojl.org/).
 ```
 
 ---
