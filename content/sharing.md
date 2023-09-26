@@ -52,30 +52,70 @@ faster access to cloud resources:
 
 ## Sharing dynamic notebooks on [Binder](https://mybinder.org)
 
-````{exercise} Exercise (20 min): Making your notebooks reproducible by anyone via Binder
-- Create a new GitHub repository.
-- Commit and push the notebook which we have created earlier to this repository. If you got stuck earlier,
-  you can download [this notebook](https://raw.githubusercontent.com/coderefinery/jupyter/main/example/darts.ipynb)
-  (right-click, "Save as ..."). You can also try [Binder](https://mybinder.org) with a different notebook.
-- Create a `requirements.txt` file which contains (adapt this if your notebook has other dependencies):
-  ```
-  matplotlib==3.4.1
-  ```
-- Commit and push also this file to your notebook repository.
-- Visit [https://mybinder.org](https://mybinder.org):
-  ```{figure} img/binder.jpg
-  :alt: Screenshot of Binder web interface
+`````{exercise} Exercise (20 min): Making your notebooks reproducible by anyone via Binder
+  - Create a new GitHub repository and **click on "Add a README file"**: <https://github.com/new>
 
-  Screenshot of Binder web interface.
-  ```
-- Copy-paste the markdown text for the mybinder badge into a README.md file in your notebook repository.
-- Check that your notebook repository now has a "launch binder"
-  badge in your `README.md` file on GitHub.
-- Try clicking the button and see how your repository is launched
-  on Binder (can take a minute or two). Your notebooks can now be expored and executed in the cloud.
-- Enjoy being fully reproducible!
-- Even better would be to get a DOI to your notebook and point Binder to the DOI.
-````
+  - This exercise can be done entirely through the GitHub web interface (but
+    using the terminal is of course also OK). You can use the "Add file" button
+    to upload files:
+    ```{figure} img/github-upload.png
+    :alt: Screenshot of Binder web interface
+
+    Screenshot of Binder web interface.
+    ```
+
+  ````{tabs}
+    ```{group-tab} Jupyter Notebooks
+    - Upload the notebook which we have created earlier to this repository. If you got stuck earlier,
+      you can download [this notebook](https://raw.githubusercontent.com/coderefinery/jupyter/main/example/darts.ipynb)
+      (right-click, "Save as ..."). You can also try this with a different notebook. 
+
+    - Add also a `requirements.txt` file which contains (adapt this if your notebook has other dependencies):
+      ```
+      matplotlib==3.4.1
+      ```
+    ```
+    ```{group-tab} R Markdown/R Studio project
+    This exercise is for those who use Rmd files instead of Jupyter notebooks.
+
+    - Upload or push your Rmd file to this GitHub repository.
+
+    - Add a file `runtime.txt` which specifies the R version you want to use:
+      ```
+      r-3.6-2020-10-13
+      ```
+
+    - Add a file `install.R` which lists the dependencies, for instance:
+      ```
+      install.packages(c("readr", "ggplot2"))
+      ```
+
+    - After you have done that, visit
+      https://mybinder.org/v2/gh/**USER**/**REPOSITORY**/**BRANCH**?urlpath=rstudio (adapt
+      "USER", "REPOSITORY", and "BRANCH").
+
+    - For more information, see [this
+      guide](https://github.com/alan-turing-institute/the-turing-way/blob/master/workshops/boost-research-reproducibility-binder/workshop-presentations/zero-to-binder-r.md).
+    ```
+  ````
+
+  - Visit [https://mybinder.org](https://mybinder.org):
+    ```{figure} img/binder.jpg
+    :alt: Screenshot of Binder web interface
+
+    Screenshot of Binder web interface.
+    ```
+  - Copy-paste the markdown text for the mybinder badge into a README.md file in your notebook repository.
+
+  - Check that your notebook repository now has a "launch binder"
+    badge in your `README.md` file on GitHub.
+
+  - Try clicking the button and see how your repository is launched
+    on Binder (can take a minute or two). Your notebooks can now be expored and executed in the cloud.
+
+  - Enjoy being fully reproducible! Even better would be to get a DOI to your
+    notebook and point Binder to the DOI.
+`````
 
 ```{keypoints} More examples with Binder:
 - [Binder documentation](https://mybinder.readthedocs.io/en/latest/introduction.html)
@@ -159,25 +199,3 @@ repository](https://github.com/timalthoff/activityinequality).
   ```
 - Try to deploy this example via Binder in the same way as the above exercise.
 ````
-
-(r-project-binder)=
-
-### Sharing R Markdown/Studio projects
-
-````{exercise} (Optional) Exercise: share R Markdown/R Studio project via Binder
-This exercise is for those who use Rmd files instead of Jupyter notebooks.
-- Put your Rmd file into a GitHub repository.
-- To this repository add a file `runtime.txt` which specifies the R version you want to use:
-  ```
-  r-3.6-2020-10-13
-  ```
-- To this repository add a file `install.R` which lists the dependencies, for instance:
-  ```
-  install.packages(c("readr", "ggplot2"))
-  ```
-- After you have done that, visit
-  https://mybinder.org/v2/gh/myuser/myrepo/mybranch?urlpath=rstudio (adapt
-  "myuser", "myrepo", and "mybranch").
-- For more information, see [this guide](https://github.com/alan-turing-institute/the-turing-way/blob/master/workshops/boost-research-reproducibility-binder/workshop-presentations/zero-to-binder-r.md).
-````
-

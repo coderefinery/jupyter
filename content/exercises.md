@@ -16,7 +16,6 @@ Sharing notebooks:
 - {ref}`reproducible-via-binder`
 - {ref}`without-requirements`
 - {ref}`share-widget`
-- {ref}`r-project-binder`
 
 Examples of Jupyter features:
 - {ref}`interactive-data-fitting`
