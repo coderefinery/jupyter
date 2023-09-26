@@ -33,14 +33,13 @@ to make it easier to interact with Git and GitHub:
   - Adds a GitHub tab to the left-side menu bar where you can browse
     and open notebooks from your GitHub repositories.
 
-All three extensions can be used from within the JupyterLab interface.
-[jupyterlab-git](https://github.com/jupyterlab/jupyterlab-git) is installed as part
-of our [Conda environment](https://coderefinery.github.io/installation/conda-environment/).
-[nbdime](http://nbdime.readthedocs.io/) is also already installed in this environment since
-it is a dependency of jupyterlab-git.
-
-To install additional extensions, please consult the
-[official documentation](https://jupyterlab.readthedocs.io/en/stable/user/extensions.html)
+All three extensions can be used from within the JupyterLab interface and our
+[Conda
+environment](https://coderefinery.github.io/installation/conda-environment/)
+provides [jupyterlab-git](https://github.com/jupyterlab/jupyterlab-git) and
+[nbdime](http://nbdime.readthedocs.io/).  To install additional extensions,
+please consult the [official
+documentation](https://jupyterlab.readthedocs.io/en/stable/user/extensions.html)
 about installing and managing JupyterLab extensions.
 
 ---
