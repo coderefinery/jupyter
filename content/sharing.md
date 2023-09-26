@@ -101,7 +101,7 @@ repository](https://github.com/timalthoff/activityinequality).
   how?](https://mybinder.readthedocs.io/en/latest/howto/languages.html)
 - Try to run the notebook. What happens?
 - Most likely the run brakes down immediately in the first cell
-  ```jupyter
+  ```python
   %matplotlib inline
   import pandas as pd
   import matplotlib.pyplot as plt
@@ -115,13 +115,13 @@ repository](https://github.com/timalthoff/activityinequality).
   error message.
 - To install the missing requirements, add a new code cell to the beginning of the
   notebook with the contents
-  ```jupyter
+  ```
   !python3 -m pip install pandas matplotlib
   ```
   and run the notebook again. What happens now?
 - Again, the run brakes down due to missing packages. This time the culprit is the
   `seaborn` package. Modify the first cell to also install it with
-  ```jupyter
+  ```
   !python3 -m pip install pandas matplotlib seaborn
   ```
   and try to run the notebook for the third time. Does it finally work?
@@ -130,15 +130,14 @@ repository](https://github.com/timalthoff/activityinequality).
   containing the necessary packages to run the notebook and add it next to the notebook
   in the repository.
 - In this case, the `requirements.txt` could look like this
-  ```file
-  # requirements.txt
+  ```
   pandas
   matplotlib
   seaborn
   ```
   and to make sure the packages are installed, one could add a code cell to the beginning
   of original notebook with the line
-  ```jupyter
+  ```
   !python3 -m pip install -r requirements.txt
   ```
 
