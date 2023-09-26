@@ -61,7 +61,8 @@ and presents several options to browse them.
   [https://github.com/losc-tutorial/quickview](https://github.com/losc-tutorial/quickview)
 - The notebook can be opened and interactively explored
   using Binder by clicking the "launch Binder" button.
-- How does the Binder instance know which Python packages to load?
+- How does the Binder instance know which Python packages to load? It takes the information
+  from files like `requirements.txt` (Python) or `environment.yml` or `runtime.txt` (R).
 
 
 ### [Activity inequality](http://activityinequality.stanford.edu/) study
