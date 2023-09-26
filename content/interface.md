@@ -12,7 +12,7 @@
 - 0 min exercises
 ```
 
-JupyterLab is the next-generation user interface for Jupyter notebooks
+JupyterLab is the next-generation user interface for Jupyter Notebooks
 and is intended to replace the conventional interface.
 It is a highly modular and customizable interface.
 
@@ -158,9 +158,7 @@ It can also happen that these shortcuts interfere with browser shortcuts.
 
 ### Tools for writing, testing and debugging code
 
-```{discussion} Integrated development environments
-- What tools do you use for writing, testing, and debugging code?
-
+```{admonition} What tools do you use for writing, testing, and debugging code?
 Some people prefer **terminal-based text editors** for writing code (e.g. Vi/Vim, Nano, Emacs, etc.).
 
 Others prefer **integrated development environments (IDEs)**,
@@ -173,13 +171,13 @@ Yet others prefer **code editors**, which are light-weight IDEs.
 - Continue using Emacs and Vim, if you are already proficient
 - Supports multiple programming languages
 
-**Code editor**
-- If you use multiple programming languages then code editors offer good support
-- Both IDE and code editors share common features such as code completion, hints, highlighting sections of code
-- Supports multiple programming languages
-
 **IDE**
 - If you are working with large code bases, then you should definitely checkout the IDE suitable for your programming language
 - IDEs offer rich support for Debugging and Code refactoring
 - Focused on a single language
+
+**Code editor**
+- If you use multiple programming languages then code editors offer good support
+- Both IDE and code editors share common features such as code completion, hints, highlighting sections of code
+- Supports multiple programming languages
 ```
