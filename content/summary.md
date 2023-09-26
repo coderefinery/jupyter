@@ -43,7 +43,7 @@ Example: <https://stackoverflow.com/a/39817243>
 
 ## Similar tools for other languages
 
-- R: [R Shiny](https://shiny.rstudio.com/gallery/)
+- R: [R Shiny](https://shiny.rstudio.com/gallery/), [R Markdown](https://rmarkdown.rstudio.com/)
 - JavaScript: [Observable](https://observablehq.com/)
 - Julia: [Pluto](https://github.com/fonsp/Pluto.jl)
 

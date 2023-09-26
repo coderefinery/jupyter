@@ -170,16 +170,14 @@ Demonstrate out-of-order execution problems and how to avoid them:
 
 ## Notebooks in other languages
 
-```{exercise} (Optional exercise) Installing a kernel for your favorite language
-
-Want to use Jupyter for other programming languages than Python? Head over to this
-[list of Jupyter kernels](https://github.com/jupyter/jupyter/wiki/Jupyter-kernels)
-and find the kernel for your favorite language. Follow the link to installation instructions
-and try to make it work on your machine!
-
-- [Direct link for IRKernel](https://irkernel.github.io/installation/) (for R)
-- [Direct link for IJulia](https://github.com/JuliaLang/IJulia.jl) (for Julia)
-```
+It is possible to use Jupyter for other programming languages than Python
+([list of supported
+kernels](https://github.com/jupyter/jupyter/wiki/Jupyter-kernels)).  However,
+if you write R or Julia code, instead of installing a kernel, we recommend to
+use their corresponding notebook solutions which are optimized for these
+languages:
+  - [R Markdown](https://rmarkdown.rstudio.com/) for R
+  - [Pluto.jl](https://plutojl.org/) for Julia
 
 ---
 
