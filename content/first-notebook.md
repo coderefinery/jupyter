@@ -35,10 +35,10 @@ fall within the unit circle.
 
 ## Launching JupyterLab notebook
 
-In your terminal create a folder or navigate to a folder where you would like
+In your terminal **first create a folder or navigate to a folder** where you would like
 the new notebook to appear.
 
-Then launch JupyterLab:
+**After you have created a new folder and moved to it**, launch JupyterLab:
 ```console
 $ jupyter-lab
 ```
