@@ -1,8 +1,8 @@
-# Jupyter notebooks
+# Jupyter Notebooks
 
 ```{objectives}
 - Get an idea of the purpose of Jupyter.
-- See some inspirational Jupyter notebooks.
+- See some inspirational Jupyter Notebooks.
 ```
 
 ```{instructor-note}
@@ -10,7 +10,7 @@
 - 0 min exercises
 ```
 
-## Motivation for Jupyter notebooks
+## Motivation for Jupyter Notebooks
 
 Jupyter Notebook is a tool for creating and sharing documents that contain live code, equations, visualizations, and narrative text.
 
@@ -18,7 +18,7 @@ Jupyter Notebook is a tool for creating and sharing documents that contain live 
 :alt: A comparison between pure Python code and a Jupyter Notebook highlights how Jupyter Notebook can include much more elaborate narrative than regular code files.
 :width: 100%
 
-**Jupyter notebooks can contain much more than just regular code. (CC-BY).
+Jupyter Notebooks can contain much more than just regular code. (CC-BY).
 ```
 
 - **Code, text, equations, figures, plots**, etc. are interleaved, creating a *computational narrative*.
@@ -28,9 +28,10 @@ Jupyter Notebook is a tool for creating and sharing documents that contain live 
 - The name "Jupyter" derives from Julia+Python+R, but today Jupyter kernels
   exist for [dozens of programming languages](https://github.com/jupyter/jupyter/wiki/Jupyter-kernels).
 
+
 ### Jupyter Notebook-ish functionalities are widely used
 
-Many tools can have jupyter-like behaviour: code and markdown cells
+Many tools can have Jupyter-like behaviour: code and markdown cells
 - VSCode
 - Google Colab
 - GitHub Codespaces
@@ -39,7 +40,8 @@ Many tools can have jupyter-like behaviour: code and markdown cells
 
 ## Case examples
 
-Jupyter notebooks make it feasible to share your code: you can explain your ideas and anyone can run the code eg. in Binder.
+Jupyter Notebooks make it feasible to share your code: you can explain your
+ideas and anyone can run the code eg. in [Binder](https://mybinder.org/).
 
 ### [Gravitational wave discovery](https://www.gw-openscience.org/about/)
 
@@ -91,7 +93,6 @@ For further inspiration, head over to the
 ---
 
 ## Use cases
-
 
 - Really good for **linear workflows** (e.g. read data, filter data, do some statistics, plot the results)
 - Experimenting with new ideas, testing new libraries/databases
