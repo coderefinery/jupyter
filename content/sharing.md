@@ -42,10 +42,9 @@ These platforms can be used free of charge but have paid subscriptions for
 faster access to cloud resources:
 
 - [CoCalc](https://cocalc.com/) (formerly SageMathCloud) allows collaborative editing of notebooks in the cloud
-- Google's [colaboratory](https://colab.research.google.com/) lets you work on notebooks in the cloud, and you can [read and write to notebook files on Drive](https://colab.research.google.com/notebooks/io.ipynb)
+- Google's [Colaboratory](https://colab.research.google.com/) lets you work on notebooks in the cloud, and you can [read and write to notebook files on Drive](https://colab.research.google.com/notebooks/io.ipynb)
 - [Microsoft Azure Notebooks](https://notebooks.azure.com/) also offers free notebooks in the cloud
 - [Deepnote](https://deepnote.com/) allows real-time collaboration
-
 
 ---
 
@@ -89,7 +88,7 @@ faster access to cloud resources:
 
 (without-requirements)=
 
-### Importance of requirements file
+### Importance of tracking dependencies
 
 ````{exercise} (Optional) Exercise: what happens without requirements.txt?
 Let's look at the same [activity inequality
@@ -100,7 +99,7 @@ repository](https://github.com/timalthoff/activityinequality).
   Most others are in R, which also works in Binder. [But
   how?](https://mybinder.readthedocs.io/en/latest/howto/languages.html)
 - Try to run the notebook. What happens?
-- Most likely the run brakes down immediately in the first cell
+- Most likely the run breaks down immediately in the first cell:
   ```python
   %matplotlib inline
   import pandas as pd
@@ -109,7 +108,7 @@ repository](https://github.com/timalthoff/activityinequality).
   sns.set(style="whitegrid")
   from itertools import cycle
   ```
-  with a long list of `ModuleNotFoundError` messages. This is
+  We get a long list of `ModuleNotFoundError` messages. This is
   because the required Python packages have not been installed and can not be imported.
   The missing packages include, at least, `pandas` and `matplotlib` mentioned in the
   error message.
@@ -119,7 +118,7 @@ repository](https://github.com/timalthoff/activityinequality).
   !python3 -m pip install pandas matplotlib
   ```
   and run the notebook again. What happens now?
-- Again, the run brakes down due to missing packages. This time the culprit is the
+- Again, the run breaks due to missing packages. This time the culprit is the
   `seaborn` package. Modify the first cell to also install it with
   ```
   !python3 -m pip install pandas matplotlib seaborn
@@ -136,11 +135,12 @@ repository](https://github.com/timalthoff/activityinequality).
   seaborn
   ```
   and to make sure the packages are installed, one could add a code cell to the beginning
-  of original notebook with the line
+  of original notebook with the line:
   ```
   !python3 -m pip install -r requirements.txt
   ```
-
+  To make sure that the notebook will continue to work also in few months,
+  you might want to specify also the version in the `requirements.txt` file.
 ````
 
 (share-widget)=
