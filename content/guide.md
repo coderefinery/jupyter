@@ -49,7 +49,7 @@ By the end of this lesson, learners should:
 - 12:50 - 12:55 [Sharing notebooks](https://coderefinery.github.io/jupyter/sharing/)
 - 12:55 - 13:05 Break
 - 13:05 - 13:25 [Binder exercise (20 min)](https://coderefinery.github.io/jupyter/sharing/#sharing-dynamic-notebooks-on-binder)
-- 13:25 - 13:30 Wrap-up
+- 13:25 - 13:30 [Summary](https://coderefinery.github.io/jupyter/summary/)
 
 ## Exercises
 
