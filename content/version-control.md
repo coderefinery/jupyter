@@ -13,7 +13,6 @@ Jupyter Notebooks are stored in [JSON](https://en.wikipedia.org/wiki/JSON) forma
 With this format it can be a bit difficult to compare and merge changes which are introduced
 through the notebook interface.
 
----
 
 ## Packages and JupyterLab extensions to simplify version control
 
@@ -46,7 +45,44 @@ about installing and managing JupyterLab extensions.
 
 ---
 
-## Comparing changes without jupyterlab-git/nbdime
+## Comparing Jupyter Notebooks on GitHub
+
+For this you really want to enable [Rich Jupyter Notebook
+Diffs](https://docs.github.com/en/repositories/working-with-files/using-files/working-with-non-code-files#working-with-jupyter-notebook-files-on-github)
+on GitHub:
+- On GitHub click on your avatar/image (top right).
+- Click on "Feature preview".
+- Enable "Rich Jupyter Notebook Diffs".
+
+To demonstrate the difference we have created a small change and you can try to
+compare the effect yourself by enabling/disabling the feature:
+<https://github.com/coderefinery/jupyter/compare/5ff55b8..fce21e6>
+
+Here is the diff **without "Rich Jupyter Notebook Diffs"**:
+```{figure} img/github-without-rich-diff.png
+:alt: A small change but without "Rich Jupyter Notebook Diffs"
+:width: 100%
+:class: with-border
+
+A small change in a notebook viewed on GitHub
+without "Rich Jupyter Notebook Diffs" (truncated).
+```
+
+Here is the same change, but this time **with "Rich Jupyter Notebook Diffs" enabled**:
+```{figure} img/github-with-rich-diff.png
+:alt: A small change in a notebook viewed on GitHub with "Rich Jupyter Notebook Diffs" enabled
+:width: 100%
+:class: with-border
+
+The same change viewed on GitHub, this time
+with "Rich Jupyter Notebook Diffs" enabled.
+```
+
+---
+
+## Comparing changes locally without jupyterlab-git/nbdime
+
+(plain-git-diff)=
 
 ```{instructor-note}
 - Create a new folder
@@ -55,10 +91,6 @@ about installing and managing JupyterLab extensions.
 - Add `.ipynb_checkpoints/` to `.gitignore`
 - Stage and commit the file before trying the changes below
 ```
-
-(plain-git-diff)=
-
-### A plain git diff
 
 ```{exercise} Instructor demonstrates a plain git diff
 1. To understand the problem, the instructor first shows the [example
