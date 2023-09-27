@@ -1,4 +1,4 @@
 .jupyter_cache/
 _build/
 venv/
-content/.DS_Store
+*.DS_Store

@@ -41,6 +41,13 @@ Components of a Jupyter notebook.
 
 ## Navigation
 
+```{figure} img/JupyterInterface.png
+:alt: Jupyter used interface has a file browser and a notebook view
+:width: 100%
+
+Jupyter Lab user interface has a left side toolbar – that has a file browser and a git tab. The file browser shows the file that Jupyter Lab was opened in. The right side shows the files that are open. You can have split view by dragging from the top tab view. (CC-BY)
+```
+
 - Left-hand menu (toggle it with `Ctrl(⌘)-b`):
      - File browser
          - New launcher
