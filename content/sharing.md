@@ -35,6 +35,13 @@
     - a PDF file
     - a slide-show in the browser
 
+```{figure} img/JupyterDownload.png
+:alt: You can export Jupyter Notebooks to various formats. Some might need extra installations.
+:width: 60%
+
+You can export Jupyter Notebooks to various formats. Some might need extra installations.
+```
+
 
 ### Commercial offers with free plans
 
