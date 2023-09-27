@@ -37,7 +37,7 @@
 
 ```{figure} img/JupyterDownload.png
 :alt: You can export Jupyter Notebooks to various formats. Some might need extra installations.
-:width: 60%
+:width: 100%
 
 You can export Jupyter Notebooks to various formats. Some might need extra installations.
 ```
