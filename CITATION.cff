@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+message: "If you use this lesson material, please cite it using these metadata."
+authors:
+- name: "CodeRefinery"
+- family-names: "Bast"
+  given-names: "Radovan"
+- family-names: "Wikfeldt"
+  given-names: "Kjartan Thor"
+- family-names: "Darst"
+  given-names: "Richard"
+- family-names: "Jääskelainen"
+  given-names: "Matias"
+- family-names: "Hellsvik"
+  given-names: "Johan"
+- family-names: "Ruokolainen"
+  given-names: "Teemu"
+title: "Jupyter Notebooks"
+type: "data"
+abstract: "A tool to write and share executable notebooks and data visualization. This lesson gives an overview of what Jupyter notebooks are, when they can be particularly useful, and shows best practices for reusable and reproducible notebooks."
+version: 2025-02-26
+date-released: 2025-02-26
+url: "https://coderefinery.github.io/jupyter/"
+license: CC-BY-4.0
+repository-code: "https://github.com/coderefinery/jupyter"
