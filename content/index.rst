@@ -16,6 +16,8 @@ for **reproducibility, collaboration, and reusability**.
     `Conda environment for CodeRefinery workshops <https://coderefinery.github.io/installation/conda-environment/>`__.
   - Optional (we only demonstrate this):
     A reasonably recent version of Git to be able to work with the JupyterLab Git integration.
+  - If you wish to follow in the terminal and are new to the command line, we
+    recorded a `short shell crash course <https://youtu.be/xbTTDLA3txI>`__.
 
 
 
@@ -41,6 +43,7 @@ for **reproducibility, collaboration, and reusability**.
    :maxdepth: 1
    :caption: Reference
 
+   Shell crash course <https://youtu.be/xbTTDLA3txI>
    exercises
    guide
    license
