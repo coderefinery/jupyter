@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>A first computational notebook &mdash; Jupyter notebooks  documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/togglebutton.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/sphinx_lesson.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/sphinx_rtd_theme_ext_color_contrast.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/tabs.css" type="text/css" />
+    <link rel="shortcut icon" href="../_static/coderefinery.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+        <script src="../_static/clipboard.min.js"></script>
+        <script src="../_static/copybutton.js"></script>
+        <script src="../_static/minipres.js"></script>
+        <script>let toggleHintShow = 'Click to show';</script>
+        <script>let toggleHintHide = 'Click to hide';</script>
+        <script>let toggleOpenOnPrint = 'true';</script>
+        <script src="../_static/togglebutton.js"></script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex/" />
+    <link rel="search" title="Search" href="../search/" />
+    <link rel="next" title="Notebooks and version control" href="../version-control/" />
+    <link rel="prev" title="JupyterLab and notebook interface" href="../interface/" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../" class="icon icon-home">
+            Jupyter notebooks
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Core episodes</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../motivation/">Jupyter Notebooks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../interface/">JupyterLab and notebook interface</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">A first computational notebook</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#creating-a-computational-narrative">Creating a computational narrative</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#launching-jupyterlab-notebook">Launching JupyterLab notebook</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#an-example-computational-notebook">An example computational notebook</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#notebooks-in-other-languages">Notebooks in other languages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#discussion">Discussion</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../version-control/">Notebooks and version control</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sharing/">Sharing notebooks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../summary/">Summary</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Optional episodes</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../extra-features/">Shell commands, magics and widgets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples/">Examples of Jupyter features</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Reference</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../exercises/">List of exercises</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide/">Instructor guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../license/">Credit and license</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">About</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://coderefinery.org/lessons/core/">All lessons</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://coderefinery.org/">CodeRefinery</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://coderefinery.org/lessons/reusing/">Reusing</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../">Jupyter notebooks</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">A first computational notebook</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/coderefinery/jupyter/blob/main/content/first-notebook.md" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="a-first-computational-notebook">
+<h1>A first computational notebook<a class="headerlink" href="#a-first-computational-notebook" title="Permalink to this heading"></a></h1>
+<div class="admonition-objectives objectives admonition" id="objectives-0">
+<p class="admonition-title">Objectives</p>
+<ul class="simple">
+<li><p>Get started with notebooks for analysis.</p></li>
+<li><p>Get a feeling for the importance of execution order.</p></li>
+</ul>
+</div>
+<div class="admonition-instructor-note instructor-note admonition" id="instructor-note-0">
+<p class="admonition-title">Instructor note</p>
+<ul class="simple">
+<li><p>5 min teaching</p></li>
+<li><p>20 min exercises</p></li>
+</ul>
+</div>
+<section id="creating-a-computational-narrative">
+<h2>Creating a computational narrative<a class="headerlink" href="#creating-a-computational-narrative" title="Permalink to this heading"></a></h2>
+<p>Let’s create our first real computational narrative in a Jupyter notebook
+(adapted from <a class="reference external" href="https://github.com/AaltoScienceIT/python-r-data-analysis-course">Python and R data analysis course</a> at Aalto Science IT).</p>
+<figure class="align-default" id="id1">
+<a class="reference internal image-reference" href="../_images/pi_with_darts.png"><img alt="Picture of throwing darts" src="../_images/pi_with_darts.png" style="width: 30%;" /></a>
+<figcaption>
+<p><span class="caption-text">Throwing darts to compute pi.</span><a class="headerlink" href="#id1" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p>Imagine you are on a desert island and wish to compute pi.
+You have a computer with you with Python installed but no
+math libraries and no Wikipedia.</p>
+<p>Here is one way of doing it - “throwing darts” by generating
+random points within a square area and checking whether the points
+fall within the unit circle.</p>
+</section>
+<hr class="docutils" />
+<section id="launching-jupyterlab-notebook">
+<h2>Launching JupyterLab notebook<a class="headerlink" href="#launching-jupyterlab-notebook" title="Permalink to this heading"></a></h2>
+<p>In your terminal <strong>first create a folder or navigate to a folder</strong> where you would like
+the new notebook to appear.</p>
+<p><strong>After you have created a new folder and moved to it</strong>, launch JupyterLab:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>jupyter-lab
+</pre></div>
+</div>
+<p>This opens JupyterLab in your browser. Click on the Python 3 tile.</p>
+<figure class="align-default" id="id2">
+<a class="reference internal image-reference" href="../_images/launching-python.png"><img alt="JupyterLab opened in the browser" src="../_images/launching-python.png" style="width: 100%;" /></a>
+<figcaption>
+<p><span class="caption-text">JupyterLab opened in the browser. Click on the Python 3 tile.</span><a class="headerlink" href="#id2" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p>If you prefer to select in which browser to open JupyterLab, use:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>jupyter-lab<span class="w"> </span>--no-browser
+</pre></div>
+</div>
+<hr class="docutils" />
+</section>
+<section id="an-example-computational-notebook">
+<span id="first-notebook"></span><h2>An example computational notebook<a class="headerlink" href="#an-example-computational-notebook" title="Permalink to this heading"></a></h2>
+<div class="admonition-hint-opening-a-webpage-inside-jupyterlab discussion important admonition" id="discussion-0">
+<p class="admonition-title">Hint: Opening a webpage inside JupyterLab</p>
+<p>If you would like to copy-paste content from this webpage into your
+Jupyter notebook, a cool way of doing it is to open this page inside
+an IFrame:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">IFrame</span>
+<span class="n">IFrame</span><span class="p">(</span><span class="n">src</span><span class="o">=</span><span class="s2">&quot;https://coderefinery.github.io/jupyter/first-notebook/&quot;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="s1">&#39;100%&#39;</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="s1">&#39;500px&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="admonition-exercise-demonstration-calculating-pi-using-monte-carlo-methods exercise important admonition" id="exercise-0">
+<p class="admonition-title">Exercise/demonstration: Calculating pi using Monte Carlo methods</p>
+<p>This can be either done as a 20 minute exercise or as a type-along demo.</p>
+<p>Each numbered item will be a new cell. Press SHIFT+ENTER to run a cell and create
+a new cell below. With the cell selected, press ESCAPE to go into command mode. Use shortcuts <code class="docutils literal notranslate"><span class="pre">M</span></code> and <code class="docutils literal notranslate"><span class="pre">Y</span></code> to change cells to markdown and code, respectively.</p>
+<ol class="arabic">
+<li><p>Create a new notebook, name it, and add a heading (markdown cell).</p>
+<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span><span class="gh"># Calculating pi using Monte Carlo methods</span>
+</pre></div>
+</div>
+</li>
+<li><p>Document the relevant formulas in a new cell (markdown cell):</p>
+<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span><span class="gu">## Relevant formulas</span>
+
+<span class="k">-</span><span class="w"> </span>square area: $s = (2 r)^2$
+<span class="k">-</span><span class="w"> </span>circle area: $c = \pi r^2$
+<span class="k">-</span><span class="w"> </span>$c/s = (\pi r^2) / (4 r^2) = \pi / 4$
+<span class="k">-</span><span class="w"> </span>$\pi = 4 * c/s$
+</pre></div>
+</div>
+</li>
+<li><p>Add an image to explain the concept (markdown cell):</p>
+<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span><span class="gu">## Image to visualize the concept</span>
+
+![<span class="nt">Darts</span>](<span class="na">https://raw.githubusercontent.com/coderefinery/jupyter/main/example/darts.svg</span>)
+</pre></div>
+</div>
+</li>
+<li><p>Import two modules that we will need (code cell):</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># importing modules that we will need</span>
+
+<span class="kn">import</span> <span class="nn">random</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+</pre></div>
+</div>
+</li>
+<li><p>Initialize the number of points (code cell):</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># initializing the number of &quot;throws&quot;</span>
+
+<span class="n">num_points</span> <span class="o">=</span> <span class="mi">1000</span>
+</pre></div>
+</div>
+</li>
+<li><p>“Throw darts” (code cell):</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># here we &quot;throw darts&quot; and count the number of hits</span>
+
+<span class="n">points</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">hits</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">num_points</span><span class="p">):</span>
+    <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">(),</span> <span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">x</span><span class="o">*</span><span class="n">x</span> <span class="o">+</span> <span class="n">y</span><span class="o">*</span><span class="n">y</span> <span class="o">&lt;</span> <span class="mf">1.0</span><span class="p">:</span>
+        <span class="n">hits</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="n">points</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="s2">&quot;red&quot;</span><span class="p">))</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">points</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="s2">&quot;blue&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
+</li>
+<li><p>Plot results (code cell):</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># unzip points into 3 lists</span>
+<span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">colors</span> <span class="o">=</span> <span class="nb">zip</span><span class="p">(</span><span class="o">*</span><span class="n">points</span><span class="p">)</span>
+
+<span class="c1"># define figure dimensions</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">set_size_inches</span><span class="p">(</span><span class="mf">6.0</span><span class="p">,</span> <span class="mf">6.0</span><span class="p">)</span>
+
+<span class="c1"># plot results</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="n">colors</span><span class="p">)</span>
+</pre></div>
+</div>
+</li>
+<li><p>Compute the estimate for pi (code cell):</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># compute and print the estimate</span>
+
+<span class="n">fraction</span> <span class="o">=</span> <span class="n">hits</span> <span class="o">/</span> <span class="n">num_points</span>
+<span class="mi">4</span> <span class="o">*</span> <span class="n">fraction</span>
+</pre></div>
+</div>
+</li>
+</ol>
+</div>
+<p>Here is the notebook: <a class="reference external" href="https://github.com/coderefinery/jupyter/blob/main/example/darts.ipynb">https://github.com/coderefinery/jupyter/blob/main/example/darts.ipynb</a>
+(static version, later we will learn how to share notebooks which are dynamic
+and can be modified).</p>
+<div class="admonition-instructor-note instructor-note admonition" id="instructor-note-1">
+<p class="admonition-title">Instructor note</p>
+<p>Demonstrate out-of-order execution problems and how to avoid them:</p>
+<ul class="simple">
+<li><p>Add a cell at the end of the notebook which redefines <code class="docutils literal notranslate"><span class="pre">num_points</span></code></p></li>
+<li><p>Then run the cell which computes the pi estimate</p></li>
+<li><p>Then demonstrate “run all cells”</p></li>
+</ul>
+</div>
+<hr class="docutils" />
+</section>
+<section id="notebooks-in-other-languages">
+<span id="other-kernels"></span><h2>Notebooks in other languages<a class="headerlink" href="#notebooks-in-other-languages" title="Permalink to this heading"></a></h2>
+<p>It is possible to use Jupyter for other programming languages than Python
+(<a class="reference external" href="https://github.com/jupyter/jupyter/wiki/Jupyter-kernels">list of supported
+kernels</a>).  However,
+if you write R or Julia code, instead of installing a kernel, we recommend to
+use their corresponding notebook solutions which are optimized for these
+languages:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://rmarkdown.rstudio.com/">R Markdown</a> for R</p></li>
+<li><p><a class="reference external" href="https://plutojl.org/">Pluto.jl</a> for Julia</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="discussion">
+<h2>Discussion<a class="headerlink" href="#discussion" title="Permalink to this heading"></a></h2>
+<p>What do we get from this?</p>
+<ul class="simple">
+<li><p>With code separate from everything else, you might just send one
+number or a plot to your supervisor/collaborator for checking.</p></li>
+<li><p>With a notebook as a narratives, you send everything in a <strong>consistent
+story</strong>.</p></li>
+<li><p>A reader may still just read the introduction and conclusion, but
+they can easily see more - <em>and try changes themselves</em> - if they
+want.</p></li>
+</ul>
+<div class="admonition-where-should-we-add-comments discussion important admonition" id="discussion-1">
+<p class="admonition-title">Where should we add comments?</p>
+<p>We can comment code either in <strong>Markdown cells</strong> or in the code cell as <strong>code comments</strong>.</p>
+<p>What advantages do you see of commenting in Markdown cells and what advantages
+can you list for writing code comments in code cells?</p>
+</div>
+<hr class="docutils" />
+<div class="admonition-keypoints keypoints admonition" id="keypoints-0">
+<p class="admonition-title">Keypoints</p>
+<ul class="simple">
+<li><p>Notebooks provide an intuitive way to perform interactive computational work.</p></li>
+<li><p>Allows fast feedback in your test-code-refactor loop.</p></li>
+<li><p>Cells can be executed in any order, beware of out-of-order execution bugs!</p></li>
+</ul>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../interface/" class="btn btn-neutral float-left" title="JupyterLab and notebook interface" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../version-control/" class="btn btn-neutral float-right" title="Notebooks and version control" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright CodeRefinery team.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
