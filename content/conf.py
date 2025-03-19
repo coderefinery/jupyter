@@ -18,8 +18,8 @@
 # -- Project information -----------------------------------------------------
 
 project = "Jupyter notebooks"
-copyright = "CodeRefinery team"
-author = "CodeRefinery team"
+copyright = "CodeRefinery contributors"
+author = "CodeRefinery contributors"
 github_user = "coderefinery"
 github_repo_name = "jupyter"  # auto-detected from dirname if blank
 github_version = "main"
