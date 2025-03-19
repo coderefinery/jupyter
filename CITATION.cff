@@ -14,11 +14,13 @@ authors:
   given-names: "Johan"
 - family-names: "Ruokolainen"
   given-names: "Teemu"
+- family-names: "Eckardt"
+  given-names: "Max Roald"
 title: "Jupyter Notebooks"
 type: "data"
 abstract: "A tool to write and share executable notebooks and data visualization. This lesson gives an overview of what Jupyter notebooks are, when they can be particularly useful, and shows best practices for reusable and reproducible notebooks."
-version: 2025-02-26
-date-released: 2025-02-26
+version: 2025-03-19
+date-released: 2025-03-19
 url: "https://coderefinery.github.io/jupyter/"
 license: CC-BY-4.0
 repository-code: "https://github.com/coderefinery/jupyter"
