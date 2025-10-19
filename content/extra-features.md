@@ -171,7 +171,6 @@ Widgets can be used to interactively explore or analyze data.
    import random
    from ipywidgets import interact, widgets
 
-   %matplotlib inline
    from matplotlib import pyplot
 
 
