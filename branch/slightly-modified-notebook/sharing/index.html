@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sharing notebooks &mdash; Jupyter notebooks  documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/togglebutton.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/sphinx_lesson.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/sphinx_rtd_theme_ext_color_contrast.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/tabs.css" type="text/css" />
+    <link rel="shortcut icon" href="../_static/coderefinery.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+        <script src="../_static/clipboard.min.js"></script>
+        <script src="../_static/copybutton.js"></script>
+        <script src="../_static/minipres.js"></script>
+        <script src="../_static/tabs.js"></script>
+        <script>let toggleHintShow = 'Click to show';</script>
+        <script>let toggleHintHide = 'Click to hide';</script>
+        <script>let toggleOpenOnPrint = 'true';</script>
+        <script src="../_static/togglebutton.js"></script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex/" />
+    <link rel="search" title="Search" href="../search/" />
+    <link rel="next" title="Summary" href="../summary/" />
+    <link rel="prev" title="Notebooks and version control" href="../version-control/" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../" class="icon icon-home">
+            Jupyter notebooks
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Core episodes</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../motivation/">Jupyter Notebooks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../interface/">JupyterLab and notebook interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../first-notebook/">A first computational notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../version-control/">Notebooks and version control</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Sharing notebooks</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#different-ways-to-share-a-notebook">Different ways to share a notebook</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#commercial-offers-with-free-plans">Commercial offers with free plans</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#sharing-dynamic-notebooks-on-binder">Sharing dynamic notebooks on Binder</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#optional-exercises">Optional exercises</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#importance-of-tracking-dependencies">Importance of tracking dependencies</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#sharing-an-interactive-notebook-on-binder">Sharing an interactive notebook on Binder</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../summary/">Summary</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Optional episodes</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../extra-features/">Shell commands, magics and widgets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples/">Examples of Jupyter features</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Reference</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../exercises/">List of exercises</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide/">Instructor guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../license/">Credit and license</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">About</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://coderefinery.org/lessons/core/">All lessons</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://coderefinery.org/">CodeRefinery</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://coderefinery.org/lessons/reusing/">Reusing</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../">Jupyter notebooks</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Sharing notebooks</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/coderefinery/jupyter/blob/main/content/sharing.md" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="sharing-notebooks">
+<h1>Sharing notebooks<a class="headerlink" href="#sharing-notebooks" title="Permalink to this heading"></a></h1>
+<div class="admonition-objectives objectives admonition" id="objectives-0">
+<p class="admonition-title">Objectives</p>
+<ul class="simple">
+<li><p>Learn how to share notebooks with colleagues and the community?</p></li>
+</ul>
+</div>
+<div class="admonition-instructor-note instructor-note admonition" id="instructor-note-0">
+<p class="admonition-title">Instructor note</p>
+<ul class="simple">
+<li><p>5 min teaching</p></li>
+<li><p>20 min exercises</p></li>
+</ul>
+</div>
+<div class="admonition-nudge-your-brain-when-have-you-shared-your-code discussion important admonition" id="discussion-0">
+<p class="admonition-title">Nudge your brain: When have you shared your code?</p>
+<ul class="simple">
+<li><p>To yourself between two computers?</p></li>
+<li><p>To a large audience eg. on a webpage?</p></li>
+<li><p>Coding together with a colleague?</p></li>
+</ul>
+</div>
+<hr class="docutils" />
+<section id="different-ways-to-share-a-notebook">
+<h2>Different ways to share a notebook<a class="headerlink" href="#different-ways-to-share-a-notebook" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p>You can enter a URL, GitHub repo or username, or GIST ID in <a class="reference external" href="https://nbviewer.jupyter.org/">nbviewer</a> and view a rendered Jupyter notebook</p></li>
+<li><p>Read the Docs can render Jupyter Notebooks via the <a class="reference external" href="https://nbsphinx.readthedocs.io/">nbsphinx package</a></p></li>
+<li><p><a class="reference external" href="https://mybinder.org/">Binder</a> creates live notebooks based on a GitHub repository</p></li>
+<li><p><a class="reference external" href="https://notebooks.egi.eu">EGI Notebooks</a> (see also https://egi-notebooks.readthedocs.io)</p></li>
+<li><p><a class="reference external" href="https://github.com/jupyterlab/jupyterlab">JupyterLab</a> supports sharing and collaborative editing of notebooks via Google Drive. Recently
+it also added support for <a class="reference external" href="https://github.com/jupyterlab/jupyterlab/pull/10118">Shared editing with collaborative notebook model</a>.</p></li>
+<li><p><a class="reference external" href="https://jupyterlite.readthedocs.io/en/latest/">JupyterLite</a> creates a Jupyterlab environment in the browser and can be hosted as a GitHub page.</p></li>
+<li><p><a class="reference external" href="https://github.com/aaren/notedown">Notedown</a>, <a class="reference external" href="https://github.com/QuantEcon/sphinxcontrib-jupyter">Jupinx</a> and <a class="reference external" href="https://github.com/hplgit/doconce">DocOnce</a> can take Markdown or Sphinx files and generate Jupyter Notebooks</p></li>
+<li><p><a class="reference external" href="https://voila.readthedocs.io/en/stable/">Voilà</a> allows you to convert a Jupyter Notebook into an interactive dashboard</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">jupyter</span> <span class="pre">nbconvert</span></code> tool can convert a (<code class="docutils literal notranslate"><span class="pre">.ipynb</span></code>) notebook file to:</p>
+<ul>
+<li><p>python code (<code class="docutils literal notranslate"><span class="pre">.py</span></code> file)</p></li>
+<li><p>an HTML file</p></li>
+<li><p>a LaTeX file</p></li>
+<li><p>a PDF file</p></li>
+<li><p>a slide-show in the browser</p></li>
+</ul>
+</li>
+</ul>
+<section id="commercial-offers-with-free-plans">
+<h3>Commercial offers with free plans<a class="headerlink" href="#commercial-offers-with-free-plans" title="Permalink to this heading"></a></h3>
+<p>These platforms can be used free of charge but have paid subscriptions for
+faster access to cloud resources:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://cocalc.com/">CoCalc</a> (formerly SageMathCloud) allows collaborative editing of notebooks in the cloud</p></li>
+<li><p>Google’s <a class="reference external" href="https://colab.research.google.com/">Colaboratory</a> lets you work on notebooks in the cloud, and you can <a class="reference external" href="https://colab.research.google.com/notebooks/io.ipynb">read and write to notebook files on Drive</a></p></li>
+<li><p><a class="reference external" href="https://notebooks.azure.com/">Microsoft Azure Notebooks</a> also offers free notebooks in the cloud</p></li>
+<li><p><a class="reference external" href="https://deepnote.com/">Deepnote</a> allows real-time collaboration</p></li>
+</ul>
+<hr class="docutils" />
+</section>
+</section>
+<section id="sharing-dynamic-notebooks-on-binder">
+<span id="reproducible-via-binder"></span><h2>Sharing dynamic notebooks on <a class="reference external" href="https://mybinder.org">Binder</a><a class="headerlink" href="#sharing-dynamic-notebooks-on-binder" title="Permalink to this heading"></a></h2>
+<div class="admonition-exercise-20-min-making-your-notebooks-reproducible-by-anyone-via-binder exercise important admonition" id="exercise-0">
+<p class="admonition-title">Exercise (20 min): Making your notebooks reproducible by anyone via Binder</p>
+<ul>
+<li><p>Create a new GitHub repository and <strong>click on “Add a README file”</strong>: <a class="reference external" href="https://github.com/new">https://github.com/new</a></p></li>
+<li><p>This exercise can be done entirely through the GitHub web interface (but
+using the terminal is of course also OK). You can use the “Add file” button
+to upload files:</p>
+<figure class="align-default" id="id1">
+<img alt="Screenshot of Binder web interface" src="../_images/github-upload.png" />
+<figcaption>
+<p><span class="caption-text">Screenshot of Binder web interface.</span><a class="headerlink" href="#id1" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</li>
+</ul>
+<div class="sphinx-tabs docutils container">
+<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-0-SnVweXRlciBOb3RlYm9va3M=" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-0-SnVweXRlciBOb3RlYm9va3M=" name="SnVweXRlciBOb3RlYm9va3M=" role="tab" tabindex="0">Jupyter Notebooks</button><button aria-controls="panel-0-UiBNYXJrZG93bi9SIFN0dWRpbyBwcm9qZWN0" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-0-UiBNYXJrZG93bi9SIFN0dWRpbyBwcm9qZWN0" name="UiBNYXJrZG93bi9SIFN0dWRpbyBwcm9qZWN0" role="tab" tabindex="-1">R Markdown/R Studio project</button></div><div aria-labelledby="tab-0-SnVweXRlciBOb3RlYm9va3M=" class="sphinx-tabs-panel group-tab" id="panel-0-SnVweXRlciBOb3RlYm9va3M=" name="SnVweXRlciBOb3RlYm9va3M=" role="tabpanel" tabindex="0"><ul>
+<li><p>Upload the notebook which we have created earlier to this repository. If you got stuck earlier,
+you can download <a class="reference external" href="https://raw.githubusercontent.com/coderefinery/jupyter/main/example/darts.ipynb">this notebook</a>
+(right-click, “Save as …”). You can also try this with a different notebook.</p></li>
+<li><p>Add also a <code class="docutils literal notranslate"><span class="pre">requirements.txt</span></code> file which contains (adapt this if your notebook has other dependencies):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">matplotlib</span><span class="o">==</span><span class="mf">3.4.1</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div><div aria-labelledby="tab-0-UiBNYXJrZG93bi9SIFN0dWRpbyBwcm9qZWN0" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-0-UiBNYXJrZG93bi9SIFN0dWRpbyBwcm9qZWN0" name="UiBNYXJrZG93bi9SIFN0dWRpbyBwcm9qZWN0" role="tabpanel" tabindex="0"><p>This exercise is for those who use Rmd files instead of Jupyter notebooks.</p>
+<ul>
+<li><p>Upload or push your Rmd file to this GitHub repository.</p></li>
+<li><p>Add a file <code class="docutils literal notranslate"><span class="pre">runtime.txt</span></code> which specifies the R version you want to use:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">r</span><span class="o">-</span><span class="mf">3.6</span><span class="o">-</span><span class="mi">2020</span><span class="o">-</span><span class="mi">10</span><span class="o">-</span><span class="mi">13</span>
+</pre></div>
+</div>
+</li>
+<li><p>Add a file <code class="docutils literal notranslate"><span class="pre">install.R</span></code> which lists the dependencies, for instance:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">install</span><span class="o">.</span><span class="n">packages</span><span class="p">(</span><span class="n">c</span><span class="p">(</span><span class="s2">&quot;readr&quot;</span><span class="p">,</span> <span class="s2">&quot;ggplot2&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
+</li>
+<li><p>After you have done that, visit
+https://mybinder.org/v2/gh/<strong>USER</strong>/<strong>REPOSITORY</strong>/<strong>BRANCH</strong>?urlpath=rstudio (adapt
+“USER”, “REPOSITORY”, and “BRANCH”).</p></li>
+<li><p>For more information, see <a class="reference external" href="https://github.com/alan-turing-institute/the-turing-way/blob/master/workshops/boost-research-reproducibility-binder/workshop-presentations/zero-to-binder-r.md">this
+guide</a>.</p></li>
+</ul>
+</div></div>
+<ul>
+<li><p>Visit <a class="reference external" href="https://mybinder.org">https://mybinder.org</a>:</p>
+<figure class="align-default" id="id2">
+<img alt="Screenshot of Binder web interface" src="../_images/binder.jpg" />
+<figcaption>
+<p><span class="caption-text">Screenshot of Binder web interface.</span><a class="headerlink" href="#id2" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</li>
+<li><p>Copy-paste the markdown text for the mybinder badge into a README.md file in your notebook repository.</p></li>
+<li><p>Check that your notebook repository now has a “launch binder”
+badge in your <code class="docutils literal notranslate"><span class="pre">README.md</span></code> file on GitHub.</p></li>
+<li><p>Try clicking the button and see how your repository is launched
+on Binder (can take a minute or two). Your notebooks can now be expored and executed in the cloud.</p></li>
+<li><p>Enjoy being fully reproducible! Even better would be to get a DOI to your
+notebook and point Binder to the DOI.</p></li>
+</ul>
+</div>
+<div class="admonition-more-examples-with-binder keypoints admonition" id="keypoints-0">
+<p class="admonition-title">More examples with Binder:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://mybinder.readthedocs.io/en/latest/introduction.html">Binder documentation</a></p></li>
+<li><p><a class="reference external" href="https://github.com/binder-examples">Collection of example repositories</a></p></li>
+</ul>
+</div>
+</section>
+<hr class="docutils" />
+<section id="optional-exercises">
+<h2>Optional exercises<a class="headerlink" href="#optional-exercises" title="Permalink to this heading"></a></h2>
+<section id="importance-of-tracking-dependencies">
+<span id="without-requirements"></span><h3>Importance of tracking dependencies<a class="headerlink" href="#importance-of-tracking-dependencies" title="Permalink to this heading"></a></h3>
+<div class="admonition-optional-exercise-what-happens-without-requirements-txt exercise important admonition" id="exercise-1">
+<p class="admonition-title">(Optional) Exercise: what happens without requirements.txt?</p>
+<p>Let’s look at the same <a class="reference external" href="https://github.com/timalthoff/activityinequality">activity inequality
+repository</a>.</p>
+<ul>
+<li><p>Start the repository in Binder <a class="reference external" href="https://mybinder.org/v2/gh/timalthoff/activityinequality/master">using this link</a>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">fig3/fig3bc.ipynb</span></code> is a Python notebook, so it works in Binder.
+Most others are in R, which also works in Binder. <a class="reference external" href="https://mybinder.readthedocs.io/en/latest/howto/languages.html">But
+how?</a></p></li>
+<li><p>Try to run the notebook. What happens?</p></li>
+<li><p>Most likely the run breaks down immediately in the first cell:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="n">matplotlib</span> <span class="n">inline</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">style</span><span class="o">=</span><span class="s2">&quot;whitegrid&quot;</span><span class="p">)</span>
+<span class="kn">from</span> <span class="nn">itertools</span> <span class="kn">import</span> <span class="n">cycle</span>
+</pre></div>
+</div>
+<p>We get a long list of <code class="docutils literal notranslate"><span class="pre">ModuleNotFoundError</span></code> messages. This is
+because the required Python packages have not been installed and can not be imported.
+The missing packages include, at least, <code class="docutils literal notranslate"><span class="pre">pandas</span></code> and <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> mentioned in the
+error message.</p>
+</li>
+<li><p>To install the missing requirements, add a new code cell to the beginning of the
+notebook with the contents</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>!python3 -m pip install pandas matplotlib
+</pre></div>
+</div>
+<p>and run the notebook again. What happens now?</p>
+</li>
+<li><p>Again, the run breaks due to missing packages. This time the culprit is the
+<code class="docutils literal notranslate"><span class="pre">seaborn</span></code> package. Modify the first cell to also install it with</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>!python3 -m pip install pandas matplotlib seaborn
+</pre></div>
+</div>
+<p>and try to run the notebook for the third time. Does it finally work?
+What could have been done differently by the developer?</p>
+</li>
+<li><p>A good way to make a notebook more usable is to create a <code class="docutils literal notranslate"><span class="pre">requirements.txt</span></code> file
+containing the necessary packages to run the notebook and add it next to the notebook
+in the repository.</p></li>
+<li><p>In this case, the <code class="docutils literal notranslate"><span class="pre">requirements.txt</span></code> could look like this</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pandas</span>
+<span class="n">matplotlib</span>
+<span class="n">seaborn</span>
+</pre></div>
+</div>
+<p>and to make sure the packages are installed, one could add a code cell to the beginning
+of original notebook with the line:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>!python3 -m pip install -r requirements.txt
+</pre></div>
+</div>
+<p>To make sure that the notebook will continue to work also in few months,
+you might want to specify also the version in the <code class="docutils literal notranslate"><span class="pre">requirements.txt</span></code> file.</p>
+</li>
+</ul>
+</div>
+</section>
+<section id="sharing-an-interactive-notebook-on-binder">
+<span id="share-widget"></span><h3>Sharing an interactive notebook on Binder<a class="headerlink" href="#sharing-an-interactive-notebook-on-binder" title="Permalink to this heading"></a></h3>
+<div class="admonition-optional-exercise-share-an-interactive-ipywidgets-notebook-via-binder exercise important admonition" id="exercise-2">
+<p class="admonition-title">(Optional) Exercise: share an interactive (ipywidgets) notebook via Binder</p>
+<ul>
+<li><p>Take the solution from the exercise “Widgets for interactive data fitting” in the <a class="reference internal" href="../examples/"><span class="doc">Examples of Jupyter features</span></a>
+episode and paste it into a notebook.</p></li>
+<li><p>Push the notebook to a GitHub/GitLab repository.</p></li>
+<li><p>Create a <code class="docutils literal notranslate"><span class="pre">requirements.txt</span></code> file in your notebook repository, e.g.:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ipywidgets</span><span class="o">==</span><span class="mf">7.4.2</span>
+<span class="n">numpy</span><span class="o">==</span><span class="mf">1.16.4</span>
+<span class="n">matplotlib</span><span class="o">==</span><span class="mf">3.1.0</span>
+</pre></div>
+</div>
+</li>
+<li><p>Try to deploy this example via Binder in the same way as the above exercise.</p></li>
+</ul>
+</div>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../version-control/" class="btn btn-neutral float-left" title="Notebooks and version control" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../summary/" class="btn btn-neutral float-right" title="Summary" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright CodeRefinery team.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

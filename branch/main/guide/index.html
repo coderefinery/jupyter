@@ -1,0 +1,326 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Instructor guide &mdash; Jupyter notebooks  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=949a1ff5" />
+      <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=9c3e77be" />
+      <link rel="stylesheet" type="text/css" href="../_static/sphinx_lesson.css?v=e9df6548" />
+      <link rel="stylesheet" type="text/css" href="../_static/term_role_formatting.css?v=4194e21c" />
+      <link rel="stylesheet" type="text/css" href="../_static/sphinx_rtd_theme_ext_color_contrast.css?v=8e8ea19f" />
+
+  
+    <link rel="shortcut icon" href="../_static/coderefinery.ico"/>
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=187304be"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../_static/copybutton.js?v=582ca9e2"></script>
+      <script src="../_static/minipres.js?v=a0d29692"></script>
+      <script>let toggleHintShow = 'Click to show';</script>
+      <script>let toggleHintHide = 'Click to hide';</script>
+      <script>let toggleOpenOnPrint = 'true';</script>
+      <script src="../_static/togglebutton.js?v=1ae7504c"></script>
+      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+      <script data-domain="coderefinery.github.io" defer="defer" src="https://plausible.cs.aalto.fi/js/script.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex/" />
+    <link rel="search" title="Search" href="../search/" />
+    <link rel="next" title="Credit and license" href="../license/" />
+    <link rel="prev" title="List of exercises" href="../exercises/" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../" class="icon icon-home">
+            Jupyter notebooks
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Core episodes</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../motivation/">Jupyter Notebooks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../interface/">JupyterLab and notebook interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../first-notebook/">A first computational notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../version-control/">Notebooks and version control</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sharing/">Sharing notebooks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../summary/">Summary</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Optional episodes</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../extra-features/">Shell commands, magics and widgets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples/">Examples of Jupyter features</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Reference</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference external" href="https://youtu.be/xbTTDLA3txI">Shell crash course</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../exercises/">List of exercises</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Instructor guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#why-we-teach-this-lesson">Why we teach this lesson</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#intended-learning-outcomes">Intended learning outcomes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#timing-and-lesson-placement">Timing and lesson placement</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#detailed-schedule">Detailed schedule</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#exercises">Exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#how-to-teach-this-lesson">How to teach this lesson</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#motivation">Motivation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#the-jupyterlab-interface">The JupyterLab interface</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#a-first-computational-notebook">A first computational notebook</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#notebooks-and-version-control">Notebooks and version control</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#sharing-notebooks">Sharing notebooks</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#optional-shell-commands-magics-and-widgets">(Optional) Shell commands, magics and widgets</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#optional-additional-exercises">(Optional) Additional exercises</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../license/">Credit and license</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">About</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://coderefinery.org/lessons/core/">All lessons</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://coderefinery.org/">CodeRefinery</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://coderefinery.org/lessons/reusing/">Reusing</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../">Jupyter notebooks</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Instructor guide</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/coderefinery/jupyter/blob/main/content/guide.md" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="instructor-guide">
+<h1>Instructor guide<a class="headerlink" href="#instructor-guide" title="Link to this heading"></a></h1>
+<section id="why-we-teach-this-lesson">
+<h2>Why we teach this lesson<a class="headerlink" href="#why-we-teach-this-lesson" title="Link to this heading"></a></h2>
+<p>When CodeRefinery started teaching this lesson it was meant to introduce participants
+to a cool new tool around which there was a lot of buzz (particularly in data science),
+and which could be useful to researchers to quickly prototype code and analyze data in an interactive way.
+Since then, more and more participants are already using Jupyter for various purposes
+when they come to a workshop.</p>
+<p>One purpose of teaching this lesson is still to introduce Jupyter to participants who haven’t
+used it before. The episodes “Motivation”, “The JupyterLab and notebook interface” and
+“A first computational notebook” are meant to inspire participants to use notebooks for
+certain appropriate tasks, highlighting in particular the “computational narrative” aspect
+which is brilliantly enabled by notebooks.</p>
+<p>After the first three episodes the focus shifts to topics related to version control (“Notebooks and version control”), open science and reproducibility (“Sharing notebooks”) which connects to topics covered in other CodeRefinery lessons.</p>
+<p>There are also two optional episodes, “Shell commands, magics and widgets” and “Additional exercises”
+which go through various features and use-cases of Jupyter.</p>
+<p>A key take-home message from this lesson should be that Jupyter notebooks
+can be a very useful tool for reproducible research, if used wisely.</p>
+</section>
+<section id="intended-learning-outcomes">
+<h2>Intended learning outcomes<a class="headerlink" href="#intended-learning-outcomes" title="Link to this heading"></a></h2>
+<p>By the end of this lesson, learners should:</p>
+<ul class="simple">
+<li><p>be able to explain what a computational narrative is</p></li>
+<li><p>be able to identify areas of their own work where Jupyter notebooks could be an appropriate tool</p></li>
+<li><p>be able to use the JupyterLab interface efficiently</p></li>
+<li><p>understand that version control is equally important for notebooks as for other code</p></li>
+<li><p>know how to version control notebooks efficiently using JupyterLab plugins</p></li>
+<li><p>know that notebooks can be used to document scientific analysis, and published
+e.g. as supplementary information with journal articles to aid reproducibility</p></li>
+<li><p>know how to share notebooks via Binder</p></li>
+<li><p>understand possible pitfalls of using notebooks</p></li>
+</ul>
+</section>
+<section id="timing-and-lesson-placement">
+<h2>Timing and lesson placement<a class="headerlink" href="#timing-and-lesson-placement" title="Link to this heading"></a></h2>
+<section id="detailed-schedule">
+<h3>Detailed schedule<a class="headerlink" href="#detailed-schedule" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>12:00 - 12:05 <a class="reference external" href="https://coderefinery.github.io/jupyter/motivation/">Jupyter notebooks</a></p></li>
+<li><p>12:05 - 12:15 <a class="reference external" href="https://coderefinery.github.io/jupyter/interface/">JupyterLab and notebook interface</a></p></li>
+<li><p>12:15 - 12:40 <a class="reference external" href="https://coderefinery.github.io/jupyter/first-notebook/">A first computational notebook</a></p>
+<ul>
+<li><p><a class="reference external" href="https://coderefinery.github.io/jupyter/first-notebook/#an-example-computational-notebook">Exercise (20 min)</a></p></li>
+</ul>
+</li>
+<li><p>12:40 - 12:50 <a class="reference external" href="https://coderefinery.github.io/jupyter/version-control/">Notebooks and version control demo</a></p></li>
+<li><p>12:50 - 12:55 <a class="reference external" href="https://coderefinery.github.io/jupyter/sharing/">Sharing notebooks</a></p></li>
+<li><p>12:55 - 13:05 Break</p></li>
+<li><p>13:05 - 13:25 <a class="reference external" href="https://coderefinery.github.io/jupyter/sharing/#sharing-dynamic-notebooks-on-binder">Binder exercise (20 min)</a></p></li>
+<li><p>13:25 - 13:30 <a class="reference external" href="https://coderefinery.github.io/jupyter/summary/">Summary</a></p></li>
+</ul>
+</section>
+</section>
+<section id="exercises">
+<h2>Exercises<a class="headerlink" href="#exercises" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>“A first computational notebook” can be done either as a 20 minute exercise
+or as a type-along demo.</p></li>
+<li><p>“Instructor demonstrates a plain git diff” should be done as demonstration.</p></li>
+<li><p>“Making your notebooks reproducible by anyone via Binder” should be done as a
+20 minute exercise but can also be done as a demo.</p></li>
+<li><p>There are three optional exercises in “Sharing notebooks”, one on trying to reproduce
+results from a published notebook, another on sharing an interactive notebook on Binder,
+and one for R users who can try to deploy R   Studio/ R Markdown to Binder.</p></li>
+<li><p>The “Examples” episode contains many interesting examples which can be used
+for demonstration or as exercises. The dependencies for ipywidget examples are
+typically tricky to install/enable in a group exercise. Instead they can be
+demonstrated on Binder (there is an optional exercise for this).</p></li>
+</ul>
+</section>
+<section id="how-to-teach-this-lesson">
+<h2>How to teach this lesson<a class="headerlink" href="#how-to-teach-this-lesson" title="Link to this heading"></a></h2>
+<section id="motivation">
+<h3>Motivation<a class="headerlink" href="#motivation" title="Link to this heading"></a></h3>
+<p>How the instructor introduces and motivates Jupyter notebooks is flexible and
+can depend on the instructor’s background. The first episode emphasizes the
+“computational narrative” aspect of notebooks, and highlights a few
+common use cases. The gravitational-wave discovery is used as a motivational
+example, and it’s helpful if the instructor clicks the Binder link to see how
+the notebooks become available for interactive exploration in the cloud.
+The instructor should also open the link “Gallery of interesting Jupyter notebooks”
+to show the wide variety of notebooks that people have shared online.</p>
+</section>
+<section id="the-jupyterlab-interface">
+<h3>The JupyterLab interface<a class="headerlink" href="#the-jupyterlab-interface" title="Link to this heading"></a></h3>
+<p>The second episode deals with the JupyterLab interface and how notebooks work. At
+this stage the instructor should open Jupyter-Lab, demonstrate the
+interface by clicking around and then launch a new notebook. Inside this notebook
+the instructor can add headings and text and a simple code cell to illustrate
+how cells work (copy-pasting from the lesson works well). A few important keyboard
+shortcuts can be demonstrated.</p>
+<p>There is a discussion point on integrated development environments. This can
+be used as a discussion exercise, where participants are invited to talk about
+their prefered way to write code. The instructur can mention that JupyterLab is
+sort of like an IDE for notebooks.</p>
+<p>Take-home messages:</p>
+<ul class="simple">
+<li><p>The JupyterLab interface is flexible and one can customize the workspace by dragging
+notebooks, terminals and text editors around.</p></li>
+<li><p>There are code cells and markdown cells that work differently, and there are
+command and edit modes. It’s easy to switch between these.</p></li>
+</ul>
+</section>
+<section id="a-first-computational-notebook">
+<h3>A first computational notebook<a class="headerlink" href="#a-first-computational-notebook" title="Link to this heading"></a></h3>
+<p>To show that Jupyter Notebooks are rather simple and intuitive, the third episode
+demonstrates the building up of a computational narrative
+to compute pi and adding comments, equations and figures.
+The instructor should create a new notebook, name it and then type out or copy-paste from the lesson
+into notebook cells. Learners should be given time to follow along interactively.</p>
+<p>After the notebook is completed, participants and instructor should commit it to the
+repository.</p>
+<p>Take-home messages:</p>
+<ul class="simple">
+<li><p>Notebooks provide a simple and interactive tool for various kinds of analysis.</p></li>
+<li><p>Keyboard shortcuts enable efficient usage. The instructor should clearly
+explain the most common ones for executing cells, creating new cells, changing
+between markdown and code cells, etc.</p></li>
+<li><p>The execution order of cells matters, the instructor can demonstrate this by
+going up and down in the notebook.</p></li>
+</ul>
+</section>
+<section id="notebooks-and-version-control">
+<h3>Notebooks and version control<a class="headerlink" href="#notebooks-and-version-control" title="Link to this heading"></a></h3>
+<p>After discussing the Git integrations, the instructor should encourage participants to
+initialize a Git repo in their notebook directory, and commit the first “testing” notebook.
+They can do this via the JupyterLab interface if they have the plugins installed, or via
+terminal inside JupyterLab, or via regular terminal.</p>
+<p>Take home message: The Git integration in JupyterLab is powerful and enables tracking
+notebooks in just the same way as one would with source code files.</p>
+</section>
+<section id="sharing-notebooks">
+<h3>Sharing notebooks<a class="headerlink" href="#sharing-notebooks" title="Link to this heading"></a></h3>
+<p>This episode has a list of services and tools to share and collaborate on Jupyter
+notebooks. The instructor doesn’t have to go through each item in the list, but
+rather emphasize that many services and tools built around Jupyter exist.</p>
+<p>The exercise on making notebooks reproducible via Binder is an important one as
+it connects with other lessons and emphasizes the reproducibility benefits of notebooks.
+If time allows, the instructor can let participants set up a remote repository on GitHub
+for their local notebook repos, and push to the remote. After that they can follow the
+exercise steps to obtain a Binder badge to add to their repository README files.
+If time is short, the instructor can instead just demonstrate all steps and encourage
+participants to try it out themselves later.</p>
+</section>
+<section id="optional-shell-commands-magics-and-widgets">
+<h3>(Optional) Shell commands, magics and widgets<a class="headerlink" href="#optional-shell-commands-magics-and-widgets" title="Link to this heading"></a></h3>
+<p>Take-home messages:</p>
+<ul class="simple">
+<li><p>There is more to notebooks than just code.</p></li>
+<li><p>Magics and shell commands can be useful for various kinds of workflows, and enable
+users to stay within the notebook instead of jumping to another terminal.</p></li>
+<li><p>Widgets add even more interactivity to notebooks.</p></li>
+</ul>
+</section>
+<section id="optional-additional-exercises">
+<h3>(Optional) Additional exercises<a class="headerlink" href="#optional-additional-exercises" title="Link to this heading"></a></h3>
+<p>Interesting and fun exercises to learn about various Jupyter features and use cases.</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../exercises/" class="btn btn-neutral float-left" title="List of exercises" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../license/" class="btn btn-neutral float-right" title="Credit and license" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright CodeRefinery contributors.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

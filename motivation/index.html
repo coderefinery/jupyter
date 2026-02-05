@@ -1,0 +1,299 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jupyter Notebooks &mdash; Jupyter notebooks  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=949a1ff5" />
+      <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=9c3e77be" />
+      <link rel="stylesheet" type="text/css" href="../_static/sphinx_lesson.css?v=e9df6548" />
+      <link rel="stylesheet" type="text/css" href="../_static/term_role_formatting.css?v=4194e21c" />
+      <link rel="stylesheet" type="text/css" href="../_static/sphinx_rtd_theme_ext_color_contrast.css?v=8e8ea19f" />
+
+  
+    <link rel="shortcut icon" href="../_static/coderefinery.ico"/>
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=187304be"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../_static/copybutton.js?v=582ca9e2"></script>
+      <script src="../_static/minipres.js?v=a0d29692"></script>
+      <script>let toggleHintShow = 'Click to show';</script>
+      <script>let toggleHintHide = 'Click to hide';</script>
+      <script>let toggleOpenOnPrint = 'true';</script>
+      <script src="../_static/togglebutton.js?v=1ae7504c"></script>
+      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+      <script data-domain="coderefinery.github.io" defer="defer" src="https://plausible.cs.aalto.fi/js/script.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex/" />
+    <link rel="search" title="Search" href="../search/" />
+    <link rel="next" title="JupyterLab and notebook interface" href="../interface/" />
+    <link rel="prev" title="Jupyter notebooks - A tool to write and share executable notebooks and data visualization" href="../" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../" class="icon icon-home">
+            Jupyter notebooks
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Core episodes</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Jupyter Notebooks</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#motivation-for-jupyter-notebooks">Motivation for Jupyter Notebooks</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#jupyter-notebook-ish-functionalities-are-widely-used">Jupyter Notebook-ish functionalities are widely used</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#case-examples">Case examples</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#gravitational-wave-discovery">Gravitational wave discovery</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#activity-inequality-study">Activity inequality study</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#more-examples">More examples</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#use-cases">Use cases</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#pitfalls">Pitfalls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#good-practices">Good practices</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../interface/">JupyterLab and notebook interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../first-notebook/">A first computational notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../version-control/">Notebooks and version control</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sharing/">Sharing notebooks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../summary/">Summary</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Optional episodes</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../extra-features/">Shell commands, magics and widgets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples/">Examples of Jupyter features</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Reference</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://youtu.be/xbTTDLA3txI">Shell crash course</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../exercises/">List of exercises</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide/">Instructor guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../license/">Credit and license</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">About</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://coderefinery.org/lessons/core/">All lessons</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://coderefinery.org/">CodeRefinery</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://coderefinery.org/lessons/reusing/">Reusing</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../">Jupyter notebooks</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Jupyter Notebooks</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/coderefinery/jupyter/blob/main/content/motivation.md" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="jupyter-notebooks">
+<h1>Jupyter Notebooks<a class="headerlink" href="#jupyter-notebooks" title="Link to this heading"></a></h1>
+<div class="admonition-objectives objectives admonition" id="objectives-0">
+<p class="admonition-title">Objectives</p>
+<ul class="simple">
+<li><p>Get an idea of the purpose of Jupyter.</p></li>
+<li><p>See some inspirational Jupyter Notebooks.</p></li>
+</ul>
+</div>
+<div class="admonition-instructor-note instructor-note admonition" id="instructor-note-0">
+<p class="admonition-title">Instructor note</p>
+<ul class="simple">
+<li><p>10 min teaching</p></li>
+<li><p>0 min exercises</p></li>
+</ul>
+</div>
+<section id="motivation-for-jupyter-notebooks">
+<h2>Motivation for Jupyter Notebooks<a class="headerlink" href="#motivation-for-jupyter-notebooks" title="Link to this heading"></a></h2>
+<p>Jupyter Notebook is a tool for creating and sharing documents that contain live code, equations, visualizations, and narrative text.</p>
+<figure class="align-default" id="id1">
+<a class="reference internal image-reference" href="../_images/‎Jupyter_Pandas_demo.png"><img alt="A comparison between pure Python code and a Jupyter Notebook highlights how Jupyter Notebook can include much more elaborate narrative than regular code files." src="../_images/%E2%80%8EJupyter_Pandas_demo.png" style="width: 100%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">Jupyter Notebooks can contain much more than just regular code. (CC-BY).</span><a class="headerlink" href="#id1" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<ul class="simple">
+<li><p><strong>Code, text, equations, figures, plots</strong>, etc. are interleaved, creating a <em>computational narrative</em>.</p></li>
+<li><p><a class="reference external" href="https://www.nature.com/articles/d41586-018-07196-1"><em>“an environment in which users execute code, see what happens, modify and
+repeat in a kind of iterative conversation between researcher and
+data”</em></a></p></li>
+<li><p>The name “Jupyter” derives from Julia+Python+R, but today Jupyter kernels
+exist for <a class="reference external" href="https://github.com/jupyter/jupyter/wiki/Jupyter-kernels">dozens of programming languages</a>.</p></li>
+</ul>
+<section id="jupyter-notebook-ish-functionalities-are-widely-used">
+<h3>Jupyter Notebook-ish functionalities are widely used<a class="headerlink" href="#jupyter-notebook-ish-functionalities-are-widely-used" title="Link to this heading"></a></h3>
+<p>Many tools can have Jupyter-like behaviour: code and markdown cells</p>
+<ul class="simple">
+<li><p>VSCode</p></li>
+<li><p>Google Colab</p></li>
+<li><p>GitHub Codespaces</p></li>
+</ul>
+</section>
+</section>
+<hr class="docutils" />
+<section id="case-examples">
+<h2>Case examples<a class="headerlink" href="#case-examples" title="Link to this heading"></a></h2>
+<p>Jupyter Notebooks make it feasible to share your code: you can explain your
+ideas and anyone can run the code eg. in <a class="reference external" href="https://mybinder.org/">Binder</a>.</p>
+<section id="gravitational-wave-discovery">
+<h3><a class="reference external" href="https://www.gw-openscience.org/about/">Gravitational wave discovery</a><a class="headerlink" href="#gravitational-wave-discovery" title="Link to this heading"></a></h3>
+<figure class="align-default" id="id2">
+<a class="reference internal image-reference" href="../_images/gravity.jpg"><img alt="Discovery of gravitational waves" src="../_images/gravity.jpg" style="width: 50%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">Discovery of gravitational waves.</span><a class="headerlink" href="#id2" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>As a case example, let us have a look at the analysis published together with the
+discovery of gravitational waves. <a class="reference external" href="https://losc.ligo.org/tutorials/">This
+page</a> lists the available analyses
+and presents several options to browse them.</p>
+<ul class="simple">
+<li><p>A quick look at short segments of data can be found at
+<a class="reference external" href="https://github.com/losc-tutorial/quickview">https://github.com/losc-tutorial/quickview</a></p></li>
+<li><p>The notebook can be opened and interactively explored
+using Binder by clicking the “launch Binder” button.</p></li>
+<li><p>How does the Binder instance know which Python packages to load? It takes the information
+from files like <code class="docutils literal notranslate"><span class="pre">requirements.txt</span></code> (Python) or <code class="docutils literal notranslate"><span class="pre">environment.yml</span></code> or <code class="docutils literal notranslate"><span class="pre">runtime.txt</span></code> (R).</p></li>
+</ul>
+</section>
+<section id="activity-inequality-study">
+<h3><a class="reference external" href="http://activityinequality.stanford.edu/">Activity inequality</a> study<a class="headerlink" href="#activity-inequality-study" title="Link to this heading"></a></h3>
+<figure class="align-default" id="id3">
+<a class="reference internal image-reference" href="../_images/activity_inequality.png"><img alt="Stanford Activity Inequality Study" src="../_images/activity_inequality.png" style="width: 80%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">Stanford Activity Inequality Study.</span><a class="headerlink" href="#id3" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>Researchers in the Stanford Activity Inequality Study measured daily
+activity from cell phone tracking data for over 700,000 users in
+different countries across the world.</p>
+<ul class="simple">
+<li><p>All data and notebooks are available at
+<a class="reference external" href="https://github.com/timalthoff/activityinequality">https://github.com/timalthoff/activityinequality</a></p></li>
+<li><p>Even without a “launch binder” button, the notebooks can still be
+<a class="reference external" href="https://mybinder.org/v2/gh/timalthoff/activityinequality/master">launched on Binder</a>
+(you may see an error “missing R kernel” because a file <code class="docutils literal notranslate"><span class="pre">runtime.txt</span></code> is missing - more about that later)</p></li>
+<li><p>Do you see any potential problems in recreating e.g.
+<a class="reference external" href="https://github.com/timalthoff/activityinequality/blob/master/fig3/fig3bc.ipynb">fig3bc</a>?</p></li>
+</ul>
+</section>
+<section id="more-examples">
+<h3>More examples<a class="headerlink" href="#more-examples" title="Link to this heading"></a></h3>
+<p>For further inspiration, head over to the
+<a class="reference external" href="https://github.com/jupyter/jupyter/wiki">Gallery of interesting Jupyter Notebooks</a>.</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="use-cases">
+<h2>Use cases<a class="headerlink" href="#use-cases" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Really good for <strong>linear workflows</strong> (e.g. read data, filter data, do some statistics, plot the results)</p></li>
+<li><p>Experimenting with new ideas, testing new libraries/databases</p></li>
+<li><p>As an <em>interactive</em> development environment for code, data analysis, and visualization</p></li>
+<li><p>Interactive work on HPC clusters</p></li>
+<li><p>Sharing and explaining code to colleagues</p></li>
+<li><p>Teaching (programming, experimental/theoretical science)</p></li>
+<li><p>Learning from other notebooks</p></li>
+<li><p>Keeping track of interactive sessions, like a <strong>digital lab notebook</strong></p></li>
+<li><p><strong>Supplementary information with published articles</strong></p></li>
+<li><p>Slide presentations using <a class="reference external" href="https://github.com/damianavila/RISE">Reveal.js</a></p></li>
+</ul>
+</section>
+<section id="pitfalls">
+<h2>Pitfalls<a class="headerlink" href="#pitfalls" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Programs with non-linear code flow</p></li>
+<li><p>Large codebase (however it can make sense to use Jupyter as interface to the large codebase and import the codebase as a module)</p></li>
+<li><p>You cannot easily write a notebook directly in your text editor (but you can do
+that with <a class="reference external" href="https://rmarkdown.rstudio.com/">R Markdown</a>)</p></li>
+<li><p>Notebooks can be <strong>version controlled</strong>
+(<a class="reference external" href="https://nbdime.readthedocs.io/">nbdime</a> helps with that), but
+there are <strong>still limitations</strong>.</p></li>
+<li><p>Notebooks <strong>aren’t named by default</strong> and tend to <strong>acquire a bunch of
+unrelated stuff</strong>.  Be careful with organization!</p></li>
+<li><p>See also <a class="reference external" href="https://scicomp.aalto.fi/scicomp/jupyter-pitfalls/">https://scicomp.aalto.fi/scicomp/jupyter-pitfalls/</a>.</p></li>
+</ul>
+</section>
+<section id="good-practices">
+<h2>Good practices<a class="headerlink" href="#good-practices" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Rename notebooks from “Untitled.ipynb”.</p></li>
+<li><p>Run all cells before sharing/saving to verify that the results you see on your
+computer were not due to cells being run out of order (we will try this later).</p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../" class="btn btn-neutral float-left" title="Jupyter notebooks - A tool to write and share executable notebooks and data visualization" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../interface/" class="btn btn-neutral float-right" title="JupyterLab and notebook interface" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright CodeRefinery contributors.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

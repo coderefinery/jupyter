@@ -1,0 +1,1047 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Examples of Jupyter features &mdash; Jupyter notebooks  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=949a1ff5" />
+      <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=9c3e77be" />
+      <link rel="stylesheet" type="text/css" href="../_static/sphinx_lesson.css?v=e9df6548" />
+      <link rel="stylesheet" type="text/css" href="../_static/term_role_formatting.css?v=4194e21c" />
+      <link rel="stylesheet" type="text/css" href="../_static/sphinx_rtd_theme_ext_color_contrast.css?v=8e8ea19f" />
+
+  
+    <link rel="shortcut icon" href="../_static/coderefinery.ico"/>
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=187304be"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../_static/copybutton.js?v=582ca9e2"></script>
+      <script src="../_static/minipres.js?v=a0d29692"></script>
+      <script>let toggleHintShow = 'Click to show';</script>
+      <script>let toggleHintHide = 'Click to hide';</script>
+      <script>let toggleOpenOnPrint = 'true';</script>
+      <script src="../_static/togglebutton.js?v=1ae7504c"></script>
+      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+      <script data-domain="coderefinery.github.io" defer="defer" src="https://plausible.cs.aalto.fi/js/script.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex/" />
+    <link rel="search" title="Search" href="../search/" />
+    <link rel="next" title="List of exercises" href="../exercises/" />
+    <link rel="prev" title="Shell commands, magics and widgets" href="../extra-features/" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../" class="icon icon-home">
+            Jupyter notebooks
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Core episodes</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../motivation/">Jupyter Notebooks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../interface/">JupyterLab and notebook interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../first-notebook/">A first computational notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../version-control/">Notebooks and version control</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sharing/">Sharing notebooks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../summary/">Summary</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Optional episodes</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../extra-features/">Shell commands, magics and widgets</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Examples of Jupyter features</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#widgets-for-interactive-data-fitting">Widgets for interactive data fitting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#cell-profiling">Cell profiling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#installing-a-magic-command-for-line-profiling">Installing a magic command for line profiling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#data-analysis-with-pandas-dataframes">Data analysis with pandas dataframes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#defining-your-own-custom-magic-command">Defining your own custom magic command</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#parallel-python-with-ipyparallel">Parallel Python with ipyparallel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#mixing-python-and-r">Mixing Python and R</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#word-count-analysis-with-widgets">Word-count analysis with widgets</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Reference</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://youtu.be/xbTTDLA3txI">Shell crash course</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../exercises/">List of exercises</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide/">Instructor guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../license/">Credit and license</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">About</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://coderefinery.org/lessons/core/">All lessons</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://coderefinery.org/">CodeRefinery</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://coderefinery.org/lessons/reusing/">Reusing</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../">Jupyter notebooks</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Examples of Jupyter features</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/coderefinery/jupyter/blob/main/content/examples.md" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="examples-of-jupyter-features">
+<h1>Examples of Jupyter features<a class="headerlink" href="#examples-of-jupyter-features" title="Link to this heading"></a></h1>
+<div class="admonition-questions questions admonition" id="questions-0">
+<p class="admonition-title">Questions</p>
+<ul class="simple">
+<li><p>Mixed examples/exercises to practice various aspects of using Jupyter</p></li>
+</ul>
+</div>
+<div class="admonition-objectives objectives admonition" id="objectives-0">
+<p class="admonition-title">Objectives</p>
+<ul class="simple">
+<li><p>Learn more advanced usage of widgets.</p></li>
+<li><p>Learn how to profile code and install a new line-profiler tool.</p></li>
+<li><p>Practice some data analysis using pandas dataframes.</p></li>
+<li><p>Learn how to define your own magic command.</p></li>
+<li><p>Learn how to parallelize Python code using ipyparallel.</p></li>
+<li><p>Learn how to mix Python with R in the same noteobook.</p></li>
+</ul>
+</div>
+<hr class="docutils" />
+<section id="widgets-for-interactive-data-fitting">
+<span id="interactive-data-fitting"></span><h2>Widgets for interactive data fitting<a class="headerlink" href="#widgets-for-interactive-data-fitting" title="Link to this heading"></a></h2>
+<div class="admonition-widgets-for-interactive-data-fitting exercise important admonition" id="exercise-0">
+<p class="admonition-title">Widgets for interactive data fitting</p>
+<p>Widgets are fun, but they can also be useful. Here’s an example showing how you can fit noisy data interactively.</p>
+<ol class="arabic simple">
+<li><p>Execute the cell below. It fits a 5th order polynomial to a gaussian function with some random noise</p></li>
+<li><p>Use the <code class="docutils literal notranslate"><span class="pre">&#64;interact</span></code> decorator around the last two code lines
+such that you can visualize fits with polynomial orders <code class="docutils literal notranslate"><span class="pre">n</span></code>
+ranging from, say, 3 to 30:</p></li>
+</ol>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="o">%</span><span class="n">matplotlib</span> <span class="n">inline</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">gaussian</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">a</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">b</span> <span class="o">*</span> <span class="p">(</span><span class="n">x</span><span class="o">-</span><span class="n">c</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">noisy_gaussian</span><span class="p">():</span>
+    <span class="c1"># gaussian array y in interval -5 &lt;= x &lt;= 5</span>
+    <span class="n">nx</span> <span class="o">=</span> <span class="mi">100</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mf">5.0</span><span class="p">,</span> <span class="mf">5.0</span><span class="p">,</span> <span class="n">nx</span><span class="p">)</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="n">gaussian</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">a</span><span class="o">=</span><span class="mf">2.0</span><span class="p">,</span> <span class="n">b</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="mf">1.5</span><span class="p">)</span>
+    <span class="n">noise</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">,</span> <span class="n">nx</span><span class="p">)</span>
+    <span class="n">y</span> <span class="o">+=</span> <span class="n">noise</span>
+    <span class="k">return</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">fit</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+    <span class="n">pfit</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">polyfit</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
+    <span class="n">yfit</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">polyval</span><span class="p">(</span><span class="n">pfit</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">yfit</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">yfit</span><span class="p">):</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Data&quot;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">yfit</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Fit&quot;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="o">-</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">2.5</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">noisy_gaussian</span><span class="p">()</span>
+<span class="n">yfit</span> <span class="o">=</span> <span class="n">fit</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>  <span class="c1"># fit a 5th order polynomial to it</span>
+<span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">yfit</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="admonition-solution solution important dropdown admonition" id="solution-0">
+<p class="admonition-title">Solution</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">ipywidgets</span><span class="w"> </span><span class="kn">import</span> <span class="n">interact</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="o">%</span><span class="n">matplotlib</span> <span class="n">inline</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">gaussian</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">a</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">b</span> <span class="o">*</span> <span class="p">(</span><span class="n">x</span><span class="o">-</span><span class="n">c</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">noisy_gaussian</span><span class="p">():</span>
+    <span class="c1"># gaussian array y in interval -5 &lt;= x &lt;= 5</span>
+    <span class="n">nx</span> <span class="o">=</span> <span class="mi">100</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mf">5.0</span><span class="p">,</span> <span class="mf">5.0</span><span class="p">,</span> <span class="n">nx</span><span class="p">)</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="n">gaussian</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">a</span><span class="o">=</span><span class="mf">2.0</span><span class="p">,</span> <span class="n">b</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="mf">1.5</span><span class="p">)</span>
+    <span class="n">noise</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">,</span> <span class="n">nx</span><span class="p">)</span>
+    <span class="n">y</span> <span class="o">+=</span> <span class="n">noise</span>
+    <span class="k">return</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">fit</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+    <span class="n">pfit</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">polyfit</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
+    <span class="n">yfit</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">polyval</span><span class="p">(</span><span class="n">pfit</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">yfit</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">yfit</span><span class="p">):</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Data&quot;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">yfit</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Fit&quot;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="o">-</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">2.5</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">noisy_gaussian</span><span class="p">()</span>
+
+<span class="nd">@interact</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">slider</span><span class="p">(</span><span class="n">n</span><span class="o">=</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">30</span><span class="p">)):</span>
+    <span class="n">yfit</span> <span class="o">=</span> <span class="n">fit</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
+    <span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">yfit</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<hr class="docutils" />
+</section>
+<section id="cell-profiling">
+<span id="id1"></span><h2>Cell profiling<a class="headerlink" href="#cell-profiling" title="Link to this heading"></a></h2>
+<div class="admonition-cell-profiling exercise important admonition" id="exercise-1">
+<p class="admonition-title">Cell profiling</p>
+<p>This exercise is about cell profiling, but you will get practice in
+working with magics and cells.</p>
+<ol class="arabic">
+<li><p>Copy-paste the following code into a cell:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">step</span><span class="p">():</span>
+    <span class="kn">import</span><span class="w"> </span><span class="nn">random</span>
+    <span class="k">return</span> <span class="mf">1.</span> <span class="k">if</span> <span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">()</span> <span class="o">&gt;</span> <span class="mf">.5</span> <span class="k">else</span> <span class="o">-</span><span class="mf">1.</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">walk</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+    <span class="n">dx</span> <span class="o">=</span> <span class="mf">1.</span> <span class="o">/</span> <span class="n">n</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">):</span>
+        <span class="n">x_new</span> <span class="o">=</span> <span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="n">dx</span> <span class="o">*</span> <span class="n">step</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">x_new</span> <span class="o">&gt;</span> <span class="mf">5e-3</span><span class="p">:</span>
+            <span class="n">x</span><span class="p">[</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mf">0.</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">x</span><span class="p">[</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">x_new</span>
+    <span class="k">return</span> <span class="n">x</span>
+
+<span class="n">n</span> <span class="o">=</span> <span class="mi">100000</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">walk</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+</pre></div>
+</div>
+</li>
+<li><p>Split up the functions over 4 cells (either via Edit menu or keyboard shortcut <code class="docutils literal notranslate"><span class="pre">Ctrl-Shift-minus</span></code>).</p></li>
+<li><p>Plot the random walk trajectory using <code class="docutils literal notranslate"><span class="pre">plt.plot(x)</span></code>.</p></li>
+<li><p>Time the execution of <code class="docutils literal notranslate"><span class="pre">walk()</span></code> with a line magic.</p></li>
+<li><p>Run the prun cell profiler.</p></li>
+<li><p>Can you spot a little mistake which is slowing down the code?</p></li>
+<li><p>In the next exercise you will install a line profiler which
+will more easily expose the performance mistake.</p></li>
+</ol>
+<div class="admonition-solution solution important dropdown admonition" id="solution-1">
+<p class="admonition-title">Solution</p>
+<p>Split the code over multiple cells (e.g. using <code class="docutils literal notranslate"><span class="pre">Ctrl-Shift-minus</span></code>)</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">step</span><span class="p">():</span>
+    <span class="kn">import</span><span class="w"> </span><span class="nn">random</span>
+    <span class="k">return</span> <span class="mf">1.</span> <span class="k">if</span> <span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">()</span> <span class="o">&gt;</span> <span class="mf">.5</span> <span class="k">else</span> <span class="o">-</span><span class="mf">1.</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">walk</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+    <span class="n">dx</span> <span class="o">=</span> <span class="mf">1.</span> <span class="o">/</span> <span class="n">n</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">):</span>
+        <span class="n">x_new</span> <span class="o">=</span> <span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="n">dx</span> <span class="o">*</span> <span class="n">step</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">x_new</span> <span class="o">&gt;</span> <span class="mf">5e-3</span><span class="p">:</span>
+            <span class="n">x</span><span class="p">[</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mf">0.</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">x</span><span class="p">[</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">x_new</span>
+    <span class="k">return</span> <span class="n">x</span>
+</pre></div>
+</div>
+<p>Initialize <code class="docutils literal notranslate"><span class="pre">n</span></code> and call <code class="docutils literal notranslate"><span class="pre">walk()</span></code>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="mi">100000</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">walk</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Plot the random walk</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>Time the execution using the <code class="docutils literal notranslate"><span class="pre">%timeit</span></code> line magic, and capture the output:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">t1</span> <span class="o">=</span> <span class="o">%</span><span class="n">timeit</span> <span class="o">-</span><span class="n">o</span> <span class="n">walk</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Best result</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">t1</span><span class="o">.</span><span class="n">best</span>
+</pre></div>
+</div>
+<p>Run with the <code class="docutils literal notranslate"><span class="pre">%%prun</span></code> cell profiler</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="n">prun</span>
+<span class="n">walk</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<hr class="docutils" />
+</section>
+<section id="installing-a-magic-command-for-line-profiling">
+<span id="installing-magic-command"></span><h2>Installing a magic command for line profiling<a class="headerlink" href="#installing-a-magic-command-for-line-profiling" title="Link to this heading"></a></h2>
+<div class="admonition-installing-a-magic-command-for-line-profiling exercise important admonition" id="exercise-2">
+<p class="admonition-title">Installing a magic command for line profiling</p>
+<p>Magics can be installed using <code class="docutils literal notranslate"><span class="pre">pip</span></code> and loaded like plugins using the
+<code class="docutils literal notranslate"><span class="pre">%load_ext</span></code> magic. You will now install a line-profiler to get more
+detailed profile, and hopefully find insight to speed up the code
+from the previous exercise.</p>
+<ol class="arabic">
+<li><p>If you haven’t solved the previous exercise, copy paste the following code into a cell
+and run it:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">step</span><span class="p">():</span>
+    <span class="kn">import</span><span class="w"> </span><span class="nn">random</span>
+    <span class="k">return</span> <span class="mf">1.</span> <span class="k">if</span> <span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">()</span> <span class="o">&gt;</span> <span class="mf">.5</span> <span class="k">else</span> <span class="o">-</span><span class="mf">1.</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">walk</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+    <span class="n">dx</span> <span class="o">=</span> <span class="mf">1.</span> <span class="o">/</span> <span class="n">n</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">):</span>
+        <span class="n">x_new</span> <span class="o">=</span> <span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="n">dx</span> <span class="o">*</span> <span class="n">step</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">x_new</span> <span class="o">&gt;</span> <span class="mf">5e-3</span><span class="p">:</span>
+            <span class="n">x</span><span class="p">[</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mf">0.</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">x</span><span class="p">[</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">x_new</span>
+    <span class="k">return</span> <span class="n">x</span>
+
+<span class="n">n</span> <span class="o">=</span> <span class="mi">100000</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">walk</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+</pre></div>
+</div>
+</li>
+<li><p>Then install the line profiler using <code class="docutils literal notranslate"><span class="pre">!pip</span> <span class="pre">install</span> <span class="pre">line_profiler</span></code>.</p></li>
+<li><p>Next load it using <code class="docutils literal notranslate"><span class="pre">%load_ext</span> <span class="pre">line_profiler</span></code>.</p></li>
+<li><p>Have a look at the new magic command that has been enabled with <code class="docutils literal notranslate"><span class="pre">%lprun?</span></code></p></li>
+<li><p>In a new cell, run the line profiler on the <code class="docutils literal notranslate"><span class="pre">walk</span></code> and <code class="docutils literal notranslate"><span class="pre">step</span></code> functions in the way
+described on the help page.</p></li>
+<li><p>Inspect the output. Can you more easily see the mistake now?</p></li>
+</ol>
+<div class="admonition-solution solution important dropdown admonition" id="solution-2">
+<p class="admonition-title">Solution</p>
+<p>Copy-paste the code into a cell</p>
+<p>Install the line profiler</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>!pip install line_profiler
+</pre></div>
+</div>
+<p>Load the IPython extension</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="n">load_ext</span> <span class="n">line_profiler</span>
+</pre></div>
+</div>
+<p>See help:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>%lprun?
+</pre></div>
+</div>
+<p>Use the line profiler on the <code class="docutils literal notranslate"><span class="pre">walk</span></code> function:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="n">lprun</span> <span class="o">-</span><span class="n">f</span> <span class="n">walk</span> <span class="n">walk</span><span class="p">(</span><span class="mi">10000</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Aha, most time is spent on the line calling the <code class="docutils literal notranslate"><span class="pre">step()</span></code> function.
+Run line profiler on <code class="docutils literal notranslate"><span class="pre">step</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="n">lprun</span> <span class="o">-</span><span class="n">f</span> <span class="n">step</span> <span class="n">walk</span><span class="p">(</span><span class="mi">10000</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">...</span>
+     <span class="mi">8</span>                                           <span class="k">def</span><span class="w"> </span><span class="nf">step</span><span class="p">():</span>
+     <span class="mi">9</span>      <span class="mi">9999</span>       <span class="mf">7488.0</span>      <span class="mf">0.7</span>     <span class="mf">52.3</span>      <span class="kn">import</span><span class="w"> </span><span class="nn">random</span>
+    <span class="mi">10</span>      <span class="mi">9999</span>       <span class="mf">6840.0</span>      <span class="mf">0.7</span>     <span class="mf">47.7</span>      <span class="k">return</span> <span class="mf">1.</span> <span class="k">if</span> <span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">()</span>
+<span class="o">...</span>
+</pre></div>
+</div>
+<p>Aha! Lot’s of time is spent on importing the <code class="docutils literal notranslate"><span class="pre">random</span></code> module inside the <code class="docutils literal notranslate"><span class="pre">step</span></code> function
+which is called thousands of times. Move the import statement to outside the function!</p>
+</div>
+</div>
+<hr class="docutils" />
+</section>
+<section id="data-analysis-with-pandas-dataframes">
+<span id="data-analysis"></span><h2>Data analysis with pandas dataframes<a class="headerlink" href="#data-analysis-with-pandas-dataframes" title="Link to this heading"></a></h2>
+<div class="admonition-data-analysis-with-pandas-dataframes exercise important admonition" id="exercise-3">
+<p class="admonition-title">Data analysis with pandas dataframes</p>
+<p>Data science and data analysis are key use cases of Jupyter. In this
+exercise you will familiarize yourself with dataframes and various
+inbuilt analysis methods in the high-level <code class="docutils literal notranslate"><span class="pre">pandas</span></code> data exploration
+library. A dataset containing information on Nobel prizes will be viewed with the file browser.</p>
+<ol class="arabic simple">
+<li><p>Start by navigating in the File Browser to the <code class="docutils literal notranslate"><span class="pre">data/</span></code> subfolder, and
+double-click on the <code class="docutils literal notranslate"><span class="pre">nobels.csv</span></code> dataset. This will open JupyterLab’s
+inbuilt data browser.</p></li>
+<li><p>Have a look at the data, column names, etc.</p></li>
+<li><p>In a your own notebook, import the <code class="docutils literal notranslate"><span class="pre">pandas</span></code> module and load the dataset into a <em>dataframe</em>:</p></li>
+</ol>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="n">nobel</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;data/nobels.csv&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="4">
+<li><p>The “share” column of the dataframe contains the number of Nobel recipients that shared the prize. Have a look at the statistics of this column using</p></li>
+</ol>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">nobel</span><span class="p">[</span><span class="s2">&quot;share&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="5">
+<li><p>The <code class="docutils literal notranslate"><span class="pre">describe()</span></code> method is smart about data types. Try this:</p></li>
+</ol>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">nobel</span><span class="p">[</span><span class="s2">&quot;bornCountryCode&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>- What country has received the largest number of Nobel prizes, and how many?
+- How many countries are represented in the dataset?
+</pre></div>
+</div>
+<ol class="arabic simple" start="6">
+<li><p>Now analyze the age of prize recipients. You first need to convert the “born” column to datetime format:</p></li>
+</ol>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">nobel</span><span class="p">[</span><span class="s2">&quot;born&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">nobel</span><span class="p">[</span><span class="s2">&quot;born&quot;</span><span class="p">],</span>
+                               <span class="n">errors</span> <span class="o">=</span><span class="s1">&#39;coerce&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="7">
+<li><p>Next subtract the birth date from the year of receiving the prize and insert it into a new column “age”:</p></li>
+</ol>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">nobel</span><span class="p">[</span><span class="s2">&quot;age&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">nobel</span><span class="p">[</span><span class="s2">&quot;year&quot;</span><span class="p">]</span> <span class="o">-</span> <span class="n">nobel</span><span class="p">[</span><span class="s2">&quot;born&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">year</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Now print the “surname” and “age” of first 10 entries using the <code class="docutils literal notranslate"><span class="pre">head()</span></code> method.</p></li>
+</ul>
+<ol class="arabic simple" start="8">
+<li><p>Now plot results in two different ways:</p></li>
+</ol>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">nobel</span><span class="p">[</span><span class="s2">&quot;age&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">bins</span><span class="o">=</span><span class="p">[</span><span class="mi">20</span><span class="p">,</span><span class="mi">30</span><span class="p">,</span><span class="mi">40</span><span class="p">,</span><span class="mi">50</span><span class="p">,</span><span class="mi">60</span><span class="p">,</span><span class="mi">70</span><span class="p">,</span><span class="mi">80</span><span class="p">,</span><span class="mi">90</span><span class="p">,</span><span class="mi">100</span><span class="p">],</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.6</span><span class="p">);</span>
+<span class="n">nobel</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span><span class="n">column</span><span class="o">=</span><span class="s2">&quot;age&quot;</span><span class="p">,</span> <span class="n">by</span><span class="o">=</span><span class="s2">&quot;category&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="9">
+<li><p>Which Nobel laureates have been Swedish? See if you can use the <code class="docutils literal notranslate"><span class="pre">nobel.loc[CONDITION]</span></code> statement to extract the relevant rows from the <code class="docutils literal notranslate"><span class="pre">nobel</span></code> dataframe using the appropriate condition.</p></li>
+<li><p>Finally, try the powerful <code class="docutils literal notranslate"><span class="pre">groupby()</span></code> method to analyze the number of Nobel prizes per country, and visualize it with the high-level <code class="docutils literal notranslate"><span class="pre">seaborn</span></code> plotting library.</p></li>
+</ol>
+<ul class="simple">
+<li><p>First add a column “number” to the <code class="docutils literal notranslate"><span class="pre">nobel</span></code> dataframe containing 1’s (to enable the counting below).</p></li>
+<li><p>Then extract any 4 countries (replace below) and create a subset of the dataframe:</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">countries</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">COUNTRY1</span><span class="p">,</span> <span class="n">COUNTRY2</span><span class="p">,</span> <span class="n">COUNTRY3</span><span class="p">,</span> <span class="n">COUNTRY4</span><span class="p">])</span>
+<span class="n">nobel2</span> <span class="o">=</span> <span class="n">nobel</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">nobel</span><span class="p">[</span><span class="s1">&#39;bornCountry&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">countries</span><span class="p">)]</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Next use <code class="docutils literal notranslate"><span class="pre">groupby()</span></code> and <code class="docutils literal notranslate"><span class="pre">sum()</span></code>, and inspect the resulting dataframe:</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">nobels_by_country</span> <span class="o">=</span> <span class="n">nobel2</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;bornCountry&#39;</span><span class="p">,</span><span class="s2">&quot;category&quot;</span><span class="p">],</span> <span class="n">sort</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Next use the <code class="docutils literal notranslate"><span class="pre">pivot_table</span></code> method to reshape the dataframe to a spreadsheet-like structure, and display the result:</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">table</span> <span class="o">=</span> <span class="n">nobel2</span><span class="o">.</span><span class="n">pivot_table</span><span class="p">(</span><span class="n">values</span><span class="o">=</span><span class="s2">&quot;number&quot;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="s2">&quot;bornCountry&quot;</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="s2">&quot;category&quot;</span><span class="p">,</span> <span class="n">aggfunc</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">)</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Finally visualize using a heatmap:</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">seaborn</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">sns</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">heatmap</span><span class="p">(</span><span class="n">table</span><span class="p">,</span><span class="n">linewidths</span><span class="o">=</span><span class="mf">.5</span><span class="p">);</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Have a look at the help page for <code class="docutils literal notranslate"><span class="pre">sns.heatmap</span></code> and see if you can find an
+input parameter which annotates each cell in the plot with the count
+number.</p></li>
+</ul>
+<div class="admonition-solution solution important dropdown admonition" id="solution-3">
+<p class="admonition-title">Solution</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="n">nobel</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;data/nobels.csv&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">nobel</span><span class="p">[</span><span class="s2">&quot;share&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">nobel</span><span class="p">[</span><span class="s2">&quot;bornCountryCode&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>USA has received 275 prizes.</p></li>
+<li><p>76 countries have received at least one prize.</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">nobel</span><span class="p">[</span><span class="s2">&quot;born&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">nobel</span><span class="p">[</span><span class="s2">&quot;born&quot;</span><span class="p">],</span> <span class="n">errors</span> <span class="o">=</span><span class="s1">&#39;coerce&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Add column</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">nobel</span><span class="p">[</span><span class="s2">&quot;age&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">nobel</span><span class="p">[</span><span class="s2">&quot;year&quot;</span><span class="p">]</span> <span class="o">-</span> <span class="n">nobel</span><span class="p">[</span><span class="s2">&quot;born&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">year</span>
+</pre></div>
+</div>
+<p>Print surname and age</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">nobel</span><span class="p">[[</span><span class="s2">&quot;surname&quot;</span><span class="p">,</span><span class="s2">&quot;age&quot;</span><span class="p">]]</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">nobel</span><span class="p">[</span><span class="s2">&quot;age&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">bins</span><span class="o">=</span><span class="p">[</span><span class="mi">20</span><span class="p">,</span><span class="mi">30</span><span class="p">,</span><span class="mi">40</span><span class="p">,</span><span class="mi">50</span><span class="p">,</span><span class="mi">60</span><span class="p">,</span><span class="mi">70</span><span class="p">,</span><span class="mi">80</span><span class="p">,</span><span class="mi">90</span><span class="p">,</span><span class="mi">100</span><span class="p">],</span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.6</span><span class="p">);</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">nobel</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span><span class="n">column</span><span class="o">=</span><span class="s2">&quot;age&quot;</span><span class="p">,</span> <span class="n">by</span><span class="o">=</span><span class="s2">&quot;category&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Which Nobel laureates have been Swedish?</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">nobel</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">nobel</span><span class="p">[</span><span class="s2">&quot;bornCountry&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;Sweden&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>Finally, try the powerful <code class="docutils literal notranslate"><span class="pre">groupby()</span></code> method.
+Add extra column with number of Nobel prizes per row (needed for statistics)</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">nobel</span><span class="p">[</span><span class="s2">&quot;number&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mf">1.0</span>
+</pre></div>
+</div>
+<p>Pick a few countries to analyze further</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">countries</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="s2">&quot;Sweden&quot;</span><span class="p">,</span> <span class="s2">&quot;United Kingdom&quot;</span><span class="p">,</span> <span class="s2">&quot;France&quot;</span><span class="p">,</span> <span class="s2">&quot;Denmark&quot;</span><span class="p">])</span>
+<span class="n">nobel2</span> <span class="o">=</span> <span class="n">nobel</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">nobel</span><span class="p">[</span><span class="s1">&#39;bornCountry&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">countries</span><span class="p">)]</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">table</span> <span class="o">=</span> <span class="n">nobel2</span><span class="o">.</span><span class="n">pivot_table</span><span class="p">(</span><span class="n">values</span><span class="o">=</span><span class="s2">&quot;number&quot;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="s2">&quot;bornCountry&quot;</span><span class="p">,</span>
+                           <span class="n">columns</span><span class="o">=</span><span class="s2">&quot;category&quot;</span><span class="p">,</span> <span class="n">aggfunc</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">)</span>
+<span class="n">table</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">seaborn</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">sns</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">heatmap</span><span class="p">(</span><span class="n">table</span><span class="p">,</span><span class="n">linewidths</span><span class="o">=</span><span class="mf">.5</span><span class="p">,</span> <span class="n">annot</span><span class="o">=</span><span class="kc">True</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+</div>
+<hr class="docutils" />
+</section>
+<section id="defining-your-own-custom-magic-command">
+<span id="own-magic-command"></span><h2>Defining your own custom magic command<a class="headerlink" href="#defining-your-own-custom-magic-command" title="Link to this heading"></a></h2>
+<div class="admonition-defining-your-own-custom-magic-command exercise important admonition" id="exercise-4">
+<p class="admonition-title">Defining your own custom magic command</p>
+<p>It is possible to create new magic commands using the <code class="docutils literal notranslate"><span class="pre">&#64;register_cell_magic</span></code> decorator from the <code class="docutils literal notranslate"><span class="pre">IPython.core</span></code> library. Here you will create a cell magic command that compiles C++ code and executes it.
+This exercise requires that you have the GNU <code class="docutils literal notranslate"><span class="pre">g++</span></code> compiler installed on your computer.</p>
+<blockquote>
+<div><p>This example has been adapted from the <a class="reference external" href="http://ipython-books.github.io/">IPython Minibook</a>, by Cyrille Rossant, Packt Publishing, 2015.</p>
+</div></blockquote>
+<ol class="arabic simple">
+<li><p>First import <code class="docutils literal notranslate"><span class="pre">register_cell_magic</span></code></p></li>
+</ol>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">IPython.core.magic</span><span class="w"> </span><span class="kn">import</span> <span class="n">register_cell_magic</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>Next copy-paste the following code into a cell, and execute it to
+register the new cell magic command:</p></li>
+</ol>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nd">@register_cell_magic</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">cpp</span><span class="p">(</span><span class="n">line</span><span class="p">,</span> <span class="n">cell</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Compile, execute C++ code, and return the standard output.&quot;&quot;&quot;</span>
+
+    <span class="c1"># We first retrieve the current IPython interpreter instance.</span>
+    <span class="n">ip</span> <span class="o">=</span> <span class="n">get_ipython</span><span class="p">()</span>
+    <span class="c1"># We define the source and executable filenames.</span>
+    <span class="n">source_filename</span> <span class="o">=</span> <span class="s1">&#39;_temp.cpp&#39;</span>
+    <span class="n">program_filename</span> <span class="o">=</span> <span class="s1">&#39;_temp&#39;</span>
+    <span class="c1"># We write the code to the C++ file.</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">source_filename</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">cell</span><span class="p">)</span>
+    <span class="c1"># We compile the C++ code into an executable.</span>
+    <span class="nb">compile</span> <span class="o">=</span> <span class="n">ip</span><span class="o">.</span><span class="n">getoutput</span><span class="p">(</span><span class="s2">&quot;g++ </span><span class="si">{0:s}</span><span class="s2"> -o </span><span class="si">{1:s}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+        <span class="n">source_filename</span><span class="p">,</span> <span class="n">program_filename</span><span class="p">))</span>
+    <span class="c1"># We execute the executable and return the output.</span>
+    <span class="n">output</span> <span class="o">=</span> <span class="n">ip</span><span class="o">.</span><span class="n">getoutput</span><span class="p">(</span><span class="s1">&#39;./</span><span class="si">{0:s}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">program_filename</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">output</span><span class="p">))</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>You can now start using the magic using <code class="docutils literal notranslate"><span class="pre">%%cpp</span></code>.</p></li>
+</ul>
+<ol class="arabic simple" start="3">
+<li><p>Write some C++ code into a cell and try executing it.</p></li>
+<li><p>To be able to use the magic in another notebook, you need to add the
+following function at the end and then write the cell to a file in
+your PYTHONPATH. If the file is called <code class="docutils literal notranslate"><span class="pre">cpp_ext.py</span></code>, you can then
+load it by <code class="docutils literal notranslate"><span class="pre">%load_ext</span> <span class="pre">cpp_ext</span></code>.</p></li>
+</ol>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">load_ipython_extension</span><span class="p">(</span><span class="n">ipython</span><span class="p">):</span>
+    <span class="n">ipython</span><span class="o">.</span><span class="n">register_magic_function</span><span class="p">(</span><span class="n">cpp</span><span class="p">,</span><span class="s1">&#39;cell&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="admonition-solution solution important dropdown admonition" id="solution-4">
+<p class="admonition-title">Solution</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">IPython.core.magic</span><span class="w"> </span><span class="kn">import</span> <span class="n">register_cell_magic</span>
+</pre></div>
+</div>
+<p>Add <code class="docutils literal notranslate"><span class="pre">load_ipython_extension</span></code> function, and write cell to file called <code class="docutils literal notranslate"><span class="pre">cpp_ext.py</span></code>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="n">writefile</span> <span class="n">cpp_ext</span><span class="o">.</span><span class="n">py</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">cpp</span><span class="p">(</span><span class="n">line</span><span class="p">,</span> <span class="n">cell</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Compile, execute C++ code, and return the standard output.&quot;&quot;&quot;</span>
+
+    <span class="c1"># We first retrieve the current IPython interpreter instance.</span>
+    <span class="n">ip</span> <span class="o">=</span> <span class="n">get_ipython</span><span class="p">()</span>
+    <span class="c1"># We define the source and executable filenames.</span>
+    <span class="n">source_filename</span> <span class="o">=</span> <span class="s1">&#39;_temp.cpp&#39;</span>
+    <span class="n">program_filename</span> <span class="o">=</span> <span class="s1">&#39;_temp&#39;</span>
+    <span class="c1"># We write the code to the C++ file.</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">source_filename</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">cell</span><span class="p">)</span>
+    <span class="c1"># We compile the C++ code into an executable.</span>
+    <span class="nb">compile</span> <span class="o">=</span> <span class="n">ip</span><span class="o">.</span><span class="n">getoutput</span><span class="p">(</span><span class="s2">&quot;g++ </span><span class="si">{0:s}</span><span class="s2"> -o </span><span class="si">{1:s}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+        <span class="n">source_filename</span><span class="p">,</span> <span class="n">program_filename</span><span class="p">))</span>
+    <span class="c1"># We execute the executable and return the output.</span>
+    <span class="n">output</span> <span class="o">=</span> <span class="n">ip</span><span class="o">.</span><span class="n">getoutput</span><span class="p">(</span><span class="s1">&#39;./</span><span class="si">{0:s}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">program_filename</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">output</span><span class="p">))</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">load_ipython_extension</span><span class="p">(</span><span class="n">ipython</span><span class="p">):</span>
+    <span class="n">ipython</span><span class="o">.</span><span class="n">register_magic_function</span><span class="p">(</span><span class="n">cpp</span><span class="p">,</span><span class="s1">&#39;cell&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Load extension:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="n">load_ext</span> <span class="n">cpp_ext</span>
+</pre></div>
+</div>
+<p>Get help on the cpp magic:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>%%cpp?
+</pre></div>
+</div>
+<p>Hello World program in C++</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="n">cpp</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+<span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">std</span><span class="p">;</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Hello, World!&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<hr class="docutils" />
+</section>
+<section id="parallel-python-with-ipyparallel">
+<span id="ipyparallel"></span><h2>Parallel Python with ipyparallel<a class="headerlink" href="#parallel-python-with-ipyparallel" title="Link to this heading"></a></h2>
+<div class="admonition-parallel-python-with-ipyparallel exercise important admonition" id="exercise-5">
+<p class="admonition-title">Parallel Python with ipyparallel</p>
+<p>Traditionally, Python is considered to not support parallel programming very
+well (<a class="reference external" href="https://en.wikipedia.org/wiki/Global_interpreter_lock">see “GIL”</a>),
+and “proper” parallel programming should be left to “heavy-duty” languages
+like Fortran or C/C++ where OpenMP and MPI can be utilised.</p>
+<p>However, IPython now supports many different styles of parallelism which
+can be useful to researchers. In particular, <code class="docutils literal notranslate"><span class="pre">ipyparallel</span></code> enables all
+types of parallel applications to be developed, executed, debugged, and
+monitored interactively. Possible use cases of <code class="docutils literal notranslate"><span class="pre">ipyparallel</span></code> include:</p>
+<ul class="simple">
+<li><p>Quickly parallelize algorithms that are embarrassingly parallel using
+a number of simple approaches.</p></li>
+<li><p>Run a set of tasks on a set of CPUs using dynamic load balancing.</p></li>
+<li><p>Develop, test and debug new parallel algorithms (that may use MPI)
+interactively.</p></li>
+<li><p>Analyze and visualize large datasets (that could be remote and/or
+distributed) interactively using IPython</p></li>
+</ul>
+<p>This exercise is just to get started, for a thorough treatment see the
+<a class="reference external" href="https://ipyparallel.readthedocs.io/en/latest/">official documentation</a>
+and <a class="reference external" href="https://github.com/DaanVanHauwermeiren/ipyparallel-tutorial">this detailed tutorial</a>.</p>
+<ol class="arabic simple">
+<li><p>First install <code class="docutils literal notranslate"><span class="pre">ipyparallel</span></code> using <code class="docutils literal notranslate"><span class="pre">conda</span></code> or <code class="docutils literal notranslate"><span class="pre">pip</span></code>. Open a terminal window
+inside JupyterLab and do the installation.</p></li>
+<li><p>After installing <code class="docutils literal notranslate"><span class="pre">ipyparallel</span></code>, you need to start an “IPython cluster”.
+Do this in the terminal with <code class="docutils literal notranslate"><span class="pre">ipcluster</span> <span class="pre">start</span></code>.</p></li>
+<li><p>Then import <code class="docutils literal notranslate"><span class="pre">ipyparallel</span></code> in your notebook, initialize a <code class="docutils literal notranslate"><span class="pre">Client</span></code> instance,
+and create <em>DirectView</em> object for direct execution on the engines:</p></li>
+</ol>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">ipyparallel</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">ipp</span>
+<span class="n">client</span> <span class="o">=</span> <span class="n">ipp</span><span class="o">.</span><span class="n">Client</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Number of ipyparallel engines:&quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">client</span><span class="o">.</span><span class="n">ids</span><span class="p">))</span>
+<span class="n">dview</span> <span class="o">=</span> <span class="n">client</span><span class="p">[:]</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="4">
+<li><p>You have now started the parallel engines. To run something simple on
+each one of them, try the <code class="docutils literal notranslate"><span class="pre">apply_sync()</span></code> method:</p></li>
+</ol>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">dview</span><span class="o">.</span><span class="n">apply_sync</span><span class="p">(</span><span class="k">lambda</span> <span class="p">:</span> <span class="s2">&quot;Hello, World&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="5">
+<li><p>A serial evaluation of squares of integers can be seen in the code
+snippet below.</p></li>
+</ol>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">serial_result</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="p">,</span> <span class="nb">range</span><span class="p">(</span><span class="mi">30</span><span class="p">)))</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Convert this to a parallel calculation on the engines using the
+<code class="docutils literal notranslate"><span class="pre">map_sync()</span></code> method of the DirectView instance. Time both serial
+and parallel versions using <code class="docutils literal notranslate"><span class="pre">%%timeit</span> <span class="pre">-n</span> <span class="pre">1</span></code>.</p></li>
+</ul>
+<ol class="arabic simple" start="6">
+<li><p>You will now parallelize the evaluation of pi using a Monte Carlo
+method. First load modules, and export the <code class="docutils literal notranslate"><span class="pre">random</span></code> module to the engines:</p></li>
+</ol>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">random</span><span class="w"> </span><span class="kn">import</span> <span class="n">random</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">math</span><span class="w"> </span><span class="kn">import</span> <span class="n">pi</span>
+<span class="n">dview</span><span class="p">[</span><span class="s1">&#39;random&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">random</span>
+</pre></div>
+</div>
+<p>Then execute the following code in a cell. The function <code class="docutils literal notranslate"><span class="pre">mcpi</span></code> is a Monte
+Carlo method to calculate $\pi$. Time the execution of this function using
+<code class="docutils literal notranslate"><span class="pre">%timeit</span> <span class="pre">-n</span> <span class="pre">1</span></code> and a sample size of 10 million (<code class="docutils literal notranslate"><span class="pre">int(1e7)</span></code>).</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">mcpi</span><span class="p">(</span><span class="n">nsamples</span><span class="p">):</span>
+    <span class="n">s</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nsamples</span><span class="p">):</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="n">random</span><span class="p">()</span>
+        <span class="n">y</span> <span class="o">=</span> <span class="n">random</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">x</span><span class="o">*</span><span class="n">x</span> <span class="o">+</span> <span class="n">y</span><span class="o">*</span><span class="n">y</span> <span class="o">&lt;=</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="n">s</span><span class="o">+=</span><span class="mi">1</span>
+    <span class="k">return</span> <span class="mf">4.</span><span class="o">*</span><span class="n">s</span><span class="o">/</span><span class="n">nsamples</span>
+</pre></div>
+</div>
+<p>Now take the incomplete function below which takes a <code class="docutils literal notranslate"><span class="pre">DirectView</span></code> object
+and a number of samples, divides the number of samples between the engines,
+and calls <code class="docutils literal notranslate"><span class="pre">mcpi()</span></code> with a subset of the samples on each engine. Complete
+the function (by replacing the <code class="docutils literal notranslate"><span class="pre">____</span></code> fields), call it with $10^7$ samples,
+time it and compare with the serial call to <code class="docutils literal notranslate"><span class="pre">mcpi()</span></code>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">multi_mcpi</span><span class="p">(</span><span class="n">dview</span><span class="p">,</span> <span class="n">nsamples</span><span class="p">):</span>
+    <span class="c1"># get total number target engines</span>
+    <span class="n">p</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">____</span><span class="o">.</span><span class="n">targets</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">nsamples</span> <span class="o">%</span> <span class="n">p</span><span class="p">:</span>
+        <span class="c1"># ensure even divisibility</span>
+        <span class="n">nsamples</span> <span class="o">+=</span> <span class="n">p</span> <span class="o">-</span> <span class="p">(</span><span class="n">nsamples</span><span class="o">%</span><span class="n">p</span><span class="p">)</span>
+
+    <span class="n">subsamples</span> <span class="o">=</span> <span class="n">____</span><span class="o">//</span><span class="n">p</span>
+
+    <span class="n">ar</span> <span class="o">=</span> <span class="n">view</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">mcpi</span><span class="p">,</span> <span class="n">____</span><span class="p">)</span>
+    <span class="k">return</span> <span class="nb">sum</span><span class="p">(</span><span class="n">ar</span><span class="p">)</span><span class="o">/</span><span class="n">____</span>
+</pre></div>
+</div>
+<p>Final note: While parallelizing Python code is often worth it, there
+are other ways to get higher performance out of Python code. In
+particular, fast numerical packages like <a class="reference external" href="http://www.numpy.org/">Numpy</a>
+should be used, and significant speedup can be obtained with just-in-time
+compilation with <a class="reference external" href="https://numba.pydata.org/">Numba</a> and/or C-extensions
+from <a class="reference external" href="http://cython.org/">Cython</a>.</p>
+<div class="admonition-solution solution important dropdown admonition" id="solution-5">
+<p class="admonition-title">Solution</p>
+<p>Open terminal, run <code class="docutils literal notranslate"><span class="pre">ipcluster</span> <span class="pre">start</span></code> and wait a few seconds for the engines to start.
+Import module, create client and DirectView object:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">ipyparallel</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">ipp</span>
+<span class="n">client</span> <span class="o">=</span> <span class="n">ipp</span><span class="o">.</span><span class="n">Client</span><span class="p">()</span>
+<span class="n">dview</span> <span class="o">=</span> <span class="n">client</span><span class="p">[:]</span>
+<span class="n">dview</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">DirectView</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>Time the serial evaluation of the squaring lambda function:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="n">timeit</span> <span class="o">-</span><span class="n">n</span> <span class="mi">1</span>
+<span class="n">serial_result</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="p">,</span> <span class="nb">range</span><span class="p">(</span><span class="mi">30</span><span class="p">)))</span>
+</pre></div>
+</div>
+<p>Use the <code class="docutils literal notranslate"><span class="pre">map_sync</span></code> method of the DirectView instance:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="n">timeit</span> <span class="o">-</span><span class="n">n</span> <span class="mi">1</span>
+<span class="n">parallel_result</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">dview</span><span class="o">.</span><span class="n">map_sync</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="p">,</span> <span class="nb">range</span><span class="p">(</span><span class="mi">30</span><span class="p">)))</span>
+</pre></div>
+</div>
+<p>There probably won’t be any speedup due to the communication overhead.</p>
+<p>Focus instead on computing pi. Import modules, export <code class="docutils literal notranslate"><span class="pre">random</span></code> module to engines:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">random</span><span class="w"> </span><span class="kn">import</span> <span class="n">random</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">math</span><span class="w"> </span><span class="kn">import</span> <span class="n">pi</span>
+<span class="n">dview</span><span class="p">[</span><span class="s1">&#39;random&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">random</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">mcpi</span><span class="p">(</span><span class="n">nsamples</span><span class="p">):</span>
+    <span class="n">s</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nsamples</span><span class="p">):</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="n">random</span><span class="p">()</span>
+        <span class="n">y</span> <span class="o">=</span> <span class="n">random</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">x</span><span class="o">*</span><span class="n">x</span> <span class="o">+</span> <span class="n">y</span><span class="o">*</span><span class="n">y</span> <span class="o">&lt;=</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="n">s</span><span class="o">+=</span><span class="mi">1</span>
+    <span class="k">return</span> <span class="mf">4.</span><span class="o">*</span><span class="n">s</span><span class="o">/</span><span class="n">nsamples</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="n">timeit</span> <span class="o">-</span><span class="n">n</span> <span class="mi">1</span>
+<span class="n">mcpi</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="mf">1e7</span><span class="p">))</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>3.05 s ± 97.1 ms per loop (mean ± std. dev. of 7 runs, 1 loop each)
+</pre></div>
+</div>
+<p>Function for splitting up the samples and dispatching the chunks to the engines:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">multi_mcpi</span><span class="p">(</span><span class="n">view</span><span class="p">,</span> <span class="n">nsamples</span><span class="p">):</span>
+    <span class="n">p</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">view</span><span class="o">.</span><span class="n">targets</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">nsamples</span> <span class="o">%</span> <span class="n">p</span><span class="p">:</span>
+        <span class="c1"># ensure even divisibility</span>
+        <span class="n">nsamples</span> <span class="o">+=</span> <span class="n">p</span> <span class="o">-</span> <span class="p">(</span><span class="n">nsamples</span><span class="o">%</span><span class="n">p</span><span class="p">)</span>
+
+    <span class="n">subsamples</span> <span class="o">=</span> <span class="n">nsamples</span><span class="o">//</span><span class="n">p</span>
+
+    <span class="n">ar</span> <span class="o">=</span> <span class="n">view</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">mcpi</span><span class="p">,</span> <span class="n">subsamples</span><span class="p">)</span>
+    <span class="k">return</span> <span class="nb">sum</span><span class="p">(</span><span class="n">ar</span><span class="p">)</span><span class="o">/</span><span class="n">p</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="n">timeit</span> <span class="o">-</span><span class="n">n</span> <span class="mi">1</span>
+<span class="n">multi_mcpi</span><span class="p">(</span><span class="n">dview</span><span class="p">,</span> <span class="nb">int</span><span class="p">(</span><span class="mf">1e7</span><span class="p">))</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>1.71 s ± 30.4 ms per loop (mean ± std. dev. of 7 runs, 1 loop each)
+</pre></div>
+</div>
+<p>Some speedup is seen!</p>
+</div>
+</div>
+<hr class="docutils" />
+</section>
+<section id="mixing-python-and-r">
+<span id="mixing-python-r"></span><h2>Mixing Python and R<a class="headerlink" href="#mixing-python-and-r" title="Link to this heading"></a></h2>
+<div class="admonition-mixing-python-and-r exercise important admonition" id="exercise-6">
+<p class="admonition-title">Mixing Python and R</p>
+<p>Your goal now is to define a pandas dataframe, and pass it into an R cell
+and plot it with an R plotting library.</p>
+<ol class="arabic simple">
+<li><p>First you need to install the necessary packages:</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>!conda install -c r r-essentials
+!conda install -y rpy2
+</pre></div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>To run R from the Python kernel we need to load the rpy2 extension:</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="n">load_ext</span> <span class="n">rpy2</span><span class="o">.</span><span class="n">ipython</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="3">
+<li><p>Run the following code in a code cell and plot it with the basic plot
+method of pandas dataframes:</p></li>
+</ol>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
+    <span class="s1">&#39;cups_of_coffee&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">],</span>
+    <span class="s1">&#39;productivity&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="p">})</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="4">
+<li><p>Now take the following R code, and use the <code class="docutils literal notranslate"><span class="pre">%%R</span></code> magic command to pass
+in and plot the pandas dataframe defined above (to find out how, use
+<code class="docutils literal notranslate"><span class="pre">%%R?</span></code>):</p></li>
+</ol>
+<div class="highlight-R notranslate"><div class="highlight"><pre><span></span><span class="nf">library</span><span class="p">(</span><span class="n">ggplot2</span><span class="p">)</span>
+<span class="nf">ggplot</span><span class="p">(</span><span class="n">df</span><span class="p">,</span><span class="w"> </span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">cups_of_coffee</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="o">=</span><span class="n">productivity</span><span class="p">))</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nf">geom_line</span><span class="p">()</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="5">
+<li><p>Play around with the flags for height, width, units and resolution to get a good looking graph.</p></li>
+</ol>
+<div class="admonition-solution solution important dropdown admonition" id="solution-6">
+<p class="admonition-title">Solution</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
+ <span class="s1">&#39;cups_of_coffee&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">],</span>
+ <span class="s1">&#39;productivity&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="p">})</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="n">load_ext</span> <span class="n">rpy2</span><span class="o">.</span><span class="n">ipython</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="n">R</span> <span class="o">-</span><span class="n">i</span> <span class="n">df</span> <span class="o">-</span><span class="n">w</span> <span class="mi">6</span> <span class="o">-</span><span class="n">h</span> <span class="mi">4</span> <span class="o">--</span><span class="n">units</span> <span class="n">cm</span> <span class="o">-</span><span class="n">r</span> <span class="mi">200</span>
+<span class="c1"># the first line says &#39;import df and make default figure size 5 by 5 inches</span>
+<span class="c1"># with resolution 200. You can change the units to px, cm, etc. as you wish.</span>
+<span class="n">library</span><span class="p">(</span><span class="n">ggplot2</span><span class="p">)</span>
+<span class="n">ggplot</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">cups_of_coffee</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">productivity</span><span class="p">))</span> <span class="o">+</span> <span class="n">geom_line</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+</div>
+<hr class="docutils" />
+</section>
+<section id="word-count-analysis-with-widgets">
+<span id="word-count-widgets"></span><h2>Word-count analysis with widgets<a class="headerlink" href="#word-count-analysis-with-widgets" title="Link to this heading"></a></h2>
+<div class="admonition-word-count-analysis-with-widgets exercise important admonition" id="exercise-7">
+<p class="admonition-title">Word-count analysis with widgets</p>
+<p>This exercise uses the
+<a class="reference external" href="https://github.com/coderefinery/word-count">word-count project</a>
+from earlier lessons.</p>
+<ol class="arabic">
+<li><p>Have a look under the <code class="docutils literal notranslate"><span class="pre">data/</span></code> directory. You will see four .dat files
+containing word-count statistics from books. You can try opening one.</p></li>
+<li><p>Open the Launcher, and open a new Text File.</p></li>
+<li><p>Copy-paste the code below to the text file, and save it to a file
+<code class="docutils literal notranslate"><span class="pre">zipf.py</span></code> (note how syntax highlighting gets activated).</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">load_word_counts</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Load a list of (word, count, percentage) tuples from a file where each</span>
+<span class="sd">    line is of the form &quot;word count percentage&quot;. Lines starting with # are</span>
+<span class="sd">    ignored.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">counts</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">input_fd</span><span class="p">:</span>
+    	     <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">input_fd</span><span class="p">:</span>
+          <span class="k">if</span> <span class="ow">not</span> <span class="n">line</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;#&quot;</span><span class="p">):</span>
+          	   <span class="n">fields</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+                <span class="n">counts</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">fields</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="nb">int</span><span class="p">(</span><span class="n">fields</span><span class="p">[</span><span class="mi">1</span><span class="p">]),</span> <span class="nb">float</span><span class="p">(</span><span class="n">fields</span><span class="p">[</span><span class="mi">2</span><span class="p">])))</span>
+    <span class="k">return</span> <span class="n">counts</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">top_n_word</span><span class="p">(</span><span class="n">counts</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Given a list of (word, count, percentage) tuples,</span>
+<span class="sd">    return the top n word counts.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">limited_counts</span> <span class="o">=</span> <span class="n">counts</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="n">n</span><span class="p">]</span>
+    <span class="n">count_data</span> <span class="o">=</span> <span class="p">[</span><span class="n">count</span> <span class="k">for</span> <span class="p">(</span><span class="n">_</span><span class="p">,</span> <span class="n">count</span><span class="p">,</span> <span class="n">_</span><span class="p">)</span> <span class="ow">in</span> <span class="n">limited_counts</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">count_data</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">zipf_analysis</span><span class="p">(</span><span class="n">input_file</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="mi">10</span><span class="p">):</span>
+    <span class="n">counts</span> <span class="o">=</span> <span class="n">load_word_counts</span><span class="p">(</span><span class="n">input_file</span><span class="p">)</span>
+    <span class="n">top_n</span> <span class="o">=</span> <span class="n">top_n_word</span><span class="p">(</span><span class="n">counts</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">top_n</span>
+</pre></div>
+</div>
+</li>
+<li><p>Import the new zipf module, and have a look at the docstring for one
+of the functions:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>import zipf
+zipf.top_n_word?
+</pre></div>
+</div>
+</li>
+<li><p>Run the <code class="docutils literal notranslate"><span class="pre">zipf_analysis()</span></code> function for a processed datafile. Plot the
+output, and compare with a 1/N function, using the following code:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="o">%</span><span class="n">matplotlib</span> <span class="n">inline</span>
+
+<span class="n">nmax</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">z</span> <span class="o">=</span> <span class="n">zipf</span><span class="o">.</span><span class="n">zipf_analysis</span><span class="p">(</span><span class="s2">&quot;data/isles.dat&quot;</span><span class="p">,</span> <span class="n">nmax</span><span class="p">)</span>
+<span class="n">n</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">nmax</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">z_norm</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span><span class="o">/</span><span class="n">z</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">z</span><span class="p">]</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">z_norm</span><span class="p">)</span>
+<span class="n">inv_n</span> <span class="o">=</span> <span class="p">[</span><span class="mf">1.0</span><span class="o">/</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">n</span><span class="p">]</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">inv_n</span><span class="p">)</span>
+</pre></div>
+</div>
+</li>
+<li><p>Add an interactive widget to analyze Zipf’s law, using for example this
+code:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">ipywidgets</span><span class="w"> </span><span class="kn">import</span> <span class="n">interact</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="o">%</span><span class="n">matplotlib</span> <span class="n">inline</span>
+
+<span class="n">nmax</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="nd">@interact</span><span class="p">(</span><span class="n">p</span><span class="o">=-</span><span class="mf">1.0</span><span class="p">)</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">zipf_plot</span><span class="p">(</span><span class="n">p</span><span class="p">):</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">clf</span><span class="p">()</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">nmax</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;data/isles.dat&quot;</span><span class="p">,</span> <span class="s2">&quot;data/last.dat&quot;</span><span class="p">,</span> <span class="s2">&quot;data/abyss.dat&quot;</span><span class="p">,</span> <span class="s2">&quot;data/sierra.dat&quot;</span><span class="p">]:</span>
+        <span class="n">z</span> <span class="o">=</span> <span class="n">zipf</span><span class="o">.</span><span class="n">zipf_analysis</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">nmax</span><span class="p">)</span>
+        <span class="n">z_norm</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span><span class="o">/</span><span class="n">z</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">z</span><span class="p">]</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">z_norm</span><span class="p">)</span>
+    <span class="n">inv_n</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span><span class="o">**</span><span class="n">p</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">n</span><span class="p">]</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">inv_n</span><span class="p">)</span>
+</pre></div>
+</div>
+</li>
+<li><p>Add another widget parameter <code class="docutils literal notranslate"><span class="pre">nmax</span></code> to the above code to control the
+number of words displayed on the x-axis, e.g. <code class="docutils literal notranslate"><span class="pre">nmax=(6,14)</span></code>, and play
+around with both sliders.</p></li>
+</ol>
+<div class="admonition-solution solution important dropdown admonition" id="solution-7">
+<p class="admonition-title">Solution</p>
+<p>Code for a widget with sliding bars for both number of words and the inverse power:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">ipywidgets</span><span class="w"> </span><span class="kn">import</span> <span class="n">interact</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="o">%</span><span class="n">matplotlib</span> <span class="n">inline</span>
+
+<span class="nd">@interact</span><span class="p">(</span><span class="n">nmax</span><span class="o">=</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="mi">14</span><span class="p">),</span> <span class="n">p</span><span class="o">=-</span><span class="mf">1.0</span><span class="p">)</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">zipf_plot</span><span class="p">(</span><span class="n">nmax</span><span class="p">,</span> <span class="n">p</span><span class="p">):</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">clf</span><span class="p">()</span>
+    <span class="c1">#plt.figure()</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">nmax</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;data/isles.dat&quot;</span><span class="p">,</span> <span class="s2">&quot;data/last.dat&quot;</span><span class="p">,</span> <span class="s2">&quot;data/abyss.dat&quot;</span><span class="p">,</span>
+              <span class="s2">&quot;data/sierra.dat&quot;</span><span class="p">]:</span>
+        <span class="n">z</span> <span class="o">=</span> <span class="n">zipf</span><span class="o">.</span><span class="n">zipf_analysis</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">nmax</span><span class="p">)</span>
+        <span class="n">z_norm</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span><span class="o">/</span><span class="n">z</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">z</span><span class="p">]</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">z_norm</span><span class="p">)</span>
+    <span class="n">inv_n</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span><span class="o">**</span><span class="n">p</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">n</span><span class="p">]</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">inv_n</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../extra-features/" class="btn btn-neutral float-left" title="Shell commands, magics and widgets" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../exercises/" class="btn btn-neutral float-right" title="List of exercises" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright CodeRefinery contributors.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

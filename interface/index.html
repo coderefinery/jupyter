@@ -1,0 +1,410 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JupyterLab and notebook interface &mdash; Jupyter notebooks  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=949a1ff5" />
+      <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=9c3e77be" />
+      <link rel="stylesheet" type="text/css" href="../_static/sphinx_lesson.css?v=e9df6548" />
+      <link rel="stylesheet" type="text/css" href="../_static/term_role_formatting.css?v=4194e21c" />
+      <link rel="stylesheet" type="text/css" href="../_static/sphinx_rtd_theme_ext_color_contrast.css?v=8e8ea19f" />
+
+  
+    <link rel="shortcut icon" href="../_static/coderefinery.ico"/>
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=187304be"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../_static/copybutton.js?v=582ca9e2"></script>
+      <script src="../_static/minipres.js?v=a0d29692"></script>
+      <script>let toggleHintShow = 'Click to show';</script>
+      <script>let toggleHintHide = 'Click to hide';</script>
+      <script>let toggleOpenOnPrint = 'true';</script>
+      <script src="../_static/togglebutton.js?v=1ae7504c"></script>
+      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+      <script data-domain="coderefinery.github.io" defer="defer" src="https://plausible.cs.aalto.fi/js/script.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex/" />
+    <link rel="search" title="Search" href="../search/" />
+    <link rel="next" title="A first computational notebook" href="../first-notebook/" />
+    <link rel="prev" title="Jupyter Notebooks" href="../motivation/" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../" class="icon icon-home">
+            Jupyter notebooks
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Core episodes</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../motivation/">Jupyter Notebooks</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">JupyterLab and notebook interface</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#how-to-start-jupyterlab">How to start JupyterLab</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#components-the-big-picture">Components: the big picture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#navigation">Navigation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#cells">Cells</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#markdown-cells">Markdown cells</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#code-cells">Code cells</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#command-and-edit-modes">Command and edit modes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#keyboard-shortcuts">Keyboard shortcuts</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#cell-shortcuts">Cell shortcuts</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#notebook-shortcuts">Notebook shortcuts</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#tools-for-writing-testing-and-debugging-code">Tools for writing, testing and debugging code</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../first-notebook/">A first computational notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../version-control/">Notebooks and version control</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sharing/">Sharing notebooks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../summary/">Summary</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Optional episodes</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../extra-features/">Shell commands, magics and widgets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples/">Examples of Jupyter features</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Reference</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://youtu.be/xbTTDLA3txI">Shell crash course</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../exercises/">List of exercises</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide/">Instructor guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../license/">Credit and license</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">About</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://coderefinery.org/lessons/core/">All lessons</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://coderefinery.org/">CodeRefinery</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://coderefinery.org/lessons/reusing/">Reusing</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../">Jupyter notebooks</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">JupyterLab and notebook interface</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/coderefinery/jupyter/blob/main/content/interface.md" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="jupyterlab-and-notebook-interface">
+<h1>JupyterLab and notebook interface<a class="headerlink" href="#jupyterlab-and-notebook-interface" title="Link to this heading"></a></h1>
+<div class="admonition-objectives objectives admonition" id="objectives-0">
+<p class="admonition-title">Objectives</p>
+<ul class="simple">
+<li><p>Learn to navigate JupyterLab user interface.</p></li>
+<li><p>Discuss integrated development environments.</p></li>
+<li><p>Get an overview of useful keyboard shortcuts.</p></li>
+<li><p>Learn about command/edit modes and markdown/code cells.</p></li>
+</ul>
+</div>
+<div class="admonition-instructor-note instructor-note admonition" id="instructor-note-0">
+<p class="admonition-title">Instructor note</p>
+<ul class="simple">
+<li><p>15 min teaching</p></li>
+<li><p>0 min exercises</p></li>
+</ul>
+</div>
+<p>JupyterLab is the next-generation user interface for Jupyter Notebooks
+and is intended to replace the conventional interface.
+It is a highly modular and customizable interface.</p>
+<hr class="docutils" />
+<section id="how-to-start-jupyterlab">
+<h2>How to start JupyterLab<a class="headerlink" href="#how-to-start-jupyterlab" title="Link to this heading"></a></h2>
+<p>Let’s have a look at how it works. We go to terminal, and type:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>mkdir<span class="w"> </span>jupyterlab-demo
+<span class="gp">$ </span><span class="nb">cd</span><span class="w"> </span>jupyterlab-demo
+<span class="gp">$ </span>jupyter-lab
+</pre></div>
+</div>
+</section>
+<hr class="docutils" />
+<section id="components-the-big-picture">
+<h2>Components: the big picture<a class="headerlink" href="#components-the-big-picture" title="Link to this heading"></a></h2>
+<figure class="align-default" id="id1">
+<img alt="Components of a Jupyter notebook" src="../_images/notebook_components.png" />
+<figcaption>
+<p><span class="caption-text">Components of a Jupyter notebook.</span><a class="headerlink" href="#id1" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+<hr class="docutils" />
+<section id="navigation">
+<h2>Navigation<a class="headerlink" href="#navigation" title="Link to this heading"></a></h2>
+<figure class="align-default" id="id2">
+<a class="reference internal image-reference" href="../_images/JupyterInterface.png"><img alt="Jupyter used interface has a file browser and a notebook view" src="../_images/JupyterInterface.png" style="width: 100%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">Jupyter Lab user interface has a left side toolbar – that has a file browser and a git tab. The file browser shows the file that Jupyter Lab was opened in. The right side shows the files that are open. You can have split view by dragging from the top tab view. (CC-BY)</span><a class="headerlink" href="#id2" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<ul class="simple">
+<li><p>Left-hand menu (toggle it with <code class="docutils literal notranslate"><span class="pre">Ctrl(⌘)-b</span></code>):</p>
+<ul>
+<li><p>File browser</p>
+<ul>
+<li><p>New launcher</p></li>
+<li><p>New folder</p></li>
+<li><p>Upload files</p></li>
+</ul>
+</li>
+<li><p>Running terminals and kernels</p></li>
+<li><p>Command palette</p></li>
+<li><p>Cell inspector</p></li>
+<li><p>Open tabs</p></li>
+<li><p>Git integration (if <code class="docutils literal notranslate"><span class="pre">jupyterlab-git</span></code> extension installed)</p></li>
+<li><p>GitHub browser (if <code class="docutils literal notranslate"><span class="pre">jupyterlab-github</span></code> extension installed)</p></li>
+</ul>
+</li>
+<li><p>Fully-fledged terminal</p></li>
+<li><p>Text editor for source code in different languages</p></li>
+<li><p>Code console to run code interactively in a kernel with rich output and linear order</p></li>
+<li><p>Modular interface</p>
+<ul>
+<li><p>Notebooks, terminals, consoles, data files etc can be moved around</p></li>
+</ul>
+</li>
+<li><p>Classical notebook style is available under the Help menu</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="cells">
+<h2>Cells<a class="headerlink" href="#cells" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><strong>Markdown cells</strong> contain formatted text written in Markdown</p></li>
+<li><p><strong>Code cells</strong> contain code to be interpreted by the <em>kernel</em> (Python, R, Julia, Octave/Matlab…)</p></li>
+</ul>
+<section id="markdown-cells">
+<h3>Markdown cells<a class="headerlink" href="#markdown-cells" title="Link to this heading"></a></h3>
+<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span><span class="gu">## Second level heading</span>
+
+This cell contains simple
+[<span class="nt">markdown</span>](<span class="na">https://daringfireball.net/projects/markdown/syntax</span>), a simple language for writing text that can be automatically converted to other formats, e.g. HTML, LaTeX or any of a number of others.
+
+<span class="gs">**Bold**</span>, <span class="ge">*italics*</span>, <span class="gs">**_combined_**</span>, <span class="gd">~~strikethrough~~</span>, <span class="sb">`inline code`</span>.
+
+<span class="k">*</span><span class="w"> </span>bullet points
+
+or
+
+<span class="k">1.</span> numbered
+<span class="k">3.</span> lists
+
+<span class="gs">**Equations:**</span>
+inline $e^{i\pi} + 1 = 0$
+or on new line
+$$e^{i\pi} + 1 = 0$$
+
+Images:
+
+![<span class="nt">Jupyter logo</span>](<span class="na">https://jupyter.org/assets/homepage/main-logo.svg</span>)
+
+Links:
+[<span class="nt">One of many markdown cheat-sheets</span>](<span class="na">https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#emphasis</span>)
+</pre></div>
+</div>
+</section>
+<section id="code-cells">
+<h3>Code cells<a class="headerlink" href="#code-cells" title="Link to this heading"></a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># a code cell can run statements of code.</span>
+<span class="c1"># when you run this cell, the output is sent</span>
+<span class="c1"># from the web page to a back-end process, run</span>
+<span class="c1"># and the results are displayed to you</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;hello world&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="command-and-edit-modes">
+<h3>Command and edit modes<a class="headerlink" href="#command-and-edit-modes" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>To add contents to a cell, you need to enter <em>edit mode</em> by pressing <code class="docutils literal notranslate"><span class="pre">Enter</span></code> or
+double-clicking on a cell</p></li>
+<li><p>To navigate between cells, create new cells, etc., you need to enter <em>command</em> mode by
+pressing <code class="docutils literal notranslate"><span class="pre">Escape</span></code> key or executing the current cell.</p></li>
+</ul>
+</section>
+</section>
+<hr class="docutils" />
+<section id="keyboard-shortcuts">
+<h2>Keyboard shortcuts<a class="headerlink" href="#keyboard-shortcuts" title="Link to this heading"></a></h2>
+<p>Some shortcuts only work in Command or Edit mode.
+It can also happen that these shortcuts interfere with browser shortcuts.</p>
+<section id="cell-shortcuts">
+<h3>Cell shortcuts<a class="headerlink" href="#cell-shortcuts" title="Link to this heading"></a></h3>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Shortcut</p></th>
+<th class="head"><p>Effect</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Enter</span></code></p></td>
+<td><p>Enter Edit mode</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Escape</span></code> or <code class="docutils literal notranslate"><span class="pre">Ctrl</span></code>-<code class="docutils literal notranslate"><span class="pre">m</span></code></p></td>
+<td><p>Enter Command mode</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Ctrl</span></code>-<code class="docutils literal notranslate"><span class="pre">Enter</span></code></p></td>
+<td><p>Run the cell</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Shift</span></code>-<code class="docutils literal notranslate"><span class="pre">Enter</span></code></p></td>
+<td><p>Run the cell and select the cell below</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Alt</span></code>-<code class="docutils literal notranslate"><span class="pre">Enter</span></code></p></td>
+<td><p>Run the cell and insert a new cell below</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">m</span></code> and <code class="docutils literal notranslate"><span class="pre">y</span></code></p></td>
+<td><p>Toggle between Markdown and Code cells</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">d-d</span></code></p></td>
+<td><p>Delete a cell</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">z</span></code></p></td>
+<td><p>Undo deleting</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">a/b</span></code></p></td>
+<td><p>Insert cells above/below current cell</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">x/c/v</span></code></p></td>
+<td><p>Cut/copy/paste cells</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Up/Down</span></code> or <code class="docutils literal notranslate"><span class="pre">k/j</span></code></p></td>
+<td><p>Select previous/next cells</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="notebook-shortcuts">
+<h3>Notebook shortcuts<a class="headerlink" href="#notebook-shortcuts" title="Link to this heading"></a></h3>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Shortcut</p></th>
+<th class="head"><p>Effect</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Ctrl(⌘)</span></code>-<code class="docutils literal notranslate"><span class="pre">s</span></code></p></td>
+<td><p>Save notebook</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Shift</span></code>-<code class="docutils literal notranslate"><span class="pre">Ctrl(⌘)</span></code>-<code class="docutils literal notranslate"><span class="pre">s</span></code></p></td>
+<td><p>Save notebook as</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Ctrl</span></code>-q</p></td>
+<td><p>Close notebook</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Ctrl(⌘)</span></code>-<code class="docutils literal notranslate"><span class="pre">b</span></code></p></td>
+<td><p>Toggle left-hand menu</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Shift</span></code>-<code class="docutils literal notranslate"><span class="pre">Ctrl(⌘)</span></code>-<code class="docutils literal notranslate"><span class="pre">c</span></code></p></td>
+<td><p>Open command palette</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Shift</span></code>-<code class="docutils literal notranslate"><span class="pre">Ctrl(⌘)</span></code>-d</p></td>
+<td><p>Toggle single-document mode</p></td>
+</tr>
+</tbody>
+</table>
+<hr class="docutils" />
+</section>
+<section id="tools-for-writing-testing-and-debugging-code">
+<span id="integrated-development-environments"></span><h3>Tools for writing, testing and debugging code<a class="headerlink" href="#tools-for-writing-testing-and-debugging-code" title="Link to this heading"></a></h3>
+<div class="admonition-what-tools-do-you-use-for-writing-testing-and-debugging-code admonition">
+<p class="admonition-title">What tools do you use for writing, testing, and debugging code?</p>
+<p>Some people prefer <strong>terminal-based text editors</strong> for writing code (e.g. Vi/Vim, Nano, Emacs, etc.).</p>
+<p>Others prefer <strong>integrated development environments (IDEs)</strong>,
+which can bring “everything” one needs for productive programming to one’s fingertips.a</p>
+<p>Yet others prefer <strong>code editors</strong>, which are light-weight IDEs.</p>
+<p><strong>Terminal editor</strong></p>
+<ul class="simple">
+<li><p>Good command line skills are needed for effectively using terminal editors</p></li>
+<li><p>Continue using Emacs and Vim, if you are already proficient</p></li>
+<li><p>Supports multiple programming languages</p></li>
+</ul>
+<p><strong>IDE</strong></p>
+<ul class="simple">
+<li><p>If you are working with large code bases, then you should definitely checkout the IDE suitable for your programming language</p></li>
+<li><p>IDEs offer rich support for Debugging and Code refactoring</p></li>
+<li><p>Focused on a single language</p></li>
+</ul>
+<p><strong>Code editor</strong></p>
+<ul class="simple">
+<li><p>If you use multiple programming languages then code editors offer good support</p></li>
+<li><p>Both IDE and code editors share common features such as code completion, hints, highlighting sections of code</p></li>
+<li><p>Supports multiple programming languages</p></li>
+</ul>
+</div>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../motivation/" class="btn btn-neutral float-left" title="Jupyter Notebooks" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../first-notebook/" class="btn btn-neutral float-right" title="A first computational notebook" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright CodeRefinery contributors.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

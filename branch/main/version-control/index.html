@@ -1,0 +1,307 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Notebooks and version control &mdash; Jupyter notebooks  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=949a1ff5" />
+      <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=9c3e77be" />
+      <link rel="stylesheet" type="text/css" href="../_static/sphinx_lesson.css?v=e9df6548" />
+      <link rel="stylesheet" type="text/css" href="../_static/term_role_formatting.css?v=4194e21c" />
+      <link rel="stylesheet" type="text/css" href="../_static/sphinx_rtd_theme_ext_color_contrast.css?v=8e8ea19f" />
+
+  
+    <link rel="shortcut icon" href="../_static/coderefinery.ico"/>
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=187304be"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../_static/copybutton.js?v=582ca9e2"></script>
+      <script src="../_static/minipres.js?v=a0d29692"></script>
+      <script>let toggleHintShow = 'Click to show';</script>
+      <script>let toggleHintHide = 'Click to hide';</script>
+      <script>let toggleOpenOnPrint = 'true';</script>
+      <script src="../_static/togglebutton.js?v=1ae7504c"></script>
+      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+      <script data-domain="coderefinery.github.io" defer="defer" src="https://plausible.cs.aalto.fi/js/script.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex/" />
+    <link rel="search" title="Search" href="../search/" />
+    <link rel="next" title="Sharing notebooks" href="../sharing/" />
+    <link rel="prev" title="A first computational notebook" href="../first-notebook/" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../" class="icon icon-home">
+            Jupyter notebooks
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Core episodes</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../motivation/">Jupyter Notebooks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../interface/">JupyterLab and notebook interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../first-notebook/">A first computational notebook</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Notebooks and version control</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#packages-and-jupyterlab-extensions-to-simplify-version-control">Packages and JupyterLab extensions to simplify version control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#comparing-jupyter-notebooks-on-github">Comparing Jupyter Notebooks on GitHub</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#comparing-changes-locally-without-jupyterlab-git-nbdime">Comparing changes locally without jupyterlab-git/nbdime</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#comparing-changes-with-jupyterlab-git-nbdime">Comparing changes with jupyterlab-git/nbdime</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#using-nbdime-on-the-command-line">Using nbdime on the command line</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#see-also">See also</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../sharing/">Sharing notebooks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../summary/">Summary</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Optional episodes</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../extra-features/">Shell commands, magics and widgets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples/">Examples of Jupyter features</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Reference</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://youtu.be/xbTTDLA3txI">Shell crash course</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../exercises/">List of exercises</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide/">Instructor guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../license/">Credit and license</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">About</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://coderefinery.org/lessons/core/">All lessons</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://coderefinery.org/">CodeRefinery</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://coderefinery.org/lessons/reusing/">Reusing</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../">Jupyter notebooks</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Notebooks and version control</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/coderefinery/jupyter/blob/main/content/version-control.md" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="notebooks-and-version-control">
+<h1>Notebooks and version control<a class="headerlink" href="#notebooks-and-version-control" title="Link to this heading"></a></h1>
+<div class="admonition-objectives objectives admonition" id="objectives-0">
+<p class="admonition-title">Objectives</p>
+<ul class="simple">
+<li><p>Demonstrate two tools which make version control of notebooks easier.</p></li>
+</ul>
+</div>
+<div class="admonition-instructor-note instructor-note admonition" id="instructor-note-0">
+<p class="admonition-title">Instructor note</p>
+<ul class="simple">
+<li><p>10 min teaching</p></li>
+<li><p>5 min demo</p></li>
+</ul>
+</div>
+<p>Jupyter Notebooks are stored in <a class="reference external" href="https://en.wikipedia.org/wiki/JSON">JSON</a> format.
+With this format it can be a bit difficult to compare and merge changes which are introduced
+through the notebook interface.</p>
+<section id="packages-and-jupyterlab-extensions-to-simplify-version-control">
+<h2>Packages and JupyterLab extensions to simplify version control<a class="headerlink" href="#packages-and-jupyterlab-extensions-to-simplify-version-control" title="Link to this heading"></a></h2>
+<p>Several packages and JupyterLab extensions have been developed
+to make it easier to interact with Git and GitHub:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="http://nbdime.readthedocs.io/">nbdime</a> (notebook “diff” and “merge”) provides
+“content-aware” diffing and merging.</p>
+<ul>
+<li><p>Adds a Git button to the notebook interface.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">diff</span></code> and <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">merge</span></code> shell commands can use nbdime’s diff
+and merge for notebook files, but leave Git’s behavior unchanged
+for non-notebook files.</p></li>
+</ul>
+</li>
+<li><p><a class="reference external" href="https://github.com/jupyterlab/jupyterlab-git">jupyterlab-git</a>
+is a JupyterLab extension for version control using Git.</p>
+<ul>
+<li><p>Adds a Git tab to the left-side menu bar for version control inside JupyterLab.</p></li>
+</ul>
+</li>
+<li><p><a class="reference external" href="https://www.npmjs.com/package/&#64;jupyterlab/github">JupyterLab GitHub</a>
+is a JupyterLab extension for accessing GitHub repositories.</p>
+<ul>
+<li><p>Adds a GitHub tab to the left-side menu bar where you can browse
+and open notebooks from your GitHub repositories.</p></li>
+</ul>
+</li>
+</ul>
+<p>All three extensions can be used from within the JupyterLab interface and our
+<a class="reference external" href="https://coderefinery.github.io/installation/conda-environment/">Conda
+environment</a>
+provides <a class="reference external" href="https://github.com/jupyterlab/jupyterlab-git">jupyterlab-git</a> and
+<a class="reference external" href="http://nbdime.readthedocs.io/">nbdime</a>.  To install additional extensions,
+please consult the <a class="reference external" href="https://jupyterlab.readthedocs.io/en/stable/user/extensions.html">official
+documentation</a>
+about installing and managing JupyterLab extensions.</p>
+</section>
+<hr class="docutils" />
+<section id="comparing-jupyter-notebooks-on-github">
+<h2>Comparing Jupyter Notebooks on GitHub<a class="headerlink" href="#comparing-jupyter-notebooks-on-github" title="Link to this heading"></a></h2>
+<p>For this you really want to enable <a class="reference external" href="https://docs.github.com/en/repositories/working-with-files/using-files/working-with-non-code-files#working-with-jupyter-notebook-files-on-github">Rich Jupyter Notebook
+Diffs</a>
+on GitHub:</p>
+<ul class="simple">
+<li><p>On GitHub click on your avatar/image (top right).</p></li>
+<li><p>Click on “Feature preview”.</p></li>
+<li><p>Enable “Rich Jupyter Notebook Diffs”.</p></li>
+</ul>
+<p>To demonstrate the difference we have created a small change and you can try to
+compare the effect yourself by enabling/disabling the feature:
+<a class="reference external" href="https://github.com/coderefinery/jupyter/compare/5ff55b8..fce21e6">https://github.com/coderefinery/jupyter/compare/5ff55b8..fce21e6</a></p>
+<p>Here is the diff <strong>without “Rich Jupyter Notebook Diffs”</strong>:</p>
+<figure class="align-default" id="id1">
+<a class="with-border reference internal image-reference" href="../_images/github-without-rich-diff.png"><img alt="A small change but without &quot;Rich Jupyter Notebook Diffs&quot;" class="with-border" src="../_images/github-without-rich-diff.png" style="width: 100%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">A small change in a notebook viewed on GitHub
+without “Rich Jupyter Notebook Diffs” (truncated).</span><a class="headerlink" href="#id1" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>Here is the same change, but this time <strong>with “Rich Jupyter Notebook Diffs” enabled</strong>:</p>
+<figure class="align-default" id="id2">
+<a class="with-border reference internal image-reference" href="../_images/github-with-rich-diff.png"><img alt="A small change in a notebook viewed on GitHub with &quot;Rich Jupyter Notebook Diffs&quot; enabled" class="with-border" src="../_images/github-with-rich-diff.png" style="width: 100%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">The same change viewed on GitHub, this time
+with “Rich Jupyter Notebook Diffs” enabled.</span><a class="headerlink" href="#id2" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+<hr class="docutils" />
+<section id="comparing-changes-locally-without-jupyterlab-git-nbdime">
+<h2>Comparing changes locally without jupyterlab-git/nbdime<a class="headerlink" href="#comparing-changes-locally-without-jupyterlab-git-nbdime" title="Link to this heading"></a></h2>
+<div class="admonition-instructor-note instructor-note admonition" id="instructor-note-1">
+<span id="plain-git-diff"></span><p class="admonition-title">Instructor note</p>
+<ul class="simple">
+<li><p>Create a new folder</p></li>
+<li><p>Initialize a new Git repository (which is anyway good to demonstrate)</p></li>
+<li><p>Copy the “darts” notebook into it (from the previous episode)</p></li>
+<li><p>Add <code class="docutils literal notranslate"><span class="pre">.ipynb_checkpoints/</span></code> to <code class="docutils literal notranslate"><span class="pre">.gitignore</span></code></p></li>
+<li><p>Stage and commit the file before trying the changes below</p></li>
+</ul>
+</div>
+<div class="admonition-instructor-demonstrates-a-plain-git-diff exercise important admonition" id="exercise-0">
+<p class="admonition-title">Instructor demonstrates a plain git diff</p>
+<ol class="arabic simple">
+<li><p>To understand the problem, the instructor first shows the <a class="reference external" href="https://github.com/coderefinery/jupyter/blob/main/example/darts.ipynb">example
+notebook</a>
+and then the <a class="reference external" href="https://raw.githubusercontent.com/coderefinery/jupyter/main/example/darts.ipynb">source
+code</a>
+in JSON format.</p></li>
+<li><p>Then we introduce a simple change to the example notebook, for instance
+changing colors (change “red” and “blue” to something else)
+and also changing dimensions in <code class="docutils literal notranslate"><span class="pre">fig.set_size_inches(6.0,</span> <span class="pre">6.0)</span></code>.</p></li>
+<li><p>Run all cells.</p></li>
+<li><p>We save the change (save icon) and in the JupyterLab terminal try a “normal” <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">diff</span></code>
+and see that this is not very useful. Discuss why.</p></li>
+</ol>
+</div>
+</section>
+<hr class="docutils" />
+<section id="comparing-changes-with-jupyterlab-git-nbdime">
+<h2>Comparing changes with jupyterlab-git/nbdime<a class="headerlink" href="#comparing-changes-with-jupyterlab-git-nbdime" title="Link to this heading"></a></h2>
+<p>Let us inspect the same changes using jupyterlab-git (which uses nbdime).
+This is more convenient since it highlights only the changes that we have made:</p>
+<figure class="align-default" id="id3">
+<img alt="Comparing changes with jupyterlab-git/nbdime" src="../_images/git.jpg" />
+<figcaption>
+<p><span class="caption-text">Comparing changes with jupyterlab-git/nbdime. Click on the Git tab, then on the plus-minus symbol.</span><a class="headerlink" href="#id3" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+<hr class="docutils" />
+<section id="using-nbdime-on-the-command-line">
+<h2>Using nbdime on the command line<a class="headerlink" href="#using-nbdime-on-the-command-line" title="Link to this heading"></a></h2>
+<p>You can configure your (command line) Git to always use nbdime when comparing and merging notebooks:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>nbdime<span class="w"> </span>config-git<span class="w"> </span>--enable<span class="w"> </span>--global
+</pre></div>
+</div>
+<p>Now when you do git diff or git merge with notebooks, you should see a nice diff view.
+For more information please see the
+<a class="reference external" href="https://nbdime.readthedocs.io/en/latest/#git-integration-quickstart">corresponding documentation</a>.</p>
+</section>
+<hr class="docutils" />
+<section id="see-also">
+<h2>See also<a class="headerlink" href="#see-also" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://nbdev.fast.ai/getting_started.html">nbdev</a> developed by <a class="reference external" href="https://www.fast.ai/">fast.ai</a>
+is a notebook-driven development platform which includes support for <a class="reference external" href="https://nbdev.fast.ai/tutorials/git_friendly_jupyter.html">git-friendly Jupyter
+notebooks</a></p></li>
+<li><p><a class="reference external" href="https://github.com/mkery/Verdant/">Verdant</a> is a JupyterLab extension that automatically
+records history of all experiments you run in a Jupyter notebook, and stores them in an
+<code class="docutils literal notranslate"><span class="pre">.ipyhistory</span></code> JSON file.</p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../first-notebook/" class="btn btn-neutral float-left" title="A first computational notebook" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../sharing/" class="btn btn-neutral float-right" title="Sharing notebooks" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright CodeRefinery contributors.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
