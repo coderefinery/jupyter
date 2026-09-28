@@ -35,6 +35,16 @@
     - a PDF file
     - a slide-show in the browser
 
+PDF requirements (see the [nbconvert documentation](https://nbconvert.readthedocs.io/en/latest/usage.html)): `jupyter nbconvert --to pdf` uses
+LaTeX/XeLaTeX, while `jupyter nbconvert --to webpdf` renders through headless
+Chromium and requires Playwright (`nbconvert[webpdf]`). If neither toolchain is
+available and you only need a static PDF, a browser-based converter is another
+option. For example, [ipynbtopdf.xyz](https://ipynbtopdf.xyz/) processes a local
+`.ipynb` file in the browser without sending it to a conversion server. **Disclosure:**
+I maintain this project. Its [privacy details](https://ipynbtopdf.xyz/privacy)
+cover external media and analytics; review them before using it with sensitive
+notebooks.
+
 ```{figure} img/JupyterDownload.png
 :alt: You can export Jupyter Notebooks to various formats. Some might need extra installations.
 :width: 100%
